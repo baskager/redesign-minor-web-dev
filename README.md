@@ -4,7 +4,7 @@
 
 1. Learn how to build and manage complex project structures, for example, components splitting, folder structure, and name conventions.
 2. Don't be afraid to try new stuff out, be creative, and build awesome stuff where users can say: WoW!
-3. Don't write "quick fixes" or "prototype code". Try to build good code from the startup. Because I know that I won't refactor it later.
+3. Don't write "quick fixes" or "prototype code". Try to write good code from the startup. Because I know that I won't refactor it later.
 
 **Jelle Overbeek:**
 
