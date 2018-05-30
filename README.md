@@ -6,7 +6,7 @@
 2. Don't be afraid to try new stuff out, be creative, and build awesome stuff where users can say: WoW!
 3. Don't write "quick fixes" or "prototype code". Try to write good code from the startup. Because I know that I won't refactor it later.
 
-**Jamal van Rooijen**
+**Jamal van Rooijen:**
 
 1. Learning how to plan properly in this project. Especially since we are with a team of five people. Dividing tasks and completing our personal goals can only be achieved by planning properly.
 2. Learning more Javascript by developing interactive elements on the website, without being afraid to try new and inovative things if it seems too 'hard' on first glance.
@@ -18,7 +18,7 @@
 2. Clean code so that it is readable for everyone
 3. A bit design to improve my skills
 
-**Bas Kager**
+**Bas Kager:**
 1. Learn how to build proper css layouts with flexbox, grid and best practices.
 1. Get up to speed with tasks runners.
 3. Learn more about web design (best) pracitices 
