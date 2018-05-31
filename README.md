@@ -21,7 +21,7 @@
 **Bas Kager:**
 1. Learn how to build proper css layouts with flexbox, grid and best practices.
 1. Get up to speed with tasks runners.
-3. Learn more about web design (best) pracitices 
+3. Learn more about web design (best) practices 
 
 **Jelle Overbeek:**
 
