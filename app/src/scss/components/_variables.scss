@@ -2,18 +2,33 @@ $primary-color: #EC3E3F;
 $primary-accent-color: #FF7070;
 $secondary-color: #4C919C;
 $secondary-accent-color: #79E7EF;
-
-$border-color: #333;
-
-$text-primary: #333;
-$text-secondary: #555;
-
-$blockquote-background: #333;
-$blockquote-border: #333;
-$blockquote-color: darken($secondary-color, 0.5);
+// Typography
+$black: #222;
+$white: #eee;
+$bold: bold;
+$semi-bold: 600;
+$regulair: normal;
+$light: 300;
+$font-family: sans-serif;
+$h1-font-size: 7.5rem;
+$h1-font-style: normal;
+$h1-font-weight: $bold;
+$h2-font-size: 3.125rem;
+$h2-font-style: normal;
+$h2-font-weight: $semi-bold;
+$h3-font-size: 1.5rem;
+$h3-font-style: italic;
+$h3-font-weight: $semi-bold;
+$body-color: $black;
+$body-font-size: 100%;
+$body-font-size-small: 0.75rem;
+$body-line-height: 1.5rem;
+$link-color: $primary-color;
+$blockquote-background-color: $white;
+$blockquote-border-color: $primary-color;
+$blockquote-text-color: $black;
+$mark-color: $primary-color;
 // Buttons
 $btn-primary-background: $primary-color;
 $btn-primary-color: #FFF;
 $btn-focus-background: #770B11;
-
-$link-color: $secondary-color;
