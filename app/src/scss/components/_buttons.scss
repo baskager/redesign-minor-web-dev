@@ -2,10 +2,14 @@ button,
 input[type="submit"],
 input[type="reset"],
 .btn {
+  font-size: 1em;
+  font-weight: $semi-bold;
+  color: #555;
   cursor: pointer;
   transition: 0.2s;
   padding: 2em 4em;
   border: $btn-border-size solid;
+  border-radius: 0.2em;
 
   &:disabled {}
   &:hover, &:focus {
@@ -33,11 +37,21 @@ input[type="reset"],
 }
 
 .btn-danger {
-  
+  background: $btn-danger-background;
+  border-color: $btn-danger-border-color;
+  color: $btn-danger-color;
+  &:hover, &:focus {
+    background: $btn-danger-focus-background;
+  } 
 }
 
 .btn-warning {
-
+  background: $btn-warning-background;
+  border-color: $btn-warning-border-color;
+  color: $btn-warning-color;
+  &:hover, &:focus {
+    background: $btn-warning-focus-background;
+  } 
 }
 
 .btn-success {

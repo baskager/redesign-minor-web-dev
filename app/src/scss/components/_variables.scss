@@ -4,6 +4,10 @@ $pastel-neon-darkblue: #7B8DFF;
 $pastel-neon-lightblue: #64CFE8;
 $pastel-neon-mintgreen: #6EFFB4;
 
+$success-green: #D4EDDA;
+$danger-red: #E8958D;
+$warning-yellow: #FFCEA0;
+
 $primary-color: $pastel-neon-purple;
 $primary-accent-color: lighten($pastel-neon-purple, 10);
 $secondary-color: $pastel-neon-mintgreen;
@@ -48,17 +52,27 @@ $blockquote-color: darken($secondary-color, 0.5);
 $btn-border-size: 0.1em;
 
 // Buttons
-$btn-primary-background: #f5f5f5;
+$btn-primary-background: #fff;
 $btn-primary-color: #333;
 $btn-primary-focus-background: darken($btn-primary-background, 10);
 $btn-primary-border-color: darken($btn-primary-background, 20);
 
 $btn-cta-background: $primary-color;
 $btn-cta-color: #FFF;
-$btn-cta-focus-background: $primary-accent-color;
+$btn-cta-focus-background: darken($primary-color, 10);
 $btn-cta-border-color: darken($btn-primary-background, 20);
 
-$btn-success-background: $pastel-neon-mintgreen;
+$btn-success-background: darken($success-green, 10);
 $btn-success-color: #333;
-$btn-success-focus-background: darken($pastel-neon-mintgreen, 30);
-$btn-success-border-color: darken($pastel-neon-mintgreen, 30);
+$btn-success-focus-background: darken($success-green, 30);
+$btn-success-border-color: darken($success-green, 20);
+
+$btn-warning-background: $warning-yellow;
+$btn-warning-color: #333;
+$btn-warning-focus-background: darken($warning-yellow, 10);
+$btn-warning-border-color: darken($warning-yellow, 10);
+
+$btn-danger-background: $danger-red;
+$btn-danger-color: #fff;
+$btn-danger-focus-background: darken($danger-red, 10);
+$btn-danger-border-color: darken($danger-red, 30);
