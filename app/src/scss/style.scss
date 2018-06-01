@@ -2,7 +2,9 @@
 @import './components/buttons';
 @import './components/forms';
 @import './components/typography';
-
 body {
-
+  color: $body-color;
+  font-family: $font-family;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
 }
