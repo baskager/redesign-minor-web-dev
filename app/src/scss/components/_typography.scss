@@ -3,6 +3,7 @@ h1 {
   font-size: $h1-font-size;
   font-style: $h1-font-style;
   font-weight: $h1-font-weight;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -55,4 +56,6 @@ mark {
   padding: 0.15rem 0.25rem 0.025rem;
 }
 
-small {}
+small {
+  font-size: $body-font-size-small;
+}
