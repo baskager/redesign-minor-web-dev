@@ -1,12 +1,12 @@
 input,
 select,
 textarea {
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    box-shadow: inset 0 1px 3px #ddd;
-    box-sizing: border-box;
+    border-radius: $input-border-radius;
+    border: $input-border;
+    box-shadow: $input-box-shadow;
+    color: $input-color;
     display: inline-block;
-    padding: 0.5em 0.6em;
+    padding: $input-padding;
     vertical-align: middle;
 }
 
@@ -14,24 +14,20 @@ input:focus,
 select:focus,
 textarea:focus {
     outline: 0;
-    border-color: $primary-color;
+    border-color: $input-focus-border-color;
 }
 
 input:hover,
 select:hover,
 textarea:hover {
     outline: 0;
-    border-color: $primary-color;
-}
-
-input[type="color"] {
-    padding: 0.2em 0.5em;
+    border-color: $input-hover-border-color;
 }
 
 input[disabled],
 select[disabled],
 textarea[disabled] {
     cursor: not-allowed;
-    background-color: #eaeded;
-    color: #cad2d3;
+    background-color: $input-disabled-background-color;
+    color: $input-disabled-color;
 }
