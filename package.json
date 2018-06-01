@@ -1,0 +1,26 @@
+{
+  "name": "redesign-minor-web-dev",
+  "version": "1.0.0",
+  "description": "-",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baskager/redesign-minor-web-dev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baskager/redesign-minor-web-dev/issues"
+  },
+  "homepage": "https://github.com/baskager/redesign-minor-web-dev#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sequence": "^1.0.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
