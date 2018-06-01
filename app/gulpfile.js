@@ -56,7 +56,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./assets/**/*', ['default']);
+    gulp.watch(source + '**/*', ['default']);
 });
 
 gulp.task('default', ['sass', 'js', 'img']);
