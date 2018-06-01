@@ -51,10 +51,10 @@ $blockquote-color: darken($secondary-color, 0.5);
 $btn-border-size: 0.1em;
 
 // Buttons
-$btn-primary-background: #fff;
-$btn-primary-color: #333;
-$btn-primary-focus-background: darken($btn-primary-background, 10);
-$btn-primary-border-color: darken($btn-primary-background, 20);
+$btn-primary-background: #333;
+$btn-primary-color: #fff;
+$btn-primary-focus-background: lighten($btn-primary-background, 30);
+$btn-primary-border-color: lighten($btn-primary-background, 20);
 
 $btn-cta-background: $primary-color;
 $btn-cta-color: #FFF;

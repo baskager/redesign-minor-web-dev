@@ -11,11 +11,18 @@ input[type="reset"],
   border: $btn-border-size solid;
   border-radius: 0.2em;
 
-  &:disabled {}
+  &:disabled {
+    opacity: 0.5;
+    cursor: auto;
+    background: whitesmoke;
+  }
   &:hover, &:focus {
-
+    
   }
   &:active {}
+}
+.btn-link {
+  border: 0;
 }
 
 .btn-primary {
