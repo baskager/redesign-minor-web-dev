@@ -1,7 +1,13 @@
-$primary-color: #EC3E3F;
-$primary-accent-color: #FF7070;
-$secondary-color: #4C919C;
-$secondary-accent-color: #79E7EF;
+$pastel-neon-purple: #AD64E8;
+$pastel-neon-pink: #FF78C0;
+$pastel-neon-darkblue: #7B8DFF;
+$pastel-neon-lightblue: #64CFE8;
+$pastel-neon-mintgreen: #6EFFB4;
+
+$primary-color: $pastel-neon-purple;
+$primary-accent-color: lighten($pastel-neon-purple, 10);
+$secondary-color: $pastel-neon-mintgreen;
+$secondary-accent-color: darken($pastel-neon-mintgreen, 10);
 
 $border-color: #333;
 
@@ -11,9 +17,23 @@ $text-secondary: #555;
 $blockquote-background: #333;
 $blockquote-border: #333;
 $blockquote-color: darken($secondary-color, 0.5);
+
+$btn-border-size: 0.1em;
+
 // Buttons
-$btn-primary-background: $primary-color;
-$btn-primary-color: #FFF;
-$btn-focus-background: #770B11;
+$btn-primary-background: #f5f5f5;
+$btn-primary-color: #333;
+$btn-primary-focus-background: darken($btn-primary-background, 10);
+$btn-primary-border-color: darken($btn-primary-background, 20);
+
+$btn-cta-background: $primary-color;
+$btn-cta-color: #FFF;
+$btn-cta-focus-background: $primary-accent-color;
+$btn-cta-border-color: darken($btn-primary-background, 20);
+
+$btn-success-background: $pastel-neon-mintgreen;
+$btn-success-color: #333;
+$btn-success-focus-background: darken($pastel-neon-mintgreen, 30);
+$btn-success-border-color: darken($pastel-neon-mintgreen, 30);
 
 $link-color: $secondary-color;

@@ -2,18 +2,49 @@ button,
 input[type="submit"],
 input[type="reset"],
 .btn {
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 2em 4em;
+  border: $btn-border-size solid;
+
   &:disabled {}
-  &:hover {}
-  &:focus {}
+  &:hover, &:focus {
+
+  }
   &:active {}
 }
 
-.btn-primary {}
+.btn-primary {
+  background: $btn-primary-background;
+  border-color: $btn-primary-border-color;
+  color: $btn-primary-color;
+  &:hover, &:focus {
+    background: $btn-primary-focus-background;
+  } 
+}
 
-.btn-secondary {}
+.btn-cta {
+  background: $btn-cta-background;
+  border-color: $btn-cta-border-color;
+  color: $btn-cta-color;
+  &:hover, &:focus {
+    background: $btn-cta-focus-background;
+  } 
+}
 
-.btn-danger {}
+.btn-danger {
+  
+}
 
-.btn-warning {}
+.btn-warning {
 
-.btn-success {}
+}
+
+.btn-success {
+  background: $btn-success-background;
+  border-color: $btn-success-border-color;
+  color: $btn-success-color;
+  &:hover, &:focus {
+    background: $btn-success-focus-background;
+  } 
+}
