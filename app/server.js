@@ -10,6 +10,44 @@ const programData = {
     title: "Program"
 };
 
+const partnersData = {
+    title: 'Partners',
+    heading: 'Partners',
+    description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
+    linkText: 'Naar het project',
+    members: [{
+        fullName: 'OBA',
+        description: 'Something about OBA!',
+        avatarURL: '/img/avatars/oba.png',
+        gitHubURL: 'https://www.google.nl'
+    },
+    {
+        fullName: 'Keuvel',
+        description: 'Something about keuvel!',
+        avatarURL: '/img/avatars/keuvel.png',
+        gitHubURL: 'https://www.google.nl'
+    }]
+};
+
+const teamData = {
+    title: 'Ons Team',
+    heading: 'Ons Team',
+    description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
+    linkText: 'Personal GitHub',
+    members: [{
+        fullName: 'James Peter Perrone Jefferies',
+        description: 'Something about me!',
+        avatarURL: '/img/avatars/james.png',
+        gitHubURL: 'https://www.google.nl'
+    },
+    {
+        fullName: 'James Peter Perrone Jefferies',
+        description: 'Something about me!',
+        avatarURL: '/img/avatars/james.png',
+        gitHubURL: 'https://www.google.nl'
+    }]
+};
+
 nunjucks.configure('./templates', {
     autoescape: true,
     express: app,
@@ -19,13 +57,13 @@ nunjucks.configure('./templates', {
 app.set("view engine", "html");
 app.use(express.static('./static'));
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.render('index.html', {
         data: homepageData
     })
 });
 
-app.get('/program', function(req, res) {
+app.get('/program', function (req, res) {
     res.render('program.html', {
         data: programData
     })

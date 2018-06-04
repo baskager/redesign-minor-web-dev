@@ -1,20 +1,94 @@
-$primary-color: #EC3E3F;
-$primary-accent-color: #FF7070;
-$secondary-color: #4C919C;
-$secondary-accent-color: #79E7EF;
+$pastel-neon-pink: #FF015D;
+$pastel-neon-purple: #3D195B;
+$pastel-neon-yellow: #FFDF00;
+$pastel-neon-mintgreen: #6EFFB4;
 
-$border-color: #333;
+$success-green: #D4EDDA;
+$danger-red: #E8958D;
+$warning-yellow: #FFCEA0;
 
-$text-primary: #333;
-$text-secondary: #555;
+$primary-color: $pastel-neon-yellow;
+$secondary-color: $pastel-neon-purple;
+$accent-color: whitesmoke;
 
-$blockquote-background: #333;
-$blockquote-border: #333;
-$blockquote-color: darken($secondary-color, 0.5);
+// Typography
+$black: #222;
+$white: #eee;
+
+$bold: bold;
+$semi-bold: 600;
+$regulair: normal;
+$light: 300;
+
+$font-family: sans-serif;
+
+$h1-font-size: 7.5rem;
+$h1-font-style: normal;
+$h1-font-weight: $bold;
+
+$h2-font-size: 3.125rem;
+$h2-font-style: normal;
+$h2-font-weight: $semi-bold;
+
+$h3-font-size: 1.5rem;
+$h3-font-style: italic;
+$h3-font-weight: $semi-bold;
+
+$body-color: $black;
+$body-font-size: 100%;
+$body-font-size-small: 0.75rem;
+$body-line-height: 1.5rem;
+
+$link-color: $secondary-color;
+
+$blockquote-background-color: $white;
+$blockquote-border-color: $primary-color;
+$blockquote-text-color: $black;
+
+$mark-color: $primary-color;
+
+// Forms
+$input-border-radius: 3px;
+$input-border: 1px solid #CCCCCC;
+
+$input-box-shadow: inset 0 1px 3px #ddd;
+
+$input-color: $body-color;
+
+$input-disabled-background-color: #EAEDED;
+$input-disabled-color: #CAD2D3;
+
+$input-focus-border-color: $primary-color;
+$input-hover-border-color: $primary-color;
+
+$input-padding: 0.25rem 0.5rem;
+
 // Buttons
 $btn-primary-background: $primary-color;
-$btn-primary-color: #FFF;
-$btn-focus-background: #770B11;
+$btn-primary-color: #333;
+$btn-primary-focus-background: lighten($primary-color, 20);
+$btn-primary-border-color: darken($btn-primary-background, 10);
+$btn-border-size: 0.1em;
+
+$btn-cta-background: $secondary-color;
+$btn-cta-color: #fff;
+$btn-cta-focus-background: lighten($secondary-color, 20);
+$btn-cta-border-color: darken($secondary-color, 30);
+
+$btn-success-background: darken($success-green, 10);
+$btn-success-color: #333;
+$btn-success-focus-background: darken($success-green, 30);
+$btn-success-border-color: darken($success-green, 20);
+
+$btn-warning-background: $warning-yellow;
+$btn-warning-color: #333;
+$btn-warning-focus-background: darken($warning-yellow, 10);
+$btn-warning-border-color: darken($warning-yellow, 10);
+
+$btn-danger-background: $danger-red;
+$btn-danger-color: #fff;
+$btn-danger-focus-background: darken($danger-red, 10);
+$btn-danger-border-color: darken($danger-red, 30);
 
 $link-color: $secondary-color;
 
