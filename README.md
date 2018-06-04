@@ -9,7 +9,7 @@
 **Jamal van Rooijen:**
 
 1. Learning how to plan properly in this project. Especially since we are with a team of five people. Dividing tasks and completing our personal goals can only be achieved by planning properly.
-2. Learning more Javascript by developing interactive elements on the website, without being afraid to try new and inovative things if it seems too 'hard' on first glance.
+2. Learning more Javascript by developing interactive elements on the website, without being afraid to try new and inovative things if it seems too 'hard' on first glance. 
 3. Combining style and functionality, which should result in something that is pleasurable to use and has a 'Wow factor'. 
 
 **Rick:**
