@@ -1,5 +1,4 @@
 const express = require('express');
-const IncludeWithNunjucksExtension = require('nunjucks-include-with');
 const nunjucks = require("nunjucks");
 const app = express();
 
@@ -10,6 +9,50 @@ const homepageData = {
 const programData = {
     title: "Program"
 };
+
+const studentWork = {
+    title: 'Student work',
+    heading: 'Student work',
+    description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
+    courses: [
+            {
+                heading: 'heading',
+                imgUrl: '',
+                demoUrl: '',
+                repoUrl: '',
+            },
+            {
+                heading: 'heading',
+                imgUrl: '',
+                demoUrl: '',
+                repoUrl: '',
+            },
+            {
+                heading: 'heading',
+                imgUrl: '',
+                demoUrl: '',
+                repoUrl: '',
+            },
+            {             
+                heading: 'heading',
+                imgUrl: '',
+                demoUrl: '',
+                repoUrl: '',
+            },
+            {
+                heading: 'heading',
+                imgUrl: '',
+                demoUrl: '',
+                repoUrl: '',
+            },
+            {
+                heading: 'heading',
+                imgUrl: '',
+                demoUrl: '',
+                repoUrl: '',
+            }
+    ],
+}
 
 const partnersData = {
     title: 'Partners',
@@ -79,6 +122,12 @@ app.get('/partners', function (req, res) {
 app.get('/team', function (req, res) {
     res.render('partners-team.html', {
         data: teamData
+    })
+});
+
+app.get('/student-work', function (req, res) {
+    res.render('student-work.html', {
+        data: studentWork
     })
 });
 
