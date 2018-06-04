@@ -1,3 +1,4 @@
+@import './components/variables';
 @import './components/mixins';
 @import './components/buttons';
 @import './components/colors';
@@ -9,3 +10,10 @@ body {
 }
 
 @import './components/timeline';
+@import './components/student-work-card';
+
+// general icon size
+.icon {
+    height: 16px;
+    width: 16px;
+}
