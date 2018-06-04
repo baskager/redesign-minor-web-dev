@@ -1,8 +1,16 @@
+@import './components/variables';
 @import './components/buttons';
 @import './components/colors';
 @import './components/forms';
 @import './components/typography';
+@import './components/student-work-card';
 
 body {
 
+}
+
+// general icon size
+.icon {
+    height: 16px;
+    width: 16px;
 }
