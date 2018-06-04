@@ -1,0 +1,19 @@
+button,
+input[type="submit"],
+input[type="reset"],
+.btn {
+  &:disabled {}
+  &:hover {}
+  &:focus {}
+  &:active {}
+}
+
+.btn-primary {}
+
+.btn-secondary {}
+
+.btn-danger {}
+
+.btn-warning {}
+
+.btn-success {}

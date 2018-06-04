@@ -1,0 +1,19 @@
+$primary-color: #EC3E3F;
+$primary-accent-color: #FF7070;
+$secondary-color: #4C919C;
+$secondary-accent-color: #79E7EF;
+
+$border-color: #333;
+
+$text-primary: #333;
+$text-secondary: #555;
+
+$blockquote-background: #333;
+$blockquote-border: #333;
+$blockquote-color: darken($secondary-color, 0.5);
+// Buttons
+$btn-primary-background: $primary-color;
+$btn-primary-color: #FFF;
+$btn-focus-background: #770B11;
+
+$link-color: $secondary-color;
