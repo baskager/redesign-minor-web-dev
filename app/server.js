@@ -12,7 +12,22 @@ const programData = {
 };
 
 const partnersData = {
-    title: "Program"
+    title: 'Partners',
+    heading: 'Partners',
+    description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
+    linkText: 'Naar het project',
+    members: [{
+        fullName: 'OBA',
+        description: 'Something about OBA!',
+        avatarURL: '/img/avatars/oba.png',
+        gitHubURL: 'https://www.google.nl'
+    },
+    {
+        fullName: 'Keuvel',
+        description: 'Something about keuvel!',
+        avatarURL: '/img/avatars/keuvel.png',
+        gitHubURL: 'https://www.google.nl'
+    }]
 };
 
 const teamData = {
@@ -57,7 +72,7 @@ app.get('/program', function (req, res) {
 
 app.get('/partners', function (req, res) {
     res.render('partners-team.html', {
-        data: programData
+        data: partnersData
     })
 });
 
