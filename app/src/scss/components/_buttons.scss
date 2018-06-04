@@ -1,3 +1,6 @@
+a.btn {
+  display: inline-block;
+}
 button,
 input[type="submit"],
 input[type="reset"],
@@ -18,7 +21,7 @@ input[type="reset"],
     background: whitesmoke;
   }
   &:disabled:hover {
-    transform: none;
+    transform: none;  
   }
   &:hover, &:focus {
     transform: scale(1.05);
