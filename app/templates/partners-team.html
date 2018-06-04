@@ -1,11 +1,16 @@
 {% extends 'components/_base.html' %}
-<header>
-    <h1>Partners</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur quae eius inventore eos corporis sed quis consectetur,
-        culpa repellendus illum quas enim sunt voluptas deleniti iure sapiente quidem minus assumenda.</p>
-    <a href="/contact">Interesse? Neem dan contact met ons op!</a>
-</header>
-<main>
-    {% include 'components/_partner-team-article.html' %}
-</main>
+{% block content %}
+    <header>
+        <h1>{{ data.heading }}</h1>
+        <p>{{ data.description }}</p>
+        <a href="/" class="btn btn-primary">Interesse? Neem dan contact met ons op!</a>
+    </header>
+    <main>
+        {% include 'components/_partner-team-article.html' %}
+        {% for item in items %}
+            <li>{{ item.title }}</li>
+        {% else %}
+            <p>No team members :(</p>
+        {% endfor %}
+    </main>
 {% endblock %}
