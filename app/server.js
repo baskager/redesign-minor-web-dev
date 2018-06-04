@@ -1,4 +1,5 @@
 const express = require('express');
+const IncludeWithNunjucksExtension = require('nunjucks-include-with');
 const nunjucks = require("nunjucks");
 const app = express();
 
@@ -9,6 +10,11 @@ const homepageData = {
 const programData = {
     title: "Program"
 };
+
+const nunjucksEnv = nunjucks.configure('./templates');
+nunjucksEnv.addExtension('includeWith', new IncludeWithNunjucksExtension({
+  nunjucksEnv
+ }));
 
 nunjucks.configure('./templates', {
     autoescape: true,
@@ -32,9 +38,3 @@ app.get('/program', function(req, res) {
 });
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
-
-nunjucks.configure("templates", {
-  autoescape: true,
-  express: app
-});
-
