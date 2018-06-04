@@ -7,7 +7,68 @@ const homepageData = {
 };
 
 const programData = {
-    title: "Program"
+    title: "Program",
+    weeks: [{
+        label: "Week 1",
+        items: [{
+            name: "CSS to the rescue",
+            iconSrc: "//via.placeholder.com/64x64",
+            url: "#",
+            description: "Lorem ipsum dolor",
+            partner_id: null,
+            type: "course"
+        }, {
+            name: "Web app from scratch",
+            iconSrc: "//via.placeholder.com/64x64",
+            url: "#",
+            description: "Lorem ipsum dolor",
+            partner_id: null,
+            type: "course"
+        }, {
+            name: "Weekly Nerd",
+            iconSrc: "//via.placeholder.com/64x64",
+            url: "#",
+            description: "Lorem ipsum dolor",
+            partner_id: null,
+            type: "course"
+        }]
+    }, {
+        label: "Week 2",
+        items: []
+    }, {
+        label: "Week 3",
+        items: []
+    }, {
+        label: "Week 4",
+        items: [{
+            name: "CSS to the rescue",
+            iconSrc: "//via.placeholder.com/64x64",
+            url: "#",
+            description: "Lorem ipsum dolor",
+            partner_id: null,
+            type: "course"
+        }, {
+            name: "Web app from scratch",
+            iconSrc: "//via.placeholder.com/64x64",
+            url: "#",
+            description: "Lorem ipsum dolor",
+            partner_id: null,
+            type: "course"
+        }, {
+            name: "Weekly Nerd",
+            iconSrc: "//via.placeholder.com/64x64",
+            url: "#",
+            description: "Lorem ipsum dolor",
+            partner_id: null,
+            type: "course"
+        }]
+    }, {
+        label: "Week 5",
+        items: []
+    }, {
+        label: "Week 6",
+        items: []
+    }]
 };
 
 const partnersData = {

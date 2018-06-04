@@ -1,122 +1,19 @@
 {% block content %}
+
 <div class="timeline">
-
-    <div class="row">
-        <div class="column week">
-            <h2>Week 1</h2>
+    {% for week in data.weeks %}
+        <div class="row">
+            <div class="column week">
+                <h4>{{ week.label }}</h4>
+            </div>
+            {% for item in week.items %}
+                <div class="column course">
+                    <img src="{{ item.iconSrc }}" alt="">
+                    <h4><a href="{{ item.url }}">{{ item.name }}</a></h4>
+                </div>
+            {% endfor %}
         </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">CSS to the rescue</a></h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">Web app from scratch</a></h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">Weekly Nerd</a></h2>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="column week">
-            <h2>Week 2</h2>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="column week">
-            <h2>Week 3</h2>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="column week">
-            <h2>Week 4</h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">CSS to the rescue</a></h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">Web app from scratch</a></h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">Weekly Nerd</a></h2>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="column week">
-            <h2>Week 5</h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">CSS to the rescue</a></h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">Web app from scratch</a></h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">Weekly Nerd</a></h2>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="column week">
-            <h2>Week 6</h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">CSS to the rescue</a></h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">Web app from scratch</a></h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">Weekly Nerd</a></h2>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="column week">
-            <h2>Week 7</h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">CSS to the rescue</a></h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">Web app from scratch</a></h2>
-        </div>
-
-        <div class="column course">
-            <img src="//via.placeholder.com/64x64" alt="">
-            <h2><a href="#">Weekly Nerd</a></h2>
-        </div>
-    </div>
+    {% endfor %}
 </div>
+
 {% endblock %}
