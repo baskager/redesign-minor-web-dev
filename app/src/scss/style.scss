@@ -2,7 +2,9 @@
 @import './components/colors';
 @import './components/forms';
 @import './components/typography';
+@import './components/coursecard';
 
-body {
-
+* {
+    margin: 0;
+    padding: 0; 
 }

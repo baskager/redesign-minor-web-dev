@@ -2,8 +2,18 @@
 
 {% block content %}
 
-<h1>{{ data.title }}</h1>
+<main>
+
+    <h1>{{ data.title }}</h1>
+
+    <section class="course-card">
+        {% include "components/_course-card.html" %}
+        {% include "components/_course-card.html" %}
+        {% include "components/_course-card.html" %}
+        {% include "components/_course-card.html" %}
+        {% include "components/_course-card.html" %}
+    </section>
+
+</main>
 
 {% endblock %}
-
-{% include "components/_course-card.html" %}

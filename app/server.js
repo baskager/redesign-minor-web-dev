@@ -30,7 +30,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/course', function (req, res) {
-    res.render('index.html', {
+    res.render('course.html', {
         data: courseData
     });
 });
@@ -42,9 +42,4 @@ app.get('/program', function(req, res) {
 });
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
-
-nunjucks.configure("templates", {
-  autoescape: true,
-  express: app
-});
 

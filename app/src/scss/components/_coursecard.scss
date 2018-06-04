@@ -1,0 +1,52 @@
+.course-card {
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 2em;
+    div {
+        background-color: rgba(255, 255, 255, 1);
+        padding: 0 2rem 2rem 2rem;
+        border-radius: 4px;
+        border: solid gray 1px;
+        box-shadow: 0 10px 25px -10px rgba(72, 29, 99, .3);
+        position: relative;
+        h4 {
+            text-align: center;
+            margin: 1em 0;
+        }
+        svg {
+            height: 40px;
+            width: 40px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+        p {
+            line-height: 1.6em;
+        }
+        a {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .course-card {
+        margin: 0 auto;
+        grid-template-columns: calc(100% / 2 - .5em) calc(100% / 2 - .5em);
+        grid-column-gap: 1em;
+        grid-row-gap: 3em;
+    }
+}
+
+@media (min-width: 992px) {
+    .course-card {
+        margin: 0 auto;
+        grid-template-columns: calc(100% / 3 - 1em) calc(100% / 3) calc(100% / 3 - 1em);
+    }
+}
