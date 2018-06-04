@@ -6,11 +6,15 @@
         <a href="/" class="btn btn-primary">Interesse? Neem dan contact met ons op!</a>
     </header>
     <main>
-        {% include 'components/_partner-team-article.html' %}
-        {% for item in items %}
-            <li>{{ item.title }}</li>
-        {% else %}
-            <p>No team members :(</p>
+        {% for member in data.members %}
+            <article>
+                <img src="{{ member.avatarURL }}">
+                <div>
+                    <h2>{{ member.fullName }}</h2>
+                    <p>{{ member.description }}</p>
+                    <a href="{{ member.gitHubURL }}" class="btn">{{ data.linkText }}</a>
+                </div>
+            </article>
         {% endfor %}
     </main>
 {% endblock %}
