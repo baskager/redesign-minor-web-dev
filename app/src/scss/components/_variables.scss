@@ -1,17 +1,15 @@
-$pastel-neon-purple: #AD64E8;
 $pastel-neon-pink: #FF015D;
-$pastel-neon-darkblue: #7B8DFF;
-$pastel-neon-lightblue: #64CFE8;
+$pastel-neon-purple: #3D195B;
+$pastel-neon-yellow: #FFDF00;
 $pastel-neon-mintgreen: #6EFFB4;
 
 $success-green: #D4EDDA;
 $danger-red: #E8958D;
 $warning-yellow: #FFCEA0;
 
-$primary-color: $pastel-neon-purple;
-$primary-accent-color: lighten($pastel-neon-purple, 10);
-$secondary-color: $pastel-neon-mintgreen;
-$secondary-accent-color: darken($pastel-neon-mintgreen, 10);
+$primary-color: $pastel-neon-yellow;
+$secondary-color: $pastel-neon-purple;
+$accent-color: whitesmoke;
 
 // Typography
 $black: #222;
@@ -41,7 +39,7 @@ $body-font-size: 100%;
 $body-font-size-small: 0.75rem;
 $body-line-height: 1.5rem;
 
-$link-color: $primary-color;
+$link-color: $secondary-color;
 
 $blockquote-background-color: $white;
 $blockquote-border-color: $primary-color;
@@ -66,16 +64,16 @@ $input-hover-border-color: $primary-color;
 $input-padding: 0.25rem 0.5rem;
 
 // Buttons
-$btn-primary-background: #333;
-$btn-primary-color: #fff;
-$btn-primary-focus-background: lighten($btn-primary-background, 30);
-$btn-primary-border-color: lighten($btn-primary-background, 20);
+$btn-primary-background: $primary-color;
+$btn-primary-color: #333;
+$btn-primary-focus-background: lighten($primary-color, 20);
+$btn-primary-border-color: darken($btn-primary-background, 10);
 $btn-border-size: 0.1em;
 
-$btn-cta-background: $primary-color;
-$btn-cta-color: #FFF;
-$btn-cta-focus-background: darken($primary-color, 10);
-$btn-cta-border-color: darken($btn-primary-background, 20);
+$btn-cta-background: $secondary-color;
+$btn-cta-color: #fff;
+$btn-cta-focus-background: lighten($secondary-color, 20);
+$btn-cta-border-color: darken($secondary-color, 30);
 
 $btn-success-background: darken($success-green, 10);
 $btn-success-color: #333;

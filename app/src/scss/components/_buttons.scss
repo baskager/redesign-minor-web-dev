@@ -8,6 +8,7 @@ input[type="reset"],
   cursor: pointer;
   transition: 0.2s;
   padding: 2em 4em;
+  margin: 1em;
   border: $btn-border-size solid;
   border-radius: 0.2em;
 
@@ -16,8 +17,11 @@ input[type="reset"],
     cursor: auto;
     background: whitesmoke;
   }
+  &:disabled:hover {
+    transform: none;
+  }
   &:hover, &:focus {
-    
+    transform: scale(1.05);
   }
   &:active {}
 }
