@@ -1,3 +1,4 @@
+@import './components/mixins';
 @import './components/buttons';
 @import './components/colors';
 @import './components/forms';
@@ -6,3 +7,5 @@
 body {
 
 }
+
+@import './components/timeline';
