@@ -9,22 +9,39 @@
     fieldset {
         border: none;
         margin: 0;
-        padding: 0;
-
-        legend {
-            border-bottom: 1px solid $black;
-            text-align: center;
-            width: 100%;
-        }
+        padding: $padding-16 $padding-32;
     }
 
     form {
         border-radius: 5px;
         border: 1px solid $black;
 
+        h2 {
+            border-bottom: 1px solid $black;
+            font-size: 20px;
+            margin: 0;
+            padding: $padding-16 0;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: $margin-16;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
         input {
             display: block;
+            margin-top: $margin-8;
+            padding: $padding-16;
             width: 100%;
+
+            &[type="submit"] {
+                margin: $margin-32 0;
+            }
         }
     }
 }
