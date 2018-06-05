@@ -1,0 +1,30 @@
+.signup-wrapper {
+    display: flex;
+
+    section,
+    form {
+        width: 50%;
+    }
+
+    fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+
+        legend {
+            border-bottom: 1px solid $black;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    form {
+        border-radius: 5px;
+        border: 1px solid $black;
+
+        input {
+            display: block;
+            width: 100%;
+        }
+    }
+}
