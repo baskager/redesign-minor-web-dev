@@ -4,6 +4,7 @@
         display: grid;
         grid-gap: 20px;
         grid-template-columns: repeat(12, 1fr);
+        padding: 50px 0;
 
         img {
             grid-column: 1 / 7;
