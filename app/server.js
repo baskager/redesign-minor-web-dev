@@ -15,42 +15,88 @@ const studentWork = {
     heading: 'Student work',
     description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
     courses: [
-            {
-                heading: 'heading',
-                imgUrl: '',
-                demoUrl: '',
-                repoUrl: '',
-            },
-            {
-                heading: 'heading',
-                imgUrl: '',
-                demoUrl: '',
-                repoUrl: '',
-            },
-            {
-                heading: 'heading',
-                imgUrl: '',
-                demoUrl: '',
-                repoUrl: '',
-            },
-            {             
-                heading: 'heading',
-                imgUrl: '',
-                demoUrl: '',
-                repoUrl: '',
-            },
-            {
-                heading: 'heading',
-                imgUrl: '',
-                demoUrl: '',
-                repoUrl: '',
-            },
-            {
-                heading: 'heading',
-                imgUrl: '',
-                demoUrl: '',
-                repoUrl: '',
-            }
+        {
+            name: 'wafs',
+            items: [
+                {
+                    heading: 'heading',
+                    imgUrl: '',
+                    demoUrl: '',
+                    repoUrl: '',
+                },
+                {
+                    heading: 'heading',
+                    imgUrl: '',
+                    demoUrl: '',
+                    repoUrl: '',
+                },
+                {
+                    heading: 'heading',
+                    imgUrl: '',
+                    demoUrl: '',
+                    repoUrl: '',
+                },
+                {
+                    heading: 'heading',
+                    imgUrl: '',
+                    demoUrl: '',
+                    repoUrl: '',
+                },
+                {
+                    heading: 'heading',
+                    imgUrl: '',
+                    demoUrl: '',
+                    repoUrl: '',
+                },
+                {
+                    heading: 'heading',
+                    imgUrl: '',
+                    demoUrl: '',
+                    repoUrl: '',
+                }
+            ]
+        },
+        {
+            name: 'cssttr',
+            items: [
+                {
+                    heading: 'heading',
+                    imgUrl: '',
+                    demoUrl: '',
+                    repoUrl: '',
+                },
+                {
+                    heading: 'heading',
+                    imgUrl: '',
+                    demoUrl: '',
+                    repoUrl: '',
+                },
+                {
+                    heading: 'heading',
+                    imgUrl: '',
+                    demoUrl: '',
+                    repoUrl: '',
+                },
+                {
+                    heading: 'heading',
+                    imgUrl: '',
+                    demoUrl: '',
+                    repoUrl: '',
+                },
+                {
+                    heading: 'heading',
+                    imgUrl: '',
+                    demoUrl: '',
+                    repoUrl: '',
+                },
+                {
+                    heading: 'heading',
+                    imgUrl: '',
+                    demoUrl: '',
+                    repoUrl: '',
+                }
+            ]
+        },
     ],
 }
 

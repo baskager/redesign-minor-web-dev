@@ -6,7 +6,13 @@
 <main>
     {% for course in data.courses %}
     <div class="container">        
-         <h2>Test</h2>
+         <h2>{{ course.name }}</h2>
+
+         {% for item in course.items %}
+
+         <span>{{ item.heading }}</span>
+
+         {% endfor %}
     </div>
     {% endfor %}
 </main>
