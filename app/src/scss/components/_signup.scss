@@ -12,6 +12,16 @@
         padding: $padding-16 $padding-32;
     }
 
+    section {
+        h2 {
+            font-size: 24px;
+            margin: 0 0 $margin-16;
+            &:not(:first-child) {
+                margin-top: $margin-32;
+            }
+        }
+    }
+
     form {
         border-radius: 5px;
         border: 1px solid $black;
