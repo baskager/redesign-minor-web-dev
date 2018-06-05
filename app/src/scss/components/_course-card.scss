@@ -1,0 +1,28 @@
+.course-card-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-card {
+    padding: 3em;
+    margin-right: 4em;
+    background: $secondary-color;
+}
+.course-card:last-child {
+    margin-right: 0;
+}
+
+.course-card img {
+    width: 10em;
+    height: 10em;
+    display: block;
+    margin: 0 auto;
+}
+.course-card h3 {
+    text-align: center;
+    color: $primary-color;
+}
+.course-card p {
+    text-align: justify;
+    color: #fff;
+}
