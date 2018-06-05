@@ -1,6 +1,9 @@
 .timeline {
     display: flex;
     flex-direction: column;
+    margin-bottom: rem(160); // to be removed
+    max-width: rem(1024);
+    margin: rem(80) auto rem(160) auto;
 
     .sticky {
         position: sticky;
@@ -20,8 +23,8 @@
         align-items: center;
         text-align: center;
         background: #fff;
-
-        padding: rem(16);
+        //height: rem(160);
+        padding: rem(24);
     }
 
     .column-project {
@@ -31,6 +34,6 @@
     }
 
     .week {
-
+        //background-image: url("/img/timeline-mid.svg");
     }
 }
