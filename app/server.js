@@ -8,8 +8,9 @@ const homepageData = {
 
 const programData = {
     title: "Program",
-    weeks: [{
-        label: "Week 1",
+    program: [{
+        label: null,
+        sticky: true,
         items: [{
             name: "CSS to the rescue",
             iconSrc: "//via.placeholder.com/64x64",
@@ -32,42 +33,68 @@ const programData = {
             partner_id: null,
             type: "course"
         }]
+    }, {
+        label: "Week 1",
+        sticky: false,
+        items: [
+            {
+                type: "assignment",
+                description: "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
+            }, {
+                type: "assignment",
+                description: "Bouwen van een basic app en deployen."
+            }, {
+                type: "speaker",
+                name: "Justus Sturkenboom",
+                url: "#",
+                avatarURL: "//via.placeholder.com/64x64"
+            }
+        ]
     }, {
         label: "Week 2",
-        items: []
+        sticky: false,
+        items: [
+            {
+                type: "assignment",
+                description: "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
+            }, {
+                type: "assignment",
+                description: "Bouwen van een basic app en deployen."
+            }, {
+                type: "speaker",
+                name: "Justus Sturkenboom",
+                url: "#",
+                avatarURL: "//via.placeholder.com/64x64"
+            }
+        ]
     }, {
         label: "Week 3",
-        items: []
+        sticky: false,
+        items: [
+            {
+                type: "assignment",
+                description: "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
+            }, {
+                type: "assignment",
+                description: "Bouwen van een basic app en deployen."
+            }, {
+                type: "speaker",
+                name: "Justus Sturkenboom",
+                url: "#",
+                avatarURL: "//via.placeholder.com/64x64"
+            }
+        ]
     }, {
         label: "Week 4",
-        items: [{
-            name: "CSS to the rescue",
-            iconSrc: "//via.placeholder.com/64x64",
-            url: "#",
-            description: "Lorem ipsum dolor",
-            partner_id: null,
-            type: "course"
-        }, {
-            name: "Web app from scratch",
-            iconSrc: "//via.placeholder.com/64x64",
-            url: "#",
-            description: "Lorem ipsum dolor",
-            partner_id: null,
-            type: "course"
-        }, {
-            name: "Weekly Nerd",
-            iconSrc: "//via.placeholder.com/64x64",
-            url: "#",
-            description: "Lorem ipsum dolor",
-            partner_id: null,
-            type: "course"
-        }]
-    }, {
-        label: "Week 5",
-        items: []
-    }, {
-        label: "Week 6",
-        items: []
+        sticky: false,
+        items: [
+            {
+                type: "project",
+                name: "Project 1",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.",
+                url: "#"
+            }
+        ]
     }]
 };
 

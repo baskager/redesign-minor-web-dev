@@ -19,6 +19,10 @@ body {
     width: 16px;
 }
 
+.avatar {
+    border-radius: 50%;
+}
+
 @import './components/timeline';
 @import './components/student-work-card';
 @import './components/teacher-card';

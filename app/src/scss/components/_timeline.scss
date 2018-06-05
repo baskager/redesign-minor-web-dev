@@ -2,11 +2,14 @@
     display: flex;
     flex-direction: column;
 
+    .sticky {
+        position: sticky;
+        top: 0;
+    }
+
     .row {
         display: inline-flex;
-        position: sticky;
-        top: rem(160);
-        height: rem(192);
+
     }
 
     .column {
@@ -15,14 +18,19 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
         background: #fff;
+
+        padding: rem(16);
     }
 
-    .course {
-        height: rem(192);
+    .column-project {
+        width: 75%;
+        background-color: #f6f6f6;
+        border-radius: rem(8);
     }
 
     .week {
-        
+
     }
 }
