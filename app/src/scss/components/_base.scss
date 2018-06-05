@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    color: $body-color;
+    font-family: $font-family;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+}
+
+body>header,
+main {
+    margin: 0 auto;
+    max-width: 80rem;
+    width: 95%;
+}
