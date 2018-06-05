@@ -11,6 +11,10 @@ const programData = {
     title: "Program"
 };
 
+const courseData = {
+    title: "Course"
+};
+
 const partnersData = {
     title: 'Partners',
     heading: 'Partners',
@@ -91,5 +95,11 @@ app.get('/signup', function (req, res) {
         data: signupData
     })
 });
+
+app.get('/course', function(req, res) {
+    res.render('course.html', {
+        data: courseData
+    })
+})
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
