@@ -2,10 +2,45 @@
 <header>
     <h1>{{ data.heading }}</h1>
     <p>{{ data.description }}</p>
+
+    <nav class="searchbar">
+        <form action="/student-work" method="POST">
+    
+            <select name="archive" id="select-year">
+                <option value="all">All years</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+            </select>
+
+            <select name="courses" id="select-course">
+                <option value="all">All courses</option>
+
+                <option value="wafs">Web app from scratch</option>
+                <option value="ccsttr">CSS to the rescue</option>
+                <option value="project1">Project 1</option>
+                
+                <option value="pm">Performance matters</option>
+                <option value="bt">Browser technologies</option>
+                <option value="project2">Project 2</option>
+
+                <option value="wd">Web design</option>
+                <option value="rtw">Real time web</option>
+                <option value="project3">Project 3</option>
+
+                <option value="mp">Meesterproef</option>
+            </select>
+        
+            <input type="text" placeholder="Search">
+            <button type="submit">Filter</button>
+        
+        </form>
+    </nav>
 </header>
-<main>
+
+<div class="courses">
     {% for course in data.courses %}
-    <div class="container">        
+    <div class="course">        
          <h2>{{ course.name }}</h2>
 
          {% for item in course.items %}
@@ -13,7 +48,10 @@
          <span>{{ item.heading }}</span>
 
          {% endfor %}
+
+         <a href="#" class="btn-primary">Meer {{ course.name }}</a>
     </div>
     {% endfor %}
-</main>
+
+</div>
 {% endblock %}
