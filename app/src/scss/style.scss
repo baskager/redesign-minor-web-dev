@@ -1,4 +1,5 @@
 @import './components/variables';
+@import './components/base';
 @import './components/styleguide';
 @import './components/mixins';
 @import './components/forms';
@@ -20,3 +21,4 @@ body {
 
 @import './components/timeline';
 @import './components/student-work-card';
+@import './components/teacher-card';

@@ -109,6 +109,10 @@ const teamData = {
     }]
 };
 
+const signupData = {
+    title: "Sign-Up"
+};
+
 nunjucks.configure('./templates', {
     autoescape: true,
     express: app,
@@ -127,6 +131,24 @@ app.get('/', function (req, res) {
 app.get('/program', function (req, res) {
     res.render('program.html', {
         data: programData
+    })
+});
+
+app.get('/partners', function (req, res) {
+    res.render('partners-team.html', {
+        data: partnersData
+    })
+});
+
+app.get('/team', function (req, res) {
+    res.render('partners-team.html', {
+        data: teamData
+    })
+});
+
+app.get('/signup', function (req, res) {
+    res.render('signup.html', {
+        data: signupData
     })
 });
 

@@ -5,7 +5,7 @@
     .row {
         display: inline-flex;
         position: sticky;
-        top: 0;
+        top: rem(160);
         height: rem(192);
     }
 
@@ -16,7 +16,6 @@
         justify-content: center;
         align-items: center;
         background: #fff;
-        box-shadow: $card-shadow;
     }
 
     .course {
@@ -24,6 +23,6 @@
     }
 
     .week {
-
+        
     }
 }
