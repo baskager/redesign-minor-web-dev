@@ -1,13 +1,7 @@
 @import './components/variables';
+@import './components/base';
 @import './components/styleguide';
 @import './components/forms';
 @import './components/buttons';
 @import './components/typography';
 @import './components/teacher-card';
-
-body {
-    color: $body-color;
-    font-family: $font-family;
-    font-size: $body-font-size;
-    line-height: $body-line-height;
-}
