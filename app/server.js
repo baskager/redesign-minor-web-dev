@@ -12,7 +12,8 @@ const programData = {
 };
 
 const courseData = {
-    title: "Course"
+    title: "Course",
+    description: "Here comes the description for the course. Here comes the description for the course. Here comes the description for the course."
 };
 
 const partnersData = {

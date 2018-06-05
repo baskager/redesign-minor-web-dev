@@ -2,6 +2,67 @@
 
 {% block content %}
 
-<h1>{{ data.title }}</h1>
+<section class="courseHeader">
+    <h1>{{ data.title }}</h1>
+    <p>{{ data.description }}</p>
+    <svg></svg>
+</section>
+
+<main>
+    <section class="teacher">
+        <div>
+            <h4>Teacher name</h4>
+            <p>Teacher github</p>
+        </div>
+        <div>
+            <h4>Teacher name</h4>
+            <p>Teacher github</p>
+        </div>
+    </section>
+
+    <section class="">
+        <div>
+            <h2>Learn goals</h2>
+            <ul>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+        </div>
+        <div>
+            <h2>More about this course</h2>
+            <ul>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+        </div>
+    </section>
+
+    include course-card
+
+    include student-work
+
+    <section class="other-courses">
+        <h2>Other courses</h2>
+        <div>
+            <a href="">other course</a>
+            <a href="">other course</a>
+            <a href="">other course</a>
+            <a href="">other course</a>
+            <a href="">other course</a>
+            <a href="">other course</a>
+            <a href="">other course</a>
+            <a href="">other course</a>
+        </div>
+    </section>
+
+</main>
+
+include footer
 
 {% endblock %}
