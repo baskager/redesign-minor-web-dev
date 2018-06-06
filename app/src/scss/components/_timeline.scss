@@ -5,14 +5,13 @@
     max-width: rem(1024);
     margin: rem(80) auto rem(160) auto;
 
+    .row {
+        display: inline-flex;
+    }
+
     .sticky {
         position: sticky;
         top: 0;
-    }
-
-    .row {
-        display: inline-flex;
-
     }
 
     .column {
@@ -23,7 +22,6 @@
         align-items: center;
         text-align: center;
         background: #fff;
-        //height: rem(160);
         padding: rem(24);
     }
 
@@ -33,7 +31,22 @@
         border-radius: rem(8);
     }
 
+    .sticky + .row {
+        .week {
+            background-image: url("/img/timeline/timeline-start.svg");
+        }
+    }
+
     .week {
-        //background-image: url("/img/timeline-mid.svg");
+        background-image: url("/img/timeline/timeline-mid.svg");
+        background-position: center right 20px;
+        background-repeat: no-repeat;
+    }
+
+    .row:last-child,
+    .row.project {
+        .week {
+            background-image: url("/img/timeline/timeline-end.svg");
+        }
     }
 }
