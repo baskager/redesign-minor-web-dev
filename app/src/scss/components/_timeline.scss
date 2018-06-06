@@ -1,28 +1,15 @@
-
-
 .timeline {
     display: flex;
     flex-direction: column;
-    margin-bottom: rem(160); // to be removed
     margin: rem(80) auto rem(160) auto;
 
     .sticky {
         position: sticky;
         top: 0;
-        box-shadow: 0px 1px 3px rgba(0,0,0,0.12), 0px -1px 3px rgba(0,0,0,0.12);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0px -1px 3px rgba(0,0,0,0.12);
+
         &:first-child {
             box-shadow: $bottom-shadow;
-        }
-
-        .course {
-            h4 {
-                margin: 1em 0 0 0;
-                text-transform: uppercase;
-                a {
-                    color: $pastel-neon-pink;
-                    text-decoration: none;
-                }
-            }
         }
     }
 
@@ -40,7 +27,7 @@
         align-items: center;
         text-align: center;
         background: #fff;
-        padding: rem(24);
+        padding: $padding-24;
     }
 
     .column-project {
