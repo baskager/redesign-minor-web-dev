@@ -11,10 +11,71 @@ body {
     font-size: $body-font-size;
     line-height: $body-line-height;
 }
+.center {
+    margin: 0 auto;
+}
+.container {
+    max-width: 80vw;
+    .col-1 {
+        max-width: 100%;
+    }
+    .col-2 {
+        max-width: 50%;
+    }
+    .col-4 {
+        max-width: 25%;
+    }
+    .col-6 {
+        max-width: 18.75%;
+    }
+    .col-8 {
+        max-width: 12.5%;
+    }
+}
+
+@media (max-width:62em) {
+    .container {
+        max-width: 100%;
+        .col-t-1 {
+            max-width: 100%;
+        }
+        .col-t-2 {
+            max-width: 50%;
+        }
+        .col-t-4 {
+            max-width: 25%;
+        }
+    }
+}
+
+@media (max-width:48em) {
+    .container {
+        max-width: 100%;
+        .col-m-1 {
+            max-width: 100%;
+            background: blue;
+        }
+        .col-m-2 {
+            max-width: 50%;
+        }
+        .col-m-4 {
+            max-width: 25%;
+        }
+    }
+}
 
 body>header,
 main {
     margin: 0 auto;
     max-width: 80rem;
     width: 95%;
+}
+
+.icon {
+    height: 16px;
+    width: 16px;
+}
+
+.avatar {
+    border-radius: 50%;
 }
