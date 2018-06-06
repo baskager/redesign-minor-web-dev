@@ -6,11 +6,13 @@
 
     {% for week in data.program %}
 
-        {% if week.sticky %}
-        <div class="row sticky">
-        {% else %}
-        <div class="row">
-        {% endif %}
+    {% if week.sticky %}
+    <div class="row sticky">
+        <div class="row-container">
+    {% else %}
+    <div class="row">
+        <div class="row-container">
+    {% endif %}
 
             <div class="column week">
                 {% if week.label %}
@@ -20,32 +22,37 @@
 
             {% for item in week.items %}
 
-                {% if item.type == 'course' %}
-                    <div class="column course">
-                        <img src="{{ item.iconSrc }}" alt="">
-                        <h4><a href="{{ item.url }}">{{ item.name }}</a></h4>
-                    </div>
-                {% elseif  item.type == 'assignment' %}
-                    <div class="column">
-                        <p>{{ item.description }}</p>
-                    </div>
-                {% elseif item.type == 'speaker' %}
-                    <div class="column">
-                        <img class="avatar" src="{{ item.avatarURL }}" alt="">
-                        <h4><a href="{{ item.url }}">{{ item.name }}</a></h4>
-                    </div>
-                {% elseif item.type == 'project' %}
-                    <div class="column column-project">
-                        <h4><a href="{{ item.url }}">{{ item.name }}</a></h4>
-                        <p>{{ item.description }}</p>
-                    </div>
-                {% endif %}
+            {% if item.type == 'course' %}
+                <div class="column course">
+                    <img src="{{ item.iconSrc }}" alt="">
+                    <h4><a href="{{ item.url }}">{{ item.name }}</a></h4>
+                </div>
 
-            {% endfor %}
-        </div>
+            {% elseif  item.type == 'assignment' %}
+                <div class="column">
+                    <p>{{ item.description }}</p>
+                </div>
+
+            {% elseif item.type == 'speaker' %}
+                <div class="column">
+                    <img class="avatar" src="{{ item.avatarURL }}" alt="">
+                    <h4><a href="{{ item.url }}">{{ item.name }}</a></h4>
+                </div>
+
+            {% elseif item.type == 'project' %}
+                <div class="column column-project">
+                    <h4><a href="{{ item.url }}">{{ item.name }}</a></h4>
+                    <p>{{ item.description }}</p>
+                </div>
+            {% endif %}
+
     {% endfor %}
+        </div> <!--ending row-->
+    </div>
 
+    {% endfor %}
+        </div>
+    </div> <!--ending sticky-->
 
-</div>
-
+</div> <!--ending timeline-->
 {% endblock %}
