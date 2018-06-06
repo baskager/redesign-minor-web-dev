@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 100%;
     grid-row-gap: 2em;
-    .course-card {
+    div {
         padding: 3em;
         background: $secondary-color;
         position: relative;

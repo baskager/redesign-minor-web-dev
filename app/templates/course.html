@@ -10,14 +10,20 @@
 
 <main>
     <section class="teacher">
-        <div>
-            <h4>Teacher name</h4>
-            <p>Teacher github</p>
-        </div>
-        <div>
-            <h4>Teacher name</h4>
-            <p>Teacher github</p>
-        </div>
+        <div class='teacher-card'>
+                <img src='https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg' class='avatar' alt=''>
+                <div class='info'>
+                    <h3>Vasilis van Geemert</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a turpis eget lectus aliquam maximus. </p>
+                </div>
+            </div>
+        <div class='teacher-card'>
+                <img src='https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg' class='avatar' alt=''>
+                <div class='info'>
+                    <h3>Vasilis van Geemert</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a turpis eget lectus aliquam maximus. </p>
+                </div>
+            </div>
     </section>
 
     <section class="">
@@ -43,7 +49,11 @@
         </div>
     </section>
 
-    include course-card
+    <div class="course-card-list">
+    {% include 'components/_course-card.html' %}
+    {% include 'components/_course-card.html' %}
+    {% include 'components/_course-card.html' %}
+    </div>
 
     include student-work
 
