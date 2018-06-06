@@ -1,9 +1,11 @@
 {% extends "components/_base.html" %}
 
 {% block content %}
+<div class='container center'>
+    <div class='col-1'>
+        <h1>{{ data.title }}</h1>
 
-<h1>{{ data.title }}</h1>
-
-{% include "components/_student-work-card.html" %}
-
+        {% include "components/_student-work-card.html" %}
+    </div>
+</div>
 {% endblock %}

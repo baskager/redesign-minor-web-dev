@@ -11,6 +11,27 @@ body {
     font-size: $body-font-size;
     line-height: $body-line-height;
 }
+.center {
+    margin: 0 auto;
+}
+.container {
+    max-width: 80vw;
+    .col-1 {
+        width: 100%;
+    }
+    .col-2 {
+        width: 100% / 2;
+    }
+    .col-4 {
+        width: 100% / 4;
+    }
+    .col-6 {
+        width: 100% / 6;
+    }
+    .col-8 {
+        width: 100% / 8;
+    }
+}
 
 body>header,
 main {
