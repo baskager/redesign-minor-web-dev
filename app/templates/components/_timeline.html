@@ -4,23 +4,28 @@
 
     <!-- TODO make empty row 25% width instead of 100% -->
 
-    {% for week in data.program %}
+    {% for row in data.program %}
 
-    {% if week.sticky %}
-    <div class="row sticky">
-        <div class="row-container">
-    {% else %}
-    <div class="row">
-        <div class="row-container">
-    {% endif %}
+        {% if row.sticky %}
+        <div class="row sticky">
+            <div class="row-container">
+        {% elseif row.items.length == 1 %}
+        <div class="row project">
+            <div class="row-container">
+        {% else %}
+        <div class="row">
+            <div class="row-container">
+        {% endif %}
 
+            {% if row.label %}
             <div class="column week">
-                {% if week.label %}
-                    <h4>{{ week.label }}</h4>
-                {% endif %}
+                <h4>{{ row.label }}</h4>
             </div>
+            {% else %}
+            <div class="column"></div>
+            {% endif %}
 
-            {% for item in week.items %}
+            {% for item in row.items %}
 
             {% if item.type == 'course' %}
                 <div class="column course">
@@ -46,8 +51,12 @@
                 </div>
             {% endif %}
 
+
     {% endfor %}
         </div> <!--ending row-->
+    </div>
+
+        </div> <!--ending project-->
     </div>
 
     {% endfor %}
