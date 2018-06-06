@@ -2,28 +2,27 @@
 
 {% block content %}
 
-<section class="courseHeader">
-    <h1>{{ data.title }}</h1>
-    <p>{{ data.description }}</p>
-    <svg></svg>
-</section>
-
-<main>
-    <section class="teacher">
-        <div class='teacher-card'>
-                <img src='https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg' class='avatar' alt=''>
-                <div class='info'>
-                    <h3>Vasilis van Geemert</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a turpis eget lectus aliquam maximus. </p>
-                </div>
+<main class="container">
+    <section class="courseHeader">
+        <h1>{{ data.title }}</h1>
+        <p>{{ data.description }}</p>
+        <svg></svg>
+    </section>
+    <section class="teacher-list">
+        <div class='teacher-card col-4'>
+            <img src='https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg' class='avatar' alt=''>
+            <div class='info'>
+                <h3>Vasilis van Geemert</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a turpis eget lectus aliquam maximus. </p>
             </div>
-        <div class='teacher-card'>
-                <img src='https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg' class='avatar' alt=''>
-                <div class='info'>
-                    <h3>Vasilis van Geemert</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a turpis eget lectus aliquam maximus. </p>
-                </div>
+        </div>
+        <div class='teacher-card col-4'>
+            <img src='https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg' class='avatar' alt=''>
+            <div class='info'>
+                <h3>Vasilis van Geemert</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a turpis eget lectus aliquam maximus. </p>
             </div>
+        </div>
     </section>
 
     <section class="">
