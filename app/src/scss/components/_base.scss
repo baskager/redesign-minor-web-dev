@@ -16,6 +16,7 @@ body {
 }
 .container {
     max-width: 80vw;
+    background: gray;
     .col-1 {
         width: 100%;
     }
@@ -30,6 +31,36 @@ body {
     }
     .col-8 {
         width: 100% / 8;
+    }
+}
+
+@media (max-width:62em) {
+    .container {
+        max-width: 100%;
+        .col-t-1 {
+            max-width: 100%;
+        }
+        .col-t-2 {
+            max-width: 100% / 2;
+        }
+        .col-t-4 {
+            max-width: 100% / 4;
+        }
+    }
+}
+
+@media (max-width:48em) {
+    .container {
+        max-width: 100%;
+        .col-m-1 {
+            max-width: 100%;
+        }
+        .col-m-2 {
+            max-width: 100% / 2;
+        }
+        .col-m-4 {
+            max-width: 100% / 4;
+        }
     }
 }
 
