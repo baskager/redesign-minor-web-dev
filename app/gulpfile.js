@@ -7,11 +7,11 @@ const gulpSequence = require('gulp-sequence');
 const imagemin = require('gulp-imagemin');
 const cleanCSS = require('gulp-clean-css');
 
-const source = './src/'
-const destination = './static/'
+const source = './src/';
+const destination = './static/';
 
 gulp.task('sass', function () {
-    return gulp.src(source + 'scss/**/*.scss')
+    return gulp.src(source + 'scss/style.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(destination + 'css'));
 });
