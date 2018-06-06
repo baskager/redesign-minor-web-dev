@@ -8,14 +8,17 @@ input[type="reset"],
 .btn {
   font-size: 1em;
   font-weight: $semi-bold;
-  color: #555;
+  background: $btn-basic-background;
   cursor: pointer;
   transition: 0.2s;
-  padding: 2em 4em;
   margin: 1em;
-  border: $btn-border-size solid;
-  border-radius: 0.2em;
+  border: 0;
+  border-radius: 2rem;
   box-sizing: border-box;
+  display: inline-block;
+  padding: 1rem 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 
   &:disabled {
     opacity: 0.5;
