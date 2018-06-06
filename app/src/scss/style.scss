@@ -1,6 +1,7 @@
 @import './components/variables';
 @import './components/base';
 @import './components/styleguide';
+@import './components/mixins';
 @import './components/forms';
 @import './components/buttons';
 @import './components/typography';
@@ -11,7 +12,10 @@
 @import './components/testimonial';
 
 body {
-
+    color: $body-color;
+    font-family: $font-family;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
 }
 
 // general icon size
@@ -19,3 +23,9 @@ body {
     height: 16px;
     width: 16px;
 }
+
+.avatar {
+    border-radius: 50%;
+}
+
+@import './components/timeline';
