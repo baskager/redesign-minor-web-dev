@@ -1,3 +1,4 @@
+
 .student-work-card-list {
     display: flex;
     justify-content: space-between;
@@ -27,4 +28,45 @@
 .student-work-card p {
     padding: 3em;
     text-align: justify;
+}
+// The grid that is used for the student-work cards:
+//
+//     display: grid;
+//     grid-template-columns: repeat( auto-fit, minmax(17em, 1fr) );
+//     grid-gap: 2em 1em;
+
+.card-container {
+    background-color: #fff;
+    box-shadow: $card-shadow;
+
+    h2 {
+        margin: .5em;
+    }
+
+    & > img {
+        width: 100%;
+        max-height: 7.5em;
+        object-fit: cover;
+    }
+
+    .card-links {
+        display: flex;
+
+        a {
+          text-align: center;
+          text-transform: uppercase;
+          text-decoration: none;
+          
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-grow: 1;
+          flex-basis: 0;  
+          padding: 1em;
+
+          img {
+              padding: 0 0.25em 0 0;
+          }
+        }
+    }
 }

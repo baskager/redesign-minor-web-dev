@@ -1,0 +1,38 @@
+{% extends 'components/_base.html' %}
+{% block content %}
+    <header>
+        <h1>Enroll</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, natus placeat est molestiae et omnis magnam dolor consequatur
+            blanditiis nostrum, quis possimus voluptates quas quisquam. Illo alias nesciunt beatae accusamus?</p>
+    </header>
+    <main>
+        <section>
+            <h2>Requirements</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores nihil, laboriosam qui inventore magni voluptatum
+                necessitatibus maxime velit ad voluptate temporibus modi illum nemo quos voluptates distinctio voluptatem rerum
+                quidem?</p>
+            <h2>Time</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae sapiente, tempora perspiciatis deserunt nobis fugit
+                impedit, cupiditate voluptatum commodi excepturi. Repellat autem tempore at molestias, reiciendis omnis sapiente
+                voluptas!</p>
+            <h2>Quote</h2>
+            <blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit corrupti aliquid id velit. Quasi pariatur, exercitationem
+                totam eaque itaque, dolor optio magni voluptatem doloribus at vitae iure qui corrupti ea!</blockquote>
+        </section>
+        <form action="/" method="post">
+            <fieldset>
+                <legend>Apply now!</legend>
+                <label>Full Name
+                    <input type="text" placeholder="Arthur Parker" autofocus required>
+                </label>
+                <label>E-Mail
+                    <input type="email" placeholder="arthur.parker@domain.com" required>
+                </label>
+                <label>Something Else
+                    <input type="text" placeholder="Lorem ipsum dolor sit amet" required>
+                </label>
+                <input type="submit" value="I am ready!">
+            </fieldset>
+        </form>
+    </main>
+{% endblock %}
