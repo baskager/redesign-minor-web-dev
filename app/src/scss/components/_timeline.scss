@@ -1,12 +1,18 @@
 .timeline {
     display: flex;
     flex-direction: column;
+    margin-bottom: rem(160); // to be removed
+    max-width: rem(1024);
+    margin: rem(80) auto rem(160) auto;
+
+    .sticky {
+        position: sticky;
+        top: 0;
+    }
 
     .row {
         display: inline-flex;
-        position: sticky;
-        top: rem(160);
-        height: rem(192);
+
     }
 
     .column {
@@ -15,14 +21,19 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
         background: #fff;
+        //height: rem(160);
+        padding: rem(24);
     }
 
-    .course {
-        height: rem(192);
+    .column-project {
+        width: 75%;
+        background-color: #f6f6f6;
+        border-radius: rem(8);
     }
 
     .week {
-        
+        //background-image: url("/img/timeline-mid.svg");
     }
 }
