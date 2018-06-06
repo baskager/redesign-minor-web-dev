@@ -1,5 +1,6 @@
 a.btn {
   display: inline-block;
+  text-decoration: none;
 }
 button,
 input[type="submit"],
@@ -22,7 +23,7 @@ input[type="reset"],
     background: whitesmoke;
   }
   &:disabled:hover {
-    transform: none;  
+    transform: none;
   }
   &:hover, &:focus {
     transform: scale(1.05);
@@ -39,7 +40,7 @@ input[type="reset"],
   color: $btn-primary-color;
   &:hover, &:focus {
     background: $btn-primary-focus-background;
-  } 
+  }
 }
 
 .btn-cta {
@@ -48,7 +49,7 @@ input[type="reset"],
   color: $btn-cta-color;
   &:hover, &:focus {
     background: $btn-cta-focus-background;
-  } 
+  }
 }
 
 .btn-danger {
@@ -57,7 +58,7 @@ input[type="reset"],
   color: $btn-danger-color;
   &:hover, &:focus {
     background: $btn-danger-focus-background;
-  } 
+  }
 }
 
 .btn-warning {
@@ -66,7 +67,7 @@ input[type="reset"],
   color: $btn-warning-color;
   &:hover, &:focus {
     background: $btn-warning-focus-background;
-  } 
+  }
 }
 
 .btn-success {
@@ -75,5 +76,5 @@ input[type="reset"],
   color: $btn-success-color;
   &:hover, &:focus {
     background: $btn-success-focus-background;
-  } 
+  }
 }
