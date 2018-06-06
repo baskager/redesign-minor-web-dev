@@ -433,17 +433,17 @@ const partnersData = {
     description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
     linkText: 'Naar het project',
     members: [{
-        fullName: 'OBA',
-        description: 'Something about OBA!',
-        avatarURL: '/img/avatars/oba.png',
-        gitHubURL: 'https://www.google.nl'
+        heading: 'Openbare Bibliotheek Amsterdam',
+        subHeading: 'De OBA is dé bibliotheek van Amsterdam en omgeving.',
+        avatarURL: '/img/partners/oba.jpg',
+        gitHubURL: 'https://www.oba.nl/'
     },
     {
-        fullName: 'Keuvel',
-        description: 'Something about keuvel!',
-        avatarURL: '/img/avatars/keuvel.png',
-        gitHubURL: 'https://www.google.nl'
-    }]
+        heading: 'Openbare Bibliotheek Amsterdam',
+        subHeading: 'De OBA is dé bibliotheek van Amsterdam en omgeving.',
+        avatarURL: '/img/partners/oba.jpg',
+        gitHubURL: 'https://www.oba.nl/'
+    },]
 };
 
 const teamData = {

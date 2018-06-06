@@ -7,7 +7,7 @@ $success-green: #D4EDDA;
 $danger-red: #E8958D;
 $warning-yellow: #FFCEA0;
 
-$primary-color: $pastel-neon-yellow;
+$primary-color: $pastel-neon-pink;
 $secondary-color: $pastel-neon-purple;
 $accent-color: #e9e9e9;
 
@@ -54,11 +54,13 @@ $margin-8: 0.5rem;
 $margin-16: 1rem;
 $margin-24: 1.5rem;
 $margin-32: 2rem;
+$margin-48: 2.5rem;
 
 $padding-8: 0.5rem;
 $padding-16: 1rem;
 $padding-24: 1.5rem;
 $padding-32: 2rem;
+$padding-48: 2.5rem;
 
 // Forms
 $input-border-radius: 3px;
@@ -80,8 +82,14 @@ $input-hover-border-color: $primary-color;
 $input-padding: 0.25rem 0.5rem;
 
 // Buttons
+$btn-basic-background: $accent-color;
+$btn-basic-color: #222;
+$btn-basic-focus-background: lighten($accent-color, 20);
+$btn-basic-border-color: darken($accent-color, 10);
+$btn-basic-size: 0.1em;
+
 $btn-primary-background: $primary-color;
-$btn-primary-color: #333;
+$btn-primary-color: #fff;
 $btn-primary-focus-background: lighten($primary-color, 20);
 $btn-primary-border-color: darken($btn-primary-background, 10);
 $btn-border-size: 0.1em;
