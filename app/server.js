@@ -1,5 +1,4 @@
 const express = require('express');
-const IncludeWithNunjucksExtension = require('nunjucks-include-with');
 const nunjucks = require("nunjucks");
 const app = express();
 
@@ -15,6 +14,154 @@ const courseData = {
     title: "Course",
     description: "Here comes the description for the course. Here comes the description for the course. Here comes the description for the course."
 };
+const studentWork = {
+    title: 'Student work',
+    heading: 'Student work',
+    description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
+    courses: [
+        {
+            name: 'Web app from scratch',
+            items: [
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                }
+            ]
+        },
+        {
+            name: 'CSS to the rescue',
+            items: [
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                }
+            ]
+        },
+        {
+            name: 'Project 1',
+            items: [
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                },
+                {
+                    heading: 'Project header',
+                    imgUrl: '/img/student-work/1.jpg',
+                    imgAlt: 'Description of the project/image',
+                    demoUrl: 'https://www.github.com',
+                    repoUrl: 'https://www.github.com',
+                }
+            ]
+        },
+    ],
+}
 
 const partnersData = {
     title: 'Partners',
@@ -91,6 +238,12 @@ app.get('/team', function (req, res) {
     })
 });
 
+app.get('/student-work', function (req, res) {
+    res.render('student-work.html', {
+        data: studentWork
+    })
+});
+      
 app.get('/signup', function (req, res) {
     res.render('signup.html', {
         data: signupData
