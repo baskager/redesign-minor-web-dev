@@ -10,10 +10,12 @@ const programData = {
     title: "Program"
 };
 
+
 const courseData = {
     title: "Course",
     description: "Here comes the description for the course. Here comes the description for the course. Here comes the description for the course."
 };
+
 const studentWork = {
     title: 'Student work',
     heading: 'Student work',
@@ -217,13 +219,19 @@ app.use(express.static('./static'));
 app.get('/', function (req, res) {
     res.render('index.html', {
         data: homepageData
-    })
+    });
+});
+
+app.get('/course', function (req, res) {
+    res.render('course.html', {
+        data: courseData
+    });
 });
 
 app.get('/program', function (req, res) {
     res.render('program.html', {
         data: programData
-    })
+    });
 });
 
 app.get('/partners', function (req, res) {
