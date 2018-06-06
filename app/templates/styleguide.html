@@ -6,128 +6,217 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Styleguide - v1.0</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
 <body>
-<main>
-    <section>
-        <h1>Color</h1>
-        <hr>
-    </section>
-    <section>
-        <h1>Typography</h1>
-        <hr>
-        <!-- HEADING -->
-        <h1>Header Level 1</h1>
-        <h2>Header Level 2</h2>
-        <h3>Header Level 3</h3>
-        <h4>Header Level 4</h4>
-        <h5>Header Level 5</h5>
-        <h6>Header Level 6</h6>
+    <main class='styleguide'>
+        <h1>Color swatch</h1>
+        <section class='colors'>
+            <div class="colorgroup">
+                <div class='colorbox primary'>
+                    PRIMARY
+                </div>
+            </div>
+            <div class="colorgroup">
+                <div class='colorbox secondary'>
+                    SECONDARY
+                </div>
+            </div>
+            <div class="colorgroup">
+                <div class='colorbox accent'>
+                    ACCENT
+                </div>
+            </div>
+            <div class="colorgroup">
+                <div class='colorbox success'>
+                    SUCCESS
+                </div>
+            </div>
+            <div class="colorgroup">
+                <div class='colorbox warning'>
+                    WARNING
+                </div>
+            </div>
+            <div class="colorgroup">
+                <div class='colorbox danger'>
+                    DANGER
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>Typography</h1>
+            <hr>
+            <!-- HEADING -->
+            <h2>Header Level 2</h2>
+            <h3>Header Level 3</h3>
 
-        <!-- PARAGRAPH -->
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur maiores maxime quod nihil necessitatibus corporis
-            commodi veniam ullam quo. Doloremque, voluptatibus ratione repellendus cumque deleniti voluptas nesciunt id assumenda
-            minima!
-        </p>
+            <!-- PARAGRAPH -->
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur maiores maxime quod nihil necessitatibus corporis
+                commodi veniam ullam quo. Doloremque, voluptatibus ratione repellendus cumque deleniti voluptas nesciunt
+                id assumenda minima!
+            </p>
 
-        <!-- LINK -->
-        <a href="http://www.google.nl">http://www.google.nl</a>
+            <!-- LINK -->
+            <a href="http://www.google.nl">http://www.google.nl</a>
 
-        <!-- QUOTES -->
-        <q>"Build a future where people live in harmony with nature."</q>
-        <blockquote cite="http://www.google.nl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laborum explicabo iusto beatae fugiat nam repellendus
-            mollitia dolores reiciendis ipsam magni, cupiditate quidem hic fuga! Quo accusamus maxime dolore eveniet?</blockquote>
+            <!-- QUOTES -->
+            <blockquote cite="http://www.google.nl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, laborum explicabo iusto beatae fugiat nam
+                repellendus mollitia dolores reiciendis ipsam magni, cupiditate quidem hic fuga! Quo accusamus maxime dolore
+                eveniet?
+            </blockquote>
 
-        <!-- OTHER'S -->
-        <b>Bold Text</b>
-        <strong>Important Text</strong>
-        <i>Italic Text</i>
-        <em>Emphasized Text</em>
-        <mark>Marked Text</mark>
-        <small>Small Text</small>
-    </section>
-    <section>
-        <h1>Buttons</h1>
-        <hr>
+            <!-- OTHER'S -->
+            <b>Bold Text</b>
+            <strong>Important Text</strong>
+            <i>Italic Text</i>
+            <em>Emphasized Text</em>
+            <mark>Marked Text</mark>
+            <small>Small Text</small>
+        </section>
+        <section>
+            <h1>Teacher card</h1>
+            <div class='teacher-card'>
+                <img src='https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg' class='avatar' alt=''>
+                <div class='info'>
+                    <h3>Vasilis van Geemert</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a turpis eget lectus aliquam maximus. </p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>course cards</h1>
+            <div class='course-card-list'>
+                <div class='course-card'>
+                    <img src='http://sweettutos.com/wp-content/uploads/2015/12/placeholder.png' class='avatar' alt=''>
+                    <h3>Week 1</h3>
+                    <p>Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving; Bouwen van een basic app en deployen.</p>
+                    <a href=""></a>
+                </div>
 
-        <button>Submit</button>
-        <button disabled>Submit</button>
+                <div class='course-card'>
+                    <img src='http://sweettutos.com/wp-content/uploads/2015/12/placeholder.png' class='avatar' alt=''>
+                    <h3>Week 2</h3>
+                    <p>Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving; Bouwen van een basic app en deployen.</p>
+                    <a href=""></a>
+                </div>
 
-        <button class="btn-primary">Primary</button>
-        <button class="btn-secondary">Secondary</button>
-        <button class="btn-danger">Danger</button>
-        <button class="btn-warning">Danger</button>
-        <button class="btn-success">Success</button>
+                <div class='course-card'>
+                    <img src='http://sweettutos.com/wp-content/uploads/2015/12/placeholder.png' class='avatar' alt=''>
+                    <h3>Week 3</h3>
+                    <p>Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving; Bouwen van een basic app en deployen.</p>
+                    <a href=""></a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>Student work</h1>
+            <div class='student-work-card-list'>
+                <a href='#' class='student-work-card'>
+                    <img src='http://sweettutos.com/wp-content/uploads/2015/12/placeholder.png' class='avatar' alt=''>
+                    <p>Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving; Bouwen van een basic app en deployen.</p>
+                </a>
+                <a href='#' class='student-work-card'>
+                    <img src='http://sweettutos.com/wp-content/uploads/2015/12/placeholder.png' class='avatar' alt=''>
+                    <p>Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving; Bouwen van een basic app en deployen.</p>
+                </a>
+                <a href='#' class='student-work-card'>
+                    <img src='http://sweettutos.com/wp-content/uploads/2015/12/placeholder.png' class='avatar' alt=''>
+                    <p>Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving; Bouwen van een basic app en deployen.</p>
+                </a>
+            </div>
+            <a class='btn btn-cta btn-student-work'>Meer studentenwerk</a>
+        </section>
+        <section>
+            <h1>Testimonial</h1>
+            <div class='testimonial'>
+                <img src='https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg' class='avatar' alt=''>
+                <div class='info'>
+                    <blockquote>Het was zeker een flinke uitdaging en de lesstof was af en toe erg heftig. Maar na verdieping erin heb ik toch alles kunnen halen.</blockquote>
+                    <i>~ John Doe</i>
+                </div>
+            </div>
+            </section>
+        <section>
+            <h1>Buttons</h1>
+            <hr>
 
-        <input type="submit">
+            <button>Button</button>
+            <button disabled>Disabled</button>
 
-        <a class="btn" href="">Link button</a>
-    </section>
-    <section>
-        <h1>Forms</h1>
-        <hr>
+            <button class="btn-primary">Primary</button>
+            <button class="btn-cta">Call to action</button>
+            <button class="btn-danger">Danger</button>
+            <button class="btn-warning">Warning</button>
+            <button class="btn-success">Success</button>
 
-        <form>
-            <label>button</label>
-            <input type="button">
-
-            <label>checkbox</label>
-            <input type="checkbox">
-
-            <label>data</label>
-            <input type="date">
-
-            <label>email</label>
-            <input type="email">
-
-            <label>file</label>
-            <input type="file">
-
-            <label>image</label>
-            <input type="image">
-
-            <label>number</label>
-            <input type="number">
-
-            <label>password</label>
-            <input type="password">
-
-            <label>radio</label>
-            <input type="radio" name="radio" value="Optie 1" id="optie1">
-            <label for="optie1">Optie 1</label>
-            <input type="radio" name="radio" value="Optie 2" id="optie2">
-            <label for="optie2">Optie 2</label>
-            <input type="radio" name="radio" value="Optie 3" id="optie3">
-            <label for="optie3">Optie 3</label>
-
-            <label>reset</label>
-            <input type="reset">
-
-            <label>search</label>
-            <input type="search">
-
-            <label>submit</label>
             <input type="submit">
 
-            <label>telephone</label>
-            <input type="tel">
+            <a class="btn btn-link" href="">Link button</a>
+        </section>
+        <section>
+            <h1>Forms</h1>
+            <hr>
 
-            <label>text</label>
-            <input type="text">
+            <form>
+                <label>button</label>
+                <input type="button">
 
-            <label>url</label>
-            <input type="url">
+                <label>checkbox</label>
+                <input type="checkbox">
 
-            <label>select</label>
-            <select>
-                <option value="optie">Optie</option>
-                <option value="optie">Optie</option>
-            </select>
-        </form>
-    </section>
-</main>
+                <label>data</label>
+                <input type="date">
+
+                <label>email</label>
+                <input type="email">
+
+                <label>file</label>
+                <input type="file">
+
+                <label>image</label>
+                <input type="image">
+
+                <label>number</label>
+                <input type="number">
+
+                <label>password</label>
+                <input type="password">
+
+                <label>radio</label>
+                <input type="radio" name="radio" value="Optie 1" id="optie1">
+                <label for="optie1">Optie 1</label>
+                <input type="radio" name="radio" value="Optie 2" id="optie2">
+                <label for="optie2">Optie 2</label>
+                <input type="radio" name="radio" value="Optie 3" id="optie3">
+                <label for="optie3">Optie 3</label>
+
+                <label>reset</label>
+                <input type="reset">
+
+                <label>search</label>
+                <input type="search">
+
+                <label>submit</label>
+                <input type="submit">
+
+                <label>telephone</label>
+                <input type="tel">
+
+                <label>text</label>
+                <input type="text">
+
+                <label>url</label>
+                <input type="url">
+
+                <label>select</label>
+                <select>
+                    <option value="optie">Optie</option>
+                    <option value="optie">Optie</option>
+                </select>
+            </form>
+        </section>
+    </main>
 </body>
 
 </html>

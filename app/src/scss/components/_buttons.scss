@@ -1,19 +1,79 @@
+a.btn {
+  display: inline-block;
+}
 button,
 input[type="submit"],
 input[type="reset"],
 .btn {
-  &:disabled {}
-  &:hover {}
-  &:focus {}
+  font-size: 1em;
+  font-weight: $semi-bold;
+  color: #555;
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 2em 4em;
+  margin: 1em;
+  border: $btn-border-size solid;
+  border-radius: 0.2em;
+  box-sizing: border-box;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: auto;
+    background: whitesmoke;
+  }
+  &:disabled:hover {
+    transform: none;  
+  }
+  &:hover, &:focus {
+    transform: scale(1.05);
+  }
   &:active {}
 }
+.btn-link {
+  border: 0;
+}
 
-.btn-primary {}
+.btn-primary {
+  background: $btn-primary-background;
+  border-color: $btn-primary-border-color;
+  color: $btn-primary-color;
+  &:hover, &:focus {
+    background: $btn-primary-focus-background;
+  } 
+}
 
-.btn-secondary {}
+.btn-cta {
+  background: $btn-cta-background;
+  border-color: $btn-cta-border-color;
+  color: $btn-cta-color;
+  &:hover, &:focus {
+    background: $btn-cta-focus-background;
+  } 
+}
 
-.btn-danger {}
+.btn-danger {
+  background: $btn-danger-background;
+  border-color: $btn-danger-border-color;
+  color: $btn-danger-color;
+  &:hover, &:focus {
+    background: $btn-danger-focus-background;
+  } 
+}
 
-.btn-warning {}
+.btn-warning {
+  background: $btn-warning-background;
+  border-color: $btn-warning-border-color;
+  color: $btn-warning-color;
+  &:hover, &:focus {
+    background: $btn-warning-focus-background;
+  } 
+}
 
-.btn-success {}
+.btn-success {
+  background: $btn-success-background;
+  border-color: $btn-success-border-color;
+  color: $btn-success-color;
+  &:hover, &:focus {
+    background: $btn-success-focus-background;
+  } 
+}
