@@ -47,6 +47,17 @@ $blockquote-text-color: $black;
 
 $mark-color: $primary-color;
 
+// Margin & Padding
+$margin-8: 0.5rem;
+$margin-16: 1rem;
+$margin-24: 1.5rem;
+$margin-32: 2rem;
+
+$padding-8: 0.5rem;
+$padding-16: 1rem;
+$padding-24: 1.5rem;
+$padding-32: 2rem;
+
 // Forms
 $input-border-radius: 3px;
 $input-border: 1px solid #CCCCCC;
@@ -54,6 +65,9 @@ $input-border: 1px solid #CCCCCC;
 $input-box-shadow: inset 0 1px 3px #ddd;
 
 $input-color: $body-color;
+
+// Shadows
+$card-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
 $input-disabled-background-color: #EAEDED;
 $input-disabled-color: #CAD2D3;
@@ -89,7 +103,3 @@ $btn-danger-background: $danger-red;
 $btn-danger-color: #fff;
 $btn-danger-focus-background: darken($danger-red, 10);
 $btn-danger-border-color: darken($danger-red, 30);
-
-$link-color: $secondary-color;
-
-$card-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);

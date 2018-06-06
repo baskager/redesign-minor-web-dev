@@ -1,10 +1,13 @@
 @import './components/variables';
+@import './components/colors';
 @import './components/base';
 @import './components/styleguide';
 @import './components/mixins';
 @import './components/forms';
 @import './components/buttons';
 @import './components/typography';
+@import './components/student-work-card';
+@import './components/teacher-card';
 
 body {
     color: $body-color;
@@ -24,5 +27,3 @@ body {
 }
 
 @import './components/timeline';
-@import './components/student-work-card';
-@import './components/teacher-card';
