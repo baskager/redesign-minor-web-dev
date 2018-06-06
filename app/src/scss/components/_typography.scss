@@ -1,9 +1,9 @@
-@import './components/variables';
-
 h1 {
     font-size: $h1-font-size;
     font-style: $h1-font-style;
     font-weight: $h1-font-weight;
+    font-family: $font-family-headers;
+    font-weight: 700;
     text-transform: uppercase;
     line-height: 1.25em;
 }
