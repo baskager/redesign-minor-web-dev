@@ -17,19 +17,19 @@ body {
 .container {
     max-width: 80vw;
     .col-1 {
-        width: 100%;
+        max-width: 100%;
     }
     .col-2 {
-        width: 100% / 2;
+        max-width: 50%;
     }
     .col-4 {
-        width: 100% / 4;
+        max-width: 25%;
     }
     .col-6 {
-        width: 100% / 6;
+        max-width: 18.75%;
     }
     .col-8 {
-        width: 100% / 8;
+        max-width: 12.5%;
     }
 }
 
@@ -40,10 +40,10 @@ body {
             max-width: 100%;
         }
         .col-t-2 {
-            max-width: 100% / 2;
+            max-width: 50%;
         }
         .col-t-4 {
-            max-width: 100% / 4;
+            max-width: 25%;
         }
     }
 }
@@ -53,12 +53,13 @@ body {
         max-width: 100%;
         .col-m-1 {
             max-width: 100%;
+            background: blue;
         }
         .col-m-2 {
-            max-width: 100% / 2;
+            max-width: 50%;
         }
         .col-m-4 {
-            max-width: 100% / 4;
+            max-width: 25%;
         }
     }
 }
