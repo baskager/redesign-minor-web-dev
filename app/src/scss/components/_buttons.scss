@@ -14,6 +14,7 @@ input[type="reset"],
   margin: 1em;
   border: $btn-border-size solid;
   border-radius: 0.2em;
+  box-sizing: border-box;
 
   &:disabled {
     opacity: 0.5;
