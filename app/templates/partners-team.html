@@ -5,13 +5,13 @@
         <p>{{ data.description }}</p>
         <a href="/" class="btn btn-primary">Interesse? Neem dan contact met ons op!</a>
     </header>
-    <main>
+    <main class="partners-team-wrapper">
         {% for member in data.members %}
             <article>
                 <img src="{{ member.avatarURL }}">
                 <div>
-                    <h2>{{ member.fullName }}</h2>
-                    <p>{{ member.description }}</p>
+                    <h2><span>{{ member.heading }}</span></h2>
+                    <p><span>{{ member.subHeading }}</span></p>
                     <a href="{{ member.gitHubURL }}" class="btn">{{ data.linkText }}</a>
                 </div>
             </article>
