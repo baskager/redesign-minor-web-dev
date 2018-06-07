@@ -511,13 +511,8 @@ const partnersData = {
 };
 
 const teamData = {
-<<<<<<< HEAD
   title: "Ons Team",
   heading: "Ons Team",
-=======
-  title: "Ons team",
-  heading: "Ons team",
->>>>>>> 6c9a9286862b794adc9f6b44b9b8fd4c1d50c83c
   description:
     "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
   linkText: "Personal GitHub",
@@ -563,7 +558,6 @@ app.get("/program", function(req, res) {
 });
 
 app.get("/partners", function(req, res) {
-<<<<<<< HEAD
   res.render("partners-team.html", {
     data: partnersData
   });
@@ -573,11 +567,6 @@ app.get("/team", function(req, res) {
   res.render("partners-team.html", {
     data: teamData
   });
-=======
-  res.render("partners.html", {
-    data: partnersData
-  });
->>>>>>> 6c9a9286862b794adc9f6b44b9b8fd4c1d50c83c
 });
 
 app.get("/student-work", function(req, res) {
