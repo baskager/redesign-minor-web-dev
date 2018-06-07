@@ -69,3 +69,14 @@ body header.container {
         }
     }
 }
+
+@media (max-width: 992px) {
+    .other-courses {
+        div {
+            a {
+                width: calc(50% - 1rem);
+                margin: 1rem 0;
+            }
+        }
+    }
+}
