@@ -13,21 +13,3 @@
 @import './components/student-work';
 @import './components/testimonial';
 @import './components/timeline';
-
-
-body {
-    color: $body-color;
-    font-family: $font-family;
-    font-size: $body-font-size;
-    line-height: $body-line-height;
-
-
-// general icon size
-.icon {
-    height: 16px;
-    width: 16px;
-}
-
-.avatar {
-    border-radius: 50%;
-}
