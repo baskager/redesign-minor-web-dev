@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="320px" viewBox="0 0 24 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>timeline-mid</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="timeline-mid" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(5.000000, 153.000000)" opacity="0.900000036">
+            <circle id="Oval-Copy-2" fill="#51306C" fill-rule="nonzero" cx="7" cy="7" r="3"></circle>
+            <circle id="Oval-Copy-3" stroke="#51306C" stroke-width="2" cx="7" cy="7" r="7"></circle>
+        </g>
+        <path d="M12,173 L12,321.013513" id="Path-Copy-3" stroke="#51306C" stroke-width="2" stroke-dasharray="4"></path>
+        <path d="M12,0 L12,148.084435" id="Path-Copy-3-Copy" stroke="#51306C" stroke-width="2" stroke-dasharray="4" transform="translate(12.500000, 74.500000) scale(1, -1) translate(-12.500000, -74.500000) "></path>
+    </g>
+</svg>

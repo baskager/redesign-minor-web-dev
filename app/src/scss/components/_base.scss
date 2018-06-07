@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: $body-color;
+    font-family: $font-family;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 80rem;
+    width: 95%;
+}
+
+.icon {
+    height: rem(16);
+    width: rem(16);
+}
+
+.avatar {
+    border-radius: 50%;
+}
