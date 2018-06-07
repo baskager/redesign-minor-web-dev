@@ -53,7 +53,6 @@ body {
         max-width: 100%;
         .col-m-1 {
             max-width: 100%;
-            background: blue;
         }
         .col-m-2 {
             max-width: 50%;
@@ -72,8 +71,8 @@ main {
 }
 
 .icon {
-    height: 16px;
-    width: 16px;
+    height: $margin-16;
+    width: $margin-16;
 }
 
 .avatar {

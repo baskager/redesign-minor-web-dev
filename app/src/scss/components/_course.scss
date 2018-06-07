@@ -1,0 +1,40 @@
+body header {
+    margin-bottom: 5rem;
+    h1 {
+        max-width: 785px;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 30px;
+        line-height: 1.4em;
+        margin: 0;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: normal;
+        max-width: 785px;
+    }
+}
+
+.course-info {
+    display: grid;
+    grid-template-columns: calc(50% - 2rem) calc(50% - 2rem);
+    grid-column-gap: 4rem;
+    margin: 2rem 0 6rem 0;
+    div {
+        h2 {
+            margin-bottom: .5rem;
+        }
+    }
+}
+
+.course-list {
+    padding-left: 1.2rem;
+    li {
+        margin: .5rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-info {
+        grid-template-columns: 100%;
+    }
+}
