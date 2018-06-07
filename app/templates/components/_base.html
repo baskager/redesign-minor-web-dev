@@ -12,7 +12,12 @@
 
 <body>
 
-    {% block content %} {% endblock %} {% include 'components/_footer.html' %}
+    {% include 'components/_nav.html' %}
+
+    {% block content %} 
+    {% endblock %} 
+    
+    {% include 'components/_footer.html' %}
 
     <script src="js/app.js"></script>
 </body>
