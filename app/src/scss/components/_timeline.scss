@@ -26,12 +26,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: $padding-24;
   }
 
   .column-project {
     width: 75%;
+    align-items: flex-start;
+
+    p {
+      max-width: rem(480);
+    }
   }
 
   .week {
