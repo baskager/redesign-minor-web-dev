@@ -17,7 +17,7 @@
     .row-container {
         display: flex;
         margin: auto;
-        width: rem(1400);
+        max-width: $container-xl;
     }
 
     .column {

@@ -113,3 +113,10 @@ $btn-danger-background: $danger-red;
 $btn-danger-color: #fff;
 $btn-danger-focus-background: darken($danger-red, 10);
 $btn-danger-border-color: darken($danger-red, 30);
+
+// Container widths
+$container-xl: rem(1400);
+$container-l: rem(1200);
+$container-m: rem(992);
+$container-s: rem(768);
+$container-xs: rem(576);
