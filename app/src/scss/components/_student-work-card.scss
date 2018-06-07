@@ -33,37 +33,37 @@
 //}
 
 .student-work-card {
-    background-color: #fff;
-    box-shadow: $card-shadow;
+  background-color: #fff;
+  box-shadow: $card-shadow;
 
-    h2 {
-        margin: .5em;
+  h2 {
+    margin: 0.5em;
+  }
+
+  & > img {
+    width: 100%;
+    max-height: 7.5em;
+    object-fit: cover;
+  }
+
+  .card-links {
+    display: flex;
+
+    a {
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      flex-basis: 0;
+      padding: 1em;
+
+      img {
+        padding: 0 0.25em 0 0;
+      }
     }
-
-    & > img {
-        width: 100%;
-        max-height: 7.5em;
-        object-fit: cover;
-    }
-
-    .card-links {
-        display: flex;
-
-        a {
-          text-align: center;
-          text-transform: uppercase;
-          text-decoration: none;
-          
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-grow: 1;
-          flex-basis: 0;  
-          padding: 1em;
-
-          img {
-              padding: 0 0.25em 0 0;
-          }
-        }
-    }
+  }
 }
