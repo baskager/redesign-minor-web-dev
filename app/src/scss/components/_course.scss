@@ -1,19 +1,3 @@
-body header.container {
-  margin-bottom: 5rem;
-  h1 {
-    max-width: rem(785);
-    margin-bottom: 1rem;
-  }
-  p {
-    font-size: rem(30);
-    line-height: 1.4em;
-    margin: 0;
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight: normal;
-    max-width: rem(768);
-  }
-}
-
 .course-info {
   display: grid;
   grid-template-columns: calc(50% - 2rem) calc(50% - 2rem);
