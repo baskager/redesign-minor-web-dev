@@ -21,7 +21,7 @@
 
             span {
                 -webkit-box-decoration-break: clone;
-                background-color: #3D195B;
+                background-color: $secondary-color;
                 box-decoration-break: clone;
                 display: inline;
                 padding: $padding-24;
@@ -58,17 +58,11 @@
         }
 
         .btn {
-            background-color: #FF015D;
-            border-radius: 2rem;
-            border: none;
+            background-color: $primary-color;
             box-shadow: 0 7px 28px rgba(61,25,91,0.15), 0 5px 10px rgba(61,25,91,0.12);
             color: #FFFFFF;
-            display: inline-block;
-            margin-left: 0;
             margin-right: 20%;
             margin-top: -0.75rem;
-            padding: 1rem 3.5rem;
-            text-transform: uppercase;
 
             &:hover,
             &:focus {

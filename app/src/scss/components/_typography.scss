@@ -28,8 +28,14 @@ h3 {
     font-weight: $h3-font-weight;
 }
 
+h4 {
+    margin: 1em 0 0 0;
+    text-transform: uppercase;
+}
+
 a {
     color: $link-color;
+    text-decoration: none;
 }
 
 blockquote {
