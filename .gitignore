@@ -62,3 +62,4 @@ typings/
 
 .idea/
 /app/static/
+.DS_Store
