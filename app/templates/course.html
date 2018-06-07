@@ -53,24 +53,30 @@
         </section>
     </section>
 
-    <div class="course-card-list">
-        {% include "components/_course-card.html" %} {% include "components/_course-card.html" %} {% include "components/_course-card.html"
-        %}
-    </div>
+    <section class="course-card-overview">
+        <h2>Weekly program</h2>
+        <div class="course-card-list">
+            {% include "components/_course-card.html" %} {% include "components/_course-card.html" %} {% include "components/_course-card.html"
+            %}
+        </div>
+        <div class="course-btn">
+            <a class="btn btn-primary" href="">View the full program</a>
+        </div>
+    </section>
 
     include student-work
 
     <section class="other-courses">
         <h2>Other courses</h2>
-        <div class="">
-            <a class="" href="">other course</a>
-            <a href="">other course</a>
-            <a href="">other course</a>
-            <a href="">other course</a>
-            <a href="">other course</a>
-            <a href="">other course</a>
-            <a href="">other course</a>
-            <a href="">other course</a>
+        <div>
+            <a class="btn" href="">other course</a>
+            <a class="btn" href="">other course</a>
+            <a class="btn" href="">other course</a>
+            <a class="btn" href="">other course</a>
+            <a class="btn" href="">other course</a>
+            <a class="btn" href="">other course</a>
+            <a class="btn" href="">other course</a>
+            <a class="btn" href="">other course</a>
         </div>
     </section>
 </main>
