@@ -1,18 +1,17 @@
 .teacher-card {
-    background: $accent-color;
-    max-width: 30em;
-    display: flex;
-    
+  background: $accent-color;
+  max-width: 30em;
+  display: flex;
 }
 .teacher-card img {
-    height: 100%;
-    width: 20em;
-    border-radius: 50%;
-    padding: 1em;
+  height: 100%;
+  width: 20em;
+  border-radius: 50%;
+  padding: 1em;
 }
 .teacher-card h3 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 .teacher-card p {
-    padding: 0 0.5em 0.5em 0.5em;
+  padding: 0 0.5em 0.5em 0.5em;
 }
