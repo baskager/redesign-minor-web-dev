@@ -5,6 +5,7 @@
 @import './components/forms';
 @import './components/buttons';
 @import './components/typography';
+@import './components/footer';
 @import './components/teacher-card';
 @import './components/partners-team.scss';
 @import './components/student-work-card';
@@ -13,13 +14,13 @@
 @import './components/testimonial';
 @import './components/timeline';
 
+
 body {
     color: $body-color;
     font-family: $font-family;
     font-size: $body-font-size;
     line-height: $body-line-height;
-    margin: 0;
-}
+
 
 // general icon size
 .icon {
