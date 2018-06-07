@@ -1,0 +1,76 @@
+{% extends "components/_base.html" %}
+
+{% block content %}
+
+<header class="container">
+    <h1>Real-Time Web</h1>
+    <p>In drie weken leer je hoe je real time / live data op een inzichtelijke manier toegankelijk kunt maken voor de eindgebruiker.</p>
+    <img src="" alt=""></img>
+</header>
+
+<main class="container">
+    <section class="teacher-list">
+        <div class='teacher-card col-4'>
+            <img src='https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg' class='avatar' alt=''>
+            <div class='info'>
+                <h3>Laurens Aarnoudse</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a turpis eget lectus aliquam maximus. </p>
+            </div>
+        </div>
+        <div class='teacher-card col-4'>
+            <img src='https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg' class='avatar' alt=''>
+            <div class='info'>
+                <h3>Titus Wormer</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a turpis eget lectus aliquam maximus. </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-info">
+        <div>
+            <h2>Learn goals</h2>
+            <ol class="course-list">
+                <li>Student kan zelfstandig een (Node) webapp bouwen met een backend die gebruikt maakt van templating, routing en een remote
+                database.</li>
+                <li>Student kan een live applicatie opleveren waar interactie mee mogelijk is die invloed heeft op de inhoud van de applicatie
+                via manipulatie van de database.</li>
+                <li>Student kan live data vertalen naar een reactive view (datavisualisatie mag) op een manier die voor een eindgebruiker zinnig
+                is.</li>
+            </ol>
+        </div>
+        <div>
+            <h2>More about this course</h2>
+            <ul class="course-list">
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="course-card-list">
+    {% include 'components/_course-card.html' %}
+    {% include 'components/_course-card.html' %}
+    {% include 'components/_course-card.html' %}
+    </div>
+
+    include student-work
+
+    <section class="other-courses">
+        <h2>Other courses</h2>
+        <div>
+            <a href="">other course</a>
+            <a href="">other course</a>
+            <a href="">other course</a>
+            <a href="">other course</a>
+            <a href="">other course</a>
+            <a href="">other course</a>
+            <a href="">other course</a>
+            <a href="">other course</a>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
