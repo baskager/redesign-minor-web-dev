@@ -15,22 +15,22 @@ body header.container {
 }
 
 .course-info {
-    display: grid;
-    grid-template-columns: calc(50% - 2rem) calc(50% - 2rem);
-    grid-column-gap: 4rem;
-    margin: 2rem 0 6rem 0;
-    section {
-        h2 {
-            margin-bottom: .5rem;
-        }
+  display: grid;
+  grid-template-columns: calc(50% - 2rem) calc(50% - 2rem);
+  grid-column-gap: 4rem;
+  margin: 2rem 0 6rem 0;
+  section {
+    h2 {
+      margin-bottom: 0.5rem;
     }
+  }
 }
 
 .course-list {
-    padding-left: 1.2rem;
-    li {
-        margin: .5rem 0;
-    }
+  padding-left: 1.2rem;
+  li {
+    margin: 0.5rem 0;
+  }
 }
 
 @media (max-width: 768px) {
