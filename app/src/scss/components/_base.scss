@@ -12,6 +12,12 @@ body {
     line-height: $body-line-height;
 }
 
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
 .container {
     margin: 0 auto;
     max-width: 80rem;

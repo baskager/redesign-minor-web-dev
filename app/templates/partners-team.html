@@ -1,20 +1,23 @@
-{% extends 'components/_base.html' %}
-{% block content %}
-    <header>
-        <h1>{{ data.heading }}</h1>
-        <p>{{ data.description }}</p>
-        <a href="/" class="btn btn-primary">Interesse? Neem dan contact met ons op!</a>
-    </header>
-    <main class="partners-team-wrapper">
-        {% for member in data.members %}
-            <article>
-                <img src="{{ member.avatarURL }}">
-                <div>
-                    <h2><span>{{ member.heading }}</span></h2>
-                    <p><span>{{ member.subHeading }}</span></p>
-                    <a href="{{ member.gitHubURL }}" class="btn">{{ data.linkText }}</a>
-                </div>
-            </article>
-        {% endfor %}
-    </main>
+{% extends 'components/_base.html' %} {% block content %}
+<header class="container">
+    <h1>{{ data.heading }}</h1>
+    <p>{{ data.description }}</p>
+    <a href="/" class="btn btn-primary">Interesse? Neem dan contact met ons op!</a>
+</header>
+<main class="partners-team-wrapper container">
+    {% for member in data.members %}
+    <article class="grid">
+        <img src="{{ member.avatarURL }}">
+        <div>
+            <h2>
+                <span>{{ member.heading }}</span>
+            </h2>
+            <p>
+                <span>{{ member.subHeading }}</span>
+            </p>
+            <a href="{{ member.gitHubURL }}" class="btn">{{ data.linkText }}</a>
+        </div>
+    </article>
+    {% endfor %}
+</main>
 {% endblock %}

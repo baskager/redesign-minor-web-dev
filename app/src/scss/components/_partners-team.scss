@@ -1,24 +1,18 @@
 .partners-team-wrapper {
     article {
         align-items: center;
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: repeat(12, 1fr);
         padding: $padding-48 0;
         text-align: right;
-
         h2,
         p {
             text-align: left;
         }
-
         h2 {
             color: #FFFFFF;
             line-height: 1.415em;
             margin-bottom: 0;
             padding: 2px 0;
             text-transform: uppercase;
-
             span {
                 -webkit-box-decoration-break: clone;
                 background-color: $secondary-color;
@@ -27,19 +21,16 @@
                 padding: $padding-24;
             }
         }
-
         p {
             color: #CBA5EA;
             font-size: 1.5rem;
             margin: 0;
             padding: $padding-24 0;
-
             span {
                 background-color: #3D195B;
                 padding: $padding-24;
             }
         }
-
         img {
             border-radius: 10px;
             display: block;
@@ -51,41 +42,33 @@
             object-position: center center;
             width: 100%;
         }
-
         div {
             grid-column: 5 / 12;
             grid-row: 1;
         }
-
         .btn {
             background-color: $primary-color;
-            box-shadow: 0 7px 28px rgba(61,25,91,0.15), 0 5px 10px rgba(61,25,91,0.12);
+            box-shadow: 0 7px 28px rgba(61, 25, 91, 0.15), 0 5px 10px rgba(61, 25, 91, 0.12);
             color: #FFFFFF;
             margin-right: 20%;
             margin-top: -0.75rem;
-
             &:hover,
             &:focus {
-                box-shadow: 0 14px 28px rgba(61,25,91,0.25), 0 10px 10px rgba(61,25,91,0.22);
+                box-shadow: 0 14px 28px rgba(61, 25, 91, 0.25), 0 10px 10px rgba(61, 25, 91, 0.22);
             }
         }
-
         &:nth-child(even) {
             text-align: left;
-
             h2,
             p {
                 text-align: right;
             }
-
             img {
                 grid-column: 7 / 13;
             }
-
             div {
                 grid-column: 2 / 9;
             }
-
             .btn {
                 margin-left: 20%;
                 margin-right: 0;
