@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 const nunjucks = require("nunjucks");
 const app = express();
 
@@ -249,237 +249,415 @@ const programData = {
 };
 
 const studentWork = {
-  title: 'Student work',
-  heading: 'Student work',
-  description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
-  courses: [{
-      name: 'Web app from scratch',
-      items: [{
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
+    title: 'Student work',
+    heading: 'Student work',
+    description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
+    courses: [{
+        name: 'Web app from scratch',
+        items: [{
+            heading: 'Project header',
+            imgUrl: '/img/student-work/1.jpg',
+            imgAlt: 'Description of the project/image',
+            demoUrl: 'https://www.github.com',
+            repoUrl: 'https://www.github.com',
+          },
+          {
+            heading: 'Project header',
+            imgUrl: '/img/student-work/1.jpg',
+            imgAlt: 'Description of the project/image',
+            demoUrl: 'https://www.github.com',
+            repoUrl: 'https://www.github.com',
+          },
+          {
+            heading: 'Project header',
+            imgUrl: '/img/student-work/1.jpg',
+            imgAlt: 'Description of the project/image',
+            demoUrl: 'https://www.github.com',
+            repoUrl: 'https://www.github.com',
+          },
+          {
+            heading: 'Project header',
+            imgUrl: '/img/student-work/1.jpg',
+            imgAlt: 'Description of the project/image',
+            demoUrl: 'https://www.github.com',
+            repoUrl: 'https://www.github.com',
+          },
+          {
+            heading: 'Project header',
+            imgUrl: '/img/student-work/1.jpg',
+            imgAlt: 'Description of the project/image',
+            demoUrl: 'https://www.github.com',
+            repoUrl: 'https://www.github.com',
+          },
+          {
+            heading: 'Project header',
+            imgUrl: '/img/student-work/1.jpg',
+            imgAlt: 'Description of the project/image',
+            demoUrl: 'https://www.github.com',
+            repoUrl: 'https://www.github.com',
+          }
+        ]
+      },
+      { <<
+        << << < HEAD
+        name: 'CSS to the rescue',
+        items: [{
+            heading: 'Project header',
+            imgUrl: '/img/student-work/1.jpg',
+            imgAlt: 'Description of the project/image',
+            demoUrl: 'https://www.github.com',
+            repoUrl: 'https://www.github.com',
+          },
+          {
+            heading: 'Project header',
+            imgUrl: '/img/student-work/1.jpg',
+            imgAlt: 'Description of the project/image',
+            demoUrl: 'https://www.github.com',
+            repoUrl: 'https://www.github.com',
+          },
+          {
+            heading: 'Project header',
+            imgUrl: '/img/student-work/1.jpg',
+            imgAlt: 'Description of the project/image',
+            demoUrl: 'https://www.github.com',
+            repoUrl: 'https://www.github.com',
+          },
+          {
+            heading: 'Project header',
+            imgUrl: '/img/student-work/1.jpg',
+            imgAlt: 'Description of the project/image',
+            demoUrl: 'https://www.github.com',
+            repoUrl: 'https://www.github.com',
+          },
+          {
+            heading: 'Project header',
+            imgUrl: '/img/student-work/1.jpg',
+            imgAlt: 'Description of the project/image',
+            demoUrl: 'https://www.github.com',
+            repoUrl: 'https://www.github.com',
+          },
+          {
+            heading: 'Project header',
+            imgUrl: '/img/student-work/1.jpg',
+            imgAlt: 'Description of the project/image',
+            demoUrl: 'https://www.github.com',
+            repoUrl: 'https://www.github.com',
+            ===
+            === =
+            name: "CSS to the rescue",
+            items: [{
+                heading: "Project header",
+                imgUrl: "/img/student-work/1.jpg",
+                imgAlt: "Description of the project/image",
+                demoUrl: "https://www.github.com",
+                repoUrl: "https://www.github.com"
+              },
+              {
+                heading: "Project header",
+                imgUrl: "/img/student-work/1.jpg",
+                imgAlt: "Description of the project/image",
+                demoUrl: "https://www.github.com",
+                repoUrl: "https://www.github.com"
+              },
+              {
+                heading: "Project header",
+                imgUrl: "/img/student-work/1.jpg",
+                imgAlt: "Description of the project/image",
+                demoUrl: "https://www.github.com",
+                repoUrl: "https://www.github.com"
+              },
+              {
+                heading: "Project header",
+                imgUrl: "/img/student-work/1.jpg",
+                imgAlt: "Description of the project/image",
+                demoUrl: "https://www.github.com",
+                repoUrl: "https://www.github.com"
+              },
+              {
+                heading: "Project header",
+                imgUrl: "/img/student-work/1.jpg",
+                imgAlt: "Description of the project/image",
+                demoUrl: "https://www.github.com",
+                repoUrl: "https://www.github.com"
+              },
+              {
+                heading: "Project header",
+                imgUrl: "/img/student-work/1.jpg",
+                imgAlt: "Description of the project/image",
+                demoUrl: "https://www.github.com",
+                repoUrl: "https://www.github.com" >>>
+                  >>> > bfa1f7c149a41a1e91f6489cfe482571e85d3a51
+              }
+            ]
+          },
+          { <<
+            << << < HEAD
+            name: 'Project 1',
+            items: [{
+                heading: 'Project header',
+                imgUrl: '/img/student-work/1.jpg',
+                imgAlt: 'Description of the project/image',
+                demoUrl: 'https://www.github.com',
+                repoUrl: 'https://www.github.com',
+              },
+              {
+                heading: 'Project header',
+                imgUrl: '/img/student-work/1.jpg',
+                imgAlt: 'Description of the project/image',
+                demoUrl: 'https://www.github.com',
+                repoUrl: 'https://www.github.com',
+              },
+              {
+                heading: 'Project header',
+                imgUrl: '/img/student-work/1.jpg',
+                imgAlt: 'Description of the project/image',
+                demoUrl: 'https://www.github.com',
+                repoUrl: 'https://www.github.com',
+              },
+              {
+                heading: 'Project header',
+                imgUrl: '/img/student-work/1.jpg',
+                imgAlt: 'Description of the project/image',
+                demoUrl: 'https://www.github.com',
+                repoUrl: 'https://www.github.com',
+              },
+              {
+                heading: 'Project header',
+                imgUrl: '/img/student-work/1.jpg',
+                imgAlt: 'Description of the project/image',
+                demoUrl: 'https://www.github.com',
+                repoUrl: 'https://www.github.com',
+              },
+              {
+                heading: 'Project header',
+                imgUrl: '/img/student-work/1.jpg',
+                imgAlt: 'Description of the project/image',
+                demoUrl: 'https://www.github.com',
+                repoUrl: 'https://www.github.com',
+              }
+            ]
+          },
+        ],
+      }
+
+      const partnersData = {
+        title: 'Our Partners',
+        heading: 'Our Partners',
+        description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
+        linkText: 'View project',
+        members: [{
+            heading: 'Openbare Bibliotheek Amsterdam',
+            subHeading: 'The OBA comprises a Central Library and 25 branch libraries.',
+            avatarURL: '/img/partners/oba.jpg',
+            gitHubURL: 'https://www.oba.nl/'
+          },
+          {
+            heading: 'De Ceuvel',
+            subHeading: 'De Ceuvel is a city playground for innovation and creativity.',
+            avatarURL: '/img/partners/deceuvel.jpg',
+            gitHubURL: 'https://www.oba.nl/'
+          }, ===
+          === =
+          name: "Project 1",
+          items: [{
+              heading: "Project header",
+              imgUrl: "/img/student-work/1.jpg",
+              imgAlt: "Description of the project/image",
+              demoUrl: "https://www.github.com",
+              repoUrl: "https://www.github.com"
+            },
+            {
+              heading: "Project header",
+              imgUrl: "/img/student-work/1.jpg",
+              imgAlt: "Description of the project/image",
+              demoUrl: "https://www.github.com",
+              repoUrl: "https://www.github.com"
+            },
+            {
+              heading: "Project header",
+              imgUrl: "/img/student-work/1.jpg",
+              imgAlt: "Description of the project/image",
+              demoUrl: "https://www.github.com",
+              repoUrl: "https://www.github.com"
+            },
+            {
+              heading: "Project header",
+              imgUrl: "/img/student-work/1.jpg",
+              imgAlt: "Description of the project/image",
+              demoUrl: "https://www.github.com",
+              repoUrl: "https://www.github.com"
+            },
+            {
+              heading: "Project header",
+              imgUrl: "/img/student-work/1.jpg",
+              imgAlt: "Description of the project/image",
+              demoUrl: "https://www.github.com",
+              repoUrl: "https://www.github.com"
+            },
+            {
+              heading: "Project header",
+              imgUrl: "/img/student-work/1.jpg",
+              imgAlt: "Description of the project/image",
+              demoUrl: "https://www.github.com",
+              repoUrl: "https://www.github.com"
+            }
+          ]
         }
       ]
-    },
-    {
-      name: 'CSS to the rescue',
-      items: [{
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
+    };
+
+    const partnersData = {
+      title: "Partners",
+      heading: "Partners",
+      description: "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
+      linkText: "Naar het project",
+      members: [{
+          heading: "Openbare Bibliotheek Amsterdam",
+          subHeading: "De OBA is dé bibliotheek van Amsterdam en omgeving.",
+          avatarURL: "/img/partners/oba.jpg",
+          gitHubURL: "https://www.oba.nl/"
         },
         {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        }
+          heading: "Openbare Bibliotheek Amsterdam",
+          subHeading: "De OBA is dé bibliotheek van Amsterdam en omgeving.",
+          avatarURL: "/img/partners/oba.jpg",
+          gitHubURL: "https://www.oba.nl/"
+        } >>>
+        >>> > bfa1f7c149a41a1e91f6489cfe482571e85d3a51
       ]
-    },
-    {
-      name: 'Project 1',
-      items: [{
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        },
-        {
-          heading: 'Project header',
-          imgUrl: '/img/student-work/1.jpg',
-          imgAlt: 'Description of the project/image',
-          demoUrl: 'https://www.github.com',
-          repoUrl: 'https://www.github.com',
-        }
-      ]
-    },
-  ],
-}
+    };
 
-const partnersData = {
-  title: 'Our Partners',
-  heading: 'Our Partners',
-  description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
-  linkText: 'View project',
-  members: [{
-      heading: 'Openbare Bibliotheek Amsterdam',
-      subHeading: 'The OBA comprises a Central Library and 25 branch libraries.',
-      avatarURL: '/img/partners/oba.jpg',
-      gitHubURL: 'https://www.oba.nl/'
-    },
-    {
-      heading: 'De Ceuvel',
-      subHeading: 'De Ceuvel is a city playground for innovation and creativity.',
-      avatarURL: '/img/partners/deceuvel.jpg',
-      gitHubURL: 'https://www.oba.nl/'
-    },
-  ]
-};
+    const teamData = { <<
+        << << < HEAD
+        title: 'Ons Team',
+        heading: 'Ons Team',
+        description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
+        linkText: 'Personal GitHub',
+        members: [{
+              fullName: 'James Peter Perrone Jefferies',
+              description: 'Something about me!',
+              avatarURL: '/img/avatars/james.png',
+              gitHubURL: 'https://www.google.nl'
+            },
+            {
+              fullName: 'James Peter Perrone Jefferies',
+              description: 'Something about me!',
+              avatarURL: '/img/avatars/james.png',
+              gitHubURL: 'https://www.google.nl' ===
+                === =
+                title: "Ons Team",
+              heading: "Ons Team",
+              description: "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
+              linkText: "Personal GitHub",
+              members: [{
+                  fullName: "James Peter Perrone Jefferies",
+                  description: "Something about me!",
+                  avatarURL: "/img/avatars/james.png",
+                  gitHubURL: "https://www.google.nl"
+                },
+                {
+                  fullName: "James Peter Perrone Jefferies",
+                  description: "Something about me!",
+                  avatarURL: "/img/avatars/james.png",
+                  gitHubURL: "https://www.google.nl" >>>
+                    >>> > bfa1f7c149a41a1e91f6489cfe482571e85d3a51
+                }
+              ]
+            };
 
-const teamData = {
-  title: 'Ons Team',
-  heading: 'Ons Team',
-  description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
-  linkText: 'Personal GitHub',
-  members: [{
-      fullName: 'James Peter Perrone Jefferies',
-      description: 'Something about me!',
-      avatarURL: '/img/avatars/james.png',
-      gitHubURL: 'https://www.google.nl'
-    },
-    {
-      fullName: 'James Peter Perrone Jefferies',
-      description: 'Something about me!',
-      avatarURL: '/img/avatars/james.png',
-      gitHubURL: 'https://www.google.nl'
-    }
-  ]
-};
+            const signupData = {
+              title: "Sign-Up"
+            };
 
-const signupData = {
-  title: "Sign-Up"
-};
+            <<
+            << << < HEAD
+            nunjucks.configure('./templates', { ===
+                === =
+                nunjucks.configure("./templates", { >>>
+                  >>> > bfa1f7c149a41a1e91f6489cfe482571e85d3a51
+                  autoescape: true,
+                  express: app,
+                  watch: true
+                });
 
-nunjucks.configure('./templates', {
-  autoescape: true,
-  express: app,
-  watch: true
-});
+                app.set("view engine", "html");
+                app.use(express.static("./static"));
 
-app.set("view engine", "html");
-app.use(express.static('./static'));
+                <<
+                << << < HEAD
+                app.get('/', function (req, res) {
+                  res.render('index.html', {
+                    data: homepageData
+                  })
+                });
 
-app.get('/', function (req, res) {
-  res.render('index.html', {
-    data: homepageData
-  })
-});
+                app.get('/program', function (req, res) {
+                  res.render('program.html', {
+                    data: programData
+                  })
+                });
 
-app.get('/program', function (req, res) {
-  res.render('program.html', {
-    data: programData
-  })
-});
+                app.get('/partners', function (req, res) {
+                  res.render('partners-team.html', {
+                    data: partnersData
+                  })
+                });
 
-app.get('/partners', function (req, res) {
-  res.render('partners-team.html', {
-    data: partnersData
-  })
-});
+                app.get('/team', function (req, res) {
+                  res.render('partners-team.html', {
+                    data: teamData
+                  })
+                });
 
-app.get('/team', function (req, res) {
-  res.render('partners-team.html', {
-    data: teamData
-  })
-});
+                app.get('/student-work', function (req, res) {
+                  res.render('student-work.html', {
+                    data: studentWork
+                  })
+                });
 
-app.get('/student-work', function (req, res) {
-  res.render('student-work.html', {
-    data: studentWork
-  })
-});
+                app.get('/signup', function (req, res) {
+                  res.render('signup.html', {
+                    data: signupData
+                  })
+                });
 
-app.get('/signup', function (req, res) {
-  res.render('signup.html', {
-    data: signupData
-  })
-});
+                app.listen(3000, () => console.log('Example app listening on port 3000!')); ===
+                === =
+                app.get("/", function (req, res) {
+                  res.render("index.html", {
+                    data: homepageData
+                  });
+                });
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+                app.get("/program", function (req, res) {
+                  res.render("program.html", {
+                    data: programData
+                  });
+                });
+
+                app.get("/partners", function (req, res) {
+                  res.render("partners-team.html", {
+                    data: partnersData
+                  });
+                });
+
+                app.get("/team", function (req, res) {
+                  res.render("partners-team.html", {
+                    data: teamData
+                  });
+                });
+
+                app.get("/student-work", function (req, res) {
+                  res.render("student-work.html", {
+                    data: studentWork
+                  });
+                });
+
+                app.get("/signup", function (req, res) {
+                  res.render("signup.html", {
+                    data: signupData
+                  });
+                });
+
+                app.listen(3000, () => console.log("Example app listening on port 3000!")); >>>
+                >>> > bfa1f7c149a41a1e91f6489cfe482571e85d3a51
