@@ -15,7 +15,7 @@ body {
 }
 
 body > header {
-  padding: 8rem 0 4rem 0;
+  padding: 7rem 0 4rem 0;
   color: $white;
   background: #1b0b28;
   background: -moz-linear-gradient(
@@ -33,7 +33,6 @@ body > header {
     #341f6d 0%,
     #1b0b28 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#341f6d', endColorstr='#1b0b28',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
   h1,
   p {
