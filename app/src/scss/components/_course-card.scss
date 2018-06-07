@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns: 100%;
   grid-row-gap: 2em;
+
   .course-card {
-    padding: 3em;
+    padding: 2em;
     background: $secondary-color;
     position: relative;
     &:last-child {
@@ -16,9 +17,12 @@
       left: 0;
       bottom: 0;
     }
-    p {
-      text-align: justify;
-      color: #fff;
+    ul {
+      padding-left: 1rem;
+      li {
+        color: #fff;
+        padding-bottom: .3rem;
+      }
     }
     h3 {
       text-align: center;
@@ -44,8 +48,8 @@
 
 @media (min-width: 992px) {
   .course-card-list {
-    grid-template-columns: calc(100% / 3 - 1em) calc(100% / 3) calc(
-        100% / 3 - 1em
-      );
+    grid-template-columns: calc(100% / 3 - 1em) calc(100% / 3 - 1em) calc(
+        100% / 3 - 1em);
+      grid-column-gap: 1.5em;
   }
 }
