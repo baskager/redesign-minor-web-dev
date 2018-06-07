@@ -27,7 +27,6 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        background: #fff;
         padding: $padding-24;
     }
 
@@ -43,12 +42,13 @@
 
     .row {
         width: 100%;
+
         &:nth-child(odd) {
             background-color: rgba(#AE61EE, .03);
         }
     }
 
-    .sticky + .row {
+    .row-sticky + .row {
         .week {
             background-image: url("/img/timeline/timeline-start.svg");
         }
