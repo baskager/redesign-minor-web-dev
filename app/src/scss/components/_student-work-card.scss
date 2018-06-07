@@ -35,6 +35,8 @@
 .student-work-card {
   background-color: #fff;
   box-shadow: $card-shadow;
+  display: flex;
+  flex-flow: column;
 
   h2 {
     margin: 0.5em;
@@ -42,28 +44,41 @@
 
   & > img {
     width: 100%;
-    max-height: 7.5em;
+    max-height: 8em;
     object-fit: cover;
   }
 
-  .card-links {
+  ul {
     display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
 
-    a {
-      text-align: center;
-      text-transform: uppercase;
-      text-decoration: none;
+  a {
+    text-transform: uppercase;
+    text-decoration: none; // General style?
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-grow: 1;
-      flex-basis: 0;
-      padding: 1em;
+  a:hover,
+  a:focus {
+    background-color: $pastel-neon-pink;
+    color: $white;
 
-      img {
-        padding: 0 0.25em 0 0;
-      }
+    svg {
+      fill: $white;
     }
+  }
+
+  li {
+    width: 50%;
+  }
+
+  .icon {
+    padding: 0 0.25em 0 0;
   }
 }

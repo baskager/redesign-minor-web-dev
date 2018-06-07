@@ -484,22 +484,24 @@ const studentWork = {
 };
 
 const partnersData = {
-  title: "Partners",
-  heading: "Partners",
+  title: "Our Partners",
+  heading: "Our Partners",
   description:
     "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
-  linkText: "Naar het project",
+  linkText: "View project",
   members: [
     {
       heading: "Openbare Bibliotheek Amsterdam",
-      subHeading: "De OBA is dé bibliotheek van Amsterdam en omgeving.",
+      subHeading:
+        "The OBA comprises a Central Library and 25 branch libraries.",
       avatarURL: "/img/partners/oba.jpg",
       gitHubURL: "https://www.oba.nl/"
     },
     {
-      heading: "Openbare Bibliotheek Amsterdam",
-      subHeading: "De OBA is dé bibliotheek van Amsterdam en omgeving.",
-      avatarURL: "/img/partners/oba.jpg",
+      heading: "De Ceuvel",
+      subHeading:
+        "De Ceuvel is a city playground for innovation and creativity.",
+      avatarURL: "/img/partners/deceuvel.jpg",
       gitHubURL: "https://www.oba.nl/"
     }
   ]
@@ -553,14 +555,8 @@ app.get("/program", function(req, res) {
 });
 
 app.get("/partners", function(req, res) {
-  res.render("partners-team.html", {
+  res.render("partners.html", {
     data: partnersData
-  });
-});
-
-app.get("/team", function(req, res) {
-  res.render("partners-team.html", {
-    data: teamData
   });
 });
 
