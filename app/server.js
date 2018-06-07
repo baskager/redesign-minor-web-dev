@@ -558,7 +558,7 @@ app.get("/program", function(req, res) {
 });
 
 app.get("/partners", function(req, res) {
-  res.render("partners-team.html", {
+  res.render("partners.html", {
     data: partnersData
   });
 });
