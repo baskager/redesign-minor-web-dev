@@ -6,6 +6,7 @@
 @import "./components/buttons";
 @import "./components/typography";
 @import "./components/student-work-card";
+@import "./components/footer";
 @import "./components/teacher-card";
 @import "./components/partners-team.scss";
 @import "./components/student-work-card";
@@ -14,21 +15,3 @@
 @import "./components/testimonial";
 @import "./components/timeline";
 @import "./components/course";
-
-body {
-  color: $body-color;
-  font-family: $font-family;
-  font-size: $body-font-size;
-  line-height: $body-line-height;
-  margin: 0;
-}
-
-// general icon size
-.icon {
-  height: 16px;
-  width: 16px;
-}
-
-.avatar {
-  border-radius: 50%;
-}

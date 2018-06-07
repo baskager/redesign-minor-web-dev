@@ -1,27 +1,27 @@
 .teacher-list {
-	display: flex;
-	flex-wrap: wrap;
-    
-    .teacher-card {
-        background: $accent-color;
-        max-width: 30em;
-        display: flex;
-        margin: 0 2em 2em 0;
-        padding-right: 2rem;
-        img {
-            width: 7rem;
-            height: 7rem;
-            border-radius: 50%;
-            padding: 1em;
-        }
-        h3 {
-            margin-bottom: 0;
-        }
-        p {
-            padding: 0 0.5em 0.5em 0;
-        }
+  display: flex;
+  flex-wrap: wrap;
+
+  .teacher-card {
+    background: $accent-color;
+    max-width: 30em;
+    display: flex;
+    margin: 0 2em 2em 0;
+    padding-right: 2rem;
+    img {
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      padding: 1em;
     }
-    .teacher-card:last-child {
-        margin-right: 0;
+    h3 {
+      margin-bottom: 0;
     }
+    p {
+      padding: 0 0.5em 0.5em 0;
+    }
+  }
+  .teacher-card:last-child {
+    margin-right: 0;
+  }
 }

@@ -2,12 +2,20 @@
   display: grid;
   grid-template-columns: 100%;
   grid-row-gap: 2em;
-  div {
+
+  .course-card {
     padding: 3em;
     background: $secondary-color;
     position: relative;
     &:last-child {
       margin-right: 0;
+    }
+    a {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
     }
     p {
       color: #fff;
