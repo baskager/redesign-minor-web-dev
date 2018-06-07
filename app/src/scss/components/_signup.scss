@@ -1,0 +1,61 @@
+.signup-wrapper {
+    display: flex;
+
+    section,
+    form {
+        width: 50%;
+    }
+
+    fieldset {
+        border: none;
+        margin: 0;
+        padding: $padding-16 $padding-32;
+    }
+
+    section {
+        h2 {
+            font-size: 24px;
+            margin: 0 0 $margin-16;
+            &:not(:first-child) {
+                margin-top: $margin-32;
+            }
+        }
+    }
+
+    form {
+        border-radius: 5px;
+        border: 1px solid $black;
+
+        h2 {
+            border-bottom: 1px solid $black;
+            font-size: 20px;
+            margin: 0;
+            padding: $padding-16 0;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: $margin-16;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+
+        input {
+            display: block;
+            margin-top: $margin-8;
+            padding: $padding-16;
+            width: 100%;
+
+            &[type="submit"] {
+                margin: $margin-32 0;
+            }
+        }
+    }
+
+    blockquote {
+        margin-left: 0;
+    }
+}
