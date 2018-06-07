@@ -2,13 +2,15 @@
 
 {% block content %}
 
-<main class="container">
-    <h1>{{ data.title }}</h1>
-    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut.</p>
+<header>
+    <div class="container">
+        <h1>{{ data.title }}</h1>
+        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut.</p>
 
-    <a class="btn btn-primary" href="#timeline">Bekijk het programma</a>
-    <a class="btn btn-primary btn-outline" href="#" >Download de PDF</a>
-</main>
+        <a class="btn btn-primary" href="#timeline">Bekijk het programma</a>
+        <a class="btn btn-primary btn-outline" href="#" >Download de PDF</a>
+    </div>
+</header>
 
 {% include "components/_timeline.html" %}
 

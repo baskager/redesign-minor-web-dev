@@ -49,12 +49,12 @@ const programData = {
         {
           type: "assignment",
           description:
-            "Het structureren van JavaScript heeft een aantal voordelen. Het maakt de code beter leesbaar en dus makkelijker onderhoudbaar en uitbreidbaar."
+            "Introduction to Javascript object programming and design patterns for code."
         },
         {
           type: "assignment",
           description:
-            "De student kan een goed werkende responsive oplossing bedenken en maken voor complexe interfaces"
+            "Creating fun, pleasurable and accessible solutions for different kinds of interfaces."
         },
         {
           type: "speaker",
@@ -70,12 +70,12 @@ const programData = {
       items: [
         {
           type: "assignment",
-          description:
-            "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
+          description: "Resolving and manipulating data from an API."
         },
         {
           type: "assignment",
-          description: "Bouwen van een basic app en deployen."
+          description:
+            "Using CSS without the use of classes. Getting to know the basic CSS principles is key!"
         },
         {
           type: "speaker",
@@ -92,11 +92,12 @@ const programData = {
         {
           type: "assignment",
           description:
-            "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
+            "Finetune the structure and flow of your app, because It's a wrap!"
         },
         {
           type: "assignment",
-          description: "Bouwen van een basic app en deployen."
+          description:
+            "Designing your pleasurable interface with attention to detail."
         },
         {
           type: "speaker",
@@ -114,7 +115,7 @@ const programData = {
           type: "project",
           name: "Project 1",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.",
+            "We will have a special project at the Openbare Bibliotheek Amsterdam (OBA). Here we will create awesome stuff with data about Amsterdam, which they collected throughout the years.",
           url: "#"
         }
       ]
@@ -156,12 +157,12 @@ const programData = {
         {
           type: "assignment",
           description:
-            "Het structureren van JavaScript heeft een aantal voordelen. Het maakt de code beter leesbaar en dus makkelijker onderhoudbaar en uitbreidbaar."
+            "Make the basic functionality work on on as many devices as possible."
         },
         {
           type: "assignment",
           description:
-            "De student kan een goed werkende responsive oplossing bedenken en maken voor complexe interfaces"
+            "Do an performance audit of an existing site and make a plan to improve it."
         },
         {
           type: "speaker",
@@ -177,12 +178,12 @@ const programData = {
       items: [
         {
           type: "assignment",
-          description:
-            "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
+          description: "Add feature detection to one of your applications.."
         },
         {
           type: "assignment",
-          description: "Bouwen van een basic app en deployen."
+          description:
+            "Add serverside rendering to one of your applications, also turn it in to a progressive web app."
         },
         {
           type: "speaker",
@@ -199,11 +200,12 @@ const programData = {
         {
           type: "assignment",
           description:
-            "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
+            "Turn your application into a three layer progressive enhancent one."
         },
         {
           type: "assignment",
-          description: "Bouwen van een basic app en deployen."
+          description:
+            "Add more optimalisations and a service worker. Make your application work offline."
         },
         {
           type: "speaker",
@@ -221,7 +223,7 @@ const programData = {
           type: "project",
           name: "Project 2",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.",
+            "Lifely is a digital agency that focuses on design, content and technology. Your assignment is to improve a existing project. You can choose between the following projects: Fresh Heroes, an internship vacancy platform and TopTaal a language learning platform.",
           url: "#"
         }
       ]
@@ -334,6 +336,12 @@ const programData = {
       ]
     }
   ]
+};
+
+const courseData = {
+  title: "Course",
+  description:
+    "Here comes the description for the course. Here comes the description for the course. Here comes the description for the course."
 };
 
 const studentWork = {
@@ -548,6 +556,12 @@ app.use(express.static("./static"));
 app.get("/", function(req, res) {
   res.render("index.html", {
     data: homepageData
+  });
+});
+
+app.get("/course", function(req, res) {
+  res.render("course.html", {
+    data: courseData
   });
 });
 
