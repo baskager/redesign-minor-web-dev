@@ -1,6 +1,6 @@
 {% block content %}
 
-<div class="timeline">
+<main class="timeline">
 
     <!-- TODO make empty row 25% width instead of 100% -->
 
@@ -30,7 +30,7 @@
             {% if item.type == 'course' %}
                 <div class="column course">
                     <img src="{{ item.iconSrc }}" alt="">
-                    <h4><a href="{{ item.url }}">{{ item.name }}</a></h4>
+                    <h4><a href="/course">{{ item.name }}</a></h4>
                 </div>
 
             {% elseif  item.type == 'assignment' %}
@@ -41,12 +41,12 @@
             {% elseif item.type == 'speaker' %}
                 <div class="column">
                     <img class="avatar" src="{{ item.avatarURL }}" alt="">
-                    <h4><a href="{{ item.url }}">{{ item.name }}</a></h4>
+                    <h4><a href="/course">{{ item.name }}</a></h4>
                 </div>
 
             {% elseif item.type == 'project' %}
                 <div class="column column-project">
-                    <h4><a href="{{ item.url }}">{{ item.name }}</a></h4>
+                    <h4><a href="/course">{{ item.name }}</a></h4>
                     <p>{{ item.description }}</p>
                 </div>
             {% endif %}
@@ -62,5 +62,5 @@
         </div> <!--ending project-->
     </div>
 
-</div> <!--ending timeline-->
+</main> <!--ending timeline-->
 {% endblock %}
