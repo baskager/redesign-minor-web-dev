@@ -48,12 +48,6 @@ body header.container {
   }
 }
 
-@media (max-width: 768px) {
-  .course-info {
-    grid-template-columns: 100%;
-  }
-}
-
 .other-courses {
   div {
     display: flex;
@@ -61,7 +55,7 @@ body header.container {
     justify-content: space-between;
     a {
       @extend .btn;
-      color: #222;
+      color: $black;
     }
   }
 }
@@ -74,5 +68,11 @@ body header.container {
         margin: 1rem 0;
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .course-info {
+    grid-template-columns: 100%;
   }
 }
