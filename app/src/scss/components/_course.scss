@@ -60,15 +60,8 @@ body header.container {
     flex-wrap: wrap;
     justify-content: space-between;
     a {
-      @extend .btn-primary;
-      padding: 1rem 2rem;
-      display: block;
-      width: calc(25% - 2rem);
-      margin: 1rem 0;
-      text-align: center;
-      border-radius: 2em;
-      font-weight: 600;
-      font-size: 1rem;
+      @extend .btn;
+      color: #222;
     }
   }
 }
