@@ -1,10 +1,10 @@
 .course-header .container {
-  div {
+  >div {
     grid-column: 1 / 7;
     grid-row: 1;
     width: 100%;
     z-index: 1;
-    p {
+    >p {
       background-color: white;
       padding: 1rem 1rem 1rem 0;
     }
