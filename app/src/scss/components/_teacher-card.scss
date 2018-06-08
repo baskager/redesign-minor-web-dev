@@ -5,6 +5,7 @@
     display: flex;
     list-style: none;
     margin-right: 2rem;
+    position: relative;
   }
   div {
     display: flex;
@@ -22,9 +23,19 @@
     text-transform: uppercase;
   }
   p {
-    color: #cba5ea;
+    color: $primary-color;
     font-size: 1rem;
     margin: 0;
     padding: 0;
+  }
+  a {
+    color: transparent;
+    font-size: 0;
+    height: 100%;
+    left: 0;
+    line-height: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 }
