@@ -13,6 +13,46 @@ body {
   padding-top: rem(72);
   margin: 0;
 }
+
+body > header {
+  padding: 7rem 0 4rem 0;
+  color: $white;
+  background: #1b0b28;
+  background: -moz-linear-gradient(
+    -45deg,
+    #341f6d 0%,
+    #1b0b28 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    -45deg,
+    #341f6d 0%,
+    #1b0b28 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    #341f6d 0%,
+    #1b0b28 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+  h1,
+  p {
+    text-shadow: 0px 1px 4px rgba(150, 150, 150, 1);
+  }
+  h1 {
+    max-width: 50em;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.8em;
+    line-height: 1.4em;
+    margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: normal;
+    max-width: rem(768);
+    margin-bottom: 1rem;
+  }
+}
+
 .grid {
   display: grid;
   grid-gap: 20px;

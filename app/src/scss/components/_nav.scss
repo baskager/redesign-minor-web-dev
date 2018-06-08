@@ -21,12 +21,15 @@
   }
 
   li {
-    display: flex;
-    align-items: center;
     list-style: none;
     margin-left: rem(24);
-    height: rem(72);
     border-bottom: 2px solid transparent;
+
+    a {
+      height: rem(72);
+      display: flex;
+      align-items: center;
+    }
 
     @include transition();
 
@@ -38,12 +41,12 @@
       border-bottom: 2px solid $primary-color;
     }
 
-    &:last-child {
-      &:hover,
-      &.active {
-        border-bottom: 2px solid transparent;
-      }
-    }
+    // &:last-child {
+    //   &:hover,
+    //   &.active {
+    //     border-bottom: 2px solid transparent;
+    //   }
+    // }
   }
 
   .btn {
