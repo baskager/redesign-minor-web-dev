@@ -5,7 +5,7 @@
 
   .course-card {
     padding: 2em;
-    background: $secondary-color;
+    background: $accent-color;
     position: relative;
     &:last-child {
       margin-right: 0;
@@ -20,8 +20,9 @@
     ul {
       padding-left: 1rem;
       li {
-        color: #fff;
-        padding-bottom: .3rem;
+        padding-left: 0.4em;
+        list-style-image: url("/img/icons/bullet-purple.svg");
+        padding-bottom: 0.3rem;
       }
     }
     h3 {
@@ -49,7 +50,8 @@
 @media (min-width: 992px) {
   .course-card-list {
     grid-template-columns: calc(100% / 3 - 1em) calc(100% / 3 - 1em) calc(
-        100% / 3 - 1em);
-      grid-column-gap: 1.5em;
+        100% / 3 - 1em
+      );
+    grid-column-gap: 1.5em;
   }
 }
