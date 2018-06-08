@@ -1,36 +1,29 @@
-.teacher-list {
+.teachers-list {
   display: flex;
-  flex-wrap: wrap;
-
-  .teacher-card {
-    background: $accent-color;
-    max-width: 30em;
+  padding: 0;
+  li {
     display: flex;
-    margin: 0 2em 2em 0;
-    padding-right: 2rem;
-    position: relative;
-    img {
-      width: 7rem;
-      height: 7rem;
-      border-radius: 50%;
-      padding: 1em;
-    }
-    h3 {
-      margin-bottom: 0;
-    }
-    p {
-      padding: 0 0.5em 0.5em 0;
-    } 
-    a {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      text-indent: -9999px;
-    }
+    list-style: none;
+    margin-right: 2rem;
   }
-  .teacher-card:last-child {
-    margin-right: 0;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    height: 3rem;
+    margin-right: 1rem;
+    width: 3rem;
+  }
+  h2 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  p {
+    color: #cba5ea;
+    font-size: 1rem;
+    margin: 0;
   }
 }
