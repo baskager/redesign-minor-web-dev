@@ -1,87 +1,83 @@
 {% extends "components/_base.html" %} {% block content %}
-<header>
-    <div class="container">
-        <h1>Real-Time Web</h1>
-        <p>In drie weken leer je hoe je real time / live data op een inzichtelijke manier toegankelijk kunt maken voor de eindgebruiker.</p>
-        <img src="" alt=""></img>
+<header class="course-header">
+  <div class="container grid">
+    <div>
+      <h1>Real-Time Web</h1>
+      <p>In drie weken leer je hoe je real time / live data op een inzichtelijke manier toegankelijk kunt maken voor de eindgebruiker.</p>
+      <ul class="teachers-list">
+        <li>
+          <img class="avatar" src="https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg">
+          <div>
+            <h2>Vasilis van Gent</h2>
+            <p>CSS Master</p>
+          </div>
+        </li>
+        <li>
+          <img class="avatar" src="https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg">
+          <div>
+            <h2>Vasilis van Gent</h2>
+            <p>CSS Master</p>
+          </div>
+        </li>
+      </ul>
     </div>
+    <img src="/img/partners/oba.jpg"></img>
+  </div>
 </header>
 
 <main class="container">
-    <h2>Teachers</h2>
-    <section class="teacher-list">
-        <div class="teacher-card">
-            <img src="https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg" class="avatar"
-                alt="">
-            <div class="info">
-                <h3>Laurens Aarnoudse</h3>
-                <p>Raspudding</p>
-            </div>
-            <a href="/partners">Go to the page of the teacher</a>
-        </div>
-        <div class="teacher-card">
-            <img src="https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg" class="avatar"
-                alt="">
-            <div>
-                <h3>Titus Wormer</h3>
-                <p>Wooorm</p>
-            </div>
-            <a href="/partners">Go to the page of the teacher</a>
-        </div>
+  <section class="course-info">
+    <section>
+      <h2>Learn goals</h2>
+      <ul class="course-list">
+        <li>Student kan zelfstandig een (Node) webapp bouwen met een backend die gebruikt maakt van templating, routing en een
+          remote database.
+        </li>
+        <li>Student kan een live applicatie opleveren waar interactie mee mogelijk is die invloed heeft op de inhoud van de applicatie
+          via manipulatie van de database.</li>
+        <li>Student kan live data vertalen naar een reactive view (datavisualisatie mag) op een manier die voor een eindgebruiker
+          zinnig is.
+        </li>
+      </ul>
     </section>
-
-    <section class="course-info">
-        <section>
-            <h2>Learn goals</h2>
-            <ul class="course-list">
-                <li>Student kan zelfstandig een (Node) webapp bouwen met een backend die gebruikt maakt van templating, routing
-                    en een remote database.
-                </li>
-                <li>Student kan een live applicatie opleveren waar interactie mee mogelijk is die invloed heeft op de inhoud
-                    van de applicatie via manipulatie van de database.</li>
-                <li>Student kan live data vertalen naar een reactive view (datavisualisatie mag) op een manier die voor een eindgebruiker
-                    zinnig is.
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>More about this course</h2>
-            <ul class="course-list">
-                <li>item</li>
-                <li>item</li>
-                <li>item</li>
-                <li>item</li>
-                <li>item</li>
-            </ul>
-        </section>
+    <section>
+      <h2>More about this course</h2>
+      <ul class="course-list">
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ul>
     </section>
+  </section>
 
-    <section class="course-card-overview">
-        <h2>Weekly program</h2>
-        <div class="course-card-list">
-            {% include "components/_course-card.html" %} {% include "components/_course-card.html" %} {% include "components/_course-card.html"
-            %}
-        </div>
-        <div class="course-btn">
-            <a class="btn btn-primary" href="/program">View the full program</a>
-        </div>
-    </section>
+  <section class="course-card-overview">
+    <h2>Weekly program</h2>
+    <div class="course-card-list">
+      {% include "components/_course-card.html" %} {% include "components/_course-card.html" %} {% include "components/_course-card.html"
+      %}
+    </div>
+    <div class="course-btn">
+      <a class="btn btn-primary" href="/program">View the full program</a>
+    </div>
+  </section>
 
-    include student-work
+  include student-work
 
-    <section class="other-courses">
-        <h2>Other courses</h2>
-        <div>
-            <a class="btn" href="">other course</a>
-            <a class="btn" href="">other course</a>
-            <a class="btn" href="">other course</a>
-            <a class="btn" href="">other course</a>
-            <a class="btn" href="">other course</a>
-            <a class="btn" href="">other course</a>
-            <a class="btn" href="">other course</a>
-            <a class="btn" href="">other course</a>
-        </div>
-    </section>
+  <section class="other-courses">
+    <h2>Other courses</h2>
+    <div>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+    </div>
+  </section>
 </main>
 
 {% endblock %}
