@@ -1,22 +1,21 @@
 .course-header .container {
-  >div {
+  > div {
     grid-column: 1 / 7;
     grid-row: 1;
     width: 100%;
     z-index: 1;
-    >p {
+    > p {
       background-color: white;
       padding: 1rem 1rem 1rem 0;
     }
   }
-  >img {
+  > img {
     border-radius: 10px;
     grid-column: 6 / 13;
     grid-row: 1;
     width: 100%;
   }
 }
-
 .course-info {
   display: grid;
   grid-template-columns: calc(50% - 2rem) calc(50% - 2rem);
@@ -79,3 +78,4 @@
   .course-info {
     grid-template-columns: 100%;
   }
+}
