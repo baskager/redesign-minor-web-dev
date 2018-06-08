@@ -38,12 +38,12 @@
       border-bottom: 2px solid $primary-color;
     }
 
-    &:last-child {
-      &:hover,
-      &.active {
-        border-bottom: 2px solid transparent;
-      }
-    }
+    // &:last-child {
+    //   &:hover,
+    //   &.active {
+    //     border-bottom: 2px solid transparent;
+    //   }
+    // }
   }
 
   .btn {
