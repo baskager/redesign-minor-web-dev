@@ -14,16 +14,32 @@ $wd-color: #d00064;
 $rtw-color: #9e0068;
 $mp-color: #dd1b00;
 
+@mixin timeline-mid {
+  background-image: url("/img/timeline/timeline-mid.svg");
+  background-position: center right 20px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+@mixin timeline-start {
+  @include timeline-mid();
+  background-image: url("/img/timeline/timeline-start.svg");
+}
+
+@mixin timeline-end {
+  @include timeline-mid();
+  background-image: url("/img/timeline/timeline-end.svg");
+}
+
 .timeline {
   display: grid;
-  grid-gap: $grid-gutter;
+  column-gap: $grid-gutter;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: $grid-header-height $grid-row-height;
-
-  margin-top: rem(80);
+  max-width: rem(1180);
+  margin: rem(80) auto;
 
   .period {
-    background: red;
     grid-row: 1;
     display: flex;
     align-items: center;
@@ -32,24 +48,34 @@ $mp-color: #dd1b00;
 
   .week-1 {
     grid-row: 2;
+    @include timeline-start();
   }
 
   .week-2 {
     grid-row: 3;
+    @include timeline-mid();
   }
 
   .week-3 {
     grid-row: 4;
+    @include timeline-mid();
   }
 
   .week-4 {
     grid-row: 5;
+    @include timeline-end();
   }
 
   .week {
     display: flex;
     align-items: center;
     padding: 0 rem(24);
+  }
+
+  .period-week {
+    justify-content: flex-end;
+    padding-right: rem(56);
+    font-weight: $semi-bold;
   }
 
   header {
@@ -64,7 +90,6 @@ $mp-color: #dd1b00;
     grid-row: 1 / span 4;
     display: grid;
     grid-template-rows: $grid-header-height $grid-row-height $grid-row-height $grid-row-height;
-    grid-gap: $grid-gutter;
 
     border: 1px solid $border-color;
     box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.04);
@@ -82,6 +107,8 @@ $mp-color: #dd1b00;
 
     padding: rem(24);
     display: flex;
+    margin-top: rem(24);
+    margin-right: rem(24);
 
     header {
       padding: 0;
@@ -151,13 +178,6 @@ $mp-color: #dd1b00;
 //     }
 //   }
 
-//   .week {
-//     background-image: url("/img/timeline/timeline-mid.svg");
-//     background-position: center right 20px;
-//     background-repeat: no-repeat;
-//     background-color: transparent;
-//   }
-
 //   .row {
 //     width: 100%;
 
@@ -175,7 +195,7 @@ $mp-color: #dd1b00;
 
 //   .row-sticky + .row {
 //     .week {
-//       background-image: url("/img/timeline/timeline-start.svg");
+
 //     }
 //   }
 

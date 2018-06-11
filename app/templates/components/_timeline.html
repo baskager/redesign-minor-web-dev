@@ -5,12 +5,12 @@
 
 <main class="timeline">
 
-    <div class="period">
+    <div class="period period-week">
         Periode: {{ period.period }}
     </div>
     
     {% for week in period.weeks %}
-        <div class="week week-{{week}}">
+        <div class="period-week week week-{{week}}">
             Week: {{ week }}
         </div>
     {% endfor %}
