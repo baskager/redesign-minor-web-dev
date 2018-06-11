@@ -17,32 +17,32 @@
         
     {% for course in period.courses %}
         {% if course.type == "course" %}
-            <article class="course-{{ course.abbreviation }}">
-                <header>
+            <article>
+                <header class="course-{{ course.abbreviation }}">
                     <h5>{{ course.name }}</h5>
                     <h6>{{ course.description }}</h6>
                 </header>
 
                 {% for week in course.weeks %}
                     <div class="week">
-                        {{ week.week }}
-                        {{ week.name }}
-                        {{ week.description }}
+                        <p class="hidden-desktop">Week {{week.week}}</p>
+                        <p>{{ week.description }}</p>
                     </div>
                 {% endfor %}
             </article>
         {% elseif course.type == "speakers" %}
-            <article class="course-{{ course.abbreviation }}">
-                <header>
+            <article>
+                <header class="course-{{ course.abbreviation }}">
                     <h5>{{ course.name }}</h5>
                     <h6>{{ course.description }}</h6>
                 </header>
 
                 {% for week in course.weeks %}
                     <div class="week">
-                        {{ week.name }}
-                        {{ week.description }}
-                        {{ week.imgSrc }}
+                        <p class="hidden-desktop">Week {{week.week}}</p>
+                        <img src="{{ week.imgSrc }}" class="avatar" alt="">
+                        <a class="course-{{ course.abbreviation }}" href="#">{{ week.name }}</a>
+                        <p class="meta">{{ week.description }}</p>
                     </div>
                 {% endfor %}
             </article>

@@ -67,19 +67,19 @@ const programData = {
             {
               week: 1,
               name: "Justus Sturkenboom",
-              imgSrc: "//via.placeholder.com/64x64",
+              imgSrc: "//via.placeholder.com/48x48",
               description: "Functional Programming"
             },
             {
               week: 2,
               name: "Titus Wormer",
-              imgSrc: "//via.placeholder.com/64x64",
+              imgSrc: "//via.placeholder.com/48x48",
               description: "Git"
             },
             {
               week: 3,
               name: "Vasilis van Gemert",
-              imgSrc: "//via.placeholder.com/64x64",
+              imgSrc: "//via.placeholder.com/48x48",
               description: "Accessibility"
             }
           ]
@@ -113,7 +113,7 @@ const programData = {
       items: [
         {
           name: "Web App From Scratch",
-          iconSrc: "//via.placeholder.com/64x64",
+          iconSrc: "//via.placeholder.com/48x48",
           url: "#",
           description:
             "Building an application in the browser with native HTML, CSS & Javascript.",
@@ -122,7 +122,7 @@ const programData = {
         },
         {
           name: "CSS To The Rescue",
-          iconSrc: "//via.placeholder.com/64x64",
+          iconSrc: "//via.placeholder.com/48x48",
           url: "#",
           description:
             "Create fun, respronsive and pleasurable solutions for different kinds of complex interfaces.",
@@ -131,7 +131,7 @@ const programData = {
         },
         {
           name: "Weekly Nerd",
-          iconSrc: "//via.placeholder.com/64x64",
+          iconSrc: "//via.placeholder.com/48x48",
           url: "#",
           description:
             "A weekly presentation where new speakers visit and tell us all of their interesting coding knowledge",
@@ -158,7 +158,7 @@ const programData = {
           type: "speaker",
           name: "Titus Wormer",
           url: "#",
-          avatarURL: "//via.placeholder.com/64x64"
+          avatarURL: "//via.placeholder.com/48x48"
         }
       ]
     },
@@ -179,7 +179,7 @@ const programData = {
           type: "speaker",
           name: "PPK",
           url: "#",
-          avatarURL: "//via.placeholder.com/64x64"
+          avatarURL: "//via.placeholder.com/48x48"
         }
       ]
     },
@@ -201,7 +201,7 @@ const programData = {
           type: "speaker",
           name: "Justus Sturkenboom",
           url: "#",
-          avatarURL: "//via.placeholder.com/64x64"
+          avatarURL: "//via.placeholder.com/48x48"
         }
       ]
     },
@@ -224,7 +224,7 @@ const programData = {
       items: [
         {
           name: "Browser Technologies",
-          iconSrc: "//via.placeholder.com/64x64",
+          iconSrc: "//via.placeholder.com/48x48",
           url: "#",
           description: "Lorem ipsum dolor",
           partner_id: null,
@@ -232,7 +232,7 @@ const programData = {
         },
         {
           name: "Performance Matters",
-          iconSrc: "//via.placeholder.com/64x64",
+          iconSrc: "//via.placeholder.com/48x48",
           url: "#",
           description: "Lorem ipsum dolor",
           partner_id: null,
@@ -240,7 +240,7 @@ const programData = {
         },
         {
           name: "Weekly Nerd",
-          iconSrc: "//via.placeholder.com/64x64",
+          iconSrc: "//via.placeholder.com/48x48",
           url: "#",
           description: "Lorem ipsum dolor",
           partner_id: null,
@@ -266,7 +266,7 @@ const programData = {
           type: "speaker",
           name: "Anne - TamTam",
           url: "#",
-          avatarURL: "//via.placeholder.com/64x64"
+          avatarURL: "//via.placeholder.com/48x48"
         }
       ]
     },
@@ -287,7 +287,7 @@ const programData = {
           type: "speaker",
           name: "PE - Voorhoede",
           url: "#",
-          avatarURL: "//via.placeholder.com/64x64"
+          avatarURL: "//via.placeholder.com/48x48"
         }
       ]
     },
@@ -309,7 +309,7 @@ const programData = {
           type: "speaker",
           name: "Ischa Gast - Accessibility",
           url: "#",
-          avatarURL: "//via.placeholder.com/64x64"
+          avatarURL: "//via.placeholder.com/48x48"
         }
       ]
     },
@@ -332,7 +332,7 @@ const programData = {
       items: [
         {
           name: "Web Design",
-          iconSrc: "//via.placeholder.com/64x64",
+          iconSrc: "//via.placeholder.com/48x48",
           url: "#",
           description: "Lorem ipsum dolor",
           partner_id: null,
@@ -340,7 +340,7 @@ const programData = {
         },
         {
           name: "Real Time Web",
-          iconSrc: "//via.placeholder.com/64x64",
+          iconSrc: "//via.placeholder.com/48x48",
           url: "#",
           description: "Lorem ipsum dolor",
           partner_id: null,
@@ -348,7 +348,7 @@ const programData = {
         },
         {
           name: "Weekly Nerd",
-          iconSrc: "//via.placeholder.com/64x64",
+          iconSrc: "//via.placeholder.com/48x48",
           url: "#",
           description: "Lorem ipsum dolor",
           partner_id: null,
@@ -374,7 +374,7 @@ const programData = {
           type: "speaker",
           name: "Niels Leenheer",
           url: "#",
-          avatarURL: "//via.placeholder.com/64x64"
+          avatarURL: "//via.placeholder.com/48x48"
         }
       ]
     },
@@ -395,7 +395,7 @@ const programData = {
           type: "speaker",
           name: "Peter Peerdeman",
           url: "#",
-          avatarURL: "//via.placeholder.com/64x64"
+          avatarURL: "//via.placeholder.com/48x48"
         }
       ]
     },
@@ -416,7 +416,7 @@ const programData = {
           type: "speaker",
           name: "Leonie Watson - W3C",
           url: "#",
-          avatarURL: "//via.placeholder.com/64x64"
+          avatarURL: "//via.placeholder.com/48x48"
         }
       ]
     },

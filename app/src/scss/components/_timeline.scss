@@ -61,10 +61,24 @@ $grid-gutter: rem(24);
     display: flex;
     align-items: center;
     padding: 0 rem(24);
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .avatar {
+    margin-bottom: rem(8);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    font-weight: $semi-bold;
   }
 
   .period-week {
-    justify-content: flex-end;
+    align-items: flex-end;
     padding-right: rem(56);
     font-weight: $semi-bold;
   }

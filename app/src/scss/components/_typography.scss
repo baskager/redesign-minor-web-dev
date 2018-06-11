@@ -36,6 +36,17 @@ h4 {
 a {
   color: $link-color;
   text-decoration: none;
+
+  @include transition();
+
+  &:hover {
+    filter: brightness(70%);
+  }
+}
+
+.meta {
+  font-size: rem(14);
+  color: $gray;
 }
 
 blockquote {

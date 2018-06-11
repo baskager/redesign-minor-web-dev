@@ -54,6 +54,10 @@ main {
   color: $mp-color;
 }
 
+.hidden-desktop {
+  display: none;
+}
+
 body > header {
   padding: 7rem 0 4rem 0;
   color: $white;
