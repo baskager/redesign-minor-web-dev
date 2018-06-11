@@ -4,7 +4,7 @@
     grid-row: 1;
     width: 100%;
     z-index: 1;
-    > p {
+    > div > p {
       background-color: white;
       padding: 1rem 1rem 1rem 0;
     }
@@ -94,13 +94,17 @@
     grid-template-columns: 100%;
   }
   .course-header .container {
-    div {
+    > div {
       grid-column: 1 / 13;
+      margin-top: 14%;
+      div p {
+        background-color: rgba(255,255,255,0);
+      }
     }
 
     >img {
       grid-column: 1 / 13;
-      opacity: 0.8;
+      opacity: 0.6;
     }
   }
 
