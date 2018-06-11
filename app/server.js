@@ -8,17 +8,14 @@ const homepageData = {
 
 const programData = {
   title: "Program",
-  program: [
-    {
+  program: [{
       label: null,
       sticky: true,
-      items: [
-        {
+      items: [{
           name: "Web App From Scratch",
           iconSrc: "//via.placeholder.com/64x64",
           url: "#",
-          description:
-            "Building an application in the browser with native HTML, CSS & Javascript.",
+          description: "Building an application in the browser with native HTML, CSS & Javascript.",
           partner_id: null,
           type: "course"
         },
@@ -26,8 +23,7 @@ const programData = {
           name: "CSS To The Rescue",
           iconSrc: "//via.placeholder.com/64x64",
           url: "#",
-          description:
-            "Create fun, respronsive and pleasurable solutions for different kinds of complex interfaces.",
+          description: "Create fun, respronsive and pleasurable solutions for different kinds of complex interfaces.",
           partner_id: null,
           type: "course"
         },
@@ -35,8 +31,7 @@ const programData = {
           name: "Weekly Nerd",
           iconSrc: "//via.placeholder.com/64x64",
           url: "#",
-          description:
-            "A weekly presentation where new speakers visit and tell us all of their interesting coding knowledge",
+          description: "A weekly presentation where new speakers visit and tell us all of their interesting coding knowledge",
           partner_id: null,
           type: "course"
         }
@@ -45,16 +40,13 @@ const programData = {
     {
       label: "Week 1",
       sticky: false,
-      items: [
-        {
+      items: [{
           type: "assignment",
-          description:
-            "Introduction to Javascript object programming and design patterns for code."
+          description: "Introduction to Javascript object programming and design patterns for code."
         },
         {
           type: "assignment",
-          description:
-            "Creating fun, pleasurable and accessible solutions for different kinds of interfaces."
+          description: "Creating fun, pleasurable and accessible solutions for different kinds of interfaces."
         },
         {
           type: "speaker",
@@ -67,15 +59,13 @@ const programData = {
     {
       label: "Week 2",
       sticky: false,
-      items: [
-        {
+      items: [{
           type: "assignment",
           description: "Resolving and manipulating data from an API."
         },
         {
           type: "assignment",
-          description:
-            "Using CSS without the use of classes. Getting to know the basic CSS principles is key!"
+          description: "Using CSS without the use of classes. Getting to know the basic CSS principles is key!"
         },
         {
           type: "speaker",
@@ -88,16 +78,13 @@ const programData = {
     {
       label: "Week 3",
       sticky: false,
-      items: [
-        {
+      items: [{
           type: "assignment",
-          description:
-            "Finetune the structure and flow of your app, because It's a wrap!"
+          description: "Finetune the structure and flow of your app, because It's a wrap!"
         },
         {
           type: "assignment",
-          description:
-            "Designing your pleasurable interface with attention to detail."
+          description: "Designing your pleasurable interface with attention to detail."
         },
         {
           type: "speaker",
@@ -110,21 +97,17 @@ const programData = {
     {
       label: "Week 4",
       sticky: false,
-      items: [
-        {
-          type: "project",
-          name: "Project 1",
-          description:
-            "We will have a special project at the Openbare Bibliotheek Amsterdam (OBA). Here we will create awesome stuff with data about Amsterdam, which they collected throughout the years.",
-          url: "#"
-        }
-      ]
+      items: [{
+        type: "project",
+        name: "Project 1",
+        description: "We will have a special project at the Openbare Bibliotheek Amsterdam (OBA). Here we will create awesome stuff with data about Amsterdam, which they collected throughout the years.",
+        url: "#"
+      }]
     },
     {
       label: null,
       sticky: true,
-      items: [
-        {
+      items: [{
           name: "Browser Technologies",
           iconSrc: "//via.placeholder.com/64x64",
           url: "#",
@@ -153,16 +136,13 @@ const programData = {
     {
       label: "Week 5",
       sticky: false,
-      items: [
-        {
+      items: [{
           type: "assignment",
-          description:
-            "Make the basic functionality work on on as many devices as possible."
+          description: "Make the basic functionality work on on as many devices as possible."
         },
         {
           type: "assignment",
-          description:
-            "Do an performance audit of an existing site and make a plan to improve it."
+          description: "Do an performance audit of an existing site and make a plan to improve it."
         },
         {
           type: "speaker",
@@ -175,15 +155,13 @@ const programData = {
     {
       label: "Week 6",
       sticky: false,
-      items: [
-        {
+      items: [{
           type: "assignment",
           description: "Add feature detection to one of your applications.."
         },
         {
           type: "assignment",
-          description:
-            "Add serverside rendering to one of your applications, also turn it in to a progressive web app."
+          description: "Add serverside rendering to one of your applications, also turn it in to a progressive web app."
         },
         {
           type: "speaker",
@@ -196,16 +174,13 @@ const programData = {
     {
       label: "Week 7",
       sticky: false,
-      items: [
-        {
+      items: [{
           type: "assignment",
-          description:
-            "Turn your application into a three layer progressive enhancent one."
+          description: "Turn your application into a three layer progressive enhancent one."
         },
         {
           type: "assignment",
-          description:
-            "Add more optimalisations and a service worker. Make your application work offline."
+          description: "Add more optimalisations and a service worker. Make your application work offline."
         },
         {
           type: "speaker",
@@ -218,21 +193,17 @@ const programData = {
     {
       label: "Week 8",
       sticky: false,
-      items: [
-        {
-          type: "project",
-          name: "Project 2",
-          description:
-            "Lifely is a digital agency that focuses on design, content and technology. Your assignment is to improve a existing project. You can choose between the following projects: Fresh Heroes, an internship vacancy platform and TopTaal a language learning platform.",
-          url: "#"
-        }
-      ]
+      items: [{
+        type: "project",
+        name: "Project 2",
+        description: "Lifely is a digital agency that focuses on design, content and technology. Your assignment is to improve a existing project. You can choose between the following projects: Fresh Heroes, an internship vacancy platform and TopTaal a language learning platform.",
+        url: "#"
+      }]
     },
     {
       label: null,
       sticky: true,
-      items: [
-        {
+      items: [{
           name: "Web Design",
           iconSrc: "//via.placeholder.com/64x64",
           url: "#",
@@ -261,16 +232,13 @@ const programData = {
     {
       label: "Week 9",
       sticky: false,
-      items: [
-        {
+      items: [{
           type: "assignment",
-          description:
-            "Het structureren van JavaScript heeft een aantal voordelen. Het maakt de code beter leesbaar en dus makkelijker onderhoudbaar en uitbreidbaar."
+          description: "Het structureren van JavaScript heeft een aantal voordelen. Het maakt de code beter leesbaar en dus makkelijker onderhoudbaar en uitbreidbaar."
         },
         {
           type: "assignment",
-          description:
-            "De student kan een goed werkende responsive oplossing bedenken en maken voor complexe interfaces"
+          description: "De student kan een goed werkende responsive oplossing bedenken en maken voor complexe interfaces"
         },
         {
           type: "speaker",
@@ -283,11 +251,9 @@ const programData = {
     {
       label: "Week 10",
       sticky: false,
-      items: [
-        {
+      items: [{
           type: "assignment",
-          description:
-            "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
+          description: "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
         },
         {
           type: "assignment",
@@ -304,11 +270,9 @@ const programData = {
     {
       label: "Week 11",
       sticky: false,
-      items: [
-        {
+      items: [{
           type: "assignment",
-          description:
-            "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
+          description: "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
         },
         {
           type: "assignment",
@@ -325,35 +289,28 @@ const programData = {
     {
       label: "Week 12",
       sticky: false,
-      items: [
-        {
-          type: "project",
-          name: "Project 3",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.",
-          url: "#"
-        }
-      ]
+      items: [{
+        type: "project",
+        name: "Project 3",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.",
+        url: "#"
+      }]
     }
   ]
 };
 
 const courseData = {
   title: "Course",
-  description:
-    "Here comes the description for the course. Here comes the description for the course. Here comes the description for the course."
+  description: "Here comes the description for the course. Here comes the description for the course. Here comes the description for the course."
 };
 
 const studentWork = {
   title: "Student work",
   heading: "Student work",
-  description:
-    "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
-  courses: [
-    {
+  description: "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
+  courses: [{
       name: "Web app from scratch",
-      items: [
-        {
+      items: [{
           heading: "Project header",
           imgUrl: "/img/student-work/1.jpg",
           imgAlt: "Description of the project/image",
@@ -399,8 +356,7 @@ const studentWork = {
     },
     {
       name: "CSS to the rescue",
-      items: [
-        {
+      items: [{
           heading: "Project header",
           imgUrl: "/img/student-work/1.jpg",
           imgAlt: "Description of the project/image",
@@ -446,8 +402,7 @@ const studentWork = {
     },
     {
       name: "Project 1",
-      items: [
-        {
+      items: [{
           heading: "Project header",
           imgUrl: "/img/student-work/1.jpg",
           imgAlt: "Description of the project/image",
@@ -497,21 +452,17 @@ const studentWork = {
 const partnersData = {
   title: "Our Partners",
   heading: "Our Partners",
-  description:
-    "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
+  description: "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
   linkText: "View project",
-  members: [
-    {
+  members: [{
       heading: "Openbare Bibliotheek Amsterdam",
-      subHeading:
-        "The OBA comprises a Central Library and 25 branch libraries.",
+      subHeading: "The OBA comprises a Central Library and 25 branch libraries.",
       avatarURL: "/img/partners/oba.jpg",
       gitHubURL: "https://www.oba.nl/"
     },
     {
       heading: "De Ceuvel",
-      subHeading:
-        "De Ceuvel is a city playground for innovation and creativity.",
+      subHeading: "De Ceuvel is a city playground for innovation and creativity.",
       avatarURL: "/img/partners/deceuvel.jpg",
       gitHubURL: "https://www.oba.nl/"
     }
@@ -521,11 +472,9 @@ const partnersData = {
 const teamData = {
   title: "Ons Team",
   heading: "Ons Team",
-  description:
-    "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
+  description: "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
   linkText: "Personal GitHub",
-  members: [
-    {
+  members: [{
       fullName: "James Peter Perrone Jefferies",
       description: "Something about me!",
       avatarURL: "/img/avatars/james.png",
@@ -544,6 +493,10 @@ const signupData = {
   title: "Sign-Up"
 };
 
+const contactData = {
+  title: "contact"
+};
+
 nunjucks.configure("./templates", {
   autoescape: true,
   express: app,
@@ -553,43 +506,49 @@ nunjucks.configure("./templates", {
 app.set("view engine", "html");
 app.use(express.static("./static"));
 
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   res.render("index.html", {
     data: homepageData
   });
 });
 
-app.get("/course", function(req, res) {
+app.get("/course", function (req, res) {
   res.render("course.html", {
     data: courseData
   });
 });
 
-app.get("/program", function(req, res) {
+app.get("/program", function (req, res) {
   res.render("program.html", {
     data: programData
   });
 });
 
-app.get("/partners", function(req, res) {
+app.get("/partners", function (req, res) {
   res.render("partners.html", {
     data: partnersData
   });
 });
 
-app.get("/team", function(req, res) {
+app.get("/team", function (req, res) {
   res.render("partners-team.html", {
     data: teamData
   });
 });
 
-app.get("/student-work", function(req, res) {
+app.get("/student-work", function (req, res) {
   res.render("student-work.html", {
     data: studentWork
   });
 });
 
-app.get("/signup", function(req, res) {
+app.get("/contact", function (req, res) {
+  res.render("contact.html", {
+    data: contactData
+  });
+});
+
+app.get("/signup", function (req, res) {
   res.render("signup.html", {
     data: signupData
   });
