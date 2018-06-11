@@ -1,10 +1,15 @@
 $border-color: #bebebe;
 $border-radius: 0.5rem;
 
+$grid-header-height: rem(80);
+$grid-row-height: rem(160);
+$grid-gutter: rem(24);
+
 .timeline {
   display: grid;
-  grid-gap: 24px;
+  grid-gap: $grid-gutter;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: $grid-header-height $grid-row-height;
 
   .period {
     background: red;
@@ -27,12 +32,34 @@ $border-radius: 0.5rem;
     grid-row: 5;
   }
 
+  .week {
+    display: flex;
+    align-items: center;
+  }
+
+  header {
+    padding-top: rem(24);
+  }
+
   article {
+    grid-row: 1 / span 4;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: $grid-header-height $grid-row-height $grid-row-height $grid-row-height;
+    grid-gap: $grid-gutter;
+
+    padding: 0 rem(24);
+
+    border: 1px solid $border-color;
+    box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.04);
+    border-radius: $border-radius;
+
+    h5 {
+      margin: 0;
+    }
   }
 
   .project {
+    grid-row: 5;
     grid-column: 2 / span 4;
   }
 }

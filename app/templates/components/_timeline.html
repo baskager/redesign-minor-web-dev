@@ -10,7 +10,7 @@
     </div>
     
     {% for week in period.weeks %}
-        <div class="week-{{week}}">
+        <div class="week week-{{week}}">
             Week: {{ week }}
         </div>
     {% endfor %}
@@ -24,7 +24,7 @@
                 </header>
 
                 {% for week in course.weeks %}
-                    <div>
+                    <div class="week">
                         {{ week.week }}
                         {{ week.name }}
                         {{ week.description }}
@@ -39,8 +39,7 @@
                 </header>
 
                 {% for week in course.weeks %}
-                    <div>
-                        {{ week.week }}
+                    <div class="week">
                         {{ week.name }}
                         {{ week.description }}
                         {{ week.imgSrc }}
