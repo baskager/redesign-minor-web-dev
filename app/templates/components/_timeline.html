@@ -17,7 +17,7 @@
         
     {% for course in period.courses %}
         {% if course.type == "course" %}
-            <article>
+            <article class="course-{{ course.abbreviation }}">
                 <header>
                     <h5>{{ course.name }}</h5>
                     <h6>{{ course.description }}</h6>
@@ -32,7 +32,7 @@
                 {% endfor %}
             </article>
         {% elseif course.type == "speakers" %}
-            <article>
+            <article class="course-{{ course.abbreviation }}">
                 <header>
                     <h5>{{ course.name }}</h5>
                     <h6>{{ course.description }}</h6>

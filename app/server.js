@@ -15,6 +15,7 @@ const programData = {
       courses: [
         {
           name: "CSS to the rescue",
+          abbreviation: "cssttr",
           description: "CSS & Accessibility course",
           type: "course",
           weeks: [
@@ -37,6 +38,7 @@ const programData = {
         },
         {
           name: "Web App From Scratch",
+          abbreviation: "wafs",
           description: "JavaScript course",
           type: "course",
           weeks: [
@@ -58,6 +60,7 @@ const programData = {
         },
         {
           name: "Weekly nerd",
+          abbreviation: "wn",
           description: "(Guest) Speakers",
           type: "speakers",
           weeks: [
