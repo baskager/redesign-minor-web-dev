@@ -18,39 +18,39 @@ main {
   padding-bottom: 10em;
 }
 
-.course-cssttr {
+.course-cssttr:not(p) {
   color: $cssttr-color;
 }
 
-.course-wafs {
+.course-wafs:not(p) {
   color: $wafs-color;
 }
 
-.course-wn {
+.course-wn:not(p) {
   color: $wn-color;
 }
 
-.project {
+.project:not(p) {
   color: $project-color;
 }
 
-.course-pm {
+.course-pm:not(p) {
   color: $pm-color;
 }
 
-.course-bt {
+.course-bt:not(p) {
   color: $bt-color;
 }
 
-.course-wd {
+.course-wd:not(p) {
   color: $wd-color;
 }
 
-.course-rtw {
+.course-rtw:not(p) {
   color: $rtw-color;
 }
 
-.course-mp {
+.course-mp:not(p) {
   color: $mp-color;
 }
 
