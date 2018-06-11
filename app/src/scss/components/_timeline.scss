@@ -4,15 +4,6 @@ $border-radius: 0.5rem;
 $grid-header-height: rem(80);
 $grid-row-height: rem(160);
 $grid-gutter: rem(24);
-$cssttr-color: #4e00af;
-$wafs-color: #005aad;
-$wn-color: #008d96;
-$project-color: #bd3213;
-$pm-color: #007a4e;
-$bt-color: #233e68;
-$wd-color: #d00064;
-$rtw-color: #9e0068;
-$mp-color: #dd1b00;
 
 @mixin timeline-mid {
   background-image: url("/img/timeline/timeline-mid.svg");
@@ -92,13 +83,28 @@ $mp-color: #dd1b00;
     grid-template-rows: $grid-header-height $grid-row-height $grid-row-height $grid-row-height;
 
     border: 1px solid $border-color;
-    box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.04);
+    box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.08);
     border-radius: $border-radius;
+
+    &:not(:last-child) > :not(:last-child) {
+      border-bottom: 1px red solid;
+    }
   }
 
   h5,
   h6 {
     margin: 0;
+  }
+
+  h5 {
+    // Move to global?
+    font-size: rem(18);
+  }
+
+  h6 {
+    // Move to global?
+    font-size: rem(16);
+    font-weight: normal;
   }
 
   .project {
