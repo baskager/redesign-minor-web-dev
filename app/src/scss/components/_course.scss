@@ -67,6 +67,9 @@
   margin: 5rem 0;
   .testimonial {
     margin: 0 auto;
+    p:last-of-type {
+      font-weight: 700;
+    }
   }
 }
 
@@ -93,6 +96,21 @@
   .course-header .container {
     div {
       grid-column: 1 / 13;
+    }
+
+    >img {
+      grid-column: 1 / 13;
+      opacity: 0.8;
+    }
+  }
+
+  .student-quote {
+    .testimonial {
+      display: block;
+      img {
+        margin: 0 auto;
+        display: block;
+      }
     }
   }
 }
