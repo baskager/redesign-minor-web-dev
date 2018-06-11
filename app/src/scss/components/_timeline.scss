@@ -41,7 +41,8 @@ $mp-color: #dd1b00;
     grid-row: 5;
   }
 
-  .week {
+  .week,
+  .period {
     display: flex;
     align-items: center;
   }
@@ -62,7 +63,8 @@ $mp-color: #dd1b00;
     box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.04);
     border-radius: $border-radius;
 
-    h5 {
+    h5,
+    h6 {
       margin: 0;
     }
   }
