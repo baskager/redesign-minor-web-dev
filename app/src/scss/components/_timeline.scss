@@ -53,7 +53,7 @@ $border-radius: 0.5rem;
   .column-project {
     width: 75%;
     align-items: flex-start;
-    margin: rem(23) rem(4);
+    margin: rem(24) 0;
 
     border: 1px solid $border-color;
     border-radius: $border-radius;
@@ -75,6 +75,13 @@ $border-radius: 0.5rem;
 
     &:nth-child(odd) {
       background-color: #fafafa;
+    }
+
+    &.project {
+      .week {
+        margin-right: rem(16);
+        margin-left: rem(4);
+      }
     }
   }
 
