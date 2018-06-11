@@ -4,15 +4,18 @@
 {% for period in data.periods %}
 
 <main class="timeline">
-    Periode: {{ period.period }}
 
-    <div class="weeks">
-        {% for week in period.weeks %}
-            Week: {{ week }}
-        {% endfor %}
+    <div class="period">
+        Periode: {{ period.period }}
     </div>
-
-    {% for course in period.courses %}    
+    
+    {% for week in period.weeks %}
+        <div class="week-{{week}}">
+            Week: {{ week }}
+        </div>
+    {% endfor %}
+        
+    {% for course in period.courses %}
         {% if course.type == "course" %}
             <article>
                 <header>
@@ -45,7 +48,7 @@
                 {% endfor %}
             </article>
         {% elseif course.type == "project" %}
-            <article>
+            <article class="project">
                 <header>
                     <h5>{{ course.name }}</h5>
                     <h6>{{ course.partner }}</h6>

@@ -2,100 +2,136 @@ $border-color: #bebebe;
 $border-radius: 0.5rem;
 
 .timeline {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto rem(160) auto;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
 
-  .row-sticky {
-    margin-top: rem(24);
-    // position: sticky;
-    // top: rem(70);
-    background-color: #fff;
+  .period {
+    background: red;
+    grid-row: 1;
   }
 
-  .row-container {
-    display: flex;
-    margin: auto;
-    max-width: $container-xl;
+  .week-1 {
+    grid-row: 2;
   }
 
-  .column {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: $padding-24;
-    background: #fff;
-
-    border-left: 1px solid $border-color;
-    border-right: 1px solid $border-color;
-
-    border-bottom: 1px solid lighten($border-color, 15%);
-
-    margin-left: rem(16);
-
-    &:first-of-type {
-      border: 0;
-    }
-
-    &:last-of-type {
-      margin-right: rem(16);
-    }
-
-    &.course {
-      border-top: 1px solid $border-color;
-      border-top-left-radius: $border-radius;
-      border-top-right-radius: $border-radius;
-    }
+  .week-2 {
+    grid-row: 3;
   }
 
-  .column-project {
-    width: 75%;
-    align-items: flex-start;
-    margin: rem(24) 0;
-
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
-
-    p {
-      max-width: rem(480);
-    }
+  .week-3 {
+    grid-row: 4;
   }
 
-  .week {
-    background-image: url("/img/timeline/timeline-mid.svg");
-    background-position: center right 20px;
-    background-repeat: no-repeat;
-    background-color: transparent;
+  .week-4 {
+    grid-row: 5;
   }
 
-  .row {
-    width: 100%;
-
-    &:nth-child(odd) {
-      background-color: #fafafa;
-    }
-
-    &.project {
-      .week {
-        margin-right: rem(16);
-        margin-left: rem(4);
-      }
-    }
+  article {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
   }
 
-  .row-sticky + .row {
-    .week {
-      background-image: url("/img/timeline/timeline-start.svg");
-    }
-  }
-
-  .row:last-child,
-  .row.project {
-    .week {
-      background-image: url("/img/timeline/timeline-end.svg");
-      background-position: center right 20px;
-      }
+  .project {
+    grid-column: 2 / span 4;
   }
 }
+
+// .timeline {
+//   display: flex;
+//   flex-direction: column;
+//   margin: 0 auto rem(160) auto;
+
+//   .row-sticky {
+//     margin-top: rem(24);
+//     // position: sticky;
+//     // top: rem(70);
+//     background-color: #fff;
+//   }
+
+//   .row-container {
+//     display: flex;
+//     margin: auto;
+//     max-width: $container-xl;
+//   }
+
+//   .column {
+//     width: 25%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     padding: $padding-24;
+//     background: #fff;
+
+//     border-left: 1px solid $border-color;
+//     border-right: 1px solid $border-color;
+
+//     border-bottom: 1px solid lighten($border-color, 15%);
+
+//     margin-left: rem(16);
+
+//     &:first-of-type {
+//       border: 0;
+//     }
+
+//     &:last-of-type {
+//       margin-right: rem(16);
+//     }
+
+//     &.course {
+//       border-top: 1px solid $border-color;
+//       border-top-left-radius: $border-radius;
+//       border-top-right-radius: $border-radius;
+//     }
+//   }
+
+//   .column-project {
+//     width: 75%;
+//     align-items: flex-start;
+//     margin: rem(24) 0;
+
+//     border: 1px solid $border-color;
+//     border-radius: $border-radius;
+
+//     p {
+//       max-width: rem(480);
+//     }
+//   }
+
+//   .week {
+//     background-image: url("/img/timeline/timeline-mid.svg");
+//     background-position: center right 20px;
+//     background-repeat: no-repeat;
+//     background-color: transparent;
+//   }
+
+//   .row {
+//     width: 100%;
+
+//     &:nth-child(odd) {
+//       background-color: #fafafa;
+//     }
+
+//     &.project {
+//       .week {
+//         margin-right: rem(16);
+//         margin-left: rem(4);
+//       }
+//     }
+//   }
+
+//   .row-sticky + .row {
+//     .week {
+//       background-image: url("/img/timeline/timeline-start.svg");
+//     }
+//   }
+
+//   .row:last-child,
+//   .row.project {
+//     .week {
+//       background-image: url("/img/timeline/timeline-end.svg");
+//       background-position: center right 20px;
+//       }
+//   }
+// }
