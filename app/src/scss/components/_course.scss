@@ -63,6 +63,13 @@
   }
 }
 
+.student-quote {
+  margin: 5rem 0;
+  .testimonial {
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 992px) {
   .other-courses {
     div {
@@ -72,10 +79,20 @@
       }
     }
   }
+  .course-header .container {
+    div {
+      grid-column: 1 / 9;
+    }
+  }
 }
 
 @media (max-width: 768px) {
   .course-info {
     grid-template-columns: 100%;
+  }
+  .course-header .container {
+    div {
+      grid-column: 1 / 13;
+    }
   }
 }
