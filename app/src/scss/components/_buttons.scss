@@ -2,6 +2,7 @@ a.btn {
   display: inline-block;
   text-decoration: none;
 }
+
 button,
 input[type="submit"],
 input[type="reset"],
@@ -19,7 +20,6 @@ input[type="reset"],
   padding: 1rem 3.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-
   &:disabled {
     opacity: 0.5;
     cursor: auto;
@@ -32,14 +32,17 @@ input[type="reset"],
   &:focus {
     transform: scale(1.05);
   }
-  &:active {
-  }
+  &:active {}
 }
+
 .btn-link {
   border: 0;
 }
 
-.btn-primary {
+button.btn-primary,
+input[type="submit"].btn-primary,
+input[type="reset"].btn-primary,
+.btn.btn-primary {
   background: $btn-primary-background;
   border-color: $btn-primary-border-color;
   color: $btn-primary-color;
