@@ -76,6 +76,15 @@ $mp-color: #dd1b00;
     margin: 0;
   }
 
+  h5 {
+    font-size: rem(18);
+  }
+
+  h6 {
+    font-size: rem(16);
+    font-weight: normal;
+  }
+
   .project {
     grid-row: 5;
     grid-column: 2 / span 4;
