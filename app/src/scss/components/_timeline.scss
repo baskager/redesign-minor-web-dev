@@ -25,6 +25,9 @@ $mp-color: #dd1b00;
   .period {
     background: red;
     grid-row: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 rem(24);
   }
 
   .week-1 {
@@ -46,6 +49,15 @@ $mp-color: #dd1b00;
   .week {
     display: flex;
     align-items: center;
+    padding: 0 rem(24);
+  }
+
+  header {
+    padding: 0 rem(24);
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
   }
 
   article {
@@ -54,17 +66,12 @@ $mp-color: #dd1b00;
     grid-template-rows: $grid-header-height $grid-row-height $grid-row-height $grid-row-height;
     grid-gap: $grid-gutter;
 
-    padding: 0 rem(24);
-
     border: 1px solid $border-color;
     box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.04);
     border-radius: $border-radius;
   }
 
-  h5 {
-    margin: 0;
-  }
-
+  h5,
   h6 {
     margin: 0;
   }
