@@ -1,69 +1,76 @@
-@import './components/variables';
+@import "./components/variables";
 
 h1,
 h2,
 h3 {
-    line-height: 1;
+  line-height: 1;
 }
 
 h1 {
-    font-size: $h1-font-size;
-    font-style: $h1-font-style;
-    font-weight: $h1-font-weight;
-    font-family: $font-family-headers;
-    font-weight: 700;
-    text-transform: uppercase;
+  font-size: $h1-font-size;
+  font-style: $h1-font-style;
+  font-weight: $h1-font-weight;
+  font-family: $font-family-headers;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: $margin-48 0;
 }
 
 h2 {
-    font-size: $h2-font-size;
-    font-style: $h2-font-style;
-    font-weight: $h2-font-weight;
+  font-size: $h2-font-size;
+  font-style: $h2-font-style;
+  font-weight: $h2-font-weight;
 }
 
 h3 {
-    font-size: $h3-font-size;
-    font-style: $h3-font-style;
-    font-weight: $h3-font-weight;
+  font-size: $h3-font-size;
+  font-style: $h3-font-style;
+  font-weight: $h3-font-weight;
+}
+
+h4 {
+  margin: 1em 0 0 0;
+  text-transform: uppercase;
 }
 
 a {
-    color: $link-color;
+  color: $link-color;
+  text-decoration: none;
 }
 
 blockquote {
-    background: $blockquote-background-color;
-    border-left: 0.75rem solid $blockquote-border-color;
-    color: $blockquote-text-color;
-    margin: 1.5em;
-    padding: 1rem 0.5rem;
-    quotes: "\201C""\201D""\2018""\2019";
+  background: $blockquote-background-color;
+  border-left: 0.75rem solid $blockquote-border-color;
+  color: $blockquote-text-color;
+  margin: 0;
+  padding: 1rem 0.5rem;
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 blockquote:before {
-    color: $blockquote-border-color;
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
+  color: $blockquote-border-color;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
 }
 
 b,
 strong {
-    font-weight: $bold;
+  font-weight: $bold;
 }
 
 i,
 em {
-    font-style: italic;
+  font-style: italic;
 }
 
 mark {
-    background-color: $mark-color;
-    padding: 0.15rem 0.25rem 0.025rem;
+  background-color: $mark-color;
+  padding: 0.15rem 0.25rem 0.025rem;
 }
 
 small {
-    font-size: $body-font-size-small;
+  font-size: $body-font-size-small;
 }

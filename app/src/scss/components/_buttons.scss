@@ -2,21 +2,24 @@ a.btn {
   display: inline-block;
   text-decoration: none;
 }
+
 button,
 input[type="submit"],
 input[type="reset"],
 .btn {
   font-size: 1em;
   font-weight: $semi-bold;
-  color: #555;
+  background: $btn-basic-background;
   cursor: pointer;
   transition: 0.2s;
-  padding: 2em 4em;
   margin: 1em;
-  border: $btn-border-size solid;
-  border-radius: 0.2em;
+  border: 0;
+  border-radius: 2rem;
   box-sizing: border-box;
-
+  display: inline-block;
+  padding: 1rem 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   &:disabled {
     opacity: 0.5;
     cursor: auto;
@@ -25,20 +28,26 @@ input[type="reset"],
   &:disabled:hover {
     transform: none;
   }
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     transform: scale(1.05);
   }
   &:active {}
 }
+
 .btn-link {
   border: 0;
 }
 
-.btn-primary {
+button.btn-primary,
+input[type="submit"].btn-primary,
+input[type="reset"].btn-primary,
+.btn.btn-primary {
   background: $btn-primary-background;
   border-color: $btn-primary-border-color;
   color: $btn-primary-color;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: $btn-primary-focus-background;
   }
 }
@@ -47,7 +56,8 @@ input[type="reset"],
   background: $btn-cta-background;
   border-color: $btn-cta-border-color;
   color: $btn-cta-color;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: $btn-cta-focus-background;
   }
 }
@@ -56,7 +66,8 @@ input[type="reset"],
   background: $btn-danger-background;
   border-color: $btn-danger-border-color;
   color: $btn-danger-color;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: $btn-danger-focus-background;
   }
 }
@@ -65,7 +76,8 @@ input[type="reset"],
   background: $btn-warning-background;
   border-color: $btn-warning-border-color;
   color: $btn-warning-color;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: $btn-warning-focus-background;
   }
 }
@@ -74,7 +86,8 @@ input[type="reset"],
   background: $btn-success-background;
   border-color: $btn-success-border-color;
   color: $btn-success-color;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: $btn-success-focus-background;
   }
 }
