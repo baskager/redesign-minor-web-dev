@@ -8,10 +8,105 @@ const homepageData = {
 
 const programData = {
   title: "Program",
+  periods: [
+    {
+      period: 1,
+      weeks: [1, 2, 3, 4],
+      courses: [
+        {
+          name: "CSS to the rescue",
+          description: "CSS & Accessibility course",
+          type: "course",
+          weeks: [
+            {
+              week: 1,
+              description:
+                "Creating fun, pleasurable and accessible solutions for different kinds of interfaces."
+            },
+            {
+              week: 2,
+              description:
+                "Using CSS without the use of classes. Getting to know the basic CSS principles is key!"
+            },
+            {
+              week: 3,
+              description:
+                "Finetune the structure and flow of your app, because It's a wrap!"
+            }
+          ]
+        },
+        {
+          name: "Web App From Scratch",
+          description: "JavaScript course",
+          type: "course",
+          weeks: [
+            {
+              week: 1,
+              description:
+                "Introduction to Javascript object programming and coding design patterns."
+            },
+            {
+              week: 2,
+              description: "Resolving and manipulating data from an API."
+            },
+            {
+              week: 3,
+              description:
+                "Designing your pleasurable interface with attention to detail."
+            }
+          ]
+        },
+        {
+          name: "Weekly nerd",
+          description: "(Guest) Speakers",
+          type: "speakers",
+          weeks: [
+            {
+              week: 1,
+              name: "Justus Sturkenboom",
+              imgSrc: "//via.placeholder.com/64x64",
+              description: "Functional Programming"
+            },
+            {
+              week: 2,
+              name: "Titus Wormer",
+              imgSrc: "//via.placeholder.com/64x64",
+              description: "Git"
+            },
+            {
+              week: 3,
+              name: "Vasilis van Gemert",
+              imgSrc: "//via.placeholder.com/64x64",
+              description: "Accessibility"
+            }
+          ]
+        },
+        {
+          name: "Project 1",
+          partner: "Openbare Bibliotheek Amsterdam",
+          description:
+            "At the OBA we will create awesome stuff with data about Amsterdam, which they collected throughout the years.",
+          type: "project"
+        }
+      ]
+    }
+  ]
+};
+
+/* 
+const programData = {
+  title: "Program",
   program: [
     {
-      label: null,
-      sticky: true,
+      name: "CSS to the rescue",
+      description: "CSS & Accessibility course",
+      weeks: [
+        {
+          week: 1,
+          description:
+            "Creating fun, pleasurable and accessible solutions for different kinds of interfaces."
+        }
+      ],
       items: [
         {
           name: "Web App From Scratch",
@@ -337,6 +432,7 @@ const programData = {
     }
   ]
 };
+*/
 
 const courseData = {
   title: "Course",
