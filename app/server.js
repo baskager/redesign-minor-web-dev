@@ -60,6 +60,7 @@ const programData = {
         },
         {
           name: "Weekly nerd",
+          abbreviation: "wn",
           description: "(Guest) Speakers",
           type: "speakers",
           weeks: [
