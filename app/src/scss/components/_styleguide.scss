@@ -1,44 +1,45 @@
 .styleguide {
-  max-width: 80em;
-  margin: 0 auto;
+    max-width: 80em;
+    margin: 0 auto;
 }
 .colors {
-  display: flex;
-  // justify-content: space-between;
+    display: flex;
+    // justify-content: space-between; 
 }
 .colorgroup {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .colorbox {
-  width: 12em;
-  height: 12em;
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
-  padding: 1em;
-  padding-top: 5em;
-  box-sizing: border-box;
+    width: 12em;
+    height: 12em;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 1em;
+    padding-top: 5em;
+    box-sizing: border-box;
 }
 .primary {
-  background: $primary-color;
+    background: $primary-color;
+    color: #555;
 }
 .secondary {
-  background: $secondary-color;
+    background: $secondary-color;
 }
 .accent {
-  background: $accent-color;
-  color: #555;
+    background: $accent-color;
+    color: #555;
 }
 .success {
-  background: $success-green;
-  color: #333;
+    background: $success-green;
+    color: #333;
 }
 .warning {
-  background: $warning-yellow;
-  color: #333;
+    background: $warning-yellow;
+    color: #333;
 }
 .danger {
-  background: $danger-red;
-  color: #333;
+    background: $danger-red;
+    color: #333;
 }

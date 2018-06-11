@@ -1,13 +1,9 @@
-{% set title = "Home" %}
 {% extends "components/_base.html" %}
 
 {% block content %}
-<header class="hero">
-    <div class="container">
-        <h1>{{ data.title }}</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere tristique nisi, quis finibus sem porttitor sed. Vivamus finibus nulla id massa vehicula, et congue sapien placerat. Suspendisse potenti. Vestibulum commodo, nisi commodo pellentesque malesuada, nisi lacus auctor felis, non varius metus nulla ullamcorper est. Maecenas vestibulum tellus eu lectus maximus aliquet. Praesent blandit eros massa, vel facilisis urna viverra ac. Vestibulum feugiat sem quis condimentum condimentum.</p>
 
-        {# {% include "components/_student-work-card.html" %} #}
-    </div>
-</header>
+<h1>{{ data.title }}</h1>
+
+{% include "components/_student-work-card.html" %}
+
 {% endblock %}

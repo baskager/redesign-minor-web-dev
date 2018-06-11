@@ -1,57 +1,49 @@
 .course-card-list {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-row-gap: 2em;
-
-  .course-card {
-    padding: 2em;
-    background: $accent-color;
-    position: relative;
-    &:last-child {
-      margin-right: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 2em;
+    .course-card {
+        padding: 3em;
+        background: $secondary-color;
+        position: relative;
+        &:last-child {
+            margin-right: 0;
+        }
+        a {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+         }
+        p {
+            text-align: justify;
+            color: #fff;
+        }
+        h3 {
+            text-align: center;
+            color: $primary-color;
+        }
+        img {
+            width: 10em;
+            height: 10em;
+            display: block;
+            margin: 0 auto;
+        }
     }
-    a {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-    }
-    ul {
-      padding-left: 1rem;
-      li {
-        padding-left: 0.4em;
-        list-style-image: url("/img/icons/bullet-purple.svg");
-        padding-bottom: 0.3rem;
-      }
-    }
-    h3 {
-      text-align: center;
-      color: $primary-color;
-    }
-    img {
-      width: 10em;
-      height: 10em;
-      display: block;
-      margin: 0 auto;
-    }
-  }
 }
 
 @media (min-width: 768px) {
-  .course-card-list {
-    margin: 0 auto;
-    grid-template-columns: calc(100% / 2 - 0.5em) calc(100% / 2 - 0.5em);
-    grid-column-gap: 1em;
-    grid-row-gap: 3em;
-  }
+    .course-card-list {
+        margin: 0 auto;
+        grid-template-columns: calc(100% / 2 - .5em) calc(100% / 2 - .5em);
+        grid-column-gap: 1em;
+        grid-row-gap: 3em;
+    }
 }
 
 @media (min-width: 992px) {
-  .course-card-list {
-    grid-template-columns: calc(100% / 3 - 1em) calc(100% / 3 - 1em) calc(
-        100% / 3 - 1em
-      );
-    grid-column-gap: 1.5em;
-  }
+    .course-card-list {
+        grid-template-columns: calc(100% / 3 - 1em) calc(100% / 3) calc(100% / 3 - 1em);
+    }
 }

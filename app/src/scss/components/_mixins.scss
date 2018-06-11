@@ -1,8 +1,4 @@
 $browser-context: 16; // Default browser font size
 @function rem($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}rem;
-}
-
-@mixin transition($time: 0.1s, $property: all) {
-  transition: ease-in-out $property $time;
+    @return #{$pixels/$context}rem;
 }
