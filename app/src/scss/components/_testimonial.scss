@@ -1,0 +1,19 @@
+.testimonial {
+  max-width: 40em;
+  display: flex;
+}
+.testimonial img {
+  width: 7.5em;
+  height: 7.5em;
+  border-radius: 50%;
+  padding: 1em;
+}
+.testiomial h3 {
+  margin-bottom: 0;
+}
+.testimonial blockquote {
+  box-sizing: border-box;
+}
+.testimonial i {
+  margin-left: 3em;
+}

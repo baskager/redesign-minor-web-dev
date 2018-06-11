@@ -1,0 +1,5 @@
+.student-work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
+  grid-gap: 2em 1em;
+}
