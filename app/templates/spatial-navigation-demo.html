@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spatial Navigation - DEMO</title>
+  <link rel="stylesheet" href="/css/demo.css">
+  <script src="/js/spatial-navigation.js"></script>
+
+  <script>
+    window.addEventListener('load', function () {
+      SpatialNavigation.init();
+      SpatialNavigation.add({ selector: '.focusable' });
+      SpatialNavigation.makeFocusable();
+      SpatialNavigation.focus();
+    });
+  </script>
+</head>
+
+<body>
+  <main class="flex">
+    <section class="focusable">1</section>
+    <section class="focusable">2</section>
+    <section class="focusable">3</section>
+    <section class="focusable">4</section>
+    <section class="focusable">5</section>
+    <section class="focusable">6</section>
+    <section class="focusable">7</section>
+    <section class="focusable">8</section>
+    <section class="focusable">9</section>
+  </main>
+</body>
+
+</html>

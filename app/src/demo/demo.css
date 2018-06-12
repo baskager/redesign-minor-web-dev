@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  color: white;
+  font-family: monospace;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+*:focus {
+  outline: none;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex section {
+  background-color: #e91e63;
+  height: 33.333vh;
+  line-height: 33.333vh;
+  text-align: center;
+  width: 33.333%;
+}
+
+.flex section:hover,
+.flex section:focus {
+  background-color: #880e4f;
+  cursor: pointer;
+}

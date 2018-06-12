@@ -595,4 +595,8 @@ app.get("/signup", function(req, res) {
   });
 });
 
+app.get("/demo", function(req, res) {
+  res.render("spatial-navigation-demo.html");
+});
+
 app.listen(3000, () => console.log("Example app listening on port 3000!"));
