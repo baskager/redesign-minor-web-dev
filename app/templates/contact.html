@@ -1,30 +1,37 @@
 {% extends 'components/_base.html' %} {% block content %}
 <header>
   <div class="container">
-    <h1>Contact Us</h1>
+    <h1>Get In Touch</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, natus placeat est molestiae et omnis magnam dolor consequatur
-      blanditiis nostrum, quis possimus voluptates quas quisquam. Illo alias nesciunt beatae accusamus?</p>
+      blanditiis nostrum, quis possimus voluptates quas quisquam.</p>
   </div>
 </header>
-<main class="contact-wrapper container">
+<main class="contact-wrapper grid container">
   <form action="/" method="post">
-    <h2>Contact Us</h2>
     <fieldset>
-      <label>Full Name
-        <input type="text" placeholder="Arthur Parker" autofocus required>
+      <legend>Send us a Message</legend>
+      <label> Your Name
+        <input type="text" placeholder="">
       </label>
-      <label>E-Mail
-        <input type="email" placeholder="arthur.parker@domain.com" required>
+      <label> Email Address
+        <input type="email" placeholder="">
       </label>
-      <label>Phone
-        <input type="tel" placeholder="+31 6 478390" required>
+      <label> Phone
+        <input type="tel" placeholder="">
       </label>
-      <label>Message
-        <textarea placeholder="Message" rows="10"></textarea>
+      <label> Message
+        <textarea rows="5"></textarea>
       </label>
     </fieldset>
-    <p>contact@hva-minor.nl</p>
-    <p>Phone: +31 6 689378</p>
   </form>
+  <section>
+    <h2>Contact Information</h2>
+    <ul>
+      <li>Wibautstraat 2-4,
+        <br>Amstelcampus, 1091 GM Amsterdam</li>
+      <li>020 595 1405</li>
+      <li>studievoorlichting@hva.nl</li>
+    </ul>
+  </section>
 </main>
 {% endblock %}

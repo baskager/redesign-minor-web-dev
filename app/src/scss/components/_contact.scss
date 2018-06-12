@@ -1,46 +1,53 @@
 .contact-wrapper {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(12, 1fr);
+  box-shadow: 0 7px 28px rgba(61, 25, 91, 0.15),
+    0 5px 10px rgba(61, 25, 91, 0.12);
+  border-radius: 3px;
   form {
-    border-radius: 5px;
-    border: 1px solid lighten(#000, 75%);
-    grid-column: 1 / 6;
+    padding: 2.5rem 1rem;
+    grid-column: 1 / 8;
     fieldset {
       border: none;
-      margin: 0;
-      padding: $padding-16 $padding-32;
-    }
-    h2 {
-      border-bottom: 1px solid lighten(#000, 75%);
-      font-size: 20px;
-      margin: 0;
-      padding: $padding-16 0;
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
     }
     label {
-      display: block;
-      margin-top: $margin-16;
-      color: lighten(#000, 25%);
-      &:first-of-type {
-        margin-top: 0;
+      width: calc(50% - 10px);
+      margin-right: 20px;
+      color: #9e9e9e;
+      font-size: 0.75rem;
+      &:last-of-type {
+        width: 100%;
+      }
+      &:nth-of-type(even) {
+        margin-right: 0;
       }
     }
-    input {
+    input,
+    textarea {
       display: block;
-      margin-top: $margin-8;
-      padding: $padding-16;
       width: 100%;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      border-bottom: 1px solid #cfd8dc;
+      padding: 8px 0;
       font: inherit;
-      &[type="submit"] {
-        margin: $margin-32 0;
-        font-weight: 600;
-      }
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    textarea {
+      margin-bottom: none;
+      resize: none;
     }
   }
-  blockquote {
-    margin-left: 0;
-    margin-bottom: 0;
-    margin-right: 0;
+  section {
+    padding: 2.5rem 1rem;
+    grid-column: 8 / 13;
+    background-color: $primary-color;
+    color: white;
+    h2 {
+      margin-top: 0;
+    }
   }
 }
