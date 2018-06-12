@@ -89,3 +89,48 @@
 .course-list.delighter li:nth-of-type(3) {
     transition-delay: .6s;
 }
+
+.signup-wrapper .form-submit {
+    height: 13rem;
+    label {
+        animation: submit-form 1s cubic-bezier(0.430, 0.005, 0.000, 0.995) forwards;
+    }
+
+    input[type="submit"] {
+        width: 3.5rem;
+        margin: $margin-32 auto;
+        transition: none;
+        color: $primary-color;
+        background-color: $primary-color;
+        transform: none;
+        display: block;
+        position: relative;
+        bottom: 0;
+        &:hover {
+            background-color: $primary-color;
+            transform: none;
+        }
+    }
+}
+
+@keyframes submit-form {
+    0% {
+        opacity: 1;
+        height: 90px;
+    }
+
+    50% {
+        height: 0;
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+        height: 0;
+        margin: 0;
+        opacity: 0;
+    }
+
+
+}
