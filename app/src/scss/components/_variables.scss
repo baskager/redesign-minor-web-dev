@@ -55,6 +55,11 @@ $margin-16: 1rem;
 $margin-24: 1.5rem;
 $margin-32: 2rem;
 $margin-48: 2.5rem;
+$margin-56: rem(56);
+$margin-64: rem(64);
+$margin-72: rem(72);
+$margin-80: rem(80);
+
 $padding-8: 0.5rem;
 $padding-16: 1rem;
 $padding-24: 1.5rem;
@@ -114,3 +119,5 @@ $container-s: 48rem;
 $container-xs: 36rem;
 // Z-indices
 $zindex-nav: 10;
+$zindex-timeline-item: 8;
+$zindex-timeline-link: 9;
