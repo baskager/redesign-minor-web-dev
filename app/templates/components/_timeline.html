@@ -5,7 +5,7 @@
 
 <main class="timeline">
 
-    <div class="period period-week">
+    <div class="period period-week period-header">
         Periode: {{ period.period }}
     </div>
     
@@ -14,11 +14,11 @@
             Week: {{ week }}
         </div>
     {% endfor %}
-        
+
     {% for course in period.courses %}
         {% if course.type == "course" %}
-            <article>
-                <header class="course-{{ course.abbreviation }}">
+            <article class="course-{{ course.abbreviation }}">
+                <header>
                     <h5>{{ course.name }}</h5>
                     <h6>{{ course.description }}</h6>
                 </header>
@@ -31,8 +31,8 @@
                 {% endfor %}
             </article>
         {% elseif course.type == "speakers" %}
-            <article>
-                <header class="course-{{ course.abbreviation }}">
+            <article class="course-{{ course.abbreviation }}">
+                <header>
                     <h5>{{ course.name }}</h5>
                     <h6>{{ course.description }}</h6>
                 </header>
