@@ -4,6 +4,7 @@ $border-radius: 0.5rem;
 $grid-header-height: rem(80);
 $grid-row-height: rem(160);
 $grid-gutter: rem(24);
+$grid-max-width: rem(1180);
 
 @mixin timeline-mid {
   background-image: url("/img/timeline/timeline-mid.svg");
@@ -22,13 +23,35 @@ $grid-gutter: rem(24);
   background-image: url("/img/timeline/timeline-end.svg");
 }
 
+.timeline-wrapper {
+  display: grid;
+  grid-template-columns: 1fr $grid-max-width 1fr;
+  grid-template-rows: $grid-header-height repeat(4, $grid-row-height);
+
+  .row-gray {
+    background-color: #fafafa;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+  }
+
+  .row-1 {
+    grid-row-start: 2;
+  }
+
+  .row-2 {
+    grid-row-start: 4;
+  }
+}
+
 .timeline {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 5;
+
   display: grid;
   column-gap: $grid-gutter;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: $grid-header-height $grid-row-height;
-  max-width: rem(1180);
-  margin: rem(80) auto;
 
   .period {
     grid-row: 1;
@@ -105,6 +128,7 @@ $grid-gutter: rem(24);
     border: 1px solid $border-color;
     box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.08);
     border-radius: $border-radius;
+    background-color: #fff;
 
     transition: transform cubic-bezier(0.5, 1.42, 0.78, 1.46) 0.175s,
       border-color ease-in-out 0.175s;
@@ -117,7 +141,7 @@ $grid-gutter: rem(24);
     &:not(:last-child) {
       grid-row: 1 / span 4;
       display: grid;
-      grid-template-rows: $grid-header-height $grid-row-height $grid-row-height $grid-row-height;
+      grid-template-rows: $grid-header-height repeat(3, $grid-row-height);
     }
   }
 
@@ -126,7 +150,7 @@ $grid-gutter: rem(24);
     margin: 0;
   }
 
-  .project {
+  .course-project {
     grid-row: 5;
     grid-column: 2 / span 4;
 
