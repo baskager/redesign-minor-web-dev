@@ -12,6 +12,8 @@ body {
   line-height: $body-line-height;
   padding-top: $padding-72;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .hidden-desktop {

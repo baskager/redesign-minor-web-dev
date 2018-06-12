@@ -6,20 +6,24 @@ $grid-row-height: rem(160);
 $grid-gutter: rem(24);
 $grid-max-width: rem(1180);
 
-@mixin timeline-mid {
-  background-image: url("/img/timeline/timeline-mid.svg");
-  background-position: center right 20px;
+@mixin timeline-line {
+  background-position: center right rem(20);
   background-repeat: no-repeat;
   background-color: transparent;
 }
 
+@mixin timeline-mid {
+  @include timeline-line();
+  background-image: url("/img/timeline/timeline-mid.svg");
+}
+
 @mixin timeline-start {
-  @include timeline-mid();
+  @include timeline-line();
   background-image: url("/img/timeline/timeline-start.svg");
 }
 
 @mixin timeline-end {
-  @include timeline-mid();
+  @include timeline-line();
   background-image: url("/img/timeline/timeline-end.svg");
 }
 
@@ -27,6 +31,7 @@ $grid-max-width: rem(1180);
   display: grid;
   grid-template-columns: 1fr $grid-max-width 1fr;
   grid-template-rows: $grid-header-height repeat(4, $grid-row-height);
+  margin-top: $margin-80;
 
   .row-gray {
     background-color: #fafafa;
@@ -60,22 +65,30 @@ $grid-max-width: rem(1180);
     padding: 0 rem(24);
   }
 
-  .week-1 {
+  .week-1,
+  .week-5,
+  .week-9 {
     grid-row: 2;
     @include timeline-start();
   }
 
-  .week-2 {
+  .week-2,
+  .week-6,
+  .week-10 {
     grid-row: 3;
     @include timeline-mid();
   }
 
-  .week-3 {
+  .week-3,
+  .week-7,
+  .week-10 {
     grid-row: 4;
     @include timeline-mid();
   }
 
-  .week-4 {
+  .week-4,
+  .week-8,
+  .week-11 {
     grid-row: 5;
     @include timeline-end();
   }
@@ -96,12 +109,14 @@ $grid-max-width: rem(1180);
     margin-bottom: rem(8);
   }
 
-  p {
+  h5,
+  h6 {
     margin: 0;
+    white-space: nowrap;
   }
 
-  a {
-    font-weight: $semi-bold;
+  p {
+    margin: 0;
   }
 
   .period-week {
@@ -145,11 +160,6 @@ $grid-max-width: rem(1180);
     }
   }
 
-  h5,
-  h6 {
-    margin: 0;
-  }
-
   .course-project {
     grid-row: 5;
     grid-column: 2 / span 4;
@@ -172,6 +182,11 @@ $grid-max-width: rem(1180);
     }
   }
 
+  a {
+    font-weight: $semi-bold;
+    z-index: $zindex-timeline-link;
+  }
+
   .course-link {
     position: absolute;
     left: 0;
@@ -180,6 +195,7 @@ $grid-max-width: rem(1180);
     bottom: 0;
     font-size: 0;
     line-height: 0;
+    z-index: $zindex-timeline-item;
 
     &:focus {
       outline: 0;
