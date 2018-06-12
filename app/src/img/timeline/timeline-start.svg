@@ -6,9 +6,9 @@
     <defs></defs>
     <g id="timeline-start" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Group" transform="translate(5.000000, 153.000000)" opacity="0.900000036">
-            <circle id="Oval-Copy-2" fill="#51306C" fill-rule="nonzero" cx="7" cy="7" r="3"></circle>
-            <circle id="Oval-Copy-3" stroke="#51306C" stroke-width="2" cx="7" cy="7" r="7"></circle>
+            <circle id="Oval-Copy-2" fill="#2A2A2A" fill-rule="nonzero" cx="7" cy="7" r="3"></circle>
+            <circle id="Oval-Copy-3" stroke="#2A2A2A" stroke-width="2" cx="7" cy="7" r="7"></circle>
         </g>
-        <path d="M12,172 L12,320" id="Path-Copy-3" stroke="#51306C" stroke-width="2" stroke-dasharray="4"></path>
+        <path d="M12,172 L12,320" id="Path-Copy-3" stroke="#C1C1C1" stroke-width="2" stroke-dasharray="4"></path>
     </g>
 </svg>

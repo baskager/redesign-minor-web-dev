@@ -10,24 +10,32 @@ body {
   font-family: $font-family;
   font-size: $body-font-size;
   line-height: $body-line-height;
-  padding-top: rem(72);
+  padding-top: $padding-72;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-body>header {
+.hidden-desktop {
+  display: none;
+}
+
+body > header {
   margin-bottom: 5rem;
   padding: 7rem 0 4rem 0;
+
   h1 {
     max-width: 50em;
     margin-bottom: 1rem;
   }
+
   p {
     font-size: 1.8em;
     line-height: 1.4em;
     margin: 0;
     font-family: "Roboto Condensed", sans-serif;
     font-weight: normal;
-    max-width: rem(768);
+    max-width: 48rem;
     margin-bottom: 1rem;
   }
 }

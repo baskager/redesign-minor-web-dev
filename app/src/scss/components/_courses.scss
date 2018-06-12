@@ -1,0 +1,51 @@
+@mixin borderHover($color) {
+  &:hover,
+  &:focus-within {
+    border-color: $color;
+  }
+}
+
+.course-cssttr {
+  color: $cssttr-color;
+  @include borderHover($cssttr-color);
+}
+
+.course-wafs {
+  color: $wafs-color;
+  @include borderHover($wafs-color);
+}
+
+.course-wn {
+  color: $wn-color;
+  @include borderHover($wn-color);
+}
+
+.course-project {
+  color: $project-color;
+  @include borderHover($project-color);
+}
+
+.course-pm {
+  color: $pm-color;
+  @include borderHover($pm-color);
+}
+
+.course-bt {
+  color: $bt-color;
+  @include borderHover($bt-color);
+}
+
+.course-wd {
+  color: $wd-color;
+  @include borderHover($wd-color);
+}
+
+.course-rtw {
+  color: $rtw-color;
+  @include borderHover($rtw-color);
+}
+
+.course-mp {
+  color: $mp-color;
+  @include borderHover($mp-color);
+}
