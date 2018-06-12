@@ -16,27 +16,30 @@
     {% endfor %}
 
     {% for course in period.courses %}
+
         {% if course.type == "course" %}
+        
             <article class="course-{{ course.abbreviation }}">
                 <header>
                     <h5>{{ course.name }}</h5>
                     <h6>{{ course.description }}</h6>
                 </header>
-
                 {% for week in course.weeks %}
                     <div class="week">
                         <p class="hidden-desktop">Week {{week.week}}</p>
                         <p>{{ week.description }}</p>
                     </div>
                 {% endfor %}
+                <a class="focusable course-link" href="/course">Open {{ course.name }}</a>
             </article>
+
         {% elseif course.type == "speakers" %}
+
             <article class="course-{{ course.abbreviation }}">
                 <header>
                     <h5>{{ course.name }}</h5>
                     <h6>{{ course.description }}</h6>
                 </header>
-
                 {% for week in course.weeks %}
                     <div class="week">
                         <p class="hidden-desktop">Week {{week.week}}</p>
@@ -45,8 +48,11 @@
                         <p class="meta">{{ week.description }}</p>
                     </div>
                 {% endfor %}
+                <a class="focusable course-link" href="/course">Open {{ course.name }}</a>
             </article>
+
         {% elseif course.type == "project" %}
+    
             <article class="project">
                 <header>
                     <h5>{{ course.name }}</h5>
@@ -54,7 +60,9 @@
                     <span class="meta">End of {{ period.period }}</span>
                 </header>
                 <p>{{ course.description }}</p>
+                <a class="focusable course-link" href="/course">Open {{ course.name }}</a>
             </article>
+
         {% endif %}
     {% endfor %}
 </main>

@@ -14,40 +14,56 @@ body {
   margin: 0;
 }
 
-.course-cssttr:not(p) {
+@mixin borderHover($color) {
+  &:hover,
+  &:focus-within {
+    border-color: $color;
+  }
+}
+
+.course-cssttr {
   color: $cssttr-color;
+  @include borderHover($cssttr-color);
 }
 
-.course-wafs:not(p) {
+.course-wafs {
   color: $wafs-color;
+  @include borderHover($wafs-color);
 }
 
-.course-wn:not(p) {
+.course-wn {
   color: $wn-color;
+  @include borderHover($wn-color);
 }
 
-.project:not(p) {
+.project {
   color: $project-color;
+  @include borderHover($project-color);
 }
 
-.course-pm:not(p) {
+.course-pm {
   color: $pm-color;
+  @include borderHover($pm-color);
 }
 
-.course-bt:not(p) {
+.course-bt {
   color: $bt-color;
+  @include borderHover($bt-color);
 }
 
-.course-wd:not(p) {
+.course-wd {
   color: $wd-color;
+  @include borderHover($wd-color);
 }
 
-.course-rtw:not(p) {
+.course-rtw {
   color: $rtw-color;
+  @include borderHover($rtw-color);
 }
 
-.course-mp:not(p) {
+.course-mp {
   color: $mp-color;
+  @include borderHover($mp-color);
 }
 
 .hidden-desktop {
