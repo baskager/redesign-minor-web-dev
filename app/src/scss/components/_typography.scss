@@ -33,6 +33,10 @@ h4 {
   text-transform: uppercase;
 }
 
+p {
+  color: $body-color;
+}
+
 a {
   color: $link-color;
   text-decoration: none;
@@ -45,7 +49,7 @@ a {
 }
 
 .meta {
-  font-size: rem(14);
+  font-size: 0.875rem;
   color: $gray;
 }
 

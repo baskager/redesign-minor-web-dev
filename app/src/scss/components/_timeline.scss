@@ -131,13 +131,11 @@ $grid-gutter: rem(24);
     margin-top: rem(24);
     margin-right: rem(24);
 
-    display: grid;
-    grid-template-rows: $grid-header-height;
-    grid-column-gap: 1.5em;
+    display: flex;
 
     header {
-      padding: 0;
       padding: 0 rem(24);
+      align-items: flex-start;
     }
 
     p {
