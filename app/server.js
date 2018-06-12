@@ -386,6 +386,10 @@ const signupData = {
   title: "Sign-Up"
 };
 
+const contactData = {
+  title: "contact"
+};
+
 nunjucks.configure("./templates", {
   autoescape: true,
   express: app,
@@ -428,6 +432,12 @@ app.get("/team", function(req, res) {
 app.get("/student-work", function(req, res) {
   res.render("student-work.html", {
     data: studentWork
+  });
+});
+
+app.get("/contact", function(req, res) {
+  res.render("contact.html", {
+    data: contactData
   });
 });
 
