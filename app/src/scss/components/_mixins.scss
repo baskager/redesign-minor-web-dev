@@ -6,3 +6,8 @@ $browser-context: 16; // Default browser font size
 @mixin transition($time: 0.1s, $property: all) {
   transition: ease-in-out $property $time;
 }
+
+@mixin transitionCubic($time: 0.175s) {
+  transition: transform cubic-bezier(0.5, 1.42, 0.78, 1.46) $time,
+    border-color ease-in-out $time;
+}

@@ -35,10 +35,13 @@
 .student-work-card {
   background-color: #fff;
   box-shadow: $card-shadow;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+
   display: flex;
   flex-flow: column;
 
-  h2 {
+  h3 {
     margin: 0.5em;
   }
 
@@ -62,6 +65,13 @@
     justify-content: center;
     align-items: center;
     padding: 1em;
+  }
+
+  @include transitionCubic();
+
+  &:focus-within {
+    border-color: $primary-color;
+    transform: scale(1.035);
   }
 
   a:hover,
