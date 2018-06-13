@@ -34,16 +34,16 @@
                     <option value="mp">Meesterproef</option>
                 </select>
 
-                <input type="text" placeholder="Search">
+                <input type="search" placeholder="Search">
                 <button type="submit">Filter</button>
             </form>
         </nav>
     </div>
 </header>
 
-<main>
+<main class="student-work">
     {% for course in data.courses %}
-    <section class="course">
+    <section class="course course-{{ course.abbreviation }}">
         <div class="container">
             <h2>{{ course.name }}</h2>
 
