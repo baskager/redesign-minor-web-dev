@@ -7,13 +7,14 @@ button,
 input[type="submit"],
 input[type="reset"],
 .btn {
+  box-shadow: none;
   font-size: 1em;
   font-weight: $semi-bold;
   background: $btn-basic-background;
   cursor: pointer;
   transition: 0.2s;
   margin: 1em;
-  border: 0;
+  border: none;
   border-radius: 2rem;
   box-sizing: border-box;
   display: inline-block;
@@ -32,11 +33,10 @@ input[type="reset"],
   &:focus {
     transform: scale(1.05);
   }
-  &:active {}
 }
 
 .btn-link {
-  border: 0;
+  border: none;
 }
 
 button.btn-primary,
@@ -44,17 +44,18 @@ input[type="submit"].btn-primary,
 input[type="reset"].btn-primary,
 .btn.btn-primary {
   background: $btn-primary-background;
-  border-color: $btn-primary-border-color;
+  border: none;
   color: $btn-primary-color;
   &:hover,
   &:focus {
+    color: white;
     background: $btn-primary-focus-background;
   }
 }
 
 .btn-cta {
   background: $btn-cta-background;
-  border-color: $btn-cta-border-color;
+  border: none;
   color: $btn-cta-color;
   &:hover,
   &:focus {
@@ -64,7 +65,7 @@ input[type="reset"].btn-primary,
 
 .btn-danger {
   background: $btn-danger-background;
-  border-color: $btn-danger-border-color;
+  border: none;
   color: $btn-danger-color;
   &:hover,
   &:focus {
@@ -74,7 +75,7 @@ input[type="reset"].btn-primary,
 
 .btn-warning {
   background: $btn-warning-background;
-  border-color: $btn-warning-border-color;
+  border: none;
   color: $btn-warning-color;
   &:hover,
   &:focus {
@@ -84,7 +85,7 @@ input[type="reset"].btn-primary,
 
 .btn-success {
   background: $btn-success-background;
-  border-color: $btn-success-border-color;
+  border: none;
   color: $btn-success-color;
   &:hover,
   &:focus {

@@ -52,10 +52,6 @@ a {
   text-decoration: none;
 
   @include transition();
-
-  &:hover {
-    filter: brightness(70%);
-  }
 }
 
 .meta {

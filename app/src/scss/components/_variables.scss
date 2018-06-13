@@ -97,14 +97,14 @@ $input-padding: 0.25rem 0.5rem;
 // Buttons
 $btn-basic-background: $accent-color;
 $btn-basic-color: #222;
-$btn-basic-focus-background: lighten($accent-color, 20);
+$btn-basic-focus-background: darken($accent-color, 20);
 $btn-basic-border-color: darken($accent-color, 10);
 $btn-basic-size: 0.1em;
 $btn-border-size: 0.1em;
 
 $btn-primary-background: $primary-color;
 $btn-primary-color: #fff;
-$btn-primary-focus-background: lighten($primary-color, 20);
+$btn-primary-focus-background: darken($primary-color, 20);
 $btn-primary-border-color: darken($btn-primary-background, 10);
 
 $btn-cta-background: $secondary-color;
