@@ -17,7 +17,6 @@
     }
   }
   form {
-    @include cardStyle();
     grid-column: 8 / 13;
     fieldset {
       border: none;

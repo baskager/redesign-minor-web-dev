@@ -22,7 +22,7 @@
 
         {% if course.type == "course" %}
         
-            <article class="course-{{ course.abbreviation }}">
+            <article class="card card-interactive course-{{ course.abbreviation }}">
                 <header>
                     <h5>{{ course.name }}</h5>
                     <h6>{{ course.description }}</h6>
@@ -38,7 +38,7 @@
 
         {% elseif course.type == "speakers" %}
 
-            <article class="course-{{ course.abbreviation }}">
+            <article class="card card-interactive course-{{ course.abbreviation }}">
                 <header>
                     <h5>{{ course.name }}</h5>
                     <h6>{{ course.description }}</h6>
@@ -56,7 +56,7 @@
 
         {% elseif course.type == "project" %}
     
-            <article class="course-project">
+            <article class="card card-interactive course-project">
                 <header>
                     <h5>{{ course.name }}</h5>
                     <h6>{{ course.partner }}</h6>

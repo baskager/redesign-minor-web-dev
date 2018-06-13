@@ -5,8 +5,6 @@
   z-index: $zindex-card;
   overflow: hidden;
 
-  @include cardStyle();
-
   header {
     display: flex;
     align-items: center;
@@ -24,17 +22,5 @@
     width: 100%;
     max-height: rem(176);
     object-fit: cover;
-  }
-
-  @include transitionCubic();
-
-  a:not(.card-link) {
-    z-index: $zindex-card-link;
-  }
-
-  &:hover,
-  &:focus-within {
-    border-color: $primary-color;
-    transform: scale(1.035);
   }
 }

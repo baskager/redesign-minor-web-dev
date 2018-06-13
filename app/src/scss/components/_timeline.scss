@@ -138,14 +138,6 @@ $grid-max-width: rem(1180);
   article {
     position: relative;
 
-    @include cardStyle();
-    @include transitionCubic();
-
-    &:hover,
-    &:focus-within {
-      transform: scale(1.035);
-    }
-
     &:not(:last-child) {
       grid-row: 1 / span 4;
       display: grid;

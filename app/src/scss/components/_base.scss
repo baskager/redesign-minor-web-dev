@@ -70,18 +70,3 @@ body > header {
 .avatar {
   border-radius: 50%;
 }
-
-.card-link {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 0;
-  line-height: 0;
-  z-index: $zindex-card;
-
-  &:focus {
-    outline: 0;
-  }
-}
