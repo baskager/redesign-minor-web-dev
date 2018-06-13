@@ -32,31 +32,59 @@
       border: none;
       display: flex;
       flex-wrap: wrap;
+      > div {
+        margin-right: 20px;
+        overflow: hidden;
+        position: relative;
+        width: calc(50% - 10px);
+        &:nth-of-type(even) {
+          margin-right: 0;
+        }
+      }
     }
     label {
-      width: calc(50% - 10px);
-      margin-right: 20px;
       color: #9e9e9e;
       font-size: 0.75rem;
+      margin-right: 20px;
+      padding: 7px 6px;
+      position: absolute;
       &:last-of-type {
         width: 100%;
-      }
-      &:nth-of-type(even) {
-        margin-right: 0;
       }
     }
     input:not([type="submit"]),
     textarea {
-      display: block;
-      width: 100%;
+      background: none;
       border: none;
+      border-bottom: 1px solid #cfd8dc;
       border-radius: 0;
       box-shadow: none;
-      border-bottom: 1px solid #cfd8dc;
-      padding: 8px 0;
-      font: inherit;
-      margin-bottom: 1.5rem;
+      display: block;
       font-size: 1rem;
+      font: inherit;
+      left: 0;
+      margin-bottom: 1.5rem;
+      outline: 0;
+      padding: 8px 0;
+      padding: 8px 12px;
+      position: relative;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+
+      &:valid {
+        background: white;
+      }
+      &:focus {
+        border-color: $primary-color;
+      }
+      &:focus + label {
+        background: $primary-color;
+        color: white;
+        padding: 1px 6px;
+        z-index: 2;
+        text-transform: uppercase;
+      }
     }
     input[type="submit"] {
       width: 100%;
@@ -81,5 +109,23 @@
     li {
       margin-bottom: $margin-48;
     }
+  }
+}
+
+form.go-bottom {
+  input,
+  textarea {
+    padding: 12px 12px 12px 12px;
+  }
+  label {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  input:focus + label,
+  textarea:focus + label {
+    top: 100%;
+    margin-top: -25px;
   }
 }
