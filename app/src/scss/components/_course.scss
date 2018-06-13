@@ -27,7 +27,7 @@
     }
     li {
       padding-left: 0.4em;
-      list-style-image: url("/img/icons/bullet.svg");
+      list-style-image: url("/img/icons/bullet-purple.svg");
     }
   }
 }
@@ -75,7 +75,7 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: $desktop) {
   .other-courses {
     div {
       a {
@@ -91,7 +91,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $tablet) {
   .course-info {
     grid-template-columns: 100%;
   }
