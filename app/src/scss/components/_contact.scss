@@ -1,5 +1,10 @@
 .contact-header {
-  background-color: $secondary-color;
+  background: linear-gradient(
+      rgba($secondary-color, 0.75),
+      rgba($secondary-color, 0.75)
+    ),
+    url(/img/contact-header.png);
+  background-size: cover;
   color: white;
   padding-bottom: 13.5rem;
   p {
