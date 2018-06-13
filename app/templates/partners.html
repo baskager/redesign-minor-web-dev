@@ -3,7 +3,7 @@
     <div class="container">
         <h1>{{ data.heading }}</h1>
         <p>{{ data.description }}</p>
-        <a href="/" class="btn btn-primary">Interested? Contact us!</a>
+        <a href="/" class="btn btn-primary button-pulse">Interested? Contact us!</a>
     </div>
 </header>
 <main class="partners-team-wrapper container">
@@ -17,7 +17,7 @@
             <p>
                 <span>{{ member.subHeading }}</span>
             </p>
-            <a href="{{ member.gitHubURL }}" class="btn">{{ data.linkText }}</a>
+            <a href="{{ member.gitHubURL }}" class="btn button-pulse">{{ data.linkText }}</a>
         </div>
     </article>
     {% endfor %}
