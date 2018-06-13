@@ -8,6 +8,8 @@ const homepageData = {
 
 const programData = {
   title: "Program",
+  description:
+    "The minor works using a studio model. We have a dedicated classroom with a <b>refrigerator</b>❄️, <b>sandwich iron 🥪</b> and <b>stand-up desks</b>👖. Here we work for <b>40 hours a week💪</b>, <b>like in a real company</b>. Everyday the students have the option to ask questions to the mentors and ofcourse other students.",
   periods: [
     {
       period: 1,
