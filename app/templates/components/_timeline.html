@@ -1,66 +1,76 @@
 {% block content %}
 
+{% for period in data.periods %}
+
+<div class="timeline-wrapper">
+
+<div class="row-gray row-1"></div>
+<div class="row-gray row-2"></div>
+
 <main class="timeline">
-
-    <!-- TODO make empty row 25% width instead of 100% -->
-
-    {% for row in data.program %}
-
-        {% if row.sticky %}
-        <div class="row-sticky">
-            <div class="row-container">
-        {% elseif row.items.length == 1 %}
-        <div class="row project">
-            <div class="row-container">
-        {% else %}
-        <div class="row">
-            <div class="row-container">
-        {% endif %}
-
-            {% if row.label %}
-            <div class="column week">
-                <h4>{{ row.label }}</h4>
-            </div>
-            {% else %}
-            <div class="column"></div>
-            {% endif %}
-
-            {% for item in row.items %}
-
-            {% if item.type == 'course' %}
-                <div class="column course">
-                    <img src="{{ item.iconSrc }}" alt="">
-                    <h4><a href="/course">{{ item.name }}</a></h4>
-                </div>
-
-            {% elseif  item.type == 'assignment' %}
-                <div class="column">
-                    <p>{{ item.description }}</p>
-                </div>
-
-            {% elseif item.type == 'speaker' %}
-                <div class="column">
-                    <img class="avatar" src="{{ item.avatarURL }}" alt="">
-                    <h4><a href="/course">{{ item.name }}</a></h4>
-                </div>
-
-            {% elseif item.type == 'project' %}
-                <div class="column column-project">
-                    <h4><a href="/course">{{ item.name }}</a></h4>
-                    <p>{{ item.description }}</p>
-                </div>
-            {% endif %}
-
-    {% endfor %}
-        </div> <!--ending row-->
+    <div class="period period-week period-header">
+        Periode: {{ period.period }}
     </div>
-
-    {% endfor %}
+    
+    {% for week in period.weeks %}
+        <div class="period-week week week-{{week}}">
+            Week: {{ week }}
         </div>
-    </div> <!--ending sticky-->
+    {% endfor %}
 
-        </div> <!--ending project-->
-    </div>
+    {% for course in period.courses %}
 
-</main> <!--ending timeline-->
+        {% if course.type == "course" %}
+        
+            <article class="course-{{ course.abbreviation }}">
+                <header>
+                    <h5>{{ course.name }}</h5>
+                    <h6>{{ course.description }}</h6>
+                </header>
+                {% for week in course.weeks %}
+                    <div class="week">
+                        <p class="hidden-desktop">Week {{week.week}}</p>
+                        <p>{{ week.description }}</p>
+                    </div>
+                {% endfor %}
+                <a class="focusable course-link" href="/course">Open {{ course.name }}</a>
+            </article>
+
+        {% elseif course.type == "speakers" %}
+
+            <article class="course-{{ course.abbreviation }}">
+                <header>
+                    <h5>{{ course.name }}</h5>
+                    <h6>{{ course.description }}</h6>
+                </header>
+                {% for week in course.weeks %}
+                    <div class="week">
+                        <p class="hidden-desktop">Week {{week.week}}</p>
+                        <img src="{{ week.imgSrc }}" class="avatar" alt="">
+                        <a class="course-{{ course.abbreviation }}" href="#">{{ week.name }}</a>
+                        <p class="meta">{{ week.description }}</p>
+                    </div>
+                {% endfor %}
+                <a class="focusable course-link" href="/course">Open {{ course.name }}</a>
+            </article>
+
+        {% elseif course.type == "project" %}
+    
+            <article class="course-project">
+                <header>
+                    <h5>{{ course.name }}</h5>
+                    <h6>{{ course.partner }}</h6>
+                    <span class="meta">End of {{ period.period }}</span>
+                </header>
+                <p>{{ course.description }}</p>
+                <a class="focusable course-link" href="/course">Open {{ course.name }}</a>
+            </article>
+
+        {% endif %}
+    {% endfor %}
+</main>
+</div>
+
+
+{% endfor %}
 {% endblock %}

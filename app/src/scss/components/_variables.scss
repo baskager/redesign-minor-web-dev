@@ -1,47 +1,73 @@
-$pastel-neon-pink: #ff015d;
-$pastel-neon-purple: #3d195b;
-$pastel-neon-yellow: #ffdf00;
-$pastel-neon-mintgreen: #6effb4;
+$purple: #6a00f5;
+$dark-blue: #09012f;
 $success-green: #d4edda;
 $danger-red: #e8958d;
 $warning-yellow: #ffcea0;
-$primary-color: $pastel-neon-pink;
-$secondary-color: $pastel-neon-purple;
+
+$primary-color: $purple;
+$secondary-color: $dark-blue;
 $accent-color: #e9e9e9;
+
+$cssttr-color: #4e00af;
+$wafs-color: #005aad;
+$wn-color: #008d96;
+$project-color: #bd3213;
+$pm-color: #007a4e;
+$bt-color: #233e68;
+$wd-color: #d00064;
+$rtw-color: #9e0068;
+$mp-color: #dd1b00;
+
 // Typography
 $black: #222;
 $white: #eee;
+$gray: #727272;
+
 $bold: bold;
 $semi-bold: 600;
 $regular: normal;
 $light: 300;
+
 $font-family: "Roboto", sans-serif;
 $font-family-headers: "Roboto Condensed", sans-serif;
+
 $h1-font-size: 6.25rem;
 $h1-font-style: normal;
 $h1-font-weight: $bold;
+
 $h2-font-size: 3.125rem;
 $h2-font-style: normal;
 $h2-font-weight: $semi-bold;
 $h2-line-height: 1em;
+
 $h3-font-size: 1.5rem;
 $h3-font-style: italic;
 $h3-font-weight: $semi-bold;
+
 $body-color: $black;
 $body-font-size: 100%;
 $body-font-size-small: 0.75rem;
 $body-line-height: 1.5rem;
+
 $link-color: $primary-color;
+
 $blockquote-background-color: $white;
 $blockquote-border-color: $primary-color;
 $blockquote-text-color: $black;
+
 $mark-color: $primary-color;
+
 // Margin & Padding
 $margin-8: 0.5rem;
 $margin-16: 1rem;
 $margin-24: 1.5rem;
 $margin-32: 2rem;
 $margin-48: 2.5rem;
+$margin-56: rem(56);
+$margin-64: rem(64);
+$margin-72: rem(72);
+$margin-80: rem(80);
+
 $padding-8: 0.5rem;
 $padding-16: 1rem;
 $padding-24: 1.5rem;
@@ -52,52 +78,70 @@ $padding-56: 3.5rem;
 $padding-64: 4rem;
 $padding-72: 4.5rem;
 $padding-80: 5rem;
+
 // Forms
 $input-border-radius: 3px;
 $input-border: 1px solid #cccccc;
 $input-box-shadow: inset 0 1px 3px #ddd;
 $input-color: $body-color;
+
 // Shadows
-$card-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-0 1px 2px rgba(0, 0, 0, 0.24);
+$card-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 $bottom-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.12);
 $input-disabled-background-color: #eaeded;
 $input-disabled-color: #cad2d3;
 $input-focus-border-color: $primary-color;
 $input-hover-border-color: $primary-color;
 $input-padding: 0.25rem 0.5rem;
+
 // Buttons
 $btn-basic-background: $accent-color;
 $btn-basic-color: #222;
-$btn-basic-focus-background: lighten($accent-color, 20);
+$btn-basic-focus-background: darken($accent-color, 20);
 $btn-basic-border-color: darken($accent-color, 10);
 $btn-basic-size: 0.1em;
+$btn-border-size: 0.1em;
+
 $btn-primary-background: $primary-color;
 $btn-primary-color: #fff;
-$btn-primary-focus-background: lighten($primary-color, 20);
+$btn-primary-focus-background: darken($primary-color, 20);
 $btn-primary-border-color: darken($btn-primary-background, 10);
-$btn-border-size: 0.1em;
+
 $btn-cta-background: $secondary-color;
 $btn-cta-color: #fff;
 $btn-cta-focus-background: lighten($secondary-color, 20);
 $btn-cta-border-color: darken($secondary-color, 30);
+
 $btn-success-background: darken($success-green, 10);
 $btn-success-color: #333;
 $btn-success-focus-background: darken($success-green, 30);
 $btn-success-border-color: darken($success-green, 20);
+
 $btn-warning-background: $warning-yellow;
 $btn-warning-color: #333;
 $btn-warning-focus-background: darken($warning-yellow, 10);
 $btn-warning-border-color: darken($warning-yellow, 10);
+
 $btn-danger-background: $danger-red;
 $btn-danger-color: #fff;
 $btn-danger-focus-background: darken($danger-red, 10);
 $btn-danger-border-color: darken($danger-red, 30);
+
 // Container widths
-$container-xl: rem(1400);
-$container-l: rem(1200);
-$container-m: rem(992);
-$container-s: rem(768);
-$container-xs: rem(576);
+$container-xl: 87.5rem;
+$container-l: 75rem;
+$container-m: 62rem;
+$container-s: 48rem;
+$container-xs: 36rem;
+
 // Z-indices
 $zindex-nav: 10;
+$zindex-timeline-item: 8;
+$zindex-timeline-link: 9;
+
+
+// Media queries
+$mobile: rem(576);
+$tablet: rem(768);
+$desktop: rem(992);
+$desktop-hd: rem(1200);
