@@ -7,22 +7,28 @@ CREATE SEQUENCE course_id_seq INCREMENT 1 MINVALUE 1 MAXVALUE 2147483647 START 1
 CREATE TABLE "public"."course" (
     "id" integer DEFAULT nextval('course_id_seq') NOT NULL,
     "name" character varying NOT NULL,
-    "description" character varying NOT NULL,
+    "short_description" character varying NOT NULL,
     "partner_id" integer,
     "type_id" integer NOT NULL,
     "active" boolean NOT NULL,
+    "period" smallint NOT NULL,
+    "page_slug" character varying NOT NULL,
+    "long_description" text,
+    "learning_goals" jsonb,
+    "icon_url" character varying(512),
+    CONSTRAINT "course_page_slug_unique" UNIQUE ("page_slug"),
     CONSTRAINT "course_pk" PRIMARY KEY ("id"),
     CONSTRAINT "course_partner_id_fkey" FOREIGN KEY (partner_id) REFERENCES partner(id) ON UPDATE CASCADE ON DELETE RESTRICT NOT DEFERRABLE,
     CONSTRAINT "course_type_id_fkey" FOREIGN KEY (type_id) REFERENCES course_type(id) ON UPDATE CASCADE ON DELETE RESTRICT NOT DEFERRABLE
 ) WITH (oids = false);
 
 
+DROP VIEW IF EXISTS "course_composed_view";
+CREATE TABLE "course_composed_view" ("course_week_pk" text, "course_id" integer, "course_name" character varying, "teacher_id" integer, "week_number" smallint, "teacher_name" character varying(255), "teacher_avatar" character varying(512), "teacher_short_story" character varying(512), "week_description" character varying(512), "week_subjects" jsonb, "course_description" character varying, "course_type" character varying(255), "page_slug" character varying, "icon_url" character varying(512), "long_description" text, "learning_goals" jsonb, "partner_id" integer, "partner_name" character varying(255), "partner_website" character varying, "partner_logo" character varying);
+
+
 DROP VIEW IF EXISTS "course_overview_view";
-CREATE TABLE "course_overview_view" ("course_name" character varying, "course_type" character varying(255), "teacher_name" character varying(255), "teacher_repository" character varying(512), "teacher_website" character varying(512), "teacher_avatar" character varying(512), "partner_name" character varying(255), "partner_website" character varying, "partner_logo" character varying);
-
-
-DROP VIEW IF EXISTS "course_timeline_view";
-CREATE TABLE "course_timeline_view" ("course_name" character varying, "course_type" character varying(255), "teacher_name" character varying(255), "teacher_repository" character varying(512), "teacher_website" character varying(512), "teacher_avatar" character varying(512), "weeks" json);
+CREATE TABLE "course_overview_view" ("course_id" integer, "course_name" character varying, "course_description" character varying, "course_type" character varying(255), "page_slug" character varying, "icon_url" character varying(512), "long_description" text, "learning_goals" jsonb, "teachers" json, "partner_id" integer, "partner_name" character varying(255), "partner_website" character varying, "partner_logo" character varying);
 
 
 DROP TABLE IF EXISTS "course_type";
@@ -41,9 +47,14 @@ CREATE TABLE "public"."course_week" (
     "course_id" integer NOT NULL,
     "week_number" smallint NOT NULL,
     "description" character varying(512),
+    "subjects_covered" jsonb,
     CONSTRAINT "course_weeks_composite_pk" PRIMARY KEY ("course_id", "week_number"),
     CONSTRAINT "course_weeks_course_id_fkey" FOREIGN KEY (course_id) REFERENCES course(id) ON UPDATE CASCADE ON DELETE CASCADE NOT DEFERRABLE
 ) WITH (oids = false);
+
+
+DROP VIEW IF EXISTS "course_weeks_view";
+CREATE TABLE "course_weeks_view" ("id" integer, "weeks" text);
 
 
 DROP TABLE IF EXISTS "partner";
@@ -86,6 +97,7 @@ CREATE TABLE "public"."teacher" (
     "repository_url" character varying(512),
     "website_url" character varying(512),
     "avatar_url" character varying(512) NOT NULL,
+    "short_story" character varying(512) NOT NULL,
     CONSTRAINT "teacher_pk" PRIMARY KEY ("id"),
     CONSTRAINT "teacher_teacher_id_fkey" FOREIGN KEY (id) REFERENCES teacher_type(id) ON UPDATE CASCADE ON DELETE RESTRICT NOT DEFERRABLE
 ) WITH (oids = false);
@@ -125,28 +137,51 @@ CREATE TABLE "public"."testimonial" (
 ) WITH (oids = false);
 
 
-DROP TABLE IF EXISTS "course_overview_view";
-CREATE TABLE "public"."course_overview_view" (
+DROP TABLE IF EXISTS "course_composed_view";
+CREATE TABLE "public"."course_composed_view" (
+    "course_week_pk" text,
+    "course_id" integer,
     "course_name" character varying,
-    "course_type" character varying(255),
+    "teacher_id" integer,
+    "week_number" smallint,
     "teacher_name" character varying(255),
-    "teacher_repository" character varying(512),
-    "teacher_website" character varying(512),
     "teacher_avatar" character varying(512),
+    "teacher_short_story" character varying(512),
+    "week_description" character varying(512),
+    "week_subjects" jsonb,
+    "course_description" character varying,
+    "course_type" character varying(255),
+    "page_slug" character varying,
+    "icon_url" character varying(512),
+    "long_description" text,
+    "learning_goals" jsonb,
+    "partner_id" integer,
     "partner_name" character varying(255),
     "partner_website" character varying,
     "partner_logo" character varying
 ) WITH (oids = false);
 
-DROP TABLE IF EXISTS "course_timeline_view";
-CREATE TABLE "public"."course_timeline_view" (
+DROP TABLE IF EXISTS "course_overview_view";
+CREATE TABLE "public"."course_overview_view" (
+    "course_id" integer,
     "course_name" character varying,
+    "course_description" character varying,
     "course_type" character varying(255),
-    "teacher_name" character varying(255),
-    "teacher_repository" character varying(512),
-    "teacher_website" character varying(512),
-    "teacher_avatar" character varying(512),
-    "weeks" json
+    "page_slug" character varying,
+    "icon_url" character varying(512),
+    "long_description" text,
+    "learning_goals" jsonb,
+    "teachers" json,
+    "partner_id" integer,
+    "partner_name" character varying(255),
+    "partner_website" character varying,
+    "partner_logo" character varying
 ) WITH (oids = false);
 
--- 2018-06-11 16:45:15.662258+00
+DROP TABLE IF EXISTS "course_weeks_view";
+CREATE TABLE "public"."course_weeks_view" (
+    "id" integer,
+    "weeks" text
+) WITH (oids = false);
+
+-- 2018-06-13 12:57:15.061564+00
