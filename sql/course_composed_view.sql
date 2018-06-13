@@ -9,6 +9,7 @@ SELECT
     teacher.avatar_url AS teacher_avatar,
     teacher.short_story AS teacher_short_story,
     course_week.description AS week_description,
+    course_week.subjects_covered AS week_subjects,
     course.short_description AS course_description,
     course_type.name AS course_type,
     course.page_slug,
@@ -29,7 +30,7 @@ LEFT JOIN partner
     ON partner.id = course.partner_id
 INNER JOIN course_type
     ON course.type_id = course_type.id
-LEFT JOIN course_week
+RIGHT JOIN course_week
     ON course.id = course_week.course_id
-WHERE course.active = TRUE && course_week_pk != ''
+WHERE course.active = TRUE
 ORDER BY course_week_pk
