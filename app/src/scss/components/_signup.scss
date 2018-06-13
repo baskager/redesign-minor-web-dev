@@ -17,8 +17,6 @@
     }
   }
   form {
-    border-radius: 5px;
-    border: 1px solid lighten(#000, 75%);
     grid-column: 8 / 13;
     fieldset {
       border: none;
@@ -37,5 +35,27 @@
     margin-left: 0;
     margin-bottom: 0;
     margin-right: 0;
+  }
+
+  @include max-desktop() {
+    section {
+      grid-column: 2 / 12;
+    }
+
+    form {
+      grid-column: 3 / 11;
+      grid-row: 2;
+      margin-top: $margin-48;
+    }
+  }
+
+  @include max-mobile() {
+    section {
+      grid-column: 2 / 12;
+    }
+
+    form {
+      grid-column: 2 / 12;
+    }
   }
 }
