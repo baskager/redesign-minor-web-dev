@@ -1,4 +1,30 @@
 $browser-context: 16; // Default browser font size
 @function rem($pixels, $context: $browser-context) {
-    @return #{$pixels/$context}rem;
+  @return #{$pixels/$context}rem;
+}
+
+@mixin max-mobile() {
+  @media (max-width: $max-mobile) {
+    @content;
+  }
+}
+
+@mixin max-tablet() {
+  @media (max-width: $max-tablet) {
+    @content;
+  }
+}
+
+@mixin max-desktop() {
+  @media (max-width: $max-desktop) {
+    @content;
+  }
+}
+
+/////// Custom mediaqueries /////
+@mixin max-timeline() {
+  // Program page with timeline
+  @media (max-width: $max-mobile) {
+    @content;
+  }
 }
