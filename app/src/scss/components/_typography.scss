@@ -33,9 +33,34 @@ h4 {
   text-transform: uppercase;
 }
 
+h5 {
+  font-size: rem(18);
+}
+
+h6 {
+  font-size: rem(16);
+  font-weight: normal;
+}
+
+p {
+  color: $body-color;
+  line-height: 1.5;
+}
+
 a {
   color: $link-color;
   text-decoration: none;
+
+  @include transition();
+
+  &:hover {
+    filter: brightness(70%);
+  }
+}
+
+.meta {
+  font-size: 0.875rem;
+  color: $gray;
 }
 
 blockquote {

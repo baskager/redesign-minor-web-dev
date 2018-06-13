@@ -13,6 +13,16 @@
       margin-bottom: 0;
       padding: 2px 0;
       text-transform: uppercase;
+    }
+    p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.5rem;
+      margin: 0;
+      padding: $padding-24 0;
+    }
+
+    h2,
+    p {
       span {
         -webkit-box-decoration-break: clone;
         background-color: $secondary-color;
@@ -21,16 +31,7 @@
         padding: $padding-24;
       }
     }
-    p {
-      color: #cba5ea;
-      font-size: 1.5rem;
-      margin: 0;
-      padding: $padding-24 0;
-      span {
-        background-color: #3d195b;
-        padding: $padding-24;
-      }
-    }
+
     img {
       border-radius: 10px;
       display: block;
