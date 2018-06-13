@@ -22,6 +22,12 @@ body {
   }
 }
 
+.hidden-desktop-hd {
+  @include min-desktop-hd {
+    display: none;
+  }
+}
+
 body > header {
   margin-bottom: 5rem;
   padding: 7rem 0 4rem 0;

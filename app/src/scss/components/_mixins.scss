@@ -29,10 +29,21 @@ $browser-context: 16; // Default browser font size
   }
 }
 
-// Custom mediaqueries //
-@mixin max-timeline() {
-  // Program page with timeline
-  @media (max-width: $mobile) {
+@mixin min-desktop-hd() {
+  @media (min-width: $min-desktop-hd) {
+    @content;
+  }
+}
+
+@mixin max-desktop-hd() {
+  @media (max-width: $max-desktop-hd) {
+    @content;
+  }
+}
+
+// Custom mediaquery program overview
+@mixin med-tablet() {
+  @media (max-width: 830px) {
     @content;
   }
 }

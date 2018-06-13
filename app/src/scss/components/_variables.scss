@@ -143,9 +143,12 @@ $zindex-timeline-link: 9;
 $mobile: 575;
 $tablet: 768;
 $desktop: 992;
+$desktop-hd: 1180;
 
 $max-mobile: rem($mobile);
 $min-tablet: rem($mobile + 1);
 $max-tablet: rem($tablet);
 $min-desktop: rem($tablet + 1);
 $max-desktop: rem($desktop);
+$min-desktop-hd: rem($desktop-hd + 1);
+$max-desktop-hd: rem($desktop-hd);
