@@ -15,6 +15,7 @@
 
     if(coursesProgram) {
         coursesProgram.forEach(course => {
+            course.classList.remove('flip-2-hor-top-fwd')
             course.addEventListener('click', function(event) {
                 
                 const stopHref = function() {
@@ -27,7 +28,7 @@
                     window.location.href = href
                 }
                 stopHref()
-                window.setTimeout(linkPage, 1000)
+                window.setTimeout(linkPage, 1500)
             })
         })
     }
