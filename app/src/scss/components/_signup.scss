@@ -38,4 +38,26 @@
     margin-bottom: 0;
     margin-right: 0;
   }
+
+  @include max-desktop() {
+    section {
+      grid-column: 2 / 12;
+    }
+
+    form {
+      grid-column: 3 / 11;
+      grid-row: 2;
+      margin-top: $margin-48;
+    }
+  }
+
+  @include max-mobile() {
+    section {
+      grid-column: 2 / 12;
+    }
+
+    form {
+      grid-column: 2 / 12;
+    }
+  }
 }
