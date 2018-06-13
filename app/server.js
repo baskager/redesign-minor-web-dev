@@ -1,6 +1,11 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
 const app = express();
+const massive = require("massive");
+const monitor = require("pg-monitor");
+const debug = require("debug")("minor-server");
+const config = require("./config");
+const DataStore = require("./src/classes/DataStore.class");
 
 const homepageData = {
   title: "Home"
@@ -338,12 +343,6 @@ const programData = {
   ]
 };
 
-const courseData = {
-  title: "Course",
-  description:
-    "Here comes the description for the course. Here comes the description for the course. Here comes the description for the course."
-};
-
 const studentWork = {
   title: "Student work",
   heading: "Student work",
@@ -553,15 +552,40 @@ nunjucks.configure("./templates", {
 app.set("view engine", "html");
 app.use(express.static("./static"));
 
-app.get("/", function(req, res) {
-  res.render("index.html", {
-    data: homepageData
+massive(config.postgres).then(database => {
+  let dataStore = new DataStore(database);
+  monitor.attach(database.driverConfig);
+
+  let options = {
+    order: [
+      {
+        field: "course_name",
+        direction: "desc"
+      }
+    ]
+  };
+
+  // dataStore.getAllCoursesForCourseOverview(options).then(courses => {
+  //   debug(courses);
+  // });
+
+  app.get("/course/:pageSlug", function(req, res) {
+    let pageSlug = req.params.pageSlug;
+
+    dataStore
+      .getCourseForCourseOverview({ page_slug: pageSlug }, options)
+      .then(courseData => {
+        debug(courseData[0]);
+        res.render("course.html", {
+          data: courseData[0]
+        });
+      });
   });
 });
 
-app.get("/course", function(req, res) {
-  res.render("course.html", {
-    data: courseData
+app.get("/", function(req, res) {
+  res.render("index.html", {
+    data: homepageData
   });
 });
 
