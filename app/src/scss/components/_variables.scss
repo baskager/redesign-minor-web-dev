@@ -138,3 +138,10 @@ $container-xs: 36rem;
 $zindex-nav: 10;
 $zindex-timeline-item: 8;
 $zindex-timeline-link: 9;
+
+
+// Media queries
+$mobile: rem(576);
+$tablet: rem(768);
+$desktop: rem(992);
+$desktop-hd: rem(1200);
