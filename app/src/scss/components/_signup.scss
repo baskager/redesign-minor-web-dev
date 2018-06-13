@@ -21,7 +21,7 @@
     fieldset {
       border: none;
       margin: 0;
-      padding: $padding-16 $padding-32;
+      padding: $padding-16 $padding-32 2rem;
     }
     h2 {
       border-bottom: 1px solid lighten(#000, 75%);
@@ -29,25 +29,6 @@
       margin: 0;
       padding: $padding-16 0;
       text-align: center;
-    }
-    label {
-      display: block;
-      margin-top: $margin-16;
-      color: lighten(#000, 25%);
-      &:first-of-type {
-        margin-top: 0;
-      }
-    }
-    input {
-      display: block;
-      margin-top: $margin-8;
-      padding: $padding-16;
-      width: 100%;
-      font: inherit;
-      &[type="submit"] {
-        margin: $margin-32 0;
-        font-weight: 600;
-      }
     }
   }
   blockquote {

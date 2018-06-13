@@ -30,21 +30,26 @@
   <form action="/" method="post" class="card">
     <h2>Apply now!</h2>
     <fieldset>
-      <label>Full Name
-        <input type="text" placeholder="Arthur Parker" autofocus required>
-      </label>
-      <label>E-Mail
-        <input type="email" placeholder="arthur.parker@domain.com" required>
-      </label>
-      <label>Something Else
-        <input type="text" placeholder="Lorem ipsum dolor sit amet" required>
-      </label>
-      <label>Something Else
-        <input type="text" placeholder="Lorem ipsum dolor sit amet" required>
-      </label>
-      <label>Something Else
-        <input type="text" placeholder="Lorem ipsum dolor sit amet" required>
-      </label>
+      <div>
+        <input id="name" name="name" type="text" required>
+        <label for="name">Your Name</label>
+      </div>
+      <div>
+        <input id="email" name="email" type="email" required>
+        <label for="email">Email Address</label>
+      </div>
+      <div>
+        <input id="tel" name="tel" type="tel" required>
+        <label for="tel">Phone</label>
+      </div>
+      <div>
+        <input id="repo" name="repo" type="text" required>
+        <label for="repo">Git Url</label>
+      </div>
+      <div>
+        <input id="something" name="something" type="text" required>
+        <label for="something">Something Else</label>
+      </div>
       <input type="submit" class="btn-primary" value="I am ready!">
     </fieldset>
   </form>
