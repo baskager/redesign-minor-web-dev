@@ -71,23 +71,29 @@
     transition-delay: .9s
 }
 
-.course-list.delighter li {
+.course-info.delighter li,
+.course-info.delighter p {
     transition: all .5s ease-in-out;
     opacity: 0;
     transform: translateX(10px);
 }
 
-.course-list.delighter.started li {
+.course-info.delighter.started li,
+.course-info.delighter.started p {
     transform: none;
     opacity: 1;
 }
 
-.course-list.delighter li:nth-of-type(2) {
+.course-info.delighter li:nth-of-type(2) {
     transition-delay: .3s;
 }
 
-.course-list.delighter li:nth-of-type(3) {
+.course-info.delighter li:nth-of-type(3) {
     transition-delay: .6s;
+}
+
+.course-info.delighter p {
+    transition-delay: 1.2s;
 }
 
 .signup-wrapper .form-submit {
