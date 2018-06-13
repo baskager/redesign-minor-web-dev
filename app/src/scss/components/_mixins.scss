@@ -6,25 +6,25 @@ $browser-context: 16; // Default browser font size
 
 //// Mediaqueries ////
 @mixin max-mobile() {
-  @media (max-width: $mobile) {
+  @media (max-width: $max-mobile) {
     @content;
   }
 }
 
 @mixin max-tablet() {
-  @media (max-width: $tablet) {
+  @media (max-width: $max-tablet) {
+    @content;
+  }
+}
+
+@mixin min-desktop() {
+  @media (min-width: $min-desktop) {
     @content;
   }
 }
 
 @mixin max-desktop() {
-  @media (max-width: $desktop) {
-    @content;
-  }
-}
-
-@mixin max-desktop-hd() {
-  @media (max-width: $desktop-hd) {
+  @media (max-width: $max-desktop) {
     @content;
   }
 }

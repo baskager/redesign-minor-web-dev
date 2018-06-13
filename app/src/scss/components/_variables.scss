@@ -139,9 +139,13 @@ $zindex-nav: 10;
 $zindex-timeline-item: 8;
 $zindex-timeline-link: 9;
 
-
 // Media queries
-$mobile: rem(576);
-$tablet: rem(768);
-$desktop: rem(992);
-$desktop-hd: rem(1200);
+$mobile: 575;
+$tablet: 768;
+$desktop: 992;
+
+$max-mobile: rem($mobile);
+$min-tablet: rem($mobile + 1);
+$max-tablet: rem($tablet);
+$min-desktop: rem($tablet + 1);
+$max-desktop: rem($desktop);

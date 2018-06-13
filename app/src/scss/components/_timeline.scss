@@ -137,6 +137,10 @@ $grid-max-width: rem(1180);
     margin: 0;
   }
 
+  .hidden-desktop {
+    font-weight: bold;
+  }
+
   .period-week {
     align-items: flex-end;
     padding-right: rem(56);
@@ -207,9 +211,17 @@ $grid-max-width: rem(1180);
       margin-right: 0;
     }
 
+    @include max-tablet() {
+      text-align: center;
+    }
+
     header {
       padding: 0 rem(24);
       align-items: flex-start;
+
+      @include max-tablet() {
+        align-items: center;
+      }
     }
 
     p {
