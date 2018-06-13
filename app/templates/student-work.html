@@ -50,18 +50,15 @@
             <div class="student-work-list">
                 {% for item in course.items %}
                 <article class="student-work-card">
-                    <h3>{{ item.heading }}</h3>
+                    <header>
+                        <h3>{{ item.heading }}</h3>
+                        <a class="focusable" href="{{ item.repoUrl }}" target="_blank">
+                            <img src="/img/icons/github.svg" class="icon-24" alt="To GitHub repo">
+                        </a>
+                    </header>
                     <img src="{{ item.imgUrl }}" alt="{{ item.imgAlt }}">
-                    <ul>
-                        <li>
-                            <a class="focusable" href="{{ item.demoUrl }}" target="_blank">
-                            <img src="/img/icons/play.svg" class="icon" alt="To demo icon">Demo</a>
-                        </li>
-                        <li>
-                            <a class="focusable" href="{{ item.repoUrl }}" target="_blank">
-                            <img src="/img/icons/github.svg" class="icon" alt="GitHub icon">Repo</a>
-                        </li>
-                    </ul>
+
+                    <a class="focusable card-link" href="{{ item.demoUrl }}" target="_blank"></a>
                 </article>
                 {% endfor %}
             </div>

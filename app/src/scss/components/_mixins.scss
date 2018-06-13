@@ -11,3 +11,10 @@ $browser-context: 16; // Default browser font size
   transition: transform cubic-bezier(0.5, 1.42, 0.78, 1.46) $time,
     border-color ease-in-out $time;
 }
+
+@mixin cardStyle() {
+  background-color: #fff;
+  box-shadow: $card-shadow;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+}

@@ -1,94 +1,40 @@
-//.student-work-card-list {
-//    display: flex;
-//    justify-content: space-between;
-//}
-//
-//.btn-student-work {
-//    width: 100%;
-//    margin: 6em 0;
-//    text-align: center;
-//}
-//
-//.student-work-card {
-//    margin-right: 4em;
-//    background: $primary-color;
-//    display: block;
-//    text-decoration: none;
-//    color: inherit;
-//}
-//
-//.student-work-card:last-child {
-//    margin-right: 0;
-//}
-//
-//.student-work-card img {
-//    width: 100%;
-//    display: block;
-//    margin: 0 auto;
-//}
-//
-//.student-work-card p {
-//    padding: 3em;
-//    text-align: justify;
-//}
-
 .student-work-card {
-  background-color: #fff;
-  box-shadow: $card-shadow;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-
   display: flex;
   flex-flow: column;
+  position: relative;
+  z-index: $zindex-card;
+  overflow: hidden;
+
+  @include cardStyle();
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $padding-16 $padding-24;
+  }
 
   h3 {
-    margin: 0.5em;
+    text-transform: uppercase;
+    font-size: rem(18);
+    margin: 0;
   }
 
   & > img {
     width: 100%;
-    max-height: 8em;
+    max-height: rem(176);
     object-fit: cover;
-  }
-
-  ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
-  a {
-    text-transform: uppercase;
-    text-decoration: none; // General style?
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
   }
 
   @include transitionCubic();
 
+  a:not(.card-link) {
+    z-index: $zindex-card-link;
+  }
+
+  &:hover,
   &:focus-within {
     border-color: $primary-color;
     transform: scale(1.035);
-  }
-
-  a:hover,
-  a:focus {
-    background-color: $primary-color;
-    color: $white;
-
-    svg {
-      fill: $white;
-    }
-  }
-
-  li {
-    width: 50%;
-  }
-
-  .icon {
-    padding: 0 0.25em 0 0;
   }
 }

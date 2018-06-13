@@ -57,6 +57,31 @@ body > header {
   width: 1em;
 }
 
+.icon-24 {
+  width: rem(24);
+  height: rem(24);
+}
+
+.icon-32 {
+  width: rem(32);
+  height: rem(32);
+}
+
 .avatar {
   border-radius: 50%;
+}
+
+.card-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 0;
+  line-height: 0;
+  z-index: $zindex-card;
+
+  &:focus {
+    outline: 0;
+  }
 }

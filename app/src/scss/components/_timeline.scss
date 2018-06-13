@@ -137,11 +137,8 @@ $grid-max-width: rem(1180);
 
   article {
     position: relative;
-    border: 1px solid $border-color;
-    box-shadow: $card-shadow;
-    border-radius: $border-radius;
-    background-color: #fff;
 
+    @include cardStyle();
     @include transitionCubic();
 
     &:hover,
@@ -178,23 +175,12 @@ $grid-max-width: rem(1180);
     }
   }
 
-  a {
+  a:not(.card-link) {
     font-weight: $semi-bold;
-    z-index: $zindex-timeline-link;
-  }
+    z-index: $zindex-card-link;
 
-  .course-link {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    font-size: 0;
-    line-height: 0;
-    z-index: $zindex-timeline-item;
-
-    &:focus {
-      outline: 0;
+    &:hover {
+      filter: brightness(70%);
     }
   }
 }
