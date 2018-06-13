@@ -50,6 +50,10 @@ $grid-max-width: rem(1180);
   @include max-desktop() {
     grid-template-columns: auto;
   }
+
+  @include max-tablet() {
+    grid-template-rows: auto;
+  }
 }
 
 .timeline {
@@ -65,6 +69,11 @@ $grid-max-width: rem(1180);
   @include max-desktop() {
     grid-template-columns: repeat(3, minmax(250px, 1fr));
     margin: 0 $margin-16;
+  }
+
+  @include max-tablet() {
+    display: flex;
+    flex-direction: column;
   }
 
   .period {
@@ -161,15 +170,24 @@ $grid-max-width: rem(1180);
     transition: transform cubic-bezier(0.5, 1.42, 0.78, 1.46) 0.175s,
       border-color ease-in-out 0.175s;
 
+    grid-row: 1 / span 4;
+    display: grid;
+    grid-template-rows: $grid-header-height repeat(3, $grid-row-height);
+
     &:hover,
     &:focus-within {
       transform: scale(1.035);
     }
 
-    &:not(:last-child) {
-      grid-row: 1 / span 4;
-      display: grid;
-      grid-template-rows: $grid-header-height repeat(3, $grid-row-height);
+    @include max-tablet() {
+      display: flex;
+      flex-direction: column;
+      margin-top: $margin-32;
+
+      header,
+      .week {
+        padding: $padding-16;
+      }
     }
   }
 
