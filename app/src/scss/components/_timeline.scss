@@ -43,6 +43,14 @@ $grid-max-width: rem(1180);
   .row-2 {
     grid-row-start: 4;
   }
+
+  @include max-desktop-hd() {
+    grid-template-columns: auto;
+  }
+
+  @include med-tablet() {
+    grid-template-rows: auto;
+  }
 }
 
 .timeline {
@@ -54,6 +62,16 @@ $grid-max-width: rem(1180);
   column-gap: $grid-gutter;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: $grid-header-height $grid-row-height;
+
+  @include max-desktop-hd() {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    margin: 0 $margin-16;
+  }
+
+  @include med-tablet() {
+    display: flex;
+    flex-direction: column;
+  }
 
   .period {
     grid-row: 1;
@@ -116,10 +134,18 @@ $grid-max-width: rem(1180);
     margin: 0;
   }
 
+  .hidden-desktop-hd {
+    font-weight: bold;
+  }
+
   .period-week {
     align-items: flex-end;
     padding-right: rem(56);
     font-weight: $semi-bold;
+
+    @include max-desktop-hd() {
+      display: none;
+    }
   }
 
   .period-header {
@@ -137,11 +163,19 @@ $grid-max-width: rem(1180);
 
   article {
     position: relative;
+    grid-row: 1 / span 4;
+    display: grid;
+    grid-template-rows: $grid-header-height repeat(3, $grid-row-height);
 
-    &:not(:last-child) {
-      grid-row: 1 / span 4;
-      display: grid;
-      grid-template-rows: $grid-header-height repeat(3, $grid-row-height);
+    @include med-tablet() {
+      display: flex;
+      flex-direction: column;
+      margin-top: $margin-32;
+
+      header,
+      .week {
+        padding: $padding-16;
+      }
     }
   }
 
@@ -156,9 +190,22 @@ $grid-max-width: rem(1180);
     display: flex;
     align-items: center;
 
+    @include max-desktop-hd() {
+      grid-column: 1 / span 3;
+      margin-right: 0;
+    }
+
+    @include med-tablet() {
+      text-align: center;
+    }
+
     header {
       padding: 0 rem(24);
       align-items: flex-start;
+
+      @include med-tablet() {
+        align-items: center;
+      }
     }
 
     p {

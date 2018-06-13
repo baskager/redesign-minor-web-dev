@@ -6,33 +6,44 @@ $browser-context: 16; // Default browser font size
 
 //// Mediaqueries ////
 @mixin max-mobile() {
-  @media (max-width: $mobile) {
+  @media (max-width: $max-mobile) {
     @content;
   }
 }
 
 @mixin max-tablet() {
-  @media (max-width: $tablet) {
+  @media (max-width: $max-tablet) {
+    @content;
+  }
+}
+
+@mixin min-desktop() {
+  @media (min-width: $min-desktop) {
     @content;
   }
 }
 
 @mixin max-desktop() {
-  @media (max-width: $desktop) {
+  @media (max-width: $max-desktop) {
+    @content;
+  }
+}
+
+@mixin min-desktop-hd() {
+  @media (min-width: $min-desktop-hd) {
     @content;
   }
 }
 
 @mixin max-desktop-hd() {
-  @media (max-width: $desktop-hd) {
+  @media (max-width: $max-desktop-hd) {
     @content;
   }
 }
 
-// Custom mediaqueries //
-@mixin max-timeline() {
-  // Program page with timeline
-  @media (max-width: $mobile) {
+// Custom mediaquery program overview
+@mixin med-tablet() {
+  @media (max-width: 830px) {
     @content;
   }
 }

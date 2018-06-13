@@ -62,5 +62,6 @@ typings/
 
 .idea/
 /app/static/
+.vscode/
 .DS_Store
 /.vscode/

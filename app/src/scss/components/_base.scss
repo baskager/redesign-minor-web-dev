@@ -17,7 +17,15 @@ body {
 }
 
 .hidden-desktop {
-  display: none;
+  @include min-desktop {
+    display: none;
+  }
+}
+
+.hidden-desktop-hd {
+  @include min-desktop-hd {
+    display: none;
+  }
 }
 
 body > header {
