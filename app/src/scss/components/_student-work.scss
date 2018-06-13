@@ -1,9 +1,31 @@
-.student-work-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
-  grid-gap: 2em 1em;
+.student-work {
+  .student-work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
+    grid-gap: 2em 1em;
+  }
+
+  .course {
+    padding: $padding-48 0;
+  }
+
+  h2 {
+    margin: 0 0 2rem 0;
+  }
+
+  .btn-primary {
+    display: block;
+    margin: auto;
+    max-width: rem(300);
+    padding: $padding-24;
+    text-align: center;
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
 }
 
+// Searchbar nav
 .searchbar {
   background-color: #fff;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.08);
@@ -21,6 +43,13 @@
     border-radius: 0;
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
+    &:valid {
+      background-color: #fff;
+    }
+  }
+
+  input:valid {
+    background-color: #fff;
   }
 
   input,

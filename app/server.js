@@ -192,25 +192,12 @@ const studentWork = {
   title: "Student work",
   heading: "Student work",
   description:
-    "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
+    "eMorbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
   courses: [
     {
       name: "Web app from scratch",
+      abbreviation: "wafs",
       items: [
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
         {
           heading: "Project header",
           imgUrl: "//via.placeholder.com/306x176",
@@ -243,21 +230,8 @@ const studentWork = {
     },
     {
       name: "CSS to the rescue",
+      abbreviation: "cssttr",
       items: [
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
         {
           heading: "Project header",
           imgUrl: "//via.placeholder.com/306x176",
@@ -290,21 +264,8 @@ const studentWork = {
     },
     {
       name: "Project 1",
+      abbreviation: "project",
       items: [
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
         {
           heading: "Project header",
           imgUrl: "//via.placeholder.com/306x176",

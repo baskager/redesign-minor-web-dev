@@ -41,9 +41,9 @@
     </div>
 </header>
 
-<main>
+<main class="student-work">
     {% for course in data.courses %}
-    <section class="course">
+    <section class="course course-{{ course.abbreviation }}">
         <div class="container">
             <h2>{{ course.name }}</h2>
 
