@@ -45,6 +45,8 @@ Database dumps are located in /sql/dumps.
 
 It is not recommended to use Adminer for importing or exporting data. Importing and exporting can be done with the following commands:
 
+**protip:** Make sure the target database is emptied before you import an .sql file!
+
 **importing:**
 
 `cat minorwebdev.sql | docker exec -i minorwebdev_postgres psql -U minorwebdev -d minorwebdev`
