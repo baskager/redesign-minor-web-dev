@@ -199,44 +199,44 @@ const studentWork = {
       items: [
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         }
       ]
@@ -246,44 +246,44 @@ const studentWork = {
       items: [
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         }
       ]
@@ -293,44 +293,44 @@ const studentWork = {
       items: [
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         }
       ]
