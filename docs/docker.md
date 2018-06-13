@@ -41,6 +41,8 @@ After this you can run the ExpressJS server (app/server.js) as follows:
 
 ## SQL imports and exports
 
+Database dumps are located in /sql/dumps.
+
 It is not recommended to use Adminer for importing or exporting data. Importing and exporting can be done with the following commands:
 
 **importing:**
