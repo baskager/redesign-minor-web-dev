@@ -342,7 +342,7 @@ const partnersData = {
   title: "Our Partners",
   heading: "Our Partners",
   description:
-    "De minor heeft verschillende partners. Dit zijn vooral bedrijven die een project hebben voor de meesterproef of voor tijdens de minor. Elke week is er een “Weekly Nerd🤓” waarbij een bedrijf of persoon gaat vertellen over een nerdy onderwerp.",
+    "De minor heeft verschillende partners. Dit zijn vooral bedrijven die een project hebben voor de meesterproef of voor tijdens de minor. Elke week is er een “<b>Weekly Nerd</b>🤓” waarbij een bedrijf of persoon gaat vertellen over een nerdy onderwerp.",
   linkText: "View project",
   members: [
     {
