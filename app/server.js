@@ -573,7 +573,7 @@ massive(config.postgres).then(database => {
     let pageSlug = req.params.pageSlug;
 
     dataStore
-      .getCourseForCourseOverview({ page_slug: pageSlug }, options)
+      .getCourseForCourseOverview({ page_slug: pageSlug })
       .then(courseData => {
         debug(courseData[0]);
         res.render("course.html", {
