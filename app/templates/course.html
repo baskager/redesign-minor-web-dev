@@ -1,0 +1,91 @@
+{% extends "components/_base.html" %} {% block content %}
+<header class="course-header">
+  <div class="container grid">
+    <div>
+      <div>
+        <h1>Real-Time Web</h1>
+        <p>In drie weken leer je hoe je real time / live data op een inzichtelijke manier toegankelijk kunt maken voor de eindgebruiker.</p>
+        <ul class="teachers-list">
+          <li>
+            <a href="/">See Biography</a>
+            <img class="avatar" src="https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg">
+            <div>
+              <h2>Vasilis van Gemert</h2>
+              <p>CSS Master</p>
+            </div>
+          </li>
+          <li>
+            <a href="/">See Biography</a>
+            <img class="avatar" src="https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg">
+            <div>
+              <h2>Vasilis van Gemert</h2>
+              <p>CSS Master</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <img src="/img/partners/oba.jpg"></img>
+  </div>
+</header>
+
+<main class="container">
+  <section class="course-info">
+    <section>
+      <h2>Learn goals</h2>
+      <ul class="course-list">
+        <li>
+          Student is able to build a (Node) webapp with a back-end that uses templating, routing and a remote database.
+        </li>
+        <li>
+          Student can deliver a live application where the interaction influences the content of the application by manipulating the database.
+        </li>
+        <li>
+          Student can translate live data to a reactive view (datavisualisation is allowed) that is useful for the end user.
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>More about this course</h2>
+      <p>During this course you'll learn to use Socket.io to establish a connection between the browser and the server. You'll combine your knowledge from other courses and your newly aqquired skills from this course to create a progressive web app that retrieves live data from an API, and display the data to the user.</p>
+    </section>
+  </section>
+
+  <section class="course-card-overview">
+    <h2>Weekly program</h2>
+    <div class="course-card-list">
+      {% include "components/_course-card.html" %} {% include "components/_course-card.html" %} {% include "components/_course-card.html"
+      %}
+    </div>
+    <div class="course-btn">
+      <a class="btn btn-primary animation" href="/program">View the full program</a>
+    </div>
+  </section>
+
+  <section class="student-quote">
+    <div class="testimonial">
+      <img src='https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg' class='avatar'
+      alt=''>
+      <blockquote>
+        <p>Voor ik begon met de minor had ik weinig kennis en skill in Javascript. Ik kon net een class toevoegen en weghalen met jQuery. Nu kan ik een Webapp bouwen! Leraren geven goed en gedetailleerd feedback.</p>
+        <p><i>~ Sjaak - 2018</i></p>  
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="other-courses">
+    <h2>Other courses</h2>
+    <div>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+      <a class="btn" href="">other course</a>
+    </div>
+  </section>
+</main>
+
+{% endblock %}

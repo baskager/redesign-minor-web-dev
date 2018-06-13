@@ -1,511 +1,450 @@
-const express = require('express');
+const express = require("express");
 const nunjucks = require("nunjucks");
 const app = express();
 
 const homepageData = {
-    title: "Homepage"
+  title: "Home"
 };
 
 const programData = {
-    title: "Program",
-    program: [{
-        label: null,
-        sticky: true,
-        items: [{
-            name: "Web App From Scratch",
-            iconSrc: "//via.placeholder.com/64x64",
-            url: "#",
-            description: "Lorem ipsum dolor",
-            partner_id: null,
-            type: "course"
-        }, {
-            name: "CSS To The Rescue",
-            iconSrc: "//via.placeholder.com/64x64",
-            url: "#",
-            description: "Lorem ipsum dolor",
-            partner_id: null,
-            type: "course"
-        }, {
-            name: "Weekly Nerd",
-            iconSrc: "//via.placeholder.com/64x64",
-            url: "#",
-            description: "Lorem ipsum dolor",
-            partner_id: null,
-            type: "course"
-        }]
-    }, {
-        label: "Week 1",
-        sticky: false,
-        items: [
+  title: "Program",
+  periods: [
+    {
+      period: 1,
+      weeks: [1, 2, 3, 4],
+      courses: [
+        {
+          name: "CSS to the rescue",
+          abbreviation: "cssttr",
+          description: "CSS & Accessibility course",
+          type: "course",
+          weeks: [
             {
-                type: "assignment",
-                description: "Het structureren van JavaScript heeft een aantal voordelen. Het maakt de code beter leesbaar en dus makkelijker onderhoudbaar en uitbreidbaar."
-            }, {
-                type: "assignment",
-                description: "De student kan een goed werkende responsive oplossing bedenken en maken voor complexe interfaces"
-            }, {
-                type: "speaker",
-                name: "Titus Wormer",
-                url: "#",
-                avatarURL: "//via.placeholder.com/64x64"
-            }
-        ]
-    }, {
-        label: "Week 2",
-        sticky: false,
-        items: [
+              week: 1,
+              description:
+                "Creating fun, pleasurable and accessible solutions for different kinds of interfaces."
+            },
             {
-                type: "assignment",
-                description: "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
-            }, {
-                type: "assignment",
-                description: "Bouwen van een basic app en deployen."
-            }, {
-                type: "speaker",
-                name: "PPK",
-                url: "#",
-                avatarURL: "//via.placeholder.com/64x64"
-            }
-        ]
-    }, {
-        label: "Week 3",
-        sticky: false,
-        items: [
+              week: 2,
+              description:
+                "Using CSS without the use of classes. Getting to know the basic CSS principles is key!"
+            },
             {
-                type: "assignment",
-                description: "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
-            }, {
-                type: "assignment",
-                description: "Bouwen van een basic app en deployen."
-            }, {
-                type: "speaker",
-                name: "Justus Sturkenboom",
-                url: "#",
-                avatarURL: "//via.placeholder.com/64x64"
+              week: 3,
+              description:
+                "Finetune the structure and flow of your app, because It's a wrap!"
             }
-        ]
-    }, {
-        label: "Week 4",
-        sticky: false,
-        items: [
+          ]
+        },
+        {
+          name: "Web App From Scratch",
+          abbreviation: "wafs",
+          description: "JavaScript course",
+          type: "course",
+          weeks: [
             {
-                type: "project",
-                name: "Project 1",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.",
-                url: "#"
-            }
-        ]
-    }, {
-        label: null,
-        sticky: true,
-        items: [{
-            name: "Browser Technologies",
-            iconSrc: "//via.placeholder.com/64x64",
-            url: "#",
-            description: "Lorem ipsum dolor",
-            partner_id: null,
-            type: "course"
-        }, {
-            name: "Performance Matters",
-            iconSrc: "//via.placeholder.com/64x64",
-            url: "#",
-            description: "Lorem ipsum dolor",
-            partner_id: null,
-            type: "course"
-        }, {
-            name: "Weekly Nerd",
-            iconSrc: "//via.placeholder.com/64x64",
-            url: "#",
-            description: "Lorem ipsum dolor",
-            partner_id: null,
-            type: "course"
-        }]
-    }, {
-        label: "Week 5",
-        sticky: false,
-        items: [
+              week: 1,
+              description:
+                "Introduction to Javascript object programming and coding design patterns."
+            },
             {
-                type: "assignment",
-                description: "Het structureren van JavaScript heeft een aantal voordelen. Het maakt de code beter leesbaar en dus makkelijker onderhoudbaar en uitbreidbaar."
-            }, {
-                type: "assignment",
-                description: "De student kan een goed werkende responsive oplossing bedenken en maken voor complexe interfaces"
-            }, {
-                type: "speaker",
-                name: "Anne - TamTam",
-                url: "#",
-                avatarURL: "//via.placeholder.com/64x64"
-            }
-        ]
-    }, {
-        label: "Week 6",
-        sticky: false,
-        items: [
+              week: 2,
+              description: "Resolving and manipulating data from an API."
+            },
             {
-                type: "assignment",
-                description: "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
-            }, {
-                type: "assignment",
-                description: "Bouwen van een basic app en deployen."
-            }, {
-                type: "speaker",
-                name: "PE - Voorhoede",
-                url: "#",
-                avatarURL: "//via.placeholder.com/64x64"
+              week: 3,
+              description:
+                "Designing your pleasurable interface with attention to detail."
             }
-        ]
-    }, {
-        label: "Week 7",
-        sticky: false,
-        items: [
+          ]
+        },
+        {
+          name: "Weekly nerd",
+          abbreviation: "wn",
+          description: "(Guest) Speakers",
+          type: "speakers",
+          weeks: [
             {
-                type: "assignment",
-                description: "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
-            }, {
-                type: "assignment",
-                description: "Bouwen van een basic app en deployen."
-            }, {
-                type: "speaker",
-                name: "Ischa Gast - Accessibility",
-                url: "#",
-                avatarURL: "//via.placeholder.com/64x64"
-            }
-        ]
-    }, {
-        label: "Week 8",
-        sticky: false,
-        items: [
+              week: 1,
+              name: "Justus Sturkenboom",
+              imgSrc: "//via.placeholder.com/48x48",
+              description: "Functional Programming"
+            },
             {
-                type: "project",
-                name: "Project 2",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.",
-                url: "#"
-            }
-        ]
-    }, {
-        label: null,
-        sticky: true,
-        items: [{
-            name: "Web Design",
-            iconSrc: "//via.placeholder.com/64x64",
-            url: "#",
-            description: "Lorem ipsum dolor",
-            partner_id: null,
-            type: "course"
-        }, {
-            name: "Real Time Web",
-            iconSrc: "//via.placeholder.com/64x64",
-            url: "#",
-            description: "Lorem ipsum dolor",
-            partner_id: null,
-            type: "course"
-        }, {
-            name: "Weekly Nerd",
-            iconSrc: "//via.placeholder.com/64x64",
-            url: "#",
-            description: "Lorem ipsum dolor",
-            partner_id: null,
-            type: "course"
-        }]
-    }, {
-        label: "Week 9",
-        sticky: false,
-        items: [
+              week: 2,
+              name: "Titus Wormer",
+              imgSrc: "//via.placeholder.com/48x48",
+              description: "Git"
+            },
             {
-                type: "assignment",
-                description: "Het structureren van JavaScript heeft een aantal voordelen. Het maakt de code beter leesbaar en dus makkelijker onderhoudbaar en uitbreidbaar."
-            }, {
-                type: "assignment",
-                description: "De student kan een goed werkende responsive oplossing bedenken en maken voor complexe interfaces"
-            }, {
-                type: "speaker",
-                name: "Niels Leenheer",
-                url: "#",
-                avatarURL: "//via.placeholder.com/64x64"
+              week: 3,
+              name: "Vasilis van Gemert",
+              imgSrc: "//via.placeholder.com/48x48",
+              description: "Accessibility"
             }
-        ]
-    }, {
-        label: "Week 10",
-        sticky: false,
-        items: [
+          ]
+        },
+        {
+          name: "Project 1",
+          partner: "Openbare Bibliotheek Amsterdam",
+          description:
+            "At the OBA we will create awesome stuff with data about Amsterdam, which they collected throughout the years.",
+          type: "project"
+        }
+      ]
+    },
+    {
+      period: 2,
+      weeks: [5, 6, 7, 8],
+      courses: [
+        {
+          name: "Performance matters",
+          abbreviation: "pm",
+          description: "Website perfomance course",
+          type: "course",
+          weeks: [
             {
-                type: "assignment",
-                description: "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
-            }, {
-                type: "assignment",
-                description: "Bouwen van een basic app en deployen."
-            }, {
-                type: "speaker",
-                name: "Peter Peerdeman",
-                url: "#",
-                avatarURL: "//via.placeholder.com/64x64"
-            }
-        ]
-    }, {
-        label: "Week 11",
-        sticky: false,
-        items: [
+              week: 5,
+              description:
+                "Make the basic functionality work on on as many devices as possible."
+            },
             {
-                type: "assignment",
-                description: "Herhalen van Node/npm basics; Opzetten van je ontwikkel omgeving;"
-            }, {
-                type: "assignment",
-                description: "Bouwen van een basic app en deployen."
-            }, {
-                type: "speaker",
-                name: "Leonie Watson - W3C",
-                url: "#",
-                avatarURL: "//via.placeholder.com/64x64"
-            }
-        ]
-    }, {
-        label: "Week 12",
-        sticky: false,
-        items: [
+              week: 6,
+              description: "Add feature detection to one of your applications."
+            },
             {
-                type: "project",
-                name: "Project 3",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.",
-                url: "#"
+              week: 7,
+              description:
+                "Turn your application into a three layer progressive enhancent one."
             }
-        ]
-    }]
+          ]
+        },
+        {
+          name: "Browser Technologies",
+          abbreviation: "bt",
+          description: "Progressive enhancement course",
+          type: "course",
+          weeks: [
+            {
+              week: 5,
+              description:
+                "Do an performance audit of an existing site and make a plan to improve it."
+            },
+            {
+              week: 6,
+              description:
+                "Add serverside rendering to one of your applications, also turn it in to a progressive web app."
+            },
+            {
+              week: 7,
+              description:
+                "Add more optimalisations and a service worker. Make your application work offline."
+            }
+          ]
+        },
+        {
+          name: "Weekly Nerd",
+          abbreviation: "wn",
+          description: "(Guest) Speakers",
+          type: "speakers",
+          weeks: [
+            {
+              week: 5,
+              name: "Justus Sturkenboom",
+              imgSrc: "//via.placeholder.com/48x48",
+              description: "Functional Programming"
+            },
+            {
+              week: 6,
+              name: "Titus Wormer",
+              imgSrc: "//via.placeholder.com/48x48",
+              description: "Git"
+            },
+            {
+              week: 7,
+              name: "Vasilis van Gemert",
+              imgSrc: "//via.placeholder.com/48x48",
+              description: "Accessibility"
+            }
+          ]
+        },
+        {
+          name: "Project 2",
+          partner: "Lifely",
+          description:
+            "Lifely is a digital agency. Here we’re going to work in their codebase of multiple projects.",
+          type: "project"
+        }
+      ]
+    }
+  ]
+};
+
+const courseData = {
+  title: "Course",
+  description:
+    "Here comes the description for the course. Here comes the description for the course. Here comes the description for the course."
 };
 
 const studentWork = {
-    title: 'Student work',
-    heading: 'Student work',
-    description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
-    courses: [
+  title: "Student work",
+  heading: "Student work",
+  description:
+    "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
+  courses: [
+    {
+      name: "Web app from scratch",
+      items: [
         {
-            name: 'Web app from scratch',
-            items: [
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                }
-            ]
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
         },
         {
-            name: 'CSS to the rescue',
-            items: [
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                }
-            ]
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
         },
         {
-            name: 'Project 1',
-            items: [
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                },
-                {
-                    heading: 'Project header',
-                    imgUrl: '/img/student-work/1.jpg',
-                    imgAlt: 'Description of the project/image',
-                    demoUrl: 'https://www.github.com',
-                    repoUrl: 'https://www.github.com',
-                }
-            ]
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
         },
-    ],
-}
-
-const partnersData = {
-    title: 'Partners',
-    heading: 'Partners',
-    description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
-    linkText: 'Naar het project',
-    members: [{
-        heading: 'Openbare Bibliotheek Amsterdam',
-        subHeading: 'De OBA is dé bibliotheek van Amsterdam en omgeving.',
-        avatarURL: '/img/partners/oba.jpg',
-        gitHubURL: 'https://www.oba.nl/'
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        },
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        },
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        }
+      ]
     },
     {
-        heading: 'Openbare Bibliotheek Amsterdam',
-        subHeading: 'De OBA is dé bibliotheek van Amsterdam en omgeving.',
-        avatarURL: '/img/partners/oba.jpg',
-        gitHubURL: 'https://www.oba.nl/'
-    },]
+      name: "CSS to the rescue",
+      items: [
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        },
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        },
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        },
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        },
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        },
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        }
+      ]
+    },
+    {
+      name: "Project 1",
+      items: [
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        },
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        },
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        },
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        },
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        },
+        {
+          heading: "Project header",
+          imgUrl: "/img/student-work/1.jpg",
+          imgAlt: "Description of the project/image",
+          demoUrl: "https://www.github.com",
+          repoUrl: "https://www.github.com"
+        }
+      ]
+    }
+  ]
+};
+
+const partnersData = {
+  title: "Our Partners",
+  heading: "Our Partners",
+  description:
+    "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
+  linkText: "View project",
+  members: [
+    {
+      heading: "Openbare Bibliotheek Amsterdam",
+      subHeading:
+        "The OBA comprises a Central Library and 25 branch libraries.",
+      avatarURL: "/img/partners/oba.jpg",
+      gitHubURL: "https://www.oba.nl/"
+    },
+    {
+      heading: "De Ceuvel",
+      subHeading:
+        "De Ceuvel is a city playground for innovation and creativity.",
+      avatarURL: "/img/partners/deceuvel.jpg",
+      gitHubURL: "https://www.oba.nl/"
+    }
+  ]
 };
 
 const teamData = {
-    title: 'Ons Team',
-    heading: 'Ons Team',
-    description: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.',
-    linkText: 'Personal GitHub',
-    members: [{
-        fullName: 'James Peter Perrone Jefferies',
-        description: 'Something about me!',
-        avatarURL: '/img/avatars/james.png',
-        gitHubURL: 'https://www.google.nl'
+  title: "Ons Team",
+  heading: "Ons Team",
+  description:
+    "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
+  linkText: "Personal GitHub",
+  members: [
+    {
+      fullName: "James Peter Perrone Jefferies",
+      description: "Something about me!",
+      avatarURL: "/img/avatars/james.png",
+      gitHubURL: "https://www.google.nl"
     },
     {
-        fullName: 'James Peter Perrone Jefferies',
-        description: 'Something about me!',
-        avatarURL: '/img/avatars/james.png',
-        gitHubURL: 'https://www.google.nl'
-    }]
+      fullName: "James Peter Perrone Jefferies",
+      description: "Something about me!",
+      avatarURL: "/img/avatars/james.png",
+      gitHubURL: "https://www.google.nl"
+    }
+  ]
 };
 
 const signupData = {
-    title: "Sign-Up"
+  title: "Sign-Up"
 };
 
-nunjucks.configure('./templates', {
-    autoescape: true,
-    express: app,
-    watch: true
+const contactData = {
+  title: "contact"
+};
+
+nunjucks.configure("./templates", {
+  autoescape: true,
+  express: app,
+  watch: true
 });
 
 app.set("view engine", "html");
-app.use(express.static('./static'));
+app.use(express.static("./static"));
 
-app.get('/', function (req, res) {
-    res.render('index.html', {
-        data: homepageData
-    })
+app.get("/", function(req, res) {
+  res.render("index.html", {
+    data: homepageData
+  });
 });
 
-app.get('/program', function (req, res) {
-    res.render('program.html', {
-        data: programData
-    })
+app.get("/course", function(req, res) {
+  res.render("course.html", {
+    data: courseData
+  });
 });
 
-app.get('/partners', function (req, res) {
-    res.render('partners-team.html', {
-        data: partnersData
-    })
+app.get("/program", function(req, res) {
+  res.render("program.html", {
+    data: programData
+  });
 });
 
-app.get('/team', function (req, res) {
-    res.render('partners-team.html', {
-        data: teamData
-    })
+app.get("/partners", function(req, res) {
+  res.render("partners.html", {
+    data: partnersData
+  });
 });
 
-app.get('/student-work', function (req, res) {
-    res.render('student-work.html', {
-        data: studentWork
-    })
+app.get("/team", function(req, res) {
+  res.render("partners-team.html", {
+    data: teamData
+  });
 });
 
-app.get('/signup', function (req, res) {
-    res.render('signup.html', {
-        data: signupData
-    })
+app.get("/student-work", function(req, res) {
+  res.render("student-work.html", {
+    data: studentWork
+  });
 });
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.get("/contact", function(req, res) {
+  res.render("contact.html", {
+    data: contactData
+  });
+});
+
+app.get("/signup", function(req, res) {
+  res.render("signup.html", {
+    data: signupData
+  });
+});
+
+app.listen(3000, () => console.log("Example app listening on port 3000!"));

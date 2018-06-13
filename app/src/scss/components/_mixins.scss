@@ -1,30 +1,43 @@
+//// PX to Rem function ////
 $browser-context: 16; // Default browser font size
 @function rem($pixels, $context: $browser-context) {
   @return #{$pixels/$context}rem;
 }
 
+//// Mediaqueries ////
 @mixin max-mobile() {
-  @media (max-width: $max-mobile) {
+  @media (max-width: $mobile) {
     @content;
   }
 }
 
 @mixin max-tablet() {
-  @media (max-width: $max-tablet) {
+  @media (max-width: $tablet) {
     @content;
   }
 }
 
 @mixin max-desktop() {
-  @media (max-width: $max-desktop) {
+  @media (max-width: $desktop) {
     @content;
   }
 }
 
-/////// Custom mediaqueries /////
-@mixin max-timeline() {
-  // Program page with timeline
-  @media (max-width: $max-mobile) {
+@mixin max-desktop-hd() {
+  @media (max-width: $desktop-hd) {
     @content;
   }
+}
+
+// Custom mediaqueries //
+@mixin max-timeline() {
+  // Program page with timeline
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+//// Transitions ////
+@mixin transition($time: 0.1s, $property: all) {
+  transition: ease-in-out $property $time;
 }

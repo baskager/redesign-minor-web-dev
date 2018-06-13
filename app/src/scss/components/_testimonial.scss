@@ -1,20 +1,23 @@
 .testimonial {
-    max-width: 40em;
-    display: flex;
-    
+  max-width: 40em;
+  display: flex;
 }
 .testimonial img {
-    width: 7.5em;
-    height: 7.5em;
-    border-radius: 50%;
-    padding: 1em;
+  width: 7.5em;
+  height: 7.5em;
+  border-radius: 50%;
+  padding: 1em;
+  align-self: center;
 }
 .testiomial h3 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 .testimonial blockquote {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1rem 2rem;
 }
-.testimonial i {
-    margin-left: 3em;
+.testimonial p:last-of-type {
+  text-align: right;
+  margin-top: 0;
 }
