@@ -35,7 +35,7 @@ body > header {
     margin: 0;
     font-family: "Roboto Condensed", sans-serif;
     font-weight: normal;
-    max-width: 48rem;
+    max-width: 54rem;
     margin-bottom: 1rem;
   }
 }
@@ -55,6 +55,16 @@ body > header {
 .icon {
   height: 1em;
   width: 1em;
+}
+
+.icon-24 {
+  width: rem(24);
+  height: rem(24);
+}
+
+.icon-32 {
+  width: rem(32);
+  height: rem(32);
 }
 
 .avatar {

@@ -1,0 +1,35 @@
+.card {
+  background-color: #fff;
+  box-shadow: $card-shadow;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+}
+
+.card-interactive {
+  @include transitionCubic();
+
+  .card-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 0;
+    line-height: 0;
+    z-index: $zindex-card;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  a:not(.card-link) {
+    z-index: $zindex-card-link;
+  }
+
+  &:hover,
+  &:focus-within {
+    border-color: $primary-color;
+    transform: scale(1.035);
+  }
+}
