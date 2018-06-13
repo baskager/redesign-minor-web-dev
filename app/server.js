@@ -402,19 +402,6 @@ massive(config.postgres).then(database => {
   let dataStore = new DataStore(database);
   monitor.attach(database.driverConfig);
 
-  let options = {
-    order: [
-      {
-        field: "course_name",
-        direction: "desc"
-      }
-    ]
-  };
-
-  // dataStore.getAllCoursesForCourseOverview(options).then(courses => {
-  //   debug(courses);
-  // });
-
   app.get("/course/:pageSlug", function(req, res) {
     let pageSlug = req.params.pageSlug;
 
