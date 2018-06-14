@@ -1,22 +1,18 @@
-.header-info.delighter {
-    transition: all .5s ease-in-out;
+.header-info,
+.header-img.trans {
     transform: translateX(-20px);
     opacity: 0;
 }
 
-.header-info.delighter.started {
-    transform: none;
-    opacity: 1;
+.header-img.add-transition {
+    transition: all .5s ease-in-out .5s;
 }
 
-.header-img.delighter {
+.header-info.add-transition {
     transition: all .5s ease-in-out;
-    transition-delay: .5s;
-    transform: translateX(-20px);
-    opacity: 0;
 }
 
-.header-img.delighter.started {
+.start-transition {
     transform: none;
     opacity: 1;
 }
