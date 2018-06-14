@@ -52,9 +52,19 @@
     background-color: #fff;
   }
 
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked + label {
+    color: red;
+  }
+
   input,
   select,
+  label,
   button {
     margin: 0;
+    cursor: pointer;
   }
 }
