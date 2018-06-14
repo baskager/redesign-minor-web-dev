@@ -53,11 +53,28 @@
   }
 
   input[type="checkbox"] {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    &:focus + label {
+      transform: scale(1.1);
+    }
+  }
+
+  input[type="checkbox"] + label {
+    padding: $padding-16 $padding-24;
+    border-radius: rem(100);
+    border: 1px $primary-color solid;
+    color: $primary-color;
+    margin-right: $margin-8;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   input[type="checkbox"]:checked + label {
-    color: red;
+    background-color: $primary-color;
+    color: #fff;
   }
 
   input,
