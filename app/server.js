@@ -1,6 +1,8 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
 const app = express();
+var fs = require("fs");
+var parser = require("subtitles-parser");
 
 const homepageData = {
   title: "Home"
@@ -390,6 +392,12 @@ const teamData = {
   ]
 };
 
+const srt = fs.readFileSync("src/subs/talk.srt", "utf8");
+let subs = parser.fromSrt(srt, true);
+subs = JSON.stringify(subs);
+
+console.log(subs);
+
 const talkData = {
   title: "Functional Programming",
   description: "Description comes here",
@@ -398,6 +406,7 @@ const talkData = {
   avatarUrl:
     "https://pbs.twimg.com/profile_images/2600200682/3l11tbu123yu6gya2yzt_400x400.png",
   videoUrl: "//jelle.im/crap/talk.mp4",
+  subtitles: subs,
   presentationImg: "//via.placeholder.com/1920x1080",
   videoSummary:
     "Maecenas sed diam eget risus varius blandit sit amet non magna."

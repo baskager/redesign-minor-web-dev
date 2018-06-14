@@ -27,12 +27,11 @@
       <video src="{{ data.videoUrl }}"></video>
       <img class="current-slide" src="{{ data.presentationImg }}">
       <button class="btn-media-control"></button>
+      <h2 class="subtitle"></h2>
     </div>
 
-    <h2 class="subtitle">Lorem, ipsum dolor.</h2>
-
-    <div class="slides"></div>  
     <input class="seeker" type="range" min="0" max="99" value="0">
+    <div class="slides"></div>  
   </section>
 
   <section class="talk-summary">
@@ -43,6 +42,9 @@
   </section>
 </main>
 
+<script>
+  subs = {{ data.subtitles | safe }}
+</script>
 <script src="js/splitscreen-presentation.js"></script>
 
 {% endblock %}

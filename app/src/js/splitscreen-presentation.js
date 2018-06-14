@@ -1,6 +1,6 @@
 (function() {
   const config = {
-    intervalTime: 1000
+    intervalTime: 500
   };
 
   const slides = [
@@ -42,33 +42,12 @@
     }
   ];
 
-  const subs = [
-    {
-      index: 0,
-      startTime: 0,
-      endTime: 3,
-      text: "Venenatis Cursus Commodo"
-    },
-    {
-      index: 1,
-      startTime: 4,
-      endTime: 5,
-      text: "Nullam Bibendum Porta Magna"
-    },
-    {
-      index: 2,
-      startTime: 6,
-      endTime: 10,
-      text: "Nulla vitae elit libero, a pharetra augue."
-    }
-  ];
-
   const subtitles = {
     interval: null,
     subtitles: subs,
     subtitleEl: document.querySelector(".subtitle"),
     getSubtitle: function(timestamp) {
-      let vidTime = presentation.video.currentTime;
+      let vidTime = presentation.video.currentTime * 1000;
 
       const currentSubtitles = this.subtitles.filter(function(sub) {
         if (vidTime > sub.startTime && vidTime < sub.endTime) {
@@ -79,23 +58,14 @@
       let currentSub = currentSubtitles[currentSubtitles.length - 1];
       return currentSub;
     },
-    setSubtitle: function(text) {
-      this.subtitleEl.innerText = text;
-    },
-    startInterval: function() {
-      const _this = this;
-      this.interval = setInterval(function() {
-        let currentSub = _this.getSubtitle();
-        if (currentSub) {
-          _this.setSubtitle(currentSub.text);
-        }
-      }, config.intervalTime);
-    },
-    stopInterval: function() {
-      clearInterval(this.interval);
-    },
-    init: function() {
-      this.startInterval();
+    setSubtitle: function() {
+      let currentSub = this.getSubtitle();
+
+      console.log(currentSub.text);
+
+      if (currentSub) {
+        this.subtitleEl.innerText = currentSub.text;
+      }
     }
   };
 
@@ -179,6 +149,7 @@
       const _this = this;
       this.interval = setInterval(function() {
         _this.updatePresentation();
+        subtitles.setSubtitle();
       }, config.intervalTime);
     },
     updatePresentation: function() {
@@ -186,11 +157,11 @@
       this.updateSeeker();
     },
     play: function() {
+      location.href = "#presentation";
       this.video.play();
       this.playing = true;
       this.media.classList.remove("paused");
       this.startInterval();
-      subtitles.startInterval();
     },
     pause: function() {
       this.video.pause();
