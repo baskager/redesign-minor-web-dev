@@ -6,8 +6,8 @@ const observer = new IntersectionObserver((entries) => {
         entry.target.classList.add('trans')
         if(entry.intersectionRatio != 0) {
             console.log(entry.target)
-            entry.target.classList.add('add-transition')
             window.setTimeout(function() {
+                entry.target.classList.add('add-transition')
                 entry.target.classList.add('start-transition')
             }, 1)
         }

@@ -1,15 +1,14 @@
-.header-info,
-.header-img.trans {
-    transform: translateX(-20px);
+.trans {
     opacity: 0;
-}
-
-.header-img.add-transition {
-    transition: all .5s ease-in-out .5s;
+    transform: translateX(-20px);
 }
 
 .header-info.add-transition {
     transition: all .5s ease-in-out;
+}
+
+.header-img.add-transition {
+    transition: all .5s ease-in-out .5s;
 }
 
 .start-transition {
