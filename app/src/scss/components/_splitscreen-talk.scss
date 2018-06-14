@@ -14,7 +14,7 @@
   grid-template-columns: 1fr 1fr;
   position: relative;
   max-width: rem(1280);
-  margin: auto;
+  margin: auto auto 0 auto;
 
   img,
   video {
@@ -48,19 +48,14 @@
 }
 
 .subtitle {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
-  padding: rem(24);
+  margin: 0 0 auto 0;
+  padding: rem(24) 0;
+  height: rem(80);
 
   color: #fff;
   font-size: rem(32);
   font-family: "Arial", sans-serif;
-  text-align: center;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8), 0 3px 50px rgba(0, 0, 0, 0.5);
-  background: rgba(0, 0, 0, 0.5);
 }
 
 .slides {
