@@ -393,8 +393,8 @@ const teamData = {
 const talkData = {
   title: "Functional Programming",
   description: "Description comes here",
-  speaker: "Justus Sturkenboom",
-  speakerRole: "Programming unicorn",
+  speaker: "Vitaly Friedman",
+  speakerRole: "Founder of Smashingmagazine",
   avatarUrl:
     "https://pbs.twimg.com/profile_images/2600200682/3l11tbu123yu6gya2yzt_400x400.png",
   videoUrl: "//jelle.im/crap/talk.mp4",

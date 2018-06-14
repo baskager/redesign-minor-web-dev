@@ -21,7 +21,7 @@
 </header>
 
 <main>
-  <section class="presentation">
+  <section class="presentation" id="presentation">
 
     <div class="media paused">
       <video src="{{ data.videoUrl }}"></video>
@@ -29,15 +29,13 @@
       <button class="btn-media-control"></button>
     </div>
 
-    <div class="slides"></div>
-  
+    <h2 class="subtitle">Lorem, ipsum dolor.</h2>
+
+    <div class="slides"></div>  
     <input class="seeker" type="range" min="0" max="99" value="0">
   </section>
 
   <section class="talk-summary">
-
-  <div class="notes"></div>
-
     <div class="container">
       <h3>{{ data.title }} </h3>
       <p>{{ data.videoSummary }}</p>

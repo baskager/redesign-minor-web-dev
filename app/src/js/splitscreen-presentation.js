@@ -1,4 +1,8 @@
 (function() {
+  const config = {
+    intervalTime: 1000
+  };
+
   const slides = [
     {
       index: 0,
@@ -37,6 +41,56 @@
       endTime: 180
     }
   ];
+
+  const subs = [
+    {
+      index: 0,
+      timestamp: 0,
+      text: "Venenatis Cursus Commodo"
+    },
+    {
+      index: 1,
+      timestamp: 4,
+      text: "Nullam Bibendum Porta Magna"
+    },
+    {
+      index: 2,
+      timestamp: 8,
+      text: "Nulla vitae elit libero, a pharetra augue."
+    }
+  ];
+
+  const subtitles = {
+    interval: null,
+    subtitles: subs,
+    subtitleEl: document.querySelector(".subtitle"),
+    getSubtitle: function(timestamp) {
+      const currentSubtitles = this.subtitles.filter(function(sub) {
+        if (presentation.video.currentTime > sub.timestamp) {
+          return sub;
+        }
+      });
+
+      let currentSub = currentSubtitles[currentSubtitles.length - 1];
+      return currentSub;
+    },
+    setSubtitle: function(text) {
+      this.subtitleEl.innerText = text;
+    },
+    startInterval: function() {
+      const _this = this;
+      this.interval = setInterval(function() {
+        let currentSub = _this.getSubtitle();
+        _this.setSubtitle(currentSub.text);
+      }, config.intervalTime);
+    },
+    stopInterval: function() {
+      clearInterval(this.interval);
+    },
+    init: function() {
+      this.startInterval();
+    }
+  };
 
   const presentation = {
     media: document.querySelector(".media"),
@@ -118,7 +172,7 @@
       const _this = this;
       this.interval = setInterval(function() {
         _this.updatePresentation();
-      }, 1000);
+      }, config.intervalTime);
     },
     updatePresentation: function() {
       this.setSlide();
@@ -129,6 +183,7 @@
       this.playing = true;
       this.media.classList.remove("paused");
       this.startInterval();
+      subtitles.startInterval();
     },
     pause: function() {
       this.video.pause();
@@ -154,11 +209,11 @@
 
   if (document.querySelector(".presentation")) {
     presentation.init();
+    // subtitles.init();
   }
 
-  document.addEventListener("keydown", event => {
-    const keyName = event.key;
-
-    console.log(presentation.video.currentTime);
-  });
+  // document.addEventListener("keydown", event => {
+  //   const keyName = event.key;
+  //   console.log(presentation.video.currentTime);
+  // });
 })();
