@@ -26,13 +26,21 @@
         </nav>
 
         <section>
-            <h4>Menu</h4>
+            <h4>Courses</h4>
             <ul>
-                <li>Hier</li>
-                <li>Komt</li>
-                <li>Nog</li>
-                <li>Een</li>
-                <li>Lijst</li>
+            {% for period in data.periods %}
+            	{% if period.period === 1 %}
+		            {% for course in period.courses %}
+			            <li><a href="/course/{{ course.slug }}">{{ course.name }}</a></li>
+		            {% endfor %}
+	            {% else %}      
+                    {% for course in period.courses %}
+                        {% if course.abbreviation != "wn" %}
+                            <li><a href="/course/{{ course.slug }}">{{ course.name }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+	            {% endif %}
+            {% endfor %}
             </ul>
         </section>
 
