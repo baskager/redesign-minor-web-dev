@@ -1,5 +1,5 @@
-const   scrollTransitions = 'st',
-        els = document.querySelectorAll('.' + scrollTransitions),
+const   scrollTransitions = 'scroll-transition',
+        els = document.querySelectorAll('[' + scrollTransitions + ']'),
         config = {
             threshold: 0.33
         }

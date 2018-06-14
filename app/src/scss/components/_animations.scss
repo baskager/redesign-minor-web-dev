@@ -57,7 +57,6 @@
 .partner-article.trans h2,
 .partner-article.trans p,
 .partner-article.trans a {
-    transition: all .5s ease-in-out;
     opacity: 0;
     transform: translateY(10px);
 }
@@ -66,6 +65,7 @@
 .partner-article.trans.start-transition h2,
 .partner-article.trans.start-transition p,
 .partner-article.trans.start-transition a {
+    transition: all .5s ease-in-out;
     transform: translateY(0);
     opacity: 1;
 }
