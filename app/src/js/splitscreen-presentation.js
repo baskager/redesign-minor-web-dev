@@ -45,17 +45,20 @@
   const subs = [
     {
       index: 0,
-      timestamp: 0,
+      startTime: 0,
+      endTime: 3,
       text: "Venenatis Cursus Commodo"
     },
     {
       index: 1,
-      timestamp: 4,
+      startTime: 4,
+      endTime: 5,
       text: "Nullam Bibendum Porta Magna"
     },
     {
       index: 2,
-      timestamp: 8,
+      startTime: 6,
+      endTime: 10,
       text: "Nulla vitae elit libero, a pharetra augue."
     }
   ];
@@ -65,8 +68,10 @@
     subtitles: subs,
     subtitleEl: document.querySelector(".subtitle"),
     getSubtitle: function(timestamp) {
+      let vidTime = presentation.video.currentTime;
+
       const currentSubtitles = this.subtitles.filter(function(sub) {
-        if (presentation.video.currentTime > sub.timestamp) {
+        if (vidTime > sub.startTime && vidTime < sub.endTime) {
           return sub;
         }
       });
@@ -81,7 +86,9 @@
       const _this = this;
       this.interval = setInterval(function() {
         let currentSub = _this.getSubtitle();
-        _this.setSubtitle(currentSub.text);
+        if (currentSub) {
+          _this.setSubtitle(currentSub.text);
+        }
       }, config.intervalTime);
     },
     stopInterval: function() {
