@@ -400,13 +400,25 @@ nunjucks.configure("./templates", {
 app.set("view engine", "html");
 app.use(express.static("./static"));
 
+// Use the Massive datamapper to connect to the database
 massive(config.postgres).then(database => {
+  // Create a Datastore object (handles the database queries)
   let dataStore = new DataStore(database);
+  // Attach a monitor so we get nice logs about the database usage
   monitor.attach(database.driverConfig);
 
+  // E.G. /course/web-design
   app.get("/course/:pageSlug", function(req, res) {
+    /* 
+      Get the pageslug from the Express server
+      The pageslug identifies what page we are on
+      E.G.: 'course/web-design' or 'course/real-time-web'
+    */
     let pageSlug = req.params.pageSlug;
-
+    /* 
+      Tell the datastore to fetch a course with the 
+      given pageslug and render the page with the received data. 
+    */
     dataStore
       .getCourseForCourseOverview({ page_slug: pageSlug })
       .then(courseData => {
