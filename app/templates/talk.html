@@ -1,0 +1,50 @@
+{% extends "components/_base.html" %} {% block content %}
+<header class="course-header">
+  <div class="container grid">
+    <div>
+      <div>
+        <h1>{{ data.title }}</h1>
+        <p>{{ data.description }}</p>
+        <ul class="teachers-list">
+          <li>
+            <a href="/">See Biography</a>
+            <img class="avatar" src="{{ data.avatarUrl }}">
+            <div>
+              <h2>{{ data.speaker }}</h2>
+              <p>{{ data.speakerRole }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="presentation">
+
+    <div class="media paused">
+      <video src="{{ data.videoUrl }}"></video>
+      <img class="current-slide" src="{{ data.presentationImg }}">
+      <button class="btn-media-control"></button>
+    </div>
+
+    <div class="slides"></div>
+  
+    <input class="seeker" type="range" min="0" max="99" value="0">
+  </section>
+
+  <section class="talk-summary">
+
+  <div class="notes"></div>
+
+    <div class="container">
+      <h3>{{ data.title }} </h3>
+      <p>{{ data.videoSummary }}</p>
+    </div>
+  </section>
+</main>
+
+<script src="js/splitscreen-presentation.js"></script>
+
+{% endblock %}

@@ -384,6 +384,19 @@ const teamData = {
   ]
 };
 
+const talkData = {
+  title: "Functional Programming",
+  description: "Description comes here",
+  speaker: "Justus Sturkenboom",
+  speakerRole: "Programming unicorn",
+  avatarUrl:
+    "https://pbs.twimg.com/profile_images/2600200682/3l11tbu123yu6gya2yzt_400x400.png",
+  videoUrl: "//jelle.im/crap/talk.mp4",
+  presentationImg: "//via.placeholder.com/1920x1080",
+  videoSummary:
+    "Maecenas sed diam eget risus varius blandit sit amet non magna."
+};
+
 const signupData = {
   title: "Sign-Up"
 };
@@ -434,6 +447,12 @@ app.get("/team", function(req, res) {
 app.get("/student-work", function(req, res) {
   res.render("student-work.html", {
     data: studentWork
+  });
+});
+
+app.get("/weekly-nerd", function(req, res) {
+  res.render("talk.html", {
+    data: talkData
   });
 });
 
