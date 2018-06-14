@@ -12,7 +12,7 @@ After each change, GULP has to run. During development you can use the `gulp wat
 
 # Docker
 
-[Head to the docker installation guide](<(https://github.com/baskager/redesign-minor-web-dev/blob/master/docs/docker.md)>)
+[Head to the docker guide](https://github.com/baskager/redesign-minor-web-dev/blob/master/docs/docker.md)
 
 # Database
 
