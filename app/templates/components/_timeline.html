@@ -1,76 +1,68 @@
-{% block content %}
-
-{% for period in data.periods %}
+{% block content %} {% for period in data.periods %}
 
 <div class="timeline-wrapper">
 
-<div class="row-gray row-1"></div>
-<div class="row-gray row-2"></div>
+  <div class="row-gray row-1"></div>
+  <div class="row-gray row-2"></div>
 
-<main class="timeline">
+  <section class="timeline">
     <div class="period period-week period-header">
-        Periode: {{ period.period }}
+      Periode: {{ period.period }}
     </div>
-    
+
     {% for week in period.weeks %}
-        <div class="period-week week week-{{week}}">
-            Week: {{ week }}
-        </div>
-    {% endfor %}
+    <div class="period-week week week-{{week}}">
+      Week: {{ week }}
+    </div>
+    {% endfor %} {% for course in period.courses %} {% if course.type == "course" %}
 
-    {% for course in period.courses %}
+    <article class="card card-interactive course-{{ course.abbreviation }}">
+      <header>
+        <h5>{{ course.name }}</h5>
+        <h6>{{ course.description }}</h6>
+      </header>
+      {% for week in course.weeks %}
+      <div class="week">
+        <p class="hidden-desktop-hd">Week {{week.week}}</p>
+        <p>{{ week.description }}</p>
+      </div>
+      {% endfor %}
+      <a class="focusable card-link" href="/course">Open {{ course.name }}</a>
+    </article>
 
-        {% if course.type == "course" %}
-        
-            <article class="card card-interactive course-{{ course.abbreviation }}">
-                <header>
-                    <h5>{{ course.name }}</h5>
-                    <h6>{{ course.description }}</h6>
-                </header>
-                {% for week in course.weeks %}
-                    <div class="week">
-                        <p class="hidden-desktop-hd">Week {{week.week}}</p>
-                        <p>{{ week.description }}</p>
-                    </div>
-                {% endfor %}
-                <a class="focusable card-link" href="/course">Open {{ course.name }}</a>
-            </article>
+    {% elseif course.type == "speakers" %}
 
-        {% elseif course.type == "speakers" %}
+    <article class="card card-interactive course-{{ course.abbreviation }}">
+      <header>
+        <h5>{{ course.name }}</h5>
+        <h6>{{ course.description }}</h6>
+      </header>
+      {% for week in course.weeks %}
+      <div class="week">
+        <p class="hidden-desktop-hd">Week {{week.week}}</p>
+        <img src="{{ week.imgSrc }}" class="avatar" alt="">
+        <a class="course-{{ course.abbreviation }}" href="#">{{ week.name }}</a>
+        <p class="meta">{{ week.description }}</p>
+      </div>
+      {% endfor %}
+      <a class="focusable card-link" href="/course">Open {{ course.name }}</a>
+    </article>
 
-            <article class="card card-interactive course-{{ course.abbreviation }}">
-                <header>
-                    <h5>{{ course.name }}</h5>
-                    <h6>{{ course.description }}</h6>
-                </header>
-                {% for week in course.weeks %}
-                    <div class="week">
-                        <p class="hidden-desktop-hd">Week {{week.week}}</p>
-                        <img src="{{ week.imgSrc }}" class="avatar" alt="">
-                        <a class="course-{{ course.abbreviation }}" href="#">{{ week.name }}</a>
-                        <p class="meta">{{ week.description }}</p>
-                    </div>
-                {% endfor %}
-                <a class="focusable card-link" href="/course">Open {{ course.name }}</a>
-            </article>
+    {% elseif course.type == "project" %}
 
-        {% elseif course.type == "project" %}
-    
-            <article class="card card-interactive course-project">
-                <header>
-                    <h5>{{ course.name }}</h5>
-                    <h6>{{ course.partner }}</h6>
-                    <span class="meta">End of {{ period.period }}</span>
-                </header>
-                <p>{{ course.description }}</p>
-                <a class="focusable card-link" href="/course">Open {{ course.name }}</a>
-            </article>
+    <article class="card card-interactive course-project">
+      <header>
+        <h5>{{ course.name }}</h5>
+        <h6>{{ course.partner }}</h6>
+        <span class="meta">End of {{ period.period }}</span>
+      </header>
+      <p>{{ course.description }}</p>
+      <a class="focusable card-link" href="/course">Open {{ course.name }}</a>
+    </article>
 
-        {% endif %}
-    {% endfor %}
-</main>
+    {% endif %} {% endfor %}
+  </section>
 </div>
 
 
-{% endfor %}
-{% endblock %}
+{% endfor %} {% endblock %}

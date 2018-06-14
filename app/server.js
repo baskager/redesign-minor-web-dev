@@ -18,6 +18,7 @@ const programData = {
         {
           name: "CSS to the rescue",
           abbreviation: "cssttr",
+          slug: "css-to-the-rescue",
           description: "CSS & Accessibility",
           type: "course",
           weeks: [
@@ -41,6 +42,7 @@ const programData = {
         {
           name: "Web App From Scratch",
           abbreviation: "wafs",
+          slug: "web-app-from-scratch",
           description: "JavaScript",
           type: "course",
           weeks: [
@@ -63,6 +65,7 @@ const programData = {
         {
           name: "Weekly nerd",
           abbreviation: "wn",
+          slug: "weekly-nerd",
           description: "Speakers",
           type: "speakers",
           weeks: [
@@ -102,6 +105,7 @@ const programData = {
         {
           name: "Performance matters",
           abbreviation: "pm",
+          slug: "performance-matters",
           description: "Website perfomance",
           type: "course",
           weeks: [
@@ -124,6 +128,7 @@ const programData = {
         {
           name: "Browser Technologies",
           abbreviation: "bt",
+          slug: "browser-technologies",
           description: "Progressive enhancement",
           type: "course",
           weeks: [
@@ -147,6 +152,7 @@ const programData = {
         {
           name: "Weekly Nerd",
           abbreviation: "wn",
+          slug: "weekly-nerd",
           description: "Speakers",
           type: "speakers",
           weeks: [
