@@ -1,17 +1,17 @@
-.trans {
+.header-info.trans,
+.header-img.trans {
     opacity: 0;
     transform: translateX(-20px);
 }
 
-.header-info.add-transition {
+.header-info.start-transition {
     transition: all .5s ease-in-out;
+    transform: none;
+    opacity: 1;
 }
 
-.header-img.add-transition {
+.header-img.start-transition {
     transition: all .5s ease-in-out .5s;
-}
-
-.start-transition {
     transform: none;
     opacity: 1;
 }
@@ -32,18 +32,18 @@
     }
 }
 
-.course-card-list.delighter {
+.course-card-list.trans {
     .course-card {
-        transition: all .5s ease-in-out;
         transform: translateY(20px);
         opacity: 0;
     }
 }
 
-.course-card-list.delighter.started {
+.course-card-list.start-transition {
     .course-card {
         transform: none;
         opacity: 1;
+        transition: all .5s ease-in-out;
     }
     .course-card:nth-of-type(2) {
         transition-delay: .2s;
@@ -53,57 +53,57 @@
     }
 }
 
-.partner-article.delighter img,
-.partner-article.delighter h2,
-.partner-article.delighter p,
-.partner-article.delighter a {
+.partner-article.trans img,
+.partner-article.trans h2,
+.partner-article.trans p,
+.partner-article.trans a {
     transition: all .5s ease-in-out;
     opacity: 0;
     transform: translateY(10px);
 }
 
-.partner-article.delighter.started img,
-.partner-article.delighter.started h2,
-.partner-article.delighter.started p,
-.partner-article.delighter.started a {
+.partner-article.trans.start-transition img,
+.partner-article.trans.start-transition h2,
+.partner-article.trans.start-transition p,
+.partner-article.trans.start-transition a {
     transform: translateY(0);
     opacity: 1;
 }
 
-.partner-article.delighter.started h2 {
+.partner-article.trans.start-transition h2 {
     transition-delay: .3s
 }
 
-.partner-article.delighter.started p {
+.partner-article.trans.start-transition p {
     transition-delay: .6s
 }
 
-.partner-article.delighter.started a {
+.partner-article.trans.start-transition a {
     transition-delay: .9s
 }
 
-.course-info.delighter li,
-.course-info.delighter p {
+.course-info.trans li,
+.course-info.trans p {
     transition: all .5s ease-in-out;
     opacity: 0;
     transform: translateX(10px);
 }
 
-.course-info.delighter.started li,
-.course-info.delighter.started p {
+.course-info.trans.start-transition li,
+.course-info.trans.start-transition p {
     transform: none;
     opacity: 1;
 }
 
-.course-info.delighter li:nth-of-type(2) {
+.course-info.trans li:nth-of-type(2) {
     transition-delay: .3s;
 }
 
-.course-info.delighter li:nth-of-type(3) {
+.course-info.trans li:nth-of-type(3) {
     transition-delay: .6s;
 }
 
-.course-info.delighter p {
+.course-info.trans p {
     transition-delay: 1.2s;
 }
 

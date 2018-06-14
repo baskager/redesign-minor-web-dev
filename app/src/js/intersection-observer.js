@@ -1,18 +1,27 @@
-const   scrollTransitions = 'scroll-transition',
-        els = document.querySelectorAll('[' + scrollTransitions + ']')
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        entry.target.classList.add('trans')
-        if(entry.intersectionRatio != 0) {
-            console.log(entry.target)
-            window.setTimeout(function() {
-                entry.target.classList.add('add-transition')
-                entry.target.classList.add('start-transition')
-            }, 1)
+const   scrollTransitions = 'st',
+        els = document.querySelectorAll('.' + scrollTransitions),
+        config = {
+            threshold: 0.33
         }
+
+if (IntersectionObserver) {
+
+    els.forEach(el => {
+        el.classList.add('trans')
     })
-})
-els.forEach(el => {
-    observer.observe(el)
-})
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.intersectionRatio != 0) {
+                window.setTimeout(function() {
+                    entry.target.classList.add('start-transition')
+                }, 100)
+                observer.unobserve(entry.target)
+            }
+        })
+    }, config)
+
+    els.forEach(el => {
+        observer.observe(el)
+    })
+}
