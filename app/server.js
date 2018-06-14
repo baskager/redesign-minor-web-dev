@@ -192,7 +192,7 @@ const studentWork = {
   title: "Student work",
   heading: "Student work",
   description:
-    "eMorbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
+    "Here you can find student work from the final assignement for each course of last year. Each course highlights work of all types of quality.",
   courses: [
     {
       name: "Web app from scratch",

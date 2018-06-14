@@ -25,26 +25,26 @@
   }
 }
 
-// Searchbar nav
-.searchbar {
-  background-color: #fff;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.08);
-  border: 1px solid #bebebe;
-  border-radius: 0.5rem;
-  padding: $padding-16;
-
-  form {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-column-gap: 1rem;
-  }
-
+.student-work-header {
   select {
+    font-size: inherit;
+    font-weight: inherit;
+    outline: none;
+    border: none;
+    border-bottom: $primary-color rem(8) solid;
     border-radius: 0;
+    color: $primary-color;
+    width: auto;
+    display: inline-block;
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
     &:valid {
       background-color: #fff;
+    }
+    &:hover,
+    &:focus {
+      color: lighten($primary-color, 20%);
+      border-color: lighten($primary-color, 20%);
     }
   }
 
