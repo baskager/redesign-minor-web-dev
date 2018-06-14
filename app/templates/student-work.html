@@ -14,9 +14,10 @@
             </h1>
 
             <p>{{ data.description }}</p>
-
+                <input type="radio" id="all" name="course" value="all" checked="checked">
+                <label for="all">All courses</label>
             {% for course in data.courses %}
-                <input class="focusable" type="checkbox" id="{{ course.abbreviation }}" name="course" value="{{ course.abbreviation }}">
+                <input type="radio" id="{{ course.abbreviation }}" name="course" value="{{ course.abbreviation }}">
                 <label for="{{ course.abbreviation }}">{{ course.name }}</label>
             {% endfor %}
 
