@@ -55,6 +55,8 @@
   input[type="radio"] {
     position: absolute;
     opacity: 0;
+    transition: scale 0.3s;
+    -webkit-transition: scale 0.3s;
   }
 
   input[type="radio"] + label {
@@ -63,7 +65,7 @@
     border-radius: rem(100);
     border: 1px $primary-color solid;
     color: $primary-color;
-    margin-right: $margin-8;
+    margin-right: $margin-16;
     height: auto;
 
     &:hover {
