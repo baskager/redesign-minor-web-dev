@@ -3,19 +3,23 @@
   border-top: solid rgb(97, 97, 97) 1px;
   color: white;
   margin-top: 5rem;
+
   div {
-    width: 80%;
-    padding: 2em 0;
-    margin: auto 0;
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    ul {
-      list-style-type: none;
-      padding: 0;
-      li {
-        margin: 0.2rem 0;
-      }
+    padding: $padding-64 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(261.5), 1fr));
+    grid-gap: $margin-24 $margin-24;
+
+    @include max-mobile {
+      text-align: center;
     }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin: 0.2rem 0;
   }
 }
