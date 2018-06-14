@@ -38,21 +38,3 @@ After this you can run the ExpressJS server (app/server.js) as follows:
 **Shutting down the containers can be done with the following command:**
 
 `docker-compose down`
-
-## SQL imports and exports
-
-Database dumps are located in **/sql/dumps**.
-
-`cd sql/dumps/`
-
-It is not recommended to use Adminer for importing or exporting data. Importing and exporting can be done with the following commands:
-
-**protip:** Make sure the target database is emptied before you import an .sql file!
-
-**importing:**
-
-`cat minorwebdev.sql | docker exec -i minorwebdev_postgres psql -U minorwebdev -d minorwebdev`
-
-**exporting:**
-
-`docker exec -i minorwebdev_postgres pg_dump -U minorwebdev minorwebdev > minorwebdev.sql`
