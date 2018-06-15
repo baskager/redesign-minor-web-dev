@@ -33,8 +33,6 @@ var keyNav = function(e) {
 };
 
 var input = document.querySelectorAll("input, textarea");
-console.log(input);
-
 input.forEach(el => {
   el.addEventListener("focus", el => {
     keyNavSwitch = false;
