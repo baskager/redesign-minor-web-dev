@@ -54,7 +54,7 @@ const keyNavSwitch = function() {
     el.addEventListener("focusout", function(el) {
       keyNavState = true;
       getSpan.forEach(function(span) {
-        span.classList.remove("inactive");
+        span.removeAttribute("class");
       });
     });
   });
