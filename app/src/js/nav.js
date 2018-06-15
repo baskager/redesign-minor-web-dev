@@ -32,6 +32,7 @@ var keyNav = function(e) {
   }
 };
 
+// Disable keyCode navigation when an input field has focus
 var input = document.querySelectorAll("input, textarea");
 input.forEach(el => {
   el.addEventListener("focus", el => {
@@ -39,6 +40,7 @@ input.forEach(el => {
   });
 });
 
+// Enable keyCode navigation when input field loses focus
 input.forEach(el => {
   el.addEventListener("focusout", el => {
     keyNavSwitch = true;
