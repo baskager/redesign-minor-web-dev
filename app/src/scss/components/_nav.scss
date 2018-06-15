@@ -19,14 +19,19 @@
   }
   .skip-to-content {
     position: absolute;
+    padding: $padding-8 $padding-16;
+    background-color: $primary-color;
+    color: #fff;
+    border-radius: rem(50);
     width: 1px;
     height: 1px;
     margin: 0;
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
+    transition: all 0.3 ease-in-out;
   }
   .skip-to-content:focus {
-    z-index: 20;
+    z-index: 2;
     width: auto;
     height: auto;
     clip: auto;
