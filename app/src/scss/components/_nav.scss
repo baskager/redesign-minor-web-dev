@@ -16,6 +16,7 @@
   h1 {
     font-size: $h3-font-size;
     margin: 0;
+    @include transition;
   }
   .skip-to-content {
     position: absolute;
@@ -36,7 +37,7 @@
     height: auto;
     clip: auto;
   }
-  .skip-to-content:focus + a {
+  .skip-to-content:focus + a h1 {
     opacity: 0;
   }
 
