@@ -1,11 +1,6 @@
-var keyNavSwitch = true;
-document.addEventListener("keyup", function(e) {
-  if (keyNavSwitch === true) {
-    keyNav(e);
-  }
-});
+"use strict";
 
-var keyNav = function(e) {
+const keyNav = function keyNav(e) {
   // 1
   if (e.keyCode === 49) {
     window.location.href = "/";
@@ -32,17 +27,37 @@ var keyNav = function(e) {
   }
 };
 
-// Disable keyCode navigation when an input field has focus
-var input = document.querySelectorAll("input, textarea");
-input.forEach(el => {
-  el.addEventListener("focus", el => {
-    keyNavSwitch = false;
-  });
-});
+const keyNavSwitch = function() {
+  let keyNavState = true;
 
-// Enable keyCode navigation when input field loses focus
-input.forEach(el => {
-  el.addEventListener("focusout", el => {
-    keyNavSwitch = true;
+  document.addEventListener("keyup", function(e) {
+    if (keyNavState === true) {
+      keyNav(e);
+    }
   });
-});
+
+  let getSpan = document.querySelectorAll(".main-nav span");
+  let getInput = document.querySelectorAll("input, textarea");
+
+  // Disable keyCode navigation when an input field has focus
+  getInput.forEach(function(input) {
+    input.addEventListener("focus", function(input) {
+      keyNavState = false;
+      getSpan.forEach(function(span) {
+        span.classList.add("inactive");
+      });
+    });
+  });
+
+  // Enable keyCode navigation when input field loses focus
+  getInput.forEach(function(el) {
+    el.addEventListener("focusout", function(el) {
+      keyNavState = true;
+      getSpan.forEach(function(span) {
+        span.classList.remove("inactive");
+      });
+    });
+  });
+};
+
+keyNavSwitch();
