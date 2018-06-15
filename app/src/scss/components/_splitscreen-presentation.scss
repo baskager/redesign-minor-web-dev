@@ -13,7 +13,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
-  max-width: rem(1280);
   margin: auto;
 
   img,
@@ -25,11 +24,9 @@
   .btn-media-control {
     opacity: 0;
     background-image: url("../img/icons/pause-big.svg");
-  }
 
-  &:focus-within,
-  &:hover {
-    .btn-media-control {
+    &:focus,
+    &:hover {
       opacity: 0.5;
     }
   }
@@ -56,11 +53,27 @@
   padding: rem(24);
 
   color: #fff;
-  font-size: rem(32);
+  font-size: rem(24);
   font-family: "Arial", sans-serif;
   text-align: center;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8), 0 3px 50px rgba(0, 0, 0, 0.5);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
+
+  &.right {
+    right: 0;
+    left: auto;
+    width: 50%;
+  }
+
+  &.left {
+    right: auto;
+    left: 0;
+    width: 50%;
+  }
+
+  &.center {
+    text-align: center;
+  }
 }
 
 .slides {

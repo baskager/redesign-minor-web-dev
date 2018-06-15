@@ -46,6 +46,11 @@
     interval: null,
     subtitles: subs,
     subtitleEl: document.querySelector(".subtitle"),
+    alignSubs: function(side) {
+      this.subtitleEl.classList.remove("right");
+      this.subtitleEl.classList.remove("left");
+      this.subtitleEl.classList.add(side);
+    },
     getSubtitle: function(timestamp) {
       let vidTime = presentation.video.currentTime * 1000;
 
@@ -60,12 +65,35 @@
     },
     setSubtitle: function() {
       let currentSub = this.getSubtitle();
-
-      console.log(currentSub.text);
+      let text = "";
 
       if (currentSub) {
-        this.subtitleEl.innerText = currentSub.text;
+        text = currentSub.text;
       }
+
+      this.subtitleEl.innerText = text;
+    },
+    checkCursorSide: function(cursorPos) {
+      let screenWidth = window.innerWidth;
+      let screenCenter = screenWidth / 2;
+      let side;
+
+      if (cursorPos > screenCenter) {
+        side = "right";
+      } else {
+        side = "left";
+      }
+
+      return side;
+    },
+    setCursorEvent: function() {
+      presentation.media.addEventListener("mousemove", ev => {
+        let side = this.checkCursorSide(ev.screenX);
+        this.alignSubs(side);
+      });
+    },
+    init: function() {
+      this.setCursorEvent();
     }
   };
 
@@ -87,8 +115,7 @@
 
         img.addEventListener("click", ev => {
           this.changeTime(slide.startTime);
-          this.setSlide();
-          this.updateSeeker();
+          this.updatePresentation();
         });
 
         this.slideNodes.push(img);
@@ -116,16 +143,12 @@
     },
     setSlide: function() {
       let slide = this.getSlide(this.video.currentTime);
-
       if (slide) {
         this.slideEl.src = slide.img;
         this.setActiveSlide(slide);
       }
-
-      if (this.video.currentTime === this.duration) {
-        this.pause();
-      }
     },
+    slideChanged: function() {},
     changeTime: function(time) {
       this.video.currentTime = time;
     },
@@ -149,12 +172,16 @@
       const _this = this;
       this.interval = setInterval(function() {
         _this.updatePresentation();
-        subtitles.setSubtitle();
       }, config.intervalTime);
     },
     updatePresentation: function() {
       this.setSlide();
       this.updateSeeker();
+      subtitles.setSubtitle();
+
+      if (this.video.currentTime === this.duration) {
+        this.pause();
+      }
     },
     play: function() {
       location.href = "#presentation";
@@ -187,11 +214,6 @@
 
   if (document.querySelector(".presentation")) {
     presentation.init();
-    // subtitles.init();
+    subtitles.init();
   }
-
-  // document.addEventListener("keydown", event => {
-  //   const keyName = event.key;
-  //   console.log(presentation.video.currentTime);
-  // });
 })();
