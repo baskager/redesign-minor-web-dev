@@ -17,7 +17,7 @@
                 <input type="radio" id="all" name="course" value="all" checked="checked">
                 <label for="all">All courses</label>
             {% for course in data.courses %}
-                <input type="radio" id="{{ course.abbreviation }}" name="course" value="{{ course.abbreviation }}">
+                <input type="checkbox" id="{{ course.abbreviation }}" name="course" value="{{ course.abbreviation }}">
                 <label for="{{ course.abbreviation }}">{{ course.name }}</label>
             {% endfor %}
 
@@ -44,7 +44,7 @@
     </nav>
 </header>
 
-<main class="student-work">
+<main id="main" class="student-work">
     {% for course in data.courses %}
     <section class="course course-{{ course.abbreviation }}">
         <div class="container">
