@@ -54,13 +54,14 @@
       border-bottom: 2px solid rgba($primary-color, 0.5);
     }
     &.active {
-      border-bottom: 2px solid $primary-color;
-    } // &:last-child {
-    //   &:hover,
-    //   &.active {
-    //     border-bottom: 2px solid transparent;
-    //   }
-    // }
+      border-bottom: 2px solid $secondary-color;
+      a {
+        color: $secondary-color;
+      }
+      span {
+        border-color: $secondary-color;
+      }
+    }
     span {
       border: 1px $primary-color solid;
       font-size: 0.75rem;
