@@ -1,0 +1,66 @@
+html body * {
+    font-family: sans-serif;
+    font-size: 1.3rem;
+}
+
+.form .email {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    position: relative;
+}
+
+.form div {
+    margin: 1em 0;
+}
+
+.form input {
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+.form p {
+    margin: 0;
+    margin-right: 1rem;
+}
+
+section {
+    margin: 40vh 0;
+}
+
+.autocomplete ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.autocomplete {
+    position: absolute;
+    top: 1rem;
+    left: 16.8rem;
+    width: 213px;
+    border: solid rgb(107, 107, 107) 1px;
+    background: white;
+}
+
+.autocomplete ul li {
+    padding: 1rem;
+}
+
+.autocomplete ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.autocomplete ul li a:hover,
+.autocomplete ul li a:focus {
+    outline: 0;
+    color: white;
+}
+
+.autocomplete ul li:focus-within {
+    background: blue;
+}
+
+.gone {
+    display: none;
+}

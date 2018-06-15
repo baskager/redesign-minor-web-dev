@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>form interaction</title>
+</head>
+<body>
+
+    <section class="form">
+        <form>
+            <h2>Geen extra interactie</h2>
+            <fieldset>
+                <div>
+                    <input id="name" name="name" type="text" required>
+                    <label for="name">Naam</label>
+                </div>
+                <div class="email">
+                    <input id="email-begin" name="email-begin" type="email" required>
+                    <label for="email">Email Address</label>
+                </div>
+                <div>
+                    <input id="tel" name="tel" type="tel" required>
+                    <label for="tel">Telefoon nummer</label>
+                </div>
+                <div>
+                    <input id="repo" name="repo" type="url" required>
+                    <label for="repo">Git Url</label>
+                </div>
+                <input type="submit" class="btn-primary" value="Verzenden">
+            </fieldset>
+        </form>
+    </section>
+
+    <section class="form form2">
+        <form>
+            <h2>Extra email interactie</h2>
+            <fieldset>
+                <div>
+                    <input id="name" name="name" type="text" required>
+                    <label for="name">Naam</label>
+                </div>
+                <div class="email">
+                    <input id="email-begin" name="email-begin" type="text" required>
+                    <p>@</p>
+                    <input id="email-end" name="email-end" type="text" required>
+                    <div class="autocomplete gone">
+                        <ul>
+                            
+                        </ul>
+                    </div>
+                    <label for="email">Email Address</label>
+                </div>
+                <div>
+                    <input id="tel" name="tel" type="tel" required>
+                    <label for="tel">Telefoon nummer</label>
+                </div>
+                <div>
+                    <input id="repo" name="repo" type="url" required>
+                    <label for="repo">Git Url</label>
+                </div>
+                <input type="submit" class="btn-primary" value="Verzenden">
+            </fieldset>
+        </form>
+    </section>
+
+    <section class="form form2">
+        <form>
+            <h2>Extra email interactie</h2>
+            <fieldset>
+                <div>
+                    <input id="name" name="name" type="text" required>
+                    <label for="name">Naam</label>
+                </div>
+                <div class="email">
+                    <input id="email-begin" name="email-begin" type="text" required>
+                    <p>@</p>
+                    <input id="email-end" name="email-end" type="text" required>
+                    <div class="autocomplete gone">
+                        <ul>
+                            
+                        </ul>
+                    </div>
+                    <label for="email">Email Address</label>
+                </div>
+                <div>
+                    <input id="tel" name="tel" type="tel" required>
+                    <label for="tel">Telefoon nummer</label>
+                </div>
+                <div>
+                    <input id="repo" name="repo" type="url" required>
+                    <label for="repo">Git Url</label>
+                </div>
+                <input type="submit" class="btn-primary" value="Verzenden">
+            </fieldset>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
