@@ -48,7 +48,8 @@
 }
 
 .subtitle {
-  margin: 0 0 auto 0;
+  margin: 0 auto auto auto;
+  max-width: rem(1280);
   padding: rem(24) 0;
   height: rem(80);
 
