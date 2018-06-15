@@ -1,5 +1,4 @@
 var keyNavSwitch = true;
-
 document.addEventListener("keyup", function(e) {
   if (keyNavSwitch === true) {
     keyNav(e);
@@ -33,7 +32,9 @@ var keyNav = function(e) {
   }
 };
 
-var input = document.querySelectorAll("input");
+var input = document.querySelectorAll("input, textarea");
+console.log(input);
+
 input.forEach(el => {
   el.addEventListener("focus", el => {
     keyNavSwitch = false;
