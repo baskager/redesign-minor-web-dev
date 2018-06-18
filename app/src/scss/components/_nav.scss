@@ -40,12 +40,11 @@
   .skip-to-content:focus + a h1 {
     opacity: 0;
   }
-
   ul {
     padding: 0;
     margin: 0;
   }
-
+  // main menu styling
   & div > ul {
     display: flex;
     & > li {
@@ -54,10 +53,12 @@
         height: $padding-72;
         display: flex;
         align-items: center;
-      }
-      @include transition();
-      &:hover {
-        border-bottom: 2px solid rgba($primary-color, 0.5);
+        border-bottom: 2px solid transparent;
+        &:hover {
+          border-bottom: 2px solid rgba($primary-color, 0.5);
+        }
+
+        @include transition();
       }
       &.active {
         border-bottom: 2px solid $secondary-color;
@@ -72,7 +73,7 @@
         border: 1px $primary-color solid;
         font-size: 0.75rem;
         margin-right: 0.5rem;
-        display: inline-flex;
+        display: none;
         align-items: center;
         justify-content: center;
         border-radius: 4px;
@@ -80,12 +81,31 @@
         height: 1.25rem;
         @include transition;
         &.inactive {
-          opacity: 0.3;
+          opacity: 0.4;
+        }
+        @include min-desktop {
+          display: inline-flex;
+        }
+      }
+      &:first-child {
+        margin: 0;
+        align-items: center;
+        display: inline-flex;
+        span {
+          opacity: 0.4;
+          width: auto;
+          padding: 0 $padding-8;
+          color: $primary-color;
+          margin: 0;
+          &.active {
+            opacity: 1;
+          }
         }
       }
     }
   }
 
+  // submenu styling
   .submenu {
     position: absolute;
     left: 0;
@@ -96,13 +116,13 @@
     display: none;
     visibility: hidden;
     opacity: 0;
-    div {
+    box-shadow: $card-shadow;
+    div div {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
       grid-gap: $margin-16;
     }
     h2 {
-      grid-column: 1 / span 4;
       text-transform: uppercase;
       color: #fff;
       font-size: $body-font-size;
@@ -114,6 +134,10 @@
     a {
       display: block;
       padding: $padding-8 0;
+      color: lighten($primary-color, 35%);
+      &:hover {
+        color: lighten($primary-color, 25%);
+      }
     }
   }
   li:focus-within .submenu,
@@ -124,7 +148,6 @@
   }
   li {
     list-style: none;
-    border-bottom: 2px solid transparent;
   }
   .btn {
     margin: 0;

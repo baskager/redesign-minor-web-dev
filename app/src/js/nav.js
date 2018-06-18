@@ -3,51 +3,57 @@
 
   // Set buttons for the navigation with keys
   const keyNav = function keyNav(e) {
-    // if() {
-    event.preventDefault();
-    // 1
-    if (e.keyCode === 49) {
-      window.location.href = "/";
+    const getModSpan = document.querySelector(".main-nav li > span");
+    if (e.altKey || e.keyCode === 18) {
+      getModSpan.classList.add("active");
+      // 1
+      if (e.keyCode === 49) {
+        window.location.href = "/";
+      }
+      // 2
+      else if (e.keyCode === 50) {
+        window.location.href = "/program";
+      }
+      // 3
+      else if (e.keyCode === 51) {
+        window.location.href = "/partners";
+      }
+      // 4
+      else if (e.keyCode === 52) {
+        window.location.href = "/student-work";
+      }
+      // 5
+      else if (e.keyCode === 53) {
+        window.location.href = "/contact";
+      }
+      // 6
+      else if (e.keyCode === 54) {
+        window.location.href = "/signup";
+      }
+    } else {
+      getModSpan.removeAttribute("class");
     }
-    // 2
-    else if (e.keyCode === 50) {
-      window.location.href = "/program";
+    if (e.altKey || e.keyCode === 18) {
+      document.addEventListener("keyup", function(e) {
+        getModSpan.removeAttribute("class");
+      });
     }
-    // 3
-    else if (e.keyCode === 51) {
-      window.location.href = "/partners";
-    }
-    // 4
-    else if (e.keyCode === 52) {
-      window.location.href = "/student-work";
-    }
-    // 5
-    else if (e.keyCode === 53) {
-      window.location.href = "/contact";
-    }
-    // 6
-    else if (e.keyCode === 54) {
-      window.location.href = "/signup";
-    }
-    // }
   };
 
   // Add functionality to the keys
   const keyNavSwitch = function() {
     let keyNavState = true;
+    // Get all rectangles with numbers next to the menu items
+    let getSpan = document.querySelectorAll(".main-nav div > ul a span");
+    // Get all input elements
+    let getInput = document.querySelectorAll("input, textarea");
 
     // Add eventlistener to all keys
-    document.addEventListener("keyup", function(e) {
+    document.addEventListener("keydown", function(e) {
       if (keyNavState === true) {
         keyNav(e);
       }
     });
-
-    // Get all rectangles with numbers next to the menu items
-    let getSpan = document.querySelectorAll(".main-nav span");
-
-    // Get all input elements
-    let getInput = document.querySelectorAll("input, textarea");
 
     // Disable keyCode navigation when an input field has focus
     getInput.forEach(function(input) {
