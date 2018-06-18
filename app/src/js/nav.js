@@ -104,6 +104,10 @@
       getModSpan.classList.add("active");
 
       // Set key to 1
+      if (e.keyCode === 48) {
+        document.getElementById("main").focus();
+      }
+      // Set key to 1
       if (e.keyCode === 49) {
         document.getElementById("menu-item-1").focus();
       }
