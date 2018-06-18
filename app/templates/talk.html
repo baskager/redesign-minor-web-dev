@@ -26,16 +26,30 @@
 
 <main>
   <section class="presentation" id="presentation">
-
     <div class="media paused">
       <video src="{{ data.videoUrl }}"></video>
       <img class="current-slide" src="{{ data.presentationImg }}">
       <button class="btn-media-control"></button>
       <h2 class="subtitle"></h2>
-    </div>
+    </div>  
 
-    <input class="seeker" type="range" min="0" max="99" value="0">
-    <div class="slides"></div>  
+    <div class="controls">
+      {# <button class="speed-down">Speed down</button> #}
+      <label for="set-speed">Speed</label>
+      <select id="set-speed">
+        <option value="0.25">0.25</option>
+        <option value="0.5">0.5</option>
+        <option value="0.75">0.75</option>
+        <option value="1" selected>1</option>
+        <option value="1.25">1.25</option>
+        <option value="1.50">1.50</option>
+      </select>
+      {# <button class="speed-up">Speed up</button> #}
+
+      <input class="seeker" type="range" min="0" max="99" value="0">
+    </div>
+    
+    <div class="slides"></div>
   </section>
 
   <section class="talk-summary">

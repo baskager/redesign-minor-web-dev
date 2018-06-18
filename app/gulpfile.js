@@ -6,6 +6,7 @@ const uglify = require("gulp-uglify");
 const gulpSequence = require("gulp-sequence");
 const imagemin = require("gulp-imagemin");
 const cleanCSS = require("gulp-clean-css");
+const sourcemaps = require("gulp-sourcemaps");
 
 const source = "./src/";
 const destination = "./static/";
@@ -31,11 +32,13 @@ gulp.task("img:compress", function() {
 gulp.task("js", function() {
   return gulp
     .src(source + "js/**/*.js")
+    .pipe(sourcemaps.init())
     .pipe(
       babel({
         presets: ["env"]
       })
     )
+    .on("error", console.error.bind(console))
     .pipe(gulp.dest(destination + "js"));
 });
 

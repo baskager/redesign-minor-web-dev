@@ -183,3 +183,33 @@
   bottom: 0;
   margin: auto;
 }
+
+.controls {
+  display: flex;
+  color: #fff;
+  align-items: center;
+
+  label {
+    margin-right: $margin-8;
+    font-weight: $semi-bold;
+  }
+
+  button,
+  select {
+    color: #fff;
+    background: transparent;
+    margin: 0;
+    height: rem(40);
+    padding: 0 rem(12);
+    font-size: rem(16);
+    letter-spacing: 0;
+    text-transform: none;
+    border-radius: rem(3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-right: $margin-8;
+  }
+
+  select {
+    width: auto;
+  }
+}
