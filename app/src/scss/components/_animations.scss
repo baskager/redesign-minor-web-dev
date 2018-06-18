@@ -5,13 +5,13 @@
 }
 
 .header-info.start-transition {
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
     transform: none;
     opacity: 1;
 }
 
 .header-img.start-transition {
-    transition: all .5s ease-in-out .5s;
+    transition: all .5s ease-in-out .2s;
     transform: none;
     opacity: 1;
 }
@@ -93,18 +93,6 @@
 .course-info.trans.start-transition p {
     transform: none;
     opacity: 1;
-}
-
-.course-info.trans li:nth-of-type(2) {
-    transition-delay: .3s;
-}
-
-.course-info.trans li:nth-of-type(3) {
-    transition-delay: .6s;
-}
-
-.course-info.trans p {
-    transition-delay: 1.2s;
 }
 
 .signup-wrapper .form-submit {
