@@ -105,7 +105,7 @@ const presentation = {
   seekerEl: document.querySelector(".seeker"),
   speedUpEl: document.querySelector(".speed-up"),
   speedDownEl: document.querySelector(".speed-down"),
-  speedDropdown: document.querySelector(".set-speed"),
+  speedDropdown: document.querySelector("#set-speed"),
   currentSlideEl: null,
   playing: false,
   slideNodes: [],
@@ -225,7 +225,7 @@ const presentation = {
 
     if (this.speedDropdown) {
       this.speedDropdown.addEventListener("change", ev => {
-        console.log(ev);
+        this.setSpeed(Number(ev.target.value));
       });
     }
 
