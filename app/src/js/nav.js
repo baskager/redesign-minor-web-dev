@@ -3,36 +3,42 @@
 
   // Set buttons for the navigation with keys
   const keyNav = function keyNav(e) {
+    // Get visual modifier element "alt +"
     const getModSpan = document.querySelector(".main-nav li > span");
+
+    // Check if alt is pressed before going further
     if (e.altKey || e.keyCode === 18) {
+      // Add active class on keyDown
       getModSpan.classList.add("active");
-      // 1
+
+      // Set key to 1
       if (e.keyCode === 49) {
         window.location.href = "/";
       }
-      // 2
+      // Set key to 2
       else if (e.keyCode === 50) {
         window.location.href = "/program";
       }
-      // 3
+      // Set key to 3
       else if (e.keyCode === 51) {
         window.location.href = "/partners";
       }
-      // 4
+      // Set key to 4
       else if (e.keyCode === 52) {
         window.location.href = "/student-work";
       }
-      // 5
+      // Set key to 5
       else if (e.keyCode === 53) {
         window.location.href = "/contact";
       }
-      // 6
+      // Set key to 6
       else if (e.keyCode === 54) {
         window.location.href = "/signup";
       }
     } else {
       getModSpan.removeAttribute("class");
     }
+    // Remove the whole active class when alt key is released
     if (e.altKey || e.keyCode === 18) {
       document.addEventListener("keyup", function(e) {
         getModSpan.removeAttribute("class");
@@ -80,5 +86,6 @@
     });
   };
 
+  // LETS GO KEYNAVSWITCHERINO
   keyNavSwitch();
 })();
