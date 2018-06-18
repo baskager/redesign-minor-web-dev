@@ -105,7 +105,7 @@
 
       // Set key to 1
       if (e.keyCode === 48) {
-        document.getElementById("main").focus();
+        document.getElementById("main").scrollIntoView();
       }
       // Set key to 1
       if (e.keyCode === 49) {
