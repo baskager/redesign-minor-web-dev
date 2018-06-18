@@ -83,7 +83,7 @@ body {
     font-weight: 700;
     text-align: center;
     margin: 0;
-    margin-bottom: 10px;
+    padding-bottom: 23px;
 }
 
 .numberKeyboard a {
@@ -92,7 +92,7 @@ body {
 }
 
 .keyboard {
-    display: flex;
+    display: none;
     position: fixed;
     right: 0;
     top: 0;
@@ -115,3 +115,15 @@ body {
     text-align: center;
 }
 
+.active {
+    background: rgb(76, 255, 157)
+}
+
+.show {
+    display: flex;
+}
+
+.naam input {
+    width: 1.5em;
+    margin: 0;
+}

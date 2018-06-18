@@ -10,8 +10,33 @@
 <body>
 
     <section class="form">
-        <form>
+        <form autocomplete="off">
             <h2>Geen extra interactie</h2>
+            <fieldset>
+                <div>
+                    <input id="name" name="name" type="text" required>
+                    <label for="name">Naam</label>
+                </div>
+                <div class="email">
+                    <input id="email-begin" name="email-begin" type="email" required>
+                    <label for="email">Email Address</label>
+                </div>
+                <div>
+                    <input id="tel" name="tel" type="tel" required>
+                    <label for="tel">Telefoon nummer</label>
+                </div>
+                <div>
+                    <input id="repo" name="repo" type="url" required>
+                    <label for="repo">Git Url</label>
+                </div>
+                <input type="submit" class="btn-primary" value="Verzenden">
+            </fieldset>
+        </form>
+    </section>
+
+    <section class="form">
+        <form autocomplete="on">
+            <h2>Autocomplete (werkt alleen na 1e keer)</h2>
             <fieldset>
                 <div>
                     <input id="name" name="name" type="text" required>
@@ -36,7 +61,7 @@
 
     <section class="form form2">
         <form>
-            <h2>Extra email interactie</h2>
+            <h2>autofill email</h2>
             <fieldset>
                 <div>
                     <input id="name" name="name" type="text" required>
@@ -66,23 +91,38 @@
         </form>
     </section>
 
-    <section class="form form2">
+    <section class="form form3">
         <form>
-            <h2>Extra email interactie</h2>
+            <h2>nummer keyboard (werkt alleen nog bij naam)</h2>
             <fieldset>
-                <div>
+                <div class="naam">
                     <input id="name" name="name" type="text" required>
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
+                    <input name="name" type="text">
                     <label for="name">Naam</label>
                 </div>
                 <div class="email">
-                    <input id="email-begin" name="email-begin" type="text" required>
-                    <p>@</p>
-                    <input id="email-end" name="email-end" type="text" required>
-                    <div class="autocomplete gone">
-                        <ul>
-                            
-                        </ul>
-                    </div>
+                    <input id="email" name="email" type="email" required>
                     <label for="email">Email Address</label>
                 </div>
                 <div>
@@ -99,7 +139,7 @@
     </section>
 
     <section class="keyboard">
-        <div>
+        <div class="column">
             <p>1</p>
             <p>2</p>
             <p>3</p>
@@ -108,11 +148,11 @@
         </div>
 
         <div class="numberKeyboard">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
+            <p class="row">1</p>
+            <p class="row">2</p>
+            <p class="row">3</p>
+            <p class="row">4</p>
+            <p class="row">5</p>
             <div>
                 <a>A</a>
                 <a>B</a>

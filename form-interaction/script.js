@@ -38,7 +38,7 @@ const letters = {
   14: {
     value: 'd'
     },
-  16: {
+  15: {
     value: 'e'
     },
   21: {
@@ -113,16 +113,16 @@ emailEnd.addEventListener('keyup', function() {
             
             const   elA = document.createElement('a'),
                     autocomplete = document.querySelector('.autocomplete ul'),
-                    elLi = document.createElement('li')
+                    elLi = document.createElement('li');
 
-            autocomplete.parentElement.classList.remove('gone')
+            autocomplete.parentElement.classList.remove('gone');
 
-            elA.innerHTML = emailDomain[email].domain
-            elA.href = "#"
+            elA.innerHTML = emailDomain[email].domain;
+            elA.href = "#";
             elA.addEventListener('click', event => {
-                event.preventDefault()
-                emailEnd.value = elA.innerHTML
-                autocomplete.parentElement.classList.add('gone')
+                event.preventDefault();
+                emailEnd.value = elA.innerHTML;
+                autocomplete.parentElement.classList.add('gone');
             })
 
             elLi.appendChild(elA)
@@ -131,14 +131,40 @@ emailEnd.addEventListener('keyup', function() {
     })
 })
 
-const focus = document.querySelectorAll('input')
+const focus = document.querySelectorAll('.form3 .naam input')
 
 Object.keys(letters).forEach(letter => {
     focus.forEach(el => {
+
+      el.addEventListener('focus', function() {
+        const keyBoard = document.querySelector('.keyboard');
+        keyBoard.classList.add('show')
+        const   column = document.querySelector('.column'),
+                rows = document.querySelectorAll('.row');
+        column.classList.add('active');
+
         el.addEventListener('keyup', function () {
-            if(this.value == letter) {
-                el.value = letters[letter].value
-            }
+          
+          rows.forEach(row => {
+            row.classList.add('active');
+            column.classList.remove('active');
+          });
+
+          let userInput = [];
+
+          if (this.value == '') {
+            rows.forEach(row => {
+              row.classList.remove('active');
+              column.classList.add('active');
+            });
+          }
+          
+          if (this.value == letter) {
+            userInput.push(letters[letter].value);
+            el.value = userInput;
+            this.nextElementSibling.focus()
+          }
         })
+      })
     })
 });
