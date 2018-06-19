@@ -5,7 +5,7 @@ const clean = require("gulp-clean");
 const babel = require("gulp-babel");
 const sourceStream = require("vinyl-source-stream");
 const buffer = require("vinyl-buffer");
-const log = require("gulplog");
+// const log = require("gulplog");
 const uglify = require("gulp-uglify");
 const gulpSequence = require("gulp-sequence");
 const imagemin = require("gulp-imagemin");
@@ -50,7 +50,7 @@ gulp.task("js", function() {
       .pipe(sourcemaps.init({ loadMaps: true }))
       // Add transformation tasks to the pipeline here.
       // .pipe(uglify())
-      .on("error", log.error)
+      // .on("error", log.error)
       .pipe(sourcemaps.write("./"))
       .pipe(gulp.dest(destination + "js/"))
   );

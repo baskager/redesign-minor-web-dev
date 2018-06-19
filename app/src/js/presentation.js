@@ -139,6 +139,13 @@ module.exports = class Presentation {
     };
 
     this.addEvents = function() {
+      document.addEventListener("keydown", ev => {
+        if (ev.shiftKey && ev.keyCode === 32) {
+          ev.preventDefault();
+          this.playPause();
+        }
+      });
+
       this.media.addEventListener("click", ev => {
         this.playPause();
       });

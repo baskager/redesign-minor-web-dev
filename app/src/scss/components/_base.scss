@@ -14,6 +14,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 .hidden-desktop {
@@ -77,4 +78,18 @@ body > header {
 
 .avatar {
   border-radius: 50%;
+}
+
+.hotkey {
+  display: inline-block;
+  font-size: rem(11);
+  letter-spacing: 0;
+  padding: rem(4) rem(4);
+  color: #fff;
+  border-radius: rem(3);
+  border: 1px solid #ffffff;
+  white-space: nowrap;
+  transform: translateY(3.75rem);
+  position: relative;
+  z-index: $zindex-hotkey;
 }

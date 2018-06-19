@@ -80,6 +80,8 @@
   display: flex;
   opacity: 0.3;
   margin-top: $margin-48;
+  overflow-x: auto;
+  padding: 1rem;
 
   @include transition(0.2s);
 
