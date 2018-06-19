@@ -87,22 +87,6 @@
           display: inline-flex;
         }
       }
-      &:first-child {
-        margin: 0;
-        align-items: center;
-        display: inline-flex;
-        border-bottom: 2px solid transparent;
-        span {
-          opacity: 0.4;
-          width: auto;
-          padding: 0 $padding-8;
-          color: $primary-color;
-          margin: 0;
-          &.active {
-            opacity: 1;
-          }
-        }
-      }
     }
   }
 
