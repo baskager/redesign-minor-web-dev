@@ -103,7 +103,30 @@ const letters = {
     },
 };
 
-const emailEnd = document.querySelector('.form2 #email-end')
+const emailEnd = document.querySelector('.form2 #email-end'),
+      emailName = document.querySelector('.email-name'),
+      emailStart = document.querySelector('.form2 #email-begin')
+
+emailStart.addEventListener('focus', function() {
+  const val = emailName.value,
+        elA = document.createElement('a'),
+        autocomplete = document.querySelector('.autocomplete-name ul'),
+        elLi = document.createElement('li');
+
+  autocomplete.parentElement.classList.remove('gone');
+
+  elA.innerHTML = val;
+  elA.href = "#";
+  elA.addEventListener('click', event => {
+    event.preventDefault();
+    emailStart.value = elA.innerHTML;
+    autocomplete.parentElement.classList.add('gone');
+  })
+
+  elLi.appendChild(elA)
+  autocomplete.appendChild(elLi)
+  
+})
 
 emailEnd.addEventListener('keyup', function() {
     const val = emailEnd.value

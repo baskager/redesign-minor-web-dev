@@ -47,6 +47,15 @@ body {
     background: white;
 }
 
+.autocomplete-name {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    width: 213px;
+    border: solid rgb(107, 107, 107) 1px;
+    background: white;
+}
+
 .autocomplete ul li {
     padding: 1rem;
 }

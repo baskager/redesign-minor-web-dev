@@ -64,11 +64,16 @@
             <h2>autofill email</h2>
             <fieldset>
                 <div>
-                    <input id="name" name="name" type="text" required>
+                    <input id="name" name="name" type="text" class="email-name" required>
                     <label for="name">Naam</label>
                 </div>
                 <div class="email">
                     <input id="email-begin" name="email-begin" type="text" required>
+                    <div class="autocomplete-name gone">
+                        <ul>
+
+                        </ul>
+                    </div>
                     <p>@</p>
                     <input id="email-end" name="email-end" type="text" required>
                     <div class="autocomplete gone">
