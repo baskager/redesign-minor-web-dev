@@ -400,36 +400,42 @@ let slides = [
   {
     index: 0,
     img: "/img/slides/slide-1.png",
+    links: [],
     startTime: 0,
     endTime: 12
   },
   {
     index: 1,
     img: "/img/slides/slide-2.png",
+    links: [],
     startTime: 12,
     endTime: 24
   },
   {
     index: 2,
     img: "/img/slides/slide-3.png",
+    links: [],
     startTime: 24,
     endTime: 111
   },
   {
     index: 3,
     img: "/img/slides/slide-4.png",
+    links: ["https://markboulton.co.uk/", "https://twitter.com/markboulton"],
     startTime: 111,
     endTime: 113
   },
   {
     index: 4,
     img: "/img/slides/slide-5.png",
+    links: [],
     startTime: 114,
     endTime: 150
   },
   {
     index: 5,
     img: "/img/slides/slide-6.png",
+    links: [],
     startTime: 150,
     endTime: 180
   }

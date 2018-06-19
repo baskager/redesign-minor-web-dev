@@ -16,24 +16,30 @@ module.exports = class Presentation {
     this.interval = null;
     this.slides = slides;
 
+    // Function that creates slides and adds them to the template.
     this.createSlides = function() {
       this.slides.forEach(slide => {
+        let btn = document.createElement("button");
         let img = document.createElement("img");
         img.src = slide.img;
 
-        img.addEventListener("click", ev => {
+        btn.addEventListener("click", ev => {
           this.changeTime(slide.startTime);
           this.updatePresentation();
         });
 
-        this.slideNodes.push(img);
-        this.slidesEl.insertAdjacentElement("beforeend", img);
+        btn.insertAdjacentElement("beforeend", img);
+
+        this.slideNodes.push(btn);
+        this.slidesEl.insertAdjacentElement("beforeend", btn);
       });
     };
 
+    // Get the slide that where the currenttime is between the start and endtime
     this.getSlide = function(currentTime) {
       let currentSlide = null;
 
+      // Filter
       this.slides.filter(function(slide) {
         if (currentTime >= slide.startTime && currentTime <= slide.endTime) {
           currentSlide = slide;
@@ -43,6 +49,7 @@ module.exports = class Presentation {
       return currentSlide;
     };
 
+    // Set active state of the slide
     this.setActiveSlide = function(slide) {
       this.slideNodes.forEach(function(slide) {
         slide.classList.remove("active");

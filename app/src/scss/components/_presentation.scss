@@ -77,35 +77,51 @@
 }
 
 .slides {
-  display: flex;
   opacity: 0.3;
-  margin-top: $margin-48;
+  margin-top: $margin-24;
   overflow-x: auto;
   padding: 1rem;
+  white-space: nowrap;
 
   @include transition(0.2s);
 
+  &:focus-within,
   &:hover {
     opacity: 1;
   }
 
   img {
     max-height: rem(96);
-    margin-right: $margin-8;
     border: rem(4) solid transparent;
     border-radius: $border-radius;
 
     @include transitionCubic;
+  }
 
+  button {
+    padding: 0;
+    background: none;
+    margin-right: $margin-16;
+
+    @include transitionCubic;
+
+    &:focus,
     &:hover {
+      outline: 0;
       transform: scale(1.075);
+
+      img {
+        border: rem(4) solid rgba(255, 255, 255, 0.2);
+      }
     }
 
     &.active {
-      border: rem(4) solid $primary-color;
-
       transform: scale(1.075);
       z-index: 1;
+
+      img {
+        border: rem(4) solid $primary-color;
+      }
     }
   }
 }
