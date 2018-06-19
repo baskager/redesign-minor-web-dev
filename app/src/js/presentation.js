@@ -1,5 +1,3 @@
-// (function() {
-
 const config = {
   intervalTime: 500
 };
@@ -44,7 +42,7 @@ const slides = [
 ];
 
 class Subtitles {
-  constructor(element, subtitles) {
+  constructor(element, subtitles, mouseEventElement) {
     this.interval = null;
     this.subtitleEl = element;
     this.subtitles = subtitles;
@@ -93,21 +91,34 @@ class Subtitles {
       return side;
     };
 
-    this.setCursorEvent = function() {
-      presentation.media.addEventListener("mousemove", ev => {
+    this.addEvents = function() {
+      console.log("events added");
+
+      mouseEventElement.addEventListener("mousemove", ev => {
         let side = this.checkCursorSide(ev.screenX);
         this.alignSubs(side);
+      });
+
+      document.addEventListener("keydown", ev => {
+        const keyCode = event.keyCode;
+        // keycode 37 = arrowLeft
+        // keycode 39 = arrowRight
+        if (keyCode == 37) {
+          this.alignSubs("left");
+        } else if (keyCode == 39) {
+          this.alignSubs("right");
+        }
       });
     };
 
     this.init = function() {
-      this.setCursorEvent();
+      this.addEvents();
     };
   }
 }
 
 class Presentation {
-  constructor(element) {
+  constructor(element, subtitleObj) {
     this.wrapper = element;
     this.media = this.wrapper.querySelector(".media");
     this.video = this.wrapper.querySelector(".media video");
@@ -200,7 +211,10 @@ class Presentation {
     this.updatePresentation = function() {
       this.setSlide();
       this.updateSeeker();
-      subtitles.setSubtitle();
+
+      if (subtitleObj) {
+        subtitleObj.setSubtitle();
+      }
 
       if (this.video.currentTime === this.duration) {
         this.pause();
@@ -232,17 +246,14 @@ class Presentation {
 
     this.speedUp = function() {
       this.video.playbackRate += 0.2;
-      console.log(this.video.playbackRate);
     };
 
     this.speedDown = function() {
       this.video.playbackRate -= 0.2;
-      console.log(this.video.playbackRate);
     };
 
     this.setSpeed = function(speed) {
       this.video.playbackRate = speed;
-      console.log(this.video.playbackRate);
     };
 
     this.addEvents = function() {
@@ -280,10 +291,15 @@ class Presentation {
 }
 
 const subtitleElement = document.querySelector(".subtitle");
-const subtitles = new Subtitles(subtitleElement, subs);
-
 const presentationElement = document.querySelector(".presentation");
-const presentation = new Presentation(presentationElement);
+
+const subtitles = new Subtitles(
+  subtitleElement,
+  subs,
+  presentationElement.querySelector(".media")
+);
+
+const presentation = new Presentation(presentationElement, subtitles);
 
 if (document.querySelector(".presentation")) {
   presentation.init();
