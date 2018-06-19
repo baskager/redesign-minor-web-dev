@@ -15,9 +15,13 @@ function isScrolledIntoView(element) {
 }
 
 function setFocusState(article) {
-  if (article.querySelector('a')) {
-    const articleFirstLink = article.querySelector('a');
-    const allArticleLinks = article.querySelectorAll('a');
+  if (article.querySelector('a, input, select, textarea, button')) {
+    const articleFirstLink = article.querySelector(
+      'a, input, select, textarea, button'
+    );
+    const allArticleLinks = article.querySelectorAll(
+      'a, input, select, textarea, button'
+    );
     for (let i = 0; i < allArticleLinks.length; i++) {
       if (document.activeElement === allArticleLinks[i]) {
         return false;
