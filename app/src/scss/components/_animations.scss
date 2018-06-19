@@ -5,13 +5,13 @@
 }
 
 .header-info.start-transition {
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out .2s;
     transform: none;
     opacity: 1;
 }
 
 .header-img.start-transition {
-    transition: all .5s ease-in-out .2s;
+    transition: all .5s ease-in-out .4s;
     transform: none;
     opacity: 1;
 }
