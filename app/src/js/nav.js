@@ -3,8 +3,23 @@
 
   // Main function. Here we need to toggle the quicknavigation
   const keyNav = {
+    cmdState: false,
     init: function() {
       let keyNavState = true;
+      let _this = this;
+
+      window.addEventListener("keydown", function(e) {
+        if (e.keyCode === 91) {
+          _this.cmdState = true;
+          // console.log(_this.cmdState);
+        }
+      });
+      window.addEventListener("keyup", function(e) {
+        if (e.keyCode === 91) {
+          _this.cmdState = false;
+          // console.log(_this.cmdState);
+        }
+      });
       // LETS GO KEYNAVSWITCHERINO
       keyNavSwitch.init(keyNavState);
     }
@@ -13,13 +28,7 @@
   // Set buttons for the navigation with keys
   const keyNavKeys = {
     init: function keyNavKeys(e) {
-      console.log(e.keyCode !== 91);
-      if (
-        e.keyCode !== 91 &&
-        e.keyCode !== 93 &&
-        e.keyCode !== 17 &&
-        e.keyCode !== 224
-      ) {
+      if (!keyNav.cmdState) {
         // Set key to 1
         if (e.keyCode === 49) {
           window.location.href = "/";
@@ -51,8 +60,6 @@
   // Add functionality to the keys
   const keyNavSwitch = {
     init: function(keyNavState) {
-      // console.log(keyNavState);
-      // let keyNavState = true;
       // Get all rectangles with numbers next to the menu items
       let getSpan = document.querySelectorAll(".main-nav div > ul a span");
       // Get all input elements
