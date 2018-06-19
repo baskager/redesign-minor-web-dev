@@ -3,25 +3,28 @@
 
   // Main function. Here we need to toggle the quicknavigation
   const keyNav = {
+    // Set core functionality states. The hotKeyState will be saved in a cookie.
     cmdState: false,
+    keyNavState: false,
     init: function() {
-      let keyNavState = true;
       let _this = this;
+      let keyNavState = _this.keyNavState;
 
+      // Check if the CMD state is used, since it has some OS functionality it should be blocked.
       window.addEventListener("keydown", function(e) {
         if (e.keyCode === 91) {
           _this.cmdState = true;
-          // console.log(_this.cmdState);
+        }
+        if ((e.altKey || e.keyCode === 18) && (e.ctrlKey || e.keyCode === 17)) {
+          keyNavState = true;
+          keyNavSwitch.init(keyNavState);
         }
       });
       window.addEventListener("keyup", function(e) {
         if (e.keyCode === 91) {
           _this.cmdState = false;
-          // console.log(_this.cmdState);
         }
       });
-      // LETS GO KEYNAVSWITCHERINO
-      keyNavSwitch.init(keyNavState);
     }
   };
 
