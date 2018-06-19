@@ -13,29 +13,37 @@
   // Set buttons for the navigation with keys
   const keyNavKeys = {
     init: function keyNavKeys(e) {
-      // Set key to 1
-      if (e.keyCode === 49) {
-        window.location.href = "/";
-      }
-      // Set key to 2
-      else if (e.keyCode === 50) {
-        window.location.href = "/program";
-      }
-      // Set key to 3
-      else if (e.keyCode === 51) {
-        window.location.href = "/partners";
-      }
-      // Set key to 4
-      else if (e.keyCode === 52) {
-        window.location.href = "/student-work";
-      }
-      // Set key to 5
-      else if (e.keyCode === 53) {
-        window.location.href = "/contact";
-      }
-      // Set key to 6
-      else if (e.keyCode === 54) {
-        window.location.href = "/signup";
+      console.log(e.keyCode !== 91);
+      if (
+        e.keyCode !== 91 &&
+        e.keyCode !== 93 &&
+        e.keyCode !== 17 &&
+        e.keyCode !== 224
+      ) {
+        // Set key to 1
+        if (e.keyCode === 49) {
+          window.location.href = "/";
+        }
+        // Set key to 2
+        else if (e.keyCode === 50) {
+          window.location.href = "/program";
+        }
+        // Set key to 3
+        else if (e.keyCode === 51) {
+          window.location.href = "/partners";
+        }
+        // Set key to 4
+        else if (e.keyCode === 52) {
+          window.location.href = "/student-work";
+        }
+        // Set key to 5
+        else if (e.keyCode === 53) {
+          window.location.href = "/contact";
+        }
+        // Set key to 6
+        else if (e.keyCode === 54) {
+          window.location.href = "/signup";
+        }
       }
     }
   };
