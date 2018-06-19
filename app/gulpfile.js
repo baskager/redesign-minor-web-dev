@@ -1,7 +1,11 @@
+const browserify = require("browserify");
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const clean = require("gulp-clean");
 const babel = require("gulp-babel");
+const sourceStream = require("vinyl-source-stream");
+const buffer = require("vinyl-buffer");
+const log = require("gulplog");
 const uglify = require("gulp-uglify");
 const gulpSequence = require("gulp-sequence");
 const imagemin = require("gulp-imagemin");
@@ -30,28 +34,49 @@ gulp.task("img:compress", function() {
 });
 
 gulp.task("js", function() {
-  return gulp
-    .src(source + "js/**/*.js")
-    .pipe(sourcemaps.init())
-    .pipe(
-      babel({
-        presets: ["env"]
-      })
-    )
-    .on("error", console.error.bind(console))
-    .pipe(gulp.dest(destination + "js"));
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: source + "js/app.js",
+    debug: true
+    // defining transforms here will avoid crashing your stream
+    // transform: [env]
+  });
+
+  return (
+    b
+      .bundle()
+      .pipe(sourceStream("app.js"))
+      .pipe(buffer())
+      .pipe(sourcemaps.init({ loadMaps: true }))
+      // Add transformation tasks to the pipeline here.
+      // .pipe(uglify())
+      .on("error", log.error)
+      .pipe(sourcemaps.write("./"))
+      .pipe(gulp.dest(destination + "js/"))
+  );
 });
 
 gulp.task("js:minify", () => {
-  return gulp
-    .src(destination + "/js/**/*.js")
-    .pipe(
-      babel({
-        presets: ["env"]
-      })
-    )
-    .pipe(uglify())
-    .pipe(gulp.dest(destination + "js"));
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: source + "js/app.js",
+    debug: true
+    // defining transforms here will avoid crashing your stream
+    // transform: [env]
+  });
+
+  return (
+    b
+      .bundle()
+      .pipe(sourceStream("app.js"))
+      .pipe(buffer())
+      .pipe(sourcemaps.init({ loadMaps: true }))
+      // Add transformation tasks to the pipeline here.
+      .pipe(uglify())
+      .on("error", log.error)
+      .pipe(sourcemaps.write("./"))
+      .pipe(gulp.dest(destination + "js/"))
+  );
 });
 
 gulp.task("css:minify", () => {

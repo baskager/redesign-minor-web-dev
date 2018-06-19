@@ -1,11 +1,12 @@
-var Presentation = require("./presentation");
-var Subtitles = require("./subtitles");
+const spatialNavigation = require("./spatial-navigation");
+const Presentation = require("./presentation");
+const Subtitles = require("./subtitles");
 
 if (document.querySelector(".presentation")) {
   const fpSubtitles = new Subtitles(
     document.querySelector(".subtitle"),
     subs,
-    presentationElement.querySelector(".media")
+    document.querySelector(".presentation .media")
   );
 
   const fpPresentation = new Presentation(
