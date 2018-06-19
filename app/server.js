@@ -396,7 +396,45 @@ const srt = fs.readFileSync("src/subs/talk.srt", "utf8");
 let subs = parser.fromSrt(srt, true);
 subs = JSON.stringify(subs);
 
-console.log(subs);
+let slides = [
+  {
+    index: 0,
+    img: "/img/slides/slide-1.png",
+    startTime: 0,
+    endTime: 12
+  },
+  {
+    index: 1,
+    img: "/img/slides/slide-2.png",
+    startTime: 12,
+    endTime: 24
+  },
+  {
+    index: 2,
+    img: "/img/slides/slide-3.png",
+    startTime: 24,
+    endTime: 111
+  },
+  {
+    index: 3,
+    img: "/img/slides/slide-4.png",
+    startTime: 111,
+    endTime: 113
+  },
+  {
+    index: 4,
+    img: "/img/slides/slide-5.png",
+    startTime: 114,
+    endTime: 150
+  },
+  {
+    index: 5,
+    img: "/img/slides/slide-6.png",
+    startTime: 150,
+    endTime: 180
+  }
+];
+slides = JSON.stringify(slides);
 
 const talkData = {
   title: "Functional Programming",
@@ -407,6 +445,7 @@ const talkData = {
     "https://pbs.twimg.com/profile_images/2600200682/3l11tbu123yu6gya2yzt_400x400.png",
   videoUrl: "//jelle.im/crap/talk.mp4",
   subtitles: subs,
+  slides: slides,
   presentationImg: "//via.placeholder.com/1920x1080",
   videoSummary:
     "Maecenas sed diam eget risus varius blandit sit amet non magna."

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "-",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "browserify": "browserify src/js/app.js -o static/js/bundle.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/baskager/redesign-minor-web-dev.git"
@@ -15,7 +17,7 @@
   },
   "homepage": "https://github.com/baskager/redesign-minor-web-dev#readme",
   "dependencies": {
-    "babel-core": "^6.26.3",
+    "browserify": "^16.2.2",
     "express": "^4.16.3",
     "gulp-babel": "^7.0.1",
     "gulp-clean-css": "^3.9.4",
@@ -26,7 +28,9 @@
     "subtitles-parser": "0.0.2"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
     "gulp-sass": "^4.0.1",

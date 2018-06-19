@@ -1,124 +1,5 @@
-const config = {
-  intervalTime: 500
-};
-
-const slides = [
-  {
-    index: 0,
-    img: "/img/slides/slide-1.png",
-    startTime: 0,
-    endTime: 12
-  },
-  {
-    index: 1,
-    img: "/img/slides/slide-2.png",
-    startTime: 12,
-    endTime: 24
-  },
-  {
-    index: 2,
-    img: "/img/slides/slide-3.png",
-    startTime: 24,
-    endTime: 111
-  },
-  {
-    index: 3,
-    img: "/img/slides/slide-4.png",
-    startTime: 111,
-    endTime: 113
-  },
-  {
-    index: 4,
-    img: "/img/slides/slide-5.png",
-    startTime: 114,
-    endTime: 150
-  },
-  {
-    index: 5,
-    img: "/img/slides/slide-6.png",
-    startTime: 150,
-    endTime: 180
-  }
-];
-
-class Subtitles {
-  constructor(element, subtitles, mouseEventElement) {
-    this.interval = null;
-    this.subtitleEl = element;
-    this.subtitles = subtitles;
-
-    this.alignSubs = function(side) {
-      this.subtitleEl.classList.remove("right");
-      this.subtitleEl.classList.remove("left");
-      this.subtitleEl.classList.add(side);
-    };
-
-    this.getSubtitle = function(timestamp) {
-      let vidTime = presentation.video.currentTime * 1000;
-
-      const currentSubtitles = this.subtitles.filter(function(sub) {
-        if (vidTime > sub.startTime && vidTime < sub.endTime) {
-          return sub;
-        }
-      });
-
-      let currentSub = currentSubtitles[currentSubtitles.length - 1];
-      return currentSub;
-    };
-
-    this.setSubtitle = function() {
-      let currentSub = this.getSubtitle();
-      let text = "";
-
-      if (currentSub) {
-        text = currentSub.text;
-      }
-
-      this.subtitleEl.innerText = text;
-    };
-
-    this.checkCursorSide = function(cursorPos) {
-      let screenWidth = window.innerWidth;
-      let screenCenter = screenWidth / 2;
-      let side;
-
-      if (cursorPos > screenCenter) {
-        side = "right";
-      } else {
-        side = "left";
-      }
-
-      return side;
-    };
-
-    this.addEvents = function() {
-      console.log("events added");
-
-      mouseEventElement.addEventListener("mousemove", ev => {
-        let side = this.checkCursorSide(ev.screenX);
-        this.alignSubs(side);
-      });
-
-      document.addEventListener("keydown", ev => {
-        const keyCode = event.keyCode;
-        // keycode 37 = arrowLeft
-        // keycode 39 = arrowRight
-        if (keyCode == 37) {
-          this.alignSubs("left");
-        } else if (keyCode == 39) {
-          this.alignSubs("right");
-        }
-      });
-    };
-
-    this.init = function() {
-      this.addEvents();
-    };
-  }
-}
-
-class Presentation {
-  constructor(element, subtitleObj) {
+module.exports = class Presentation {
+  constructor(element, slides, subtitleObj) {
     this.wrapper = element;
     this.media = this.wrapper.querySelector(".media");
     this.video = this.wrapper.querySelector(".media video");
@@ -133,9 +14,10 @@ class Presentation {
     this.slideNodes = [];
     this.videoDuration = 0;
     this.interval = null;
+    this.slides = slides;
 
     this.createSlides = function() {
-      slides.forEach(slide => {
+      this.slides.forEach(slide => {
         let img = document.createElement("img");
         img.src = slide.img;
 
@@ -152,7 +34,7 @@ class Presentation {
     this.getSlide = function(currentTime) {
       let currentSlide = null;
 
-      slides.filter(function(slide) {
+      this.slides.filter(function(slide) {
         if (currentTime >= slide.startTime && currentTime <= slide.endTime) {
           currentSlide = slide;
         }
@@ -205,7 +87,7 @@ class Presentation {
       const _this = this;
       this.interval = setInterval(function() {
         _this.updatePresentation();
-      }, config.intervalTime);
+      }, 500);
     };
 
     this.updatePresentation = function() {
@@ -213,7 +95,7 @@ class Presentation {
       this.updateSeeker();
 
       if (subtitleObj) {
-        subtitleObj.setSubtitle();
+        subtitleObj.setSubtitle(this.video.currentTime);
       }
 
       if (this.video.currentTime === this.duration) {
@@ -288,20 +170,4 @@ class Presentation {
       this.addEvents();
     };
   }
-}
-
-const subtitleElement = document.querySelector(".subtitle");
-const presentationElement = document.querySelector(".presentation");
-
-const subtitles = new Subtitles(
-  subtitleElement,
-  subs,
-  presentationElement.querySelector(".media")
-);
-
-const presentation = new Presentation(presentationElement, subtitles);
-
-if (document.querySelector(".presentation")) {
-  presentation.init();
-  subtitles.init();
-}
+};

@@ -1,3 +1,23 @@
+var Presentation = require("./presentation");
+var Subtitles = require("./subtitles");
+
+if (document.querySelector(".presentation")) {
+  const fpSubtitles = new Subtitles(
+    document.querySelector(".subtitle"),
+    subs,
+    presentationElement.querySelector(".media")
+  );
+
+  const fpPresentation = new Presentation(
+    document.querySelector(".presentation"),
+    slides,
+    fpSubtitles
+  );
+
+  fpPresentation.init();
+  fpSubtitles.init();
+}
+
 window.addEventListener("load", function() {
   if (document.querySelector(".focusable")) {
     const firstPeriode = document.querySelector(
