@@ -4,11 +4,18 @@
   // Main function. Here we need to toggle the quicknavigation
   const keyNav = {
     // Set core functionality states. The hotKeyState will be saved in a cookie.
+    // Key value of objects
     cmdState: false,
     keyNavState: false,
+
     init: function() {
       let _this = this;
-      let keyNavState = _this.keyNavState;
+
+      if (!storage.get("hotKeysEnabled")) {
+        storage.store("hotKeysEnabled", this.keyNavState);
+      } else {
+        this.keyNavState = storage.get("hotKeysEnabled");
+      }
 
       // Check if the CMD state is used, since it has some OS functionality it should be blocked.
       window.addEventListener("keydown", function(e) {
@@ -16,9 +23,12 @@
           _this.cmdState = true;
         }
         if ((e.altKey || e.keyCode === 18) && (e.ctrlKey || e.keyCode === 17)) {
-          keyNavState = true;
-          keyNavSwitch.init(keyNavState);
+          // Set the opposite of what the current keyNavState is
+          _this.keyNavState = !_this.keyNavState;
+          storage.store("hotKeysEnabled", _this.keyNavState);
         }
+
+        keyNavKeys.init(e);
       });
       window.addEventListener("keyup", function(e) {
         if (e.keyCode === 91) {
@@ -28,10 +38,25 @@
     }
   };
 
+  const storage = {
+    // Store data in localstorage
+    store: function(key, data) {
+      // create string from value so we can convert it back to js later.
+      localStorage.setItem(key, JSON.stringify(data));
+    },
+
+    // Getting data from the localstorage
+    get: function(key) {
+      let data = localStorage.getItem(key);
+      return JSON.parse(data);
+    }
+  };
+
   // Set buttons for the navigation with keys
   const keyNavKeys = {
     init: function keyNavKeys(e) {
-      if (!keyNav.cmdState) {
+      console.log(e.keyCode, keyNav.cmdState, keyNav.keyNavState);
+      if (!keyNav.cmdState && keyNav.keyNavState) {
         // Set key to 1
         if (e.keyCode === 49) {
           window.location.href = "/";
