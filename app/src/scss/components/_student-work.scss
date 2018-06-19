@@ -23,6 +23,10 @@
       color: darken($primary-color, 10%);
     }
   }
+  .btn {
+    max-width: 20rem;
+    margin-top: 2rem;
+  }
 }
 
 .student-work-header {
@@ -38,13 +42,15 @@
     display: inline-block;
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
+    transition: all .3s ease;
     &:valid {
       background-color: #fff;
     }
     &:hover,
     &:focus {
-      color: lighten($primary-color, 20%);
-      border-color: lighten($primary-color, 20%);
+      color: $secondary-color;
+      border-color: $secondary-color;
+      transform: translateX(40px);
     }
   }
 
@@ -67,6 +73,7 @@
     color: $primary-color;
     margin-right: $margin-16;
     height: auto;
+    transition: all .3s ease;
 
     &:hover {
       transform: scale(1.1);
@@ -74,7 +81,7 @@
   }
 
   input[type="radio"]:focus + label {
-    transform: scale(1.1);
+    transform: scale(1.15);
   }
 
   input[type="radio"]:checked + label {

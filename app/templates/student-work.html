@@ -8,8 +8,8 @@
             <h1>
                 {{ data.heading }}
                 <select name="archive" id="select-year">
-                    <option value="2017">2018</option>
-                    <option value="2019">2017</option>
+                    <option value="2018">2018 ▼</option>
+                    <option value="2017">2017 ▼</option>
                 </select>
             </h1>
 
@@ -64,7 +64,7 @@
                 {% endfor %}
             </div>
 
-            <a href="#" class="btn-primary">Meer {{ course.name }}</a>
+            <a href="#" class="btn btn-primary">Meer {{ course.name }}</a>
         </div>
     </section>
     {% endfor %}
