@@ -1,19 +1,19 @@
 {% set title = "Home" %} {% extends "components/_base.html" %} {% block content %}
-<header class="hero">
-    <div class="container">
-        <h1>{{ data.title }}</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere tristique nisi, quis finibus sem porttitor
-            sed. Vivamus finibus nulla id massa vehicula, et congue sapien placerat. Suspendisse potenti. Vestibulum commodo,
-            nisi commodo pellentesque malesuada, nisi lacus auctor felis, non varius metus nulla ullamcorper est. Maecenas
-            vestibulum tellus eu lectus maximus aliquet. Praesent blandit eros massa, vel facilisis urna viverra ac. Vestibulum
-            feugiat sem quis condimentum condimentum.</p>
-        {# {% include "components/_student-work-card.html" %} #}
-    </div>
+<header class="hero focusOnScroll">
+  <div class="container">
+    <h1>{{ data.title }}</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere tristique nisi, quis finibus sem porttitor sed.
+      Vivamus finibus nulla id massa vehicula, et congue sapien placerat. Suspendisse potenti. Vestibulum commodo, nisi commodo
+      pellentesque malesuada, nisi lacus auctor felis, non varius metus nulla ullamcorper est. Maecenas vestibulum tellus
+      eu lectus maximus aliquet. Praesent blandit eros massa, vel facilisis urna viverra ac. Vestibulum feugiat sem quis
+      condimentum condimentum.</p>
+    {# {% include "components/_student-work-card.html" %} #}
+  </div>
 </header>
 <main class="container">
-    <section class="courses">
-        <h2>Vakken</h2>
-        <!-- {% for course in data.courses %}
+  <section class="courses focusOnScroll">
+    <h2>Vakken</h2>
+    <!-- {% for course in data.courses %}
         <article>
             <img src="{{data.icon_url}}" alt=" " />
             <h3>{{course.title}}</h3>
@@ -21,140 +21,140 @@
             <a href="/course/{{course.page_slug}}">{{course.title}}</a>
         </article>
         {% endfor %} -->
-        <div class="flex">
-            <article class="card">
-                <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
-                    alt=" " />
-                <h3>Web Design</h3>
-                <p>
-                    Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
-                    is consistent and optimized to meet business objectives and create enjoyable experiences for users.
-                </p>
-                <a href="/course/{{course.page_slug}}"></a>
-            </article>
-            <article class="card">
-                <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
-                    alt=" " />
-                <h3>Web Design</h3>
-                <p>
-                    Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
-                    is consistent and optimized to meet business objectives and create enjoyable experiences for users.
-                </p>
-                <a href="/course/{{course.page_slug}}"></a>
-            </article>
-            <article class="card">
-                <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
-                    alt=" " />
-                <h3>Web Design</h3>
-                <p>
-                    Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
-                    is consistent and optimized to meet business objectives and create enjoyable experiences for users.
-                </p>
-                <a href="/course/{{course.page_slug}}"></a>
-            </article>
-            <article class="card">
-                <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
-                    alt=" " />
-                <h3>Web Design</h3>
-                <p>
-                    Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
-                    is consistent and optimized to meet business objectives and create enjoyable experiences for users.
-                </p>
-                <a href="/course/{{course.page_slug}}"></a>
-            </article>
-            <article class="card">
-                <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
-                    alt=" " />
-                <h3>Web Design</h3>
-                <p>
-                    Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
-                    is consistent and optimized to meet business objectives and create enjoyable experiences for users.
-                </p>
-                <a href="/course/{{course.page_slug}}"></a>
-            </article>
-            <article class="card">
-                <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
-                    alt=" " />
-                <h3>Web Design</h3>
-                <p>
-                    Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
-                    is consistent and optimized to meet business objectives and create enjoyable experiences for users.
-                </p>
-                <a href="/course/{{course.page_slug}}"></a>
-            </article>
-        </div>
-    </section>
-
-    <section class="partners">
-        <h2>Partners waar we mee samen werken</h2>
-        <ul class="slider">
-            <li>
-                <a href='#'>
-                    <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
-                        alt=" ">
-                </a>
-            </li>
-            <li>
-                <a href='#'>
-                    <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
-                        alt=" ">
-                </a>
-            </li>
-            <li>
-                <a href='#'>
-                    <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
-                        alt=" ">
-                </a>
-            </li>
-            <li>
-                <a href='#'>
-                    <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
-                        alt=" ">
-                </a>
-            </li>
-            <li>
-                <a href='#'>
-                    <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
-                        alt=" ">
-                </a>
-            </li>
-            <li>
-                <a href='#'>
-                    <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
-                        alt=" ">
-                </a>
-            </li>
-        </ul>
-    </section>
-
-    <section class="student-quote">
-        <div class="testimonial">
-            <img src='https://pbs.twimg.com/profile_images/535154875059806208/FwaafAh1_400x400.png' class='avatar' alt=''>
-            <blockquote>
-                <p>
-                    Het was zeker een flinke uitdaging en de lesstof was af en toe erg heftig. Maar na verdieping erin heb ik toch alles kunnen
-                    halen
-                </p>
-                <p>
-                    <i>~ John Doe - 2018</i>
-                </p>
-            </blockquote>
-        </div>
-    </section>
-
-    <section class="instagram-feed">
-        <h2>Instagram feed</h2>
-        <p>Insert instagram widget thingy here</p>
-    </section>
-
-    <section class="signup-cta">
-        <h1>Inschrijven</h1>
+    <div class="flex">
+      <article class="card">
+        <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
+          alt=" " />
+        <h3>Web Design</h3>
         <p>
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo,
-            tortor mauris condimentum nibh, ut.
+          Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
+          is consistent and optimized to meet business objectives and create enjoyable experiences for users.
         </p>
-        <a class='btn btn-primary'>Inschrijven</a>
-    </section>
+        <a href="/course/{{course.page_slug}}"></a>
+      </article>
+      <article class="card">
+        <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
+          alt=" " />
+        <h3>Web Design</h3>
+        <p>
+          Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
+          is consistent and optimized to meet business objectives and create enjoyable experiences for users.
+        </p>
+        <a href="/course/{{course.page_slug}}"></a>
+      </article>
+      <article class="card">
+        <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
+          alt=" " />
+        <h3>Web Design</h3>
+        <p>
+          Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
+          is consistent and optimized to meet business objectives and create enjoyable experiences for users.
+        </p>
+        <a href="/course/{{course.page_slug}}"></a>
+      </article>
+      <article class="card">
+        <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
+          alt=" " />
+        <h3>Web Design</h3>
+        <p>
+          Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
+          is consistent and optimized to meet business objectives and create enjoyable experiences for users.
+        </p>
+        <a href="/course/{{course.page_slug}}"></a>
+      </article>
+      <article class="card">
+        <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
+          alt=" " />
+        <h3>Web Design</h3>
+        <p>
+          Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
+          is consistent and optimized to meet business objectives and create enjoyable experiences for users.
+        </p>
+        <a href="/course/{{course.page_slug}}"></a>
+      </article>
+      <article class="card">
+        <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
+          alt=" " />
+        <h3>Web Design</h3>
+        <p>
+          Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
+          is consistent and optimized to meet business objectives and create enjoyable experiences for users.
+        </p>
+        <a href="/course/{{course.page_slug}}"></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="partners focusOnScroll">
+    <h2>Partners waar we mee samen werken</h2>
+    <ul class="slider">
+      <li>
+        <a href='#'>
+          <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
+            alt=" ">
+        </a>
+      </li>
+      <li>
+        <a href='#'>
+          <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
+            alt=" ">
+        </a>
+      </li>
+      <li>
+        <a href='#'>
+          <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
+            alt=" ">
+        </a>
+      </li>
+      <li>
+        <a href='#'>
+          <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
+            alt=" ">
+        </a>
+      </li>
+      <li>
+        <a href='#'>
+          <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
+            alt=" ">
+        </a>
+      </li>
+      <li>
+        <a href='#'>
+          <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
+            alt=" ">
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="student-quote">
+    <div class="testimonial">
+      <img src='https://pbs.twimg.com/profile_images/535154875059806208/FwaafAh1_400x400.png' class='avatar' alt=''>
+      <blockquote>
+        <p>
+          Het was zeker een flinke uitdaging en de lesstof was af en toe erg heftig. Maar na verdieping erin heb ik toch alles kunnen
+          halen
+        </p>
+        <p>
+          <i>~ John Doe - 2018</i>
+        </p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="instagram-feed">
+    <h2>Instagram feed</h2>
+    <p>Insert instagram widget thingy here</p>
+  </section>
+
+  <section class="signup-cta focusOnScroll">
+    <h1>Inschrijven</h1>
+    <p>
+      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo,
+      tortor mauris condimentum nibh, ut.
+    </p>
+    <a class='btn btn-primary'>Inschrijven</a>
+  </section>
 
 
 </main>
