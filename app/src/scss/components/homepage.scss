@@ -47,7 +47,8 @@
       a {
         outline: 0;
       }
-      &:focus-within {
+      &:focus-within,
+      &:hover {
         opacity: 1;
       }
       img {
