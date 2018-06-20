@@ -1,28 +1,46 @@
 {% extends 'components/_base.html' %} {% block content %}
 
 <header class="student-work-header">
-  <nav class="container">
-    <form action="/student-work" method="POST">
+    <nav class="container">
+        <form action="/student-work" method="POST">
+                
+            <h1>
+                {{ data.heading }}
+                <select name="archive" id="select-year">
+                    <option value="2018">2018 ▼</option>
+                    <option value="2017">2017 ▼</option>
+                </select>
+            </h1>
 
-      <h1>
-        {{ data.heading }}
-        <select name="archive" id="select-year">
-          <option value="2017">2018</option>
-          <option value="2019">2017</option>
-        </select>
-      </h1>
-      <p>{{ data.description }}</p>
-      
-      <input type="radio" id="all" name="course" value="all" checked="checked">
-      <label for="all">All courses</label>
-      {% for course in data.courses %}
-      <input type="radio" id="{{ course.abbreviation }}" name="course" value="{{ course.abbreviation }}">
-      <label for="{{ course.abbreviation }}">{{ course.name }}</label>
-      {% endfor %}
+            <p>{{ data.description }}</p>
+                <input type="radio" id="all" name="course" value="all" checked="checked">
+                <label for="all">All courses</label>
+            {% for course in data.courses %}
+                <input type="radio" id="{{ course.abbreviation }}" name="course" value="{{ course.abbreviation }}">
+                <label for="{{ course.abbreviation }}">{{ course.name }}</label>
+            {% endfor %}
 
-      <button type="submit">Filter</button>
-    </form>
-  </nav>
+            {# <select name="courses" id="select-course">
+                <option value="all">All courses</option>
+
+                <option value="wafs">Web app from scratch</option>
+                <option value="ccsttr">CSS to the rescue</option>
+                <option value="project1">Project 1</option>
+
+                <option value="pm">Performance matters</option>
+                <option value="bt">Browser technologies</option>
+                <option value="project2">Project 2</option>
+
+                <option value="wd">Web design</option>
+                <option value="rtw">Real time web</option>
+                <option value="project3">Project 3</option>
+
+                <option value="mp">Meesterproef</option>
+            </select> #}
+
+            <button type="submit">Filter</button>
+        </form>
+    </nav>
 </header>
 
 <main id="main" class="student-work">
@@ -42,7 +60,7 @@
           </header>
           <img src="{{ item.imgUrl }}" alt="{{ item.imgAlt }}">
 
-          <a class="card-link" href="{{ item.demoUrl }}" target="_blank"></a>
+          <a class="card-link" href="http://github.com" target="_blank"></a>
         </article>
         {% endfor %}
       </div>
@@ -52,5 +70,9 @@
   </section>
   {% endfor %}
 
+            <a href="#" class="btn btn-primary">Meer {{ course.name }}</a>
+        </div>
+    </section>
+    {% endfor %}
 </main>
 {% endblock %}
