@@ -26,26 +26,41 @@
           // Set the opposite of what the current keyNavState is
           self.keyNavState = !self.keyNavState;
           storage.store("hotKeysEnabled", self.keyNavState);
-          self.toggleIndicator();
+
+          // Retoggle the state of the indicator
+          self.toggleIndicators();
         }
         keyNavKeys.init(e);
       });
+
       window.addEventListener("keyup", function(e) {
         if (e.keyCode === 91) {
           self.cmdState = false;
         }
       });
-      self.toggleIndicator();
+
+      // Set base state for the toggle indicator
+      self.toggleIndicators();
     },
 
-    toggleIndicator: function() {
+    toggleIndicators: function() {
       let keyNavIndicator = document.getElementById("keynav");
+      let menuIndicators = document.querySelectorAll(
+        ".main-nav div > ul a span"
+      );
       if (this.keyNavState) {
         keyNavIndicator.classList.add("active");
+        menuIndicators.forEach(function(indicator) {
+          indicator.classList.add("active");
+        });
+        toggleOnInput();
       } else {
         keyNavIndicator.classList.remove("active");
+        menuIndicators.forEach(function(indicator) {
+          indicator.removeAttribute("class");
+        });
       }
-    }
+    },
   };
 
   const storage = {
@@ -95,23 +110,15 @@
   };
 
   // Add functionality to the keys
-  const keyNavSwitch = {
-    init: function(keyNavState) {
-      // Get all rectangles with numbers next to the menu items
-      let getSpan = document.querySelectorAll(".main-nav div > ul a span");
-      // Get all input elements
-      let getInput = document.querySelectorAll("input, textarea");
+  const toggleOnInput = {
+    // Get all rectangles with numbers next to the menu items
+    getSpan = document.querySelectorAll(".main-nav div > ul a span"),
 
-      // Add eventlistener to all keys when keyNavState === true
-      document.addEventListener("keydown", function(e) {
-        if (keyNavState === true) {
-          keyNavKeys.init(e);
-        }
-      });
-
+    disableOnInput: function() {
       // Disable keyCode navigation when an input field has focus
       getInput.forEach(function(input) {
         input.addEventListener("focus", function(input) {
+          console.log("hai");
           keyNavState = false;
 
           // Add 'inactive' styling to the rectangles
@@ -120,7 +127,9 @@
           });
         });
       });
+    },
 
+    enableOnInput: function() {
       // Enable keyCode navigation when input field loses focus
       getInput.forEach(function(el) {
         el.addEventListener("focusout", function(el) {
