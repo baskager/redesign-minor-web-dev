@@ -34,7 +34,7 @@
 		            {% for course in period.courses %}
 			            <li><a href="/course/{{ course.slug }}"><span>{{ course.name }}</span></a></li>
 		            {% endfor %}
-	            {% else %}      
+	            {% else %}
                     {% for course in period.courses %}
                         {% if course.abbreviation != "wn" %}
                             <li><a href="/course/{{ course.slug }}"><span>{{ course.name }}</span></a></li>

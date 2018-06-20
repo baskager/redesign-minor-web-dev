@@ -1,0 +1,67 @@
+{% extends "components/_base.html" %} {% block content %}
+<header class="presentation-header">
+  <div class="container">
+    <h1>{{ data.title }}</h1>
+    <p>{{ data.description }}</p>
+    <ul class="teachers-list">
+      <li>
+        <a href="/">See Biography</a>
+        <img class="avatar" src="{{ data.avatarUrl }}">
+        <div>
+            <h2>{{ data.speaker }}</h2>
+            <p>{{ data.speakerRole }}</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="center-btn">
+      <a href="#presentation" class="btn btn-primary">Check out the talk</a>  
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="presentation" id="presentation">
+    <div class="media paused">
+      <video src="{{ data.videoUrl }}"></video>
+      <img class="current-slide" src="{{ data.presentationImg }}">
+      <ul class="links"></ul>
+      <button class="btn-media-control">
+        <span class="hotkey">shift + space</span>
+      </button>
+      <h2 class="subtitle left"></h2>
+    </div>  
+
+    <div class="controls">
+      <label for="set-speed">Speed</label>
+      <select id="set-speed">
+        <option value="0.25">0.25</option>
+        <option value="0.5">0.5</option>
+        <option value="0.75">0.75</option>
+        <option value="1" selected>1</option>
+        <option value="1.25">1.25</option>
+        <option value="1.50">1.50</option>
+      </select>
+
+      <input class="seeker" type="range" min="0" max="99" value="0">
+    </div>
+    
+    <div class="slides"></div>
+  </section>
+
+  <section class="presentation-summary">
+    <div class="container">
+      <h3>{{ data.title }}</h3>
+      {% for paragraph in data.paragraphs %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+  </section>
+</main>
+
+<script>
+  subs = {{ data.subtitles | safe }};
+  slides = {{ data.slides | safe }};
+</script>
+
+{% endblock %}
