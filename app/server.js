@@ -405,7 +405,7 @@ const signupData = {
 };
 
 const contactData = {
-  title: "contact"
+  title: "Contact Us"
 };
 
 nunjucks.configure("./templates", {
