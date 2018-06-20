@@ -11,41 +11,14 @@
           <option value="2019">2017</option>
         </select>
       </h1>
-
-      {# <p>{{ data.description }}</p>
-      <input type="radio" id="all" name="course" value="all" checked="checked">
-      <label for="all">All courses</label>
-      
-      {% for course in data.courses %}
-        <input type="checkbox" id="{{ course.abbreviation }}" name="course" value="{{ course.abbreviation }}">
-        <label for="{{ course.abbreviation }}">{{ course.name }}</label>
-      {% endfor %}
- #}
-
       <p>{{ data.description }}</p>
+      
       <input type="radio" id="all" name="course" value="all" checked="checked">
       <label for="all">All courses</label>
       {% for course in data.courses %}
       <input type="radio" id="{{ course.abbreviation }}" name="course" value="{{ course.abbreviation }}">
       <label for="{{ course.abbreviation }}">{{ course.name }}</label>
-      {% endfor %} {#
-      <select name="courses" id="select-course">
-        <option value="all">All courses</option>
-
-        <option value="wafs">Web app from scratch</option>
-        <option value="ccsttr">CSS to the rescue</option>
-        <option value="project1">Project 1</option>
-
-        <option value="pm">Performance matters</option>
-        <option value="bt">Browser technologies</option>
-        <option value="project2">Project 2</option>
-
-        <option value="wd">Web design</option>
-        <option value="rtw">Real time web</option>
-        <option value="project3">Project 3</option>
-
-        <option value="mp">Meesterproef</option>
-      </select> #}
+      {% endfor %}
 
       <button type="submit">Filter</button>
     </form>
@@ -63,13 +36,13 @@
         <article class="card card-interactive student-work-card">
           <header>
             <h3>{{ item.heading }}</h3>
-            <a class="focusable" href="{{ item.repoUrl }}" target="_blank">
+            <a href="{{ item.repoUrl }}" target="_blank">
               <img src="/img/icons/github.svg" class="icon-24" alt="To GitHub repo">
             </a>
           </header>
           <img src="{{ item.imgUrl }}" alt="{{ item.imgAlt }}">
 
-          <a class="focusable card-link" href="{{ item.demoUrl }}" target="_blank"></a>
+          <a class="card-link" href="{{ item.demoUrl }}" target="_blank"></a>
         </article>
         {% endfor %}
       </div>
