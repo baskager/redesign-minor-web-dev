@@ -114,7 +114,7 @@
     visibility: hidden;
     opacity: 0;
     box-shadow: $card-shadow;
-    z-index: 1;
+    z-index: 10;
     div div {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
