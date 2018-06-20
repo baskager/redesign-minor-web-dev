@@ -21,6 +21,11 @@
 .center-btn {
   display: flex;
   justify-content: center;
+
+  .btn {
+    box-shadow: 0 7px 28px rgba(61, 25, 91, 0.15),
+      0 5px 10px rgba(61, 25, 91, 0.12);
+  }
 }
 
 .presentation-summary {
