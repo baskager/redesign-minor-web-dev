@@ -1,3 +1,4 @@
+require("./carousel");
 const spatialNavigation = require("./spatial-navigation");
 const focusOnScroll = require("./focus-on-scroll");
 const Presentation = require("./presentation");
@@ -25,14 +26,15 @@ if (document.querySelector(".focusable")) {
   const firstPeriode = document.querySelector(
     ".timeline-wrapper:first-of-type > section"
   );
+  if (firstPeriode) {
+    const firstPeriodeArticles = firstPeriode.querySelectorAll(
+      "article:nth-of-type(-n+3) a"
+    );
 
-  const firstPeriodeArticles = firstPeriode.querySelectorAll(
-    "article:nth-of-type(-n+3) a"
-  );
-
-  firstPeriodeArticles.forEach(article => {
-    article.setAttribute("data-sn-up", "#");
-  });
+    firstPeriodeArticles.forEach(article => {
+      article.setAttribute("data-sn-up", "#");
+    });
+  }
 
   SpatialNavigation.init();
   SpatialNavigation.add({ selector: ".focusable" });
