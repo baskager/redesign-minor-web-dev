@@ -1,0 +1,68 @@
+.courses {
+  .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    article {
+      padding: 2em;
+      width: calc(33.33% - 13.34px);
+      margin: 0 20px 20px 0;
+
+      img {
+        display: block;
+        max-width: 50%;
+        margin: 0 auto;
+      }
+
+      h3 {
+        color: #d00064;
+        text-align: center;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+.partners {
+  .slider {
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    flex-grow: 0;
+    overflow-y: hidden;
+    li {
+      flex-shrink: 0;
+      flex-grow: 0;
+      display: inline-block;
+      list-style: none;
+      width: calc(30% - 13.34px);
+      margin: 0 20px 20px 0;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.signup-cta {
+  max-width: 50em;
+  margin: 0 auto;
+  h1 {
+    text-align: center;
+  }
+  p {
+    max-width: 30em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  a {
+    margin: 2em auto;
+    display: block;
+    width: 60%;
+    text-align: center;
+  }
+}

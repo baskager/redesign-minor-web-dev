@@ -28,19 +28,31 @@
         <section>
             <h4>Courses</h4>
             <ul>
-            {% for period in data.periods %}
+            {# {% for period in data.periods %}
             	{% if period.period === 1 %}
 		            {% for course in period.courses %}
 			            <li><a href="/course/{{ course.slug }}">{{ course.name }}</a></li>
 		            {% endfor %}
-	            {% else %}      
+	            {% else %}
                     {% for course in period.courses %}
                         {% if course.abbreviation != "wn" %}
                             <li><a href="/course/{{ course.slug }}">{{ course.name }}</a></li>
                         {% endif %}
                     {% endfor %}
 	            {% endif %}
-            {% endfor %}
+            {% endfor %} #}
+
+                <li><a href="/course/weekly-nerd">Weekly nerd</a></li>
+                <li><a href="/course/css-to-the-rescue">CSS to the rescue</a></li>
+                <li><a href="/course/web-app-from-scratch">Web app from scratch</a></li>
+                <li><a href="/course/project-1">Project 1</a></li>
+                <li><a href="/course/browser-technologies">Browser technologies</a></li>
+                <li><a href="/course/performance-matters">Performance matters</a></li>
+                <li><a href="/course/project2">Project 2</a></li>
+                <li><a href="/course/real-time-web">Real time web</a></li>
+                <li><a href="/course/web-design">Web design</a></li>
+                <li><a href="/course/project-3">Project 3</a></li>
+                <li><a href="/course/master-project">Master project</a></li>
             </ul>
         </section>
 
