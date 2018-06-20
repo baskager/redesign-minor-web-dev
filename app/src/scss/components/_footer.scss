@@ -13,7 +13,6 @@
     }
   }
   a {
-    padding: $padding-8 0;
     display: block;
     color: lighten($primary-color, 35%);
     span {
@@ -38,5 +37,17 @@
   }
   li {
     margin: 0.2rem 0;
+    padding: $padding-8 0;
+  }
+  .skip-course-menu {
+    position: absolute;
+    top: -1rem;
+    opacity: 0;
+    &:focus {
+      opacity: 1;
+    }
+  }
+  section {
+    position: relative;
   }
 }
