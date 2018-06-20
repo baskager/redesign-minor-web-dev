@@ -1,12 +1,8 @@
 {% set title = "Home" %} {% extends "components/_base.html" %} {% block content %}
-<header class="hero focusOnScroll">
+<header id="main" class="hero focusOnScroll">
   <div class="container">
-    <h1>{{ data.title }}</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere tristique nisi, quis finibus sem porttitor sed.
-      Vivamus finibus nulla id massa vehicula, et congue sapien placerat. Suspendisse potenti. Vestibulum commodo, nisi commodo
-      pellentesque malesuada, nisi lacus auctor felis, non varius metus nulla ullamcorper est. Maecenas vestibulum tellus
-      eu lectus maximus aliquet. Praesent blandit eros massa, vel facilisis urna viverra ac. Vestibulum feugiat sem quis
-      condimentum condimentum.</p>
+    <h1>Minor Web Development</h1>
+    <p>This minor learns you to make interactive applications with HTML, CSS and JavaScipt. In seperate courses and projects you'll learn everything about: real-time web, internet of things, performance, rapid prototyping, usability, documenting, version control, debugging, testing, responsive, reactive, micro interactions, API's and more...</p>
     {# {% include "components/_student-work-card.html" %} #}
   </div>
 </header>
@@ -30,7 +26,7 @@
           Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
           is consistent and optimized to meet business objectives and create enjoyable experiences for users.
         </p>
-        <a href="/course/{{course.page_slug}}">Web Design</a>
+        <a href="/course">Web Design</a>
       </article>
       <article class="card">
         <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
@@ -89,37 +85,37 @@
     <h2>Partners waar we mee samen werken</h2>
     <ul class="slider">
       <li>
-        <a href='#'>
+        <a href='/partners'>
           <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
             alt=" ">
         </a>
       </li>
       <li>
-        <a href='#'>
+        <a href='/partners'>
           <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
             alt=" ">
         </a>
       </li>
       <li>
-        <a href='#'>
+        <a href='/partners'>
           <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
             alt=" ">
         </a>
       </li>
       <li>
-        <a href='#'>
+        <a href='/partners'>
           <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
             alt=" ">
         </a>
       </li>
       <li>
-        <a href='#'>
+        <a href='/partners'>
           <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
             alt=" ">
         </a>
       </li>
       <li>
-        <a href='#'>
+        <a href='/partners'>
           <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
             alt=" ">
         </a>
@@ -173,7 +169,7 @@
       Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo,
       tortor mauris condimentum nibh, ut.
     </p>
-    <a class='btn btn-primary'>Inschrijven</a>
+    <a class='btn btn-primary' href="/signup">Inschrijven</a>
   </section>
 
 
