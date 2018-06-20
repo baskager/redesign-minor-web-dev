@@ -9,7 +9,7 @@
     keyNavState: false,
 
     init: function() {
-      let _this = this;
+      let self = this;
 
       if (!storage.get("hotKeysEnabled")) {
         storage.store("hotKeysEnabled", this.keyNavState);
@@ -20,21 +20,31 @@
       // Check if the CMD state is used, since it has some OS functionality it should be blocked.
       window.addEventListener("keydown", function(e) {
         if (e.keyCode === 91) {
-          _this.cmdState = true;
+          self.cmdState = true;
         }
         if ((e.altKey || e.keyCode === 18) && (e.ctrlKey || e.keyCode === 17)) {
           // Set the opposite of what the current keyNavState is
-          _this.keyNavState = !_this.keyNavState;
-          storage.store("hotKeysEnabled", _this.keyNavState);
+          self.keyNavState = !self.keyNavState;
+          storage.store("hotKeysEnabled", self.keyNavState);
+          self.toggleIndicator();
         }
-
         keyNavKeys.init(e);
       });
       window.addEventListener("keyup", function(e) {
         if (e.keyCode === 91) {
-          _this.cmdState = false;
+          self.cmdState = false;
         }
       });
+      self.toggleIndicator();
+    },
+
+    toggleIndicator: function() {
+      let keyNavIndicator = document.getElementById("keynav");
+      if (this.keyNavState) {
+        keyNavIndicator.classList.add("active");
+      } else {
+        keyNavIndicator.classList.remove("active");
+      }
     }
   };
 
@@ -55,7 +65,6 @@
   // Set buttons for the navigation with keys
   const keyNavKeys = {
     init: function keyNavKeys(e) {
-      console.log(e.keyCode, keyNav.cmdState, keyNav.keyNavState);
       if (!keyNav.cmdState && keyNav.keyNavState) {
         // Set key to 1
         if (e.keyCode === 49) {

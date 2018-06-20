@@ -149,3 +149,17 @@
     }
   }
 }
+
+.keynav {
+  padding: $padding-8 $padding-16;
+  border-radius: rem(10);
+  background-color: rgba($secondary-color, 0.4);
+  color: #fff;
+  position: absolute;
+  top: 6rem;
+  font-size: 0.75rem;
+  @include transitionCubic;
+  &.active {
+    background-color: rgba($secondary-color, 1);
+  }
+}
