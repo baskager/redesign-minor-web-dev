@@ -1,6 +1,8 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
 const app = express();
+var fs = require("fs");
+var parser = require("subtitles-parser");
 
 const homepageData = {
   title: "Home"
@@ -390,6 +392,14 @@ const teamData = {
   ]
 };
 
+const srt = fs.readFileSync("src/subs/talk.srt", "utf8");
+let subs = parser.fromSrt(srt, true);
+let talkData = fs.readFileSync("src/json/vitaly-friedman.json", "utf8");
+talkData = JSON.parse(talkData);
+talkData.subtitles = subs;
+talkData.subtitles = JSON.stringify(talkData.subtitles);
+talkData.slides = JSON.stringify(talkData.slides);
+
 const signupData = {
   title: "Sign-Up"
 };
@@ -440,6 +450,12 @@ app.get("/team", function(req, res) {
 app.get("/student-work", function(req, res) {
   res.render("student-work.html", {
     data: studentWork
+  });
+});
+
+app.get("/weekly-nerd", function(req, res) {
+  res.render("talk.html", {
+    data: talkData
   });
 });
 
