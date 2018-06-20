@@ -17,15 +17,13 @@
     }
   }
   form {
-    border-radius: 5px;
-    border: 1px solid lighten(#000, 75%);
     grid-column: 8 / 13;
     height: 712px;
     transition: height 1s cubic-bezier(0.430, 0.005, 0.000, 0.995);
     fieldset {
       border: none;
       margin: 0;
-      padding: $padding-16 $padding-32;
+      padding: $padding-16 $padding-32 2rem;
     }
     h2 {
       border-bottom: 1px solid lighten(#000, 75%);
@@ -60,5 +58,27 @@
     margin-left: 0;
     margin-bottom: 0;
     margin-right: 0;
+  }
+
+  @include max-desktop() {
+    section {
+      grid-column: 2 / 12;
+    }
+
+    form {
+      grid-column: 3 / 11;
+      grid-row: 2;
+      margin-top: $margin-48;
+    }
+  }
+
+  @include max-mobile() {
+    section {
+      grid-column: 2 / 12;
+    }
+
+    form {
+      grid-column: 2 / 12;
+    }
   }
 }

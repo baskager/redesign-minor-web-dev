@@ -6,7 +6,7 @@
       blanditiis nostrum, quis possimus voluptates quas quisquam. Illo alias nesciunt beatae accusamus?</p>
   </div>
 </header>
-<main class="signup-wrapper container">
+<main id="main" class="signup-wrapper container">
   <section>
     <div>
       <h2>Requirements</h2>
@@ -27,24 +27,30 @@
         totam eaque itaque, dolor optio magni voluptatem doloribus at vitae iure qui corrupti ea!</blockquote>
     </div>
   </section>
-  <form class="sign-up-form" action="#" method="">
+
+  <form action="/" method="post" class="card">
     <h2>Apply now!</h2>
     <fieldset>
-      <label>Full Name
-        <input type="text" placeholder="Arthur Parker" autofocus required>
-      </label>
-      <label>E-Mail
-        <input type="email" placeholder="arthur.parker@domain.com" required>
-      </label>
-      <label>Something Else
-        <input type="text" placeholder="Lorem ipsum dolor sit amet" >
-      </label>
-      <label>Something Else
-        <input type="text" placeholder="Lorem ipsum dolor sit amet" >
-      </label>
-      <label>Something Else
-        <input type="text" placeholder="Lorem ipsum dolor sit amet" >
-      </label>
+      <div>
+        <input id="name" name="name" type="text" required autofocus>
+        <label for="name">Your Name</label>
+      </div>
+      <div>
+        <input id="email" name="email" type="email" required>
+        <label for="email">Email Address</label>
+      </div>
+      <div>
+        <input id="tel" name="tel" type="tel" required>
+        <label for="tel">Phone</label>
+      </div>
+      <div>
+        <input id="repo" name="repo" type="text">
+        <label for="repo">Git Url</label>
+      </div>
+      <div>
+        <input id="something" name="something" type="text">
+        <label for="something">Something Else</label>
+      </div>
       <input type="submit" class="btn-primary" value="I am ready!">
     </fieldset>
   </form>

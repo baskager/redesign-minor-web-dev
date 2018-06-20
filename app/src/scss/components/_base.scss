@@ -10,14 +10,22 @@ body {
   font-family: $font-family;
   font-size: $body-font-size;
   line-height: $body-line-height;
-  padding-top: $padding-72;
+  // padding-top: $padding-72;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .hidden-desktop {
-  display: none;
+  @include min-desktop {
+    display: none;
+  }
+}
+
+.hidden-desktop-hd {
+  @include min-desktop-hd {
+    display: none;
+  }
 }
 
 body > header {
@@ -35,7 +43,7 @@ body > header {
     margin: 0;
     font-family: "Roboto Condensed", sans-serif;
     font-weight: normal;
-    max-width: 48rem;
+    max-width: 54rem;
     margin-bottom: 1rem;
   }
 }
@@ -57,6 +65,30 @@ body > header {
   width: 1em;
 }
 
+.icon-24 {
+  width: rem(24);
+  height: rem(24);
+}
+
+.icon-32 {
+  width: rem(32);
+  height: rem(32);
+}
+
 .avatar {
   border-radius: 50%;
+}
+
+.hotkey {
+  display: inline-block;
+  font-size: rem(11);
+  letter-spacing: 0;
+  padding: rem(4) rem(4);
+  color: #fff;
+  border-radius: rem(3);
+  border: 1px solid #ffffff;
+  white-space: nowrap;
+  transform: translateY(3.75rem);
+  position: relative;
+  z-index: $zindex-hotkey;
 }

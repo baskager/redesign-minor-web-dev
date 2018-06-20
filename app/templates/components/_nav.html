@@ -1,28 +1,69 @@
 <nav class="main-nav">
   <div class="container">
+    <a class="skip-to-content" href="#main" tabindex="0">Skip to content</a>
+    <a href="/"><h1>Minor Web Dev</h1></a>
     <ul>
+      <li><span>alt +</span></li>
       <li {% if data.title=="Home" %} class="active" {% endif %}>
-        <a href="/">Home</a>
+        <a id="menu-item-1" href="/" accesskey="1"><span>1</span>Home</a>
       </li>
       <li {% if data.title=="Program" %} class="active" {% endif %}>
-        <a href="/program">Program</a>
+        <a id="menu-item-2" href="/program" accesskey="2"><span>2</span>Program</a>
+        <div class="submenu">
+          <div class="container">
+            <h2><a href="">Go to program timeline</a></h2>
+            <div>
+              <section>
+                <p>Term 1</p>
+                <ul>
+                  <li><a href="#">CSS to the rescue</a></li>
+                  <li><a href="#">Web app from scratch</a></li>
+                  <li><a href="#">Project 1</a></li>
+                </ul>
+              </section>
+              <section>
+                <p>Term 2</p>
+                <ul>
+                  <li><a href="#">Browser technologies</a></li>
+                  <li><a href="#">Performance matters</a></li>
+                  <li><a href="#">Project 2</a></li>
+                </ul>
+              </section>
+              <section>
+                <p>Term 3</p>
+                <ul>
+                  <li><a href="#">Web design</a></li>
+                  <li><a href="#">Real time web</a></li>
+                  <li><a href="#">Project 3</a></li>
+                </ul>
+              </section>
+              <section>
+                <p>Term 4</p>
+                <ul>
+                  <li><a href="#">Weekly nerd</a></li>
+                  <li><a href="#">Master project</a></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
       </li>
       <li {% if data.title=="Our Partners" %} class="active" {% endif %}>
-        <a href="/partners">Partners</a>
+        <a id="menu-item-3" href="/partners" accesskey="3"><span>3</span>Partners</a>
       </li>
       {#
       <li {% if data.title=="Ons team" %} class="active" {% endif %}>
         <a href="/team">Team</a>
       </li> #}
       <li {% if data.title=="Student work" %} class="active" {% endif %}>
-        <a href="/student-work">Student work</a>
+        <a id="menu-item-4" href="/student-work" accesskey="4"><span>4</span>Student work</a>
       </li>
-      <li {% if data.title=="Contact" %} class="active" {% endif %}>
-        <a href="/contact">Contact Us</a>
+      <li {% if data.title=="Contact Us" %} class="active" {% endif %}>
+        <a id="menu-item-5" href="/contact" accesskey="5"><span>5</span>Contact Us</a>
       </li>
       <li {% if data.title=="Sign up" %} class="active" {% endif %}>
-        <a href="/signup" class="btn btn-primary">Sign up!</a>
+        <a id="menu-item-6" href="/signup" accesskey="6" class="btn btn-primary"><span>6</span>Sign up!</a>
       </li>
     </ul>
   </div>
-</nav>
+</nav>  

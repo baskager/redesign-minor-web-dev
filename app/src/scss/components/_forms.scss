@@ -1,33 +1,72 @@
-input,
-select,
-textarea {
-  border-radius: $input-border-radius;
-  border: $input-border;
-  box-shadow: $input-box-shadow;
-  color: $input-color;
-  display: inline-block;
-  padding: $input-padding;
-  vertical-align: middle;
-}
+.contact-wrapper,
+.signup-wrapper {
+  input:not([type='submit']),
+  select,
+  textarea {
+    color: $input-color;
+    background: none;
+    border: none;
+    border-bottom: 0.0625rem solid #cfd8dc;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    font-size: 1rem;
+    font: inherit;
+    left: 0;
+    margin-bottom: 1.5rem;
+    outline: 0;
+    padding: 0.5rem 0.75rem;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    &:valid {
+      background: $success-green;
+    }
+    &:focus {
+      border-color: $primary-color;
+    }
+    &:focus + label {
+      background: $primary-color;
+      color: white;
+      margin-top: -1.5625rem;
+      padding: 0.0625rem 0.375rem;
+      text-align: center;
+      top: 100%;
+      z-index: 2;
+    }
+  }
 
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 0;
-  border-color: $input-focus-border-color;
-}
+  input[type='submit'] {
+    width: 100%;
+  }
 
-input:hover,
-select:hover,
-textarea:hover {
-  outline: 0;
-  border-color: $input-hover-border-color;
-}
+  textarea {
+    margin-bottom: none;
+    resize: none;
+  }
 
-input[disabled],
-select[disabled],
-textarea[disabled] {
-  cursor: not-allowed;
-  background-color: $input-disabled-background-color;
-  color: $input-disabled-color;
+  label {
+    bottom: 0;
+    color: #607d8b;
+    font-size: 0.85rem;
+    left: 0;
+    margin-right: 1.25rem;
+    padding: 0.625rem 0.75rem;
+    position: absolute;
+    top: 0;
+    transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s,
+      left 0.2s;
+    width: 100%;
+  }
+
+  form fieldset > div {
+    margin-right: 1.25rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    &:nth-of-type(even) {
+      margin-right: 0;
+    }
+  }
 }

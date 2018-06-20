@@ -1,25 +1,26 @@
 {% extends 'components/_base.html' %} {% block content %}
-<header>
-    <div class="container">
-        <h1>{{ data.heading }}</h1>
-        <p>{{ data.description }}</p>
-        <a href="/" class="btn btn-primary button-pulse">Interested? Contact us!</a>
-    </div>
+
+<header class="focusOnScroll">
+  <div class="container">
+    <h1>{{ data.heading }}</h1>
+    <p>{{ data.description | safe }}</p>
+    <a href="/" class="btn btn-primary button-pulse">Interested? Contact us!</a>
+  </div>
 </header>
-<main class="partners-team-wrapper container">
-    {% for member in data.members %}
-    <article class="grid partner-article" scroll-transition>
-        <img src="{{ member.avatarURL }}">
-        <div>
-            <h2>
-                <span>{{ member.heading }}</span>
-            </h2>
-            <p>
-                <span>{{ member.subHeading }}</span>
-            </p>
-            <a href="{{ member.gitHubURL }}" class="btn button-pulse">{{ data.linkText }}</a>
-        </div>
-    </article>
-    {% endfor %}
+<main id="main" class="partners-team-wrapper container">
+  {% for member in data.members %}
+  <article class="grid focusOnScroll" scroll-transition>
+    <img src="{{ member.avatarURL }}">
+    <div>
+      <h2>
+        <span>{{ member.heading }}</span>
+      </h2>
+      <p>
+        <span>{{ member.subHeading }}</span>
+      </p>
+      <a href="{{ member.gitHubURL }}" class="btn button-pulse">{{ data.linkText }}</a>
+    </div>
+  </article>
+  {% endfor %}
 </main>
 {% endblock %}

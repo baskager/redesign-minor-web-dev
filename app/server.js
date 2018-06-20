@@ -1,6 +1,8 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
 const app = express();
+var fs = require("fs");
+var parser = require("subtitles-parser");
 
 const homepageData = {
   title: "Home"
@@ -8,6 +10,8 @@ const homepageData = {
 
 const programData = {
   title: "Program",
+  description:
+    "The minor works using a studio model. We have a dedicated classroom with a <b>refrigerator</b>❄️, <b>sandwich iron 🥪</b> and <b>stand-up desks</b>👖. Here we work for <b>40 hours a week💪</b>, <b>like in a real company</b>. Everyday the students have the option to ask questions to the mentors and ofcourse other students.",
   periods: [
     {
       period: 1,
@@ -16,7 +20,8 @@ const programData = {
         {
           name: "CSS to the rescue",
           abbreviation: "cssttr",
-          description: "CSS & Accessibility course",
+          slug: "css-to-the-rescue",
+          description: "CSS & Accessibility",
           type: "course",
           weeks: [
             {
@@ -39,7 +44,8 @@ const programData = {
         {
           name: "Web App From Scratch",
           abbreviation: "wafs",
-          description: "JavaScript course",
+          slug: "web-app-from-scratch",
+          description: "JavaScript",
           type: "course",
           weeks: [
             {
@@ -61,7 +67,8 @@ const programData = {
         {
           name: "Weekly nerd",
           abbreviation: "wn",
-          description: "(Guest) Speakers",
+          slug: "weekly-nerd",
+          description: "Speakers",
           type: "speakers",
           weeks: [
             {
@@ -100,7 +107,8 @@ const programData = {
         {
           name: "Performance matters",
           abbreviation: "pm",
-          description: "Website perfomance course",
+          slug: "performance-matters",
+          description: "Website perfomance",
           type: "course",
           weeks: [
             {
@@ -122,7 +130,8 @@ const programData = {
         {
           name: "Browser Technologies",
           abbreviation: "bt",
-          description: "Progressive enhancement course",
+          slug: "browser-technologies",
+          description: "Progressive enhancement",
           type: "course",
           weeks: [
             {
@@ -145,7 +154,8 @@ const programData = {
         {
           name: "Weekly Nerd",
           abbreviation: "wn",
-          description: "(Guest) Speakers",
+          slug: "weekly-nerd",
+          description: "Speakers",
           type: "speakers",
           weeks: [
             {
@@ -197,44 +207,44 @@ const studentWork = {
       items: [
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         }
       ]
@@ -244,44 +254,44 @@ const studentWork = {
       items: [
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         }
       ]
@@ -291,44 +301,44 @@ const studentWork = {
       items: [
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         },
         {
           heading: "Project header",
-          imgUrl: "/img/student-work/1.jpg",
+          imgUrl: "//via.placeholder.com/306x176",
           imgAlt: "Description of the project/image",
-          demoUrl: "https://www.github.com",
+          demoUrl: "#",
           repoUrl: "https://www.github.com"
         }
       ]
@@ -340,7 +350,7 @@ const partnersData = {
   title: "Our Partners",
   heading: "Our Partners",
   description:
-    "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
+    "De minor heeft verschillende partners. Dit zijn vooral bedrijven die een project hebben voor de meesterproef of voor tijdens de minor. Elke week is er een “<b>Weekly Nerd</b>🤓” waarbij een bedrijf of persoon gaat vertellen over een nerdy onderwerp.",
   linkText: "View project",
   members: [
     {
@@ -382,12 +392,20 @@ const teamData = {
   ]
 };
 
+const srt = fs.readFileSync("src/subs/talk.srt", "utf8");
+let subs = parser.fromSrt(srt, true);
+let talkData = fs.readFileSync("src/json/vitaly-friedman.json", "utf8");
+talkData = JSON.parse(talkData);
+talkData.subtitles = subs;
+talkData.subtitles = JSON.stringify(talkData.subtitles);
+talkData.slides = JSON.stringify(talkData.slides);
+
 const signupData = {
   title: "Sign-Up"
 };
 
 const contactData = {
-  title: "contact"
+  title: "Contact Us"
 };
 
 nunjucks.configure("./templates", {
@@ -432,6 +450,12 @@ app.get("/team", function(req, res) {
 app.get("/student-work", function(req, res) {
   res.render("student-work.html", {
     data: studentWork
+  });
+});
+
+app.get("/weekly-nerd", function(req, res) {
+  res.render("talk.html", {
+    data: talkData
   });
 });
 

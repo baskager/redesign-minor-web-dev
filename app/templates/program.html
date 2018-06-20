@@ -1,17 +1,10 @@
-{% extends "components/_base.html" %}
-
-{% block content %}
+{% extends "components/_base.html" %} {% block content %}
 
 <header>
-    <div class="container">
-        <h1>{{ data.title }}</h1>
-        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut.</p>
-
-        <a class="btn btn-primary" href="#timeline">Bekijk het programma</a>
-        <a class="btn btn-primary btn-outline" href="#" >Download de PDF</a>
-    </div>
+  <div class="container">
+    <h1>{{ data.title }}</h1>
+    <p>{{ data.description | safe }}</p>
+  </div>
 </header>
 
-{% include "components/_timeline.html" %}
-
-{% endblock %}
+{% include "components/_timeline.html" %} {% endblock %}
