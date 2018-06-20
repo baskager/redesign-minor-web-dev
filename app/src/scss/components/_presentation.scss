@@ -15,10 +15,16 @@
   position: relative;
   margin: auto;
 
+  border: rem(4) solid transparent;
+
   img,
   video {
     width: 100%;
     object-fit: cover;
+  }
+
+  &:focus-within {
+    border: rem(4) solid $primary-color;
   }
 
   .btn-media-control {
@@ -28,6 +34,7 @@
     &:focus,
     &:hover {
       opacity: 0.5;
+      outline: 0;
     }
   }
 
@@ -40,6 +47,34 @@
     .btn-media-control {
       background-image: url("../img/icons/play-big.svg");
       opacity: 1;
+    }
+  }
+
+  .links {
+    width: 50%;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(125%);
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-top: rem(8);
+    }
+
+    a {
+      display: inline-block;
+      background: $primary-color;
+      border-radius: rem(80);
+      padding: rem(4) rem(16);
+      color: #fff;
+
+      @include transitionCubic();
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
@@ -165,9 +200,10 @@
 
     @include transition();
 
+    &:focus,
     &:hover {
-      box-shadow: 0 0 0 4px rgba(68, 91, 237, 0.25),
-        0 0 0 8px rgba(68, 91, 237, 0.12);
+      transform: scale(1.2);
+      border: 2px solid $primary-color;
     }
   }
 
@@ -175,8 +211,8 @@
     outline: 0;
 
     &::-webkit-slider-thumb {
-      box-shadow: 0 0 0 4px rgba(68, 91, 237, 0.25),
-        0 0 0 8px rgba(68, 91, 237, 0.12);
+      transform: scale(1.1);
+      background-color: $primary-color;
     }
   }
 }
@@ -223,8 +259,13 @@
     letter-spacing: 0;
     text-transform: none;
     border-radius: rem(3);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: rem(1) solid rgba(255, 255, 255, 0.25);
     margin-right: $margin-8;
+
+    &:focus {
+      border: rem(1) solid $primary-color;
+      outline: none;
+    }
   }
 
   select {

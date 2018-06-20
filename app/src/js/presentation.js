@@ -5,6 +5,7 @@ module.exports = class Presentation {
     this.video = this.wrapper.querySelector(".media video");
     this.slideEl = this.wrapper.querySelector(".media .current-slide");
     this.slidesEl = this.wrapper.querySelector(".slides");
+    this.slideLinks = this.wrapper.querySelector(".current-slide + .links");
     this.seekerEl = this.wrapper.querySelector(".seeker");
     this.speedUpEl = this.wrapper.querySelector(".speed-up");
     this.speedDownEl = this.wrapper.querySelector(".speed-down");
@@ -59,9 +60,23 @@ module.exports = class Presentation {
       this.currentSlideEl.classList.add("active");
     };
 
+    this.setLinks = function(slide) {
+      if (slide.links.length) {
+        this.slideLinks.innerHTML = "";
+
+        slide.links.forEach(link => {
+          let linkTemplate = `<li><a href="${link}">${link}</a></li>`;
+          this.slideLinks.insertAdjacentHTML("beforeend", linkTemplate);
+        });
+      } else {
+        this.slideLinks.innerHTML = "";
+      }
+    };
+
     this.setSlide = function() {
       let slide = this.getSlide(this.video.currentTime);
       if (slide) {
+        this.setLinks(slide);
         this.slideEl.src = slide.img;
         this.setActiveSlide(slide);
       }
