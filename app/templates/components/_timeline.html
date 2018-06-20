@@ -1,6 +1,7 @@
+<main id="main">
 {% block content %} {% for period in data.periods %}
 
-<div class="timeline-wrapper">
+<section class="timeline-wrapper focusOnScroll">
 
   <div class="row-gray row-1"></div>
   <div class="row-gray row-2"></div>
@@ -41,7 +42,7 @@
       <div class="week">
         <p class="hidden-desktop-hd">Week {{week.week}}</p>
         <img src="{{ week.imgSrc }}" class="avatar" alt="">
-        <a class="course-{{ course.abbreviation }}" href="#">{{ week.name }}</a>
+        <a class="course-{{ course.abbreviation }}" href="/weekly-nerd">{{ week.name }}</a>
         <p class="meta">{{ week.description }}</p>
       </div>
       {% endfor %}
@@ -62,7 +63,7 @@
 
     {% endif %} {% endfor %}
   </section>
-</div>
-
+</section>
 
 {% endfor %} {% endblock %}
+</main>
