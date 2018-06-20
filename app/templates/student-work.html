@@ -4,6 +4,15 @@
   <nav class="container">
     <form action="/student-work" method="POST">
 
+<<<<<<< HEAD
+            <p>{{ data.description }}</p>
+                <input type="radio" id="all" name="course" value="all" checked="checked">
+                <label for="all">All courses</label>
+            {% for course in data.courses %}
+                <input type="checkbox" id="{{ course.abbreviation }}" name="course" value="{{ course.abbreviation }}">
+                <label for="{{ course.abbreviation }}">{{ course.name }}</label>
+            {% endfor %}
+=======
       <h1>
         {{ data.heading }}
         <select name="archive" id="select-year">
@@ -11,6 +20,7 @@
           <option value="2019">2017</option>
         </select>
       </h1>
+>>>>>>> develop
 
       <p>{{ data.description }}</p>
       <input type="radio" id="all" name="course" value="all" checked="checked">
@@ -42,7 +52,7 @@
   </nav>
 </header>
 
-<main class="student-work">
+<main id="main" class="student-work">
   {% for course in data.courses %}
   <section class="course course-{{ course.abbreviation }} focusOnScroll">
     <div class="container">
