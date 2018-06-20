@@ -1,8 +1,9 @@
 module.exports = class Subtitles {
-  constructor(element, subtitles, mouseEventElement) {
+  constructor(element, subtitles, mouseEventElement, presentationObj) {
     this.interval = null;
     this.subtitleEl = element;
     this.subtitles = subtitles;
+    this.seekerFocused = false;
 
     this.alignSubs = function(side) {
       this.subtitleEl.classList.remove("right");
@@ -58,15 +59,29 @@ module.exports = class Subtitles {
         const keyCode = event.keyCode;
         // keycode 37 = arrowLeft
         // keycode 39 = arrowRight
-        if (keyCode == 37) {
-          this.alignSubs("left");
-        } else if (keyCode == 39) {
-          this.alignSubs("right");
+        if (!this.seekerFocused) {
+          if (keyCode == 37) {
+            this.alignSubs("left");
+          } else if (keyCode == 39) {
+            this.alignSubs("right");
+          }
         }
       });
     };
 
+    // TODO: Replace hotfix with proper function
+    this.hotfix = function() {
+      document.querySelector(".seeker").addEventListener("focus", ev => {
+        this.seekerFocused = true;
+      });
+
+      document.querySelector(".seeker").addEventListener("focusout", ev => {
+        this.seekerFocused = false;
+      });
+    };
+
     this.init = function() {
+      this.hotfix();
       this.addEvents();
     };
   }
