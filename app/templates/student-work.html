@@ -43,25 +43,32 @@
     </nav>
 </header>
 
-<main class="student-work">
-    {% for course in data.courses %}
-    <section class="course course-{{ course.abbreviation }}">
-        <div class="container">
-            <h2>{{ course.name }}</h2>
+<main id="main" class="student-work">
+  {% for course in data.courses %}
+  <section class="course course-{{ course.abbreviation }} focusOnScroll">
+    <div class="container">
+      <h2>{{ course.name }}</h2>
 
-            <div class="student-work-list">
-                {% for item in course.items %}
-                <article class="card card-interactive student-work-card">
-                    <header>
-                        <h3>{{ item.heading }}</h3>
-                        <img src="/img/icons/github.svg" class="icon-24" alt="To GitHub repo">
-                    </header>
-                    <img src="{{ item.imgUrl }}" alt="{{ item.imgAlt }}">
+      <div class="student-work-list">
+        {% for item in course.items %}
+        <article class="card card-interactive student-work-card">
+          <header>
+            <h3>{{ item.heading }}</h3>
+            <a href="{{ item.repoUrl }}" target="_blank">
+              <img src="/img/icons/github.svg" class="icon-24" alt="To GitHub repo">
+            </a>
+          </header>
+          <img src="{{ item.imgUrl }}" alt="{{ item.imgAlt }}">
 
-                    <a class="focusable card-link" href="{{ item.demoUrl }}" target="_blank"></a>
-                </article>
-                {% endfor %}
-            </div>
+          <a class="card-link" href="http://github.com" target="_blank"></a>
+        </article>
+        {% endfor %}
+      </div>
+
+      <a href="#" class="btn-primary">Meer {{ course.name }}</a>
+    </div>
+  </section>
+  {% endfor %}
 
             <a href="#" class="btn btn-primary">Meer {{ course.name }}</a>
         </div>
