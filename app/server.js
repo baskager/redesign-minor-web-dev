@@ -421,14 +421,14 @@ let slides = [
   {
     index: 3,
     img: "/img/slides/slide-4.png",
-    links: ["https://markboulton.co.uk/", "https://twitter.com/markboulton"],
+    links: [],
     startTime: 111,
     endTime: 113
   },
   {
     index: 4,
     img: "/img/slides/slide-5.png",
-    links: [],
+    links: ["https://markboulton.co.uk/", "https://twitter.com/markboulton"],
     startTime: 114,
     endTime: 150
   },

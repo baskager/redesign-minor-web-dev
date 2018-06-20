@@ -17,6 +17,16 @@
 
   border: rem(4) solid transparent;
 
+  video {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .current-slide {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
   img,
   video {
     width: 100%;
@@ -51,63 +61,51 @@
   }
 
   .links {
-    width: 50%;
-    right: 0;
-    position: absolute;
-    bottom: 0;
-    transform: translateY(125%);
     padding: 0;
     list-style: none;
+    grid-column: 2;
 
     li {
       margin-top: rem(8);
+      margin-right: rem(8);
+      display: inline-block;
     }
 
     a {
       display: inline-block;
       background: $primary-color;
       border-radius: rem(80);
+      font-size: rem(14);
       padding: rem(4) rem(16);
       color: #fff;
 
-      @include transitionCubic();
-
       &:hover {
-        transform: scale(1.1);
+        background: darken($primary-color, 10%);
       }
     }
   }
 }
 
 .subtitle {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto;
+  grid-row: 1;
+  margin: auto auto 0 auto;
   padding: rem(24);
-
+  width: 100%;
   color: #fff;
   font-size: rem(24);
   font-family: "Arial", sans-serif;
   text-align: center;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.8), 0 3px 50px rgba(0, 0, 0, 0.5);
   background: rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: $zindex-subtitle;
 
   &.right {
-    right: 0;
-    left: auto;
-    width: 50%;
+    grid-column: 2;
   }
 
   &.left {
-    right: auto;
-    left: 0;
-    width: 50%;
-  }
-
-  &.center {
-    text-align: center;
+    grid-column: 1;
   }
 }
 
@@ -229,13 +227,15 @@
   align-items: center;
   justify-content: center;
   border-radius: rem(80);
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5rem;
+  position: relative;
   margin: auto;
+  z-index: ($zindex-subtitle + 1);
 }
 
 .controls {
