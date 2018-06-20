@@ -47,6 +47,8 @@
     div {
       grid-column: 5 / 12;
       grid-row: 1;
+      position: relative;
+      z-index: 1;
     }
     .btn {
       background-color: $primary-color;

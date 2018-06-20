@@ -1,3 +1,5 @@
+require("./intersection-observer.js");
+require("./animation.js");
 require("./carousel");
 const spatialNavigation = require("./spatial-navigation");
 const focusOnScroll = require("./focus-on-scroll");

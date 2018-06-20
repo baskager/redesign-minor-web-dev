@@ -2,7 +2,7 @@
 <header class="course-header focusOnScroll">
   <div class="container grid">
     <div>
-      <div>
+      <div class="header-info" scroll-transition>
         <h1>Real-Time Web</h1>
         <p>In drie weken leer je hoe je real time / live data op een inzichtelijke manier toegankelijk kunt maken voor de eindgebruiker.</p>
         <ul class="teachers-list">
@@ -25,7 +25,7 @@
         </ul>
       </div>
     </div>
-    <img src="/img/partners/oba.jpg"></img>
+    <img class="header-img" scroll-transition src="/img/partners/oba.jpg"></img>
   </div>
 </header>
 
@@ -53,12 +53,12 @@
 
   <section class="course-card-overview focusOnScroll">
     <h2>Weekly program</h2>
-    <div class="course-card-list">
+    <div class="course-card-list" scroll-transition>
       {% include "components/_course-card.html" %} {% include "components/_course-card.html" %} {% include "components/_course-card.html"
       %}
     </div>
     <div class="course-btn">
-      <a class="btn btn-primary animation" href="/program">View the full program</a>
+      <a class="btn button-pulse" href="/program">View the full program</a>
     </div>
   </section>
 
