@@ -9,6 +9,37 @@
   justify-content: center;
 }
 
+.presentation-header {
+  padding-top: 2rem;
+
+  h1,
+  p {
+    max-width: 56rem;
+  }
+}
+
+.center-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.presentation-summary {
+  max-width: 50rem;
+  margin: 0 auto;
+
+  h3 {
+    font-family: $font-family-headers;
+    font-size: rem(64);
+    text-transform: uppercase;
+    margin-bottom: rem(42);
+  }
+
+  p {
+    font-size: rem(18);
+    line-height: 1.5;
+  }
+}
+
 .media {
   display: grid;
   grid-template-columns: 1fr 1fr;

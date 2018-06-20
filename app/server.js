@@ -394,68 +394,11 @@ const teamData = {
 
 const srt = fs.readFileSync("src/subs/talk.srt", "utf8");
 let subs = parser.fromSrt(srt, true);
-subs = JSON.stringify(subs);
-
-let slides = [
-  {
-    index: 0,
-    img: "/img/slides/slide-1.png",
-    links: [],
-    startTime: 0,
-    endTime: 12
-  },
-  {
-    index: 1,
-    img: "/img/slides/slide-2.png",
-    links: [],
-    startTime: 12,
-    endTime: 24
-  },
-  {
-    index: 2,
-    img: "/img/slides/slide-3.png",
-    links: [],
-    startTime: 24,
-    endTime: 111
-  },
-  {
-    index: 3,
-    img: "/img/slides/slide-4.png",
-    links: [],
-    startTime: 111,
-    endTime: 113
-  },
-  {
-    index: 4,
-    img: "/img/slides/slide-5.png",
-    links: ["https://markboulton.co.uk/", "https://twitter.com/markboulton"],
-    startTime: 114,
-    endTime: 150
-  },
-  {
-    index: 5,
-    img: "/img/slides/slide-6.png",
-    links: [],
-    startTime: 150,
-    endTime: 180
-  }
-];
-slides = JSON.stringify(slides);
-
-const talkData = {
-  title: "Functional Programming",
-  description: "Description comes here",
-  speaker: "Vitaly Friedman",
-  speakerRole: "Founder of Smashingmagazine",
-  avatarUrl:
-    "https://pbs.twimg.com/profile_images/2600200682/3l11tbu123yu6gya2yzt_400x400.png",
-  videoUrl: "//jelle.im/crap/talk.mp4",
-  subtitles: subs,
-  slides: slides,
-  presentationImg: "//via.placeholder.com/1920x1080",
-  videoSummary:
-    "Maecenas sed diam eget risus varius blandit sit amet non magna."
-};
+let talkData = fs.readFileSync("src/json/vitaly-friedman.json", "utf8");
+talkData = JSON.parse(talkData);
+talkData.subtitles = subs;
+talkData.subtitles = JSON.stringify(talkData.subtitles);
+talkData.slides = JSON.stringify(talkData.slides);
 
 const signupData = {
   title: "Sign-Up"

@@ -1,21 +1,21 @@
 {% extends "components/_base.html" %} {% block content %}
-<header class="course-header">
-  <div class="container grid">
-    <div>
-      <div>
-        <h1>{{ data.title }}</h1>
-        <p>{{ data.description }}</p>
-        <ul class="teachers-list">
-          <li>
-            <a href="/">See Biography</a>
-            <img class="avatar" src="{{ data.avatarUrl }}">
-            <div>
-              <h2>{{ data.speaker }}</h2>
-              <p>{{ data.speakerRole }}</p>
-            </div>
-          </li>
-        </ul>
-      </div>
+<header class="presentation-header">
+  <div class="container">
+    <h1>{{ data.title }}</h1>
+    <p>{{ data.description }}</p>
+    <ul class="teachers-list">
+      <li>
+        <a href="/">See Biography</a>
+        <img class="avatar" src="{{ data.avatarUrl }}">
+        <div>
+            <h2>{{ data.speaker }}</h2>
+            <p>{{ data.speakerRole }}</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="center-btn">
+      <a href="#presentation" class="btn btn-primary">Check out the talk</a>  
     </div>
   </div>
 </header>
@@ -49,10 +49,12 @@
     <div class="slides"></div>
   </section>
 
-  <section class="talk-summary">
+  <section class="presentation-summary">
     <div class="container">
-      <h3>{{ data.title }} </h3>
-      <p>{{ data.videoSummary }}</p>
+      <h3>{{ data.title }}</h3>
+      {% for paragraph in data.paragraphs %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
     </div>
   </section>
 </main>
