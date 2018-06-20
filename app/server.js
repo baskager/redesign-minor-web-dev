@@ -471,4 +471,14 @@ app.get("/signup", function(req, res) {
   });
 });
 
+app.get("/prototypes/slider", function(req, res) {
+  res.render("prototypes/slider.html", {
+    data: signupData
+  });
+});
+app.get("/prototypes/slider-with-buttons", function(req, res) {
+  res.render("prototypes/slider-buttons.html", {
+    data: signupData
+  });
+});
 app.listen(3000, () => console.log("Example app listening on port 3000!"));
