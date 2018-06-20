@@ -44,6 +44,7 @@
     },
 
     toggleIndicators: function() {
+      let self = this;
       let keyNavIndicator = document.getElementById("keynav");
       let menuIndicators = document.querySelectorAll(
         ".main-nav div > ul a span"
@@ -53,14 +54,13 @@
         menuIndicators.forEach(function(indicator) {
           indicator.classList.add("active");
         });
-        toggleOnInput();
       } else {
         keyNavIndicator.classList.remove("active");
         menuIndicators.forEach(function(indicator) {
           indicator.removeAttribute("class");
         });
       }
-    },
+    }
   };
 
   const storage = {
@@ -112,7 +112,7 @@
   // Add functionality to the keys
   const toggleOnInput = {
     // Get all rectangles with numbers next to the menu items
-    getSpan = document.querySelectorAll(".main-nav div > ul a span"),
+    getSpan: document.querySelectorAll(".main-nav div > ul a span"),
 
     disableOnInput: function() {
       // Disable keyCode navigation when an input field has focus
