@@ -3,32 +3,51 @@
   border-top: solid rgb(97, 97, 97) 1px;
   color: white;
   margin-top: 5rem;
-
   div {
     padding: $padding-64 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(rem(261.5), 1fr));
     grid-gap: $margin-24 $margin-24;
-
     @include max-mobile {
       text-align: center;
     }
   }
-
   a {
-    padding: $padding-8 0;
     display: block;
     color: lighten($primary-color, 35%);
-    &:hover {
-      color: lighten($primary-color, 25%);
+    span {
+      transition : transform .3s ease,
+      background-color .3s ease,
+      box-shadow .3s ease;
     }
-  }
-  // #9D95F9
+    &:hover,
+    &:focus {
+      outline: 0;
+      transform: translateX(25px);
+      color: $primary-color;
+      span {
+        box-shadow: 0px 0px 0px 8px $white;
+        background-color: $white;
+      }
+    }
+  } // #9D95F9
   ul {
     list-style-type: none;
     padding: 0;
   }
   li {
     margin: 0.2rem 0;
+    padding: $padding-8 0;
+  }
+  .skip-course-menu {
+    position: absolute;
+    top: -1rem;
+    opacity: 0;
+    &:focus {
+      opacity: 1;
+    }
+  }
+  section {
+    position: relative;
   }
 }

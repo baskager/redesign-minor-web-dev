@@ -4,55 +4,56 @@
             <h4>Menu</h4>
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <a href=""><span>Home</span></a>
                 </li>
 
                 <li>
-                    <a href="">Course</a>
+                    <a href=""><span>Course</span></a>
                 </li>
 
                 <li>
-                    <a href="">Partners</a>
+                    <a href=""><span>Partners</span></a>
                 </li>
 
                 <li>
-                    <a href="">Team</a>
+                    <a href=""><span>Team</span></a>
                 </li>
 
                 <li>
-                    <a href="">Enroll</a>
+                    <a href=""><span>Enroll</span></a>
                 </li>
             </ul>
         </nav>
 
         <section>
+            <a class="skip-course-menu" href="#contact"><span>Go to contact</span></a>
             <h4>Courses</h4>
             <ul>
             {# {% for period in data.periods %}
             	{% if period.period === 1 %}
 		            {% for course in period.courses %}
-			            <li><a href="/course/{{ course.slug }}">{{ course.name }}</a></li>
+			            <li><a href="/course/{{ course.slug }}"><span>{{ course.name }}</span></a></li>
 		            {% endfor %}
 	            {% else %}
                     {% for course in period.courses %}
                         {% if course.abbreviation != "wn" %}
-                            <li><a href="/course/{{ course.slug }}">{{ course.name }}</a></li>
+                            <li><a href="/course/{{ course.slug }}"><span>{{ course.name }}</span></a></li>
                         {% endif %}
                     {% endfor %}
 	            {% endif %}
             {% endfor %} #}
 
-                <li><a href="/course/weekly-nerd">Weekly nerd</a></li>
-                <li><a href="/course/css-to-the-rescue">CSS to the rescue</a></li>
-                <li><a href="/course/web-app-from-scratch">Web app from scratch</a></li>
-                <li><a href="/course/project-1">Project 1</a></li>
-                <li><a href="/course/browser-technologies">Browser technologies</a></li>
-                <li><a href="/course/performance-matters">Performance matters</a></li>
-                <li><a href="/course/project2">Project 2</a></li>
-                <li><a href="/course/real-time-web">Real time web</a></li>
-                <li><a href="/course/web-design">Web design</a></li>
-                <li><a href="/course/project-3">Project 3</a></li>
-                <li><a href="/course/master-project">Master project</a></li>
+                <li><a href="/course/weekly-nerd"><span>Weekly nerd</span></a></li>
+                <li><a href="/course/css-to-the-rescue"><span>CSS to the rescue</span></a></li>
+                <li><a href="/course/web-app-from-scratch"><span>Web app from scratch</span></a></li>
+                <li><a href="/course/project-1"><span>Project 1</span></a></li>
+                <li><a href="/course/browser-technologies"><span>Browser technologies</span></a></li>
+                <li><a href="/course/performance-matters"><span>Performance matters</span></a></li>
+                <li><a href="/course/project2"><span>Project 2</span></a></li>
+                <li><a href="/course/real-time-web"><span>Real time web</span></a></li>
+                <li><a href="/course/web-design"><span>Web design</span></a></li>
+                <li><a href="/course/project-3"><span>Project 3</span></a></li>
+                <li><a href="/course/master-project"><span>Master project</span></a></li>
             </ul>
         </section>
 
@@ -60,14 +61,14 @@
             <h4>Contact</h4>
             <ul>
                 <li>
-                    <a href="https://www.google.nl/maps/place/Kohnstammhuis,+Amsterdam/@52.3589919,4.9065174,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6099a444dce49:0x6bb895cc6f763e4!8m2!3d52.3591918!4d4.9086713" target="_blank">Kohnstamhuis</a>
+                    <a id="contact" href="https://www.google.nl/maps/place/Kohnstammhuis,+Amsterdam/@52.3589919,4.9065174,17z/data=!3m1!4b1!4m5!3m4!1s0x47c6099a444dce49:0x6bb895cc6f763e4!8m2!3d52.3591918!4d4.9086713" target="_blank"><span>Kohnstamhuis</span></a>
                 </li>
                 <li>
-                    <a href="https://hva.nl" target="_blank">Hogeschool van Amsterdam</a>
+                    <a href="https://hva.nl" target="_blank"><span>Hogeschool van Amsterdam</span></a>
                 </li>
                 <li>Wibautstraat 2-4</li>
                 <li>1091 GM Amsterdam</li>
-                <li><a href="mailto:koop.reijnders@hva.nl">koop.reijnders@hva.nl</a></li>
+                <li><a href="mailto:koop.reijnders@hva.nl"><span>koop.reijnders@hva.nl</span></a></li>
             </ul>
         </section>
     </div>

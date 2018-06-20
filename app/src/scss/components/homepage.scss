@@ -34,13 +34,23 @@
     flex-shrink: 0;
     flex-grow: 0;
     overflow-y: hidden;
+    scroll-behavior: smooth;
     li {
+      opacity: 0.5;
       flex-shrink: 0;
       flex-grow: 0;
       display: inline-block;
       list-style: none;
       width: calc(30% - 13.34px);
       margin: 0 20px 20px 0;
+      transition: all .3s ease;
+      a {
+        outline: 0;
+      }
+      &:focus-within,
+      &:hover {
+        opacity: 1;
+      }
       img {
         max-width: 100%;
       }

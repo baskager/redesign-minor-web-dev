@@ -10,6 +10,7 @@ module.exports = class Presentation {
     this.speedUpEl = this.wrapper.querySelector(".speed-up");
     this.speedDownEl = this.wrapper.querySelector(".speed-down");
     this.speedDropdown = this.wrapper.querySelector("#set-speed");
+    this.seekerFocused = false;
     this.currentSlideEl = null;
     this.playing = false;
     this.slideNodes = [];
