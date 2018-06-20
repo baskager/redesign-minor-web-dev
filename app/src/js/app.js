@@ -1,6 +1,8 @@
 const spatialNavigation = require("./spatial-navigation");
+const focusOnScroll = require("./focus-on-scroll");
 const Presentation = require("./presentation");
 const Subtitles = require("./subtitles");
+const nav = require("./nav");
 
 if (document.querySelector(".presentation")) {
   const fpSubtitles = new Subtitles(
@@ -19,31 +21,30 @@ if (document.querySelector(".presentation")) {
   fpSubtitles.init();
 }
 
-window.addEventListener("load", function() {
-  if (document.querySelector(".focusable")) {
-    const firstPeriode = document.querySelector(
-      ".timeline-wrapper:first-of-type > section"
-    );
-    const firstPeriodeArticles = firstPeriode.querySelectorAll(
-      "article:nth-of-type(-n+3) a"
-    );
+if (document.querySelector(".focusable")) {
+  const firstPeriode = document.querySelector(
+    ".timeline-wrapper:first-of-type > section"
+  );
 
-    firstPeriodeArticles.forEach(article => {
-      article.setAttribute("data-sn-up", "#");
-    });
+  const firstPeriodeArticles = firstPeriode.querySelectorAll(
+    "article:nth-of-type(-n+3) a"
+  );
 
-    SpatialNavigation.init();
-    SpatialNavigation.add({ selector: ".focusable" });
-    SpatialNavigation.makeFocusable();
-  }
-});
+  firstPeriodeArticles.forEach(article => {
+    article.setAttribute("data-sn-up", "#");
+  });
 
-document.querySelectorAll(".focusable").forEach(item => {
-  item.addEventListener("focus", item => {
-    item.target.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "center"
+  SpatialNavigation.init();
+  SpatialNavigation.add({ selector: ".focusable" });
+  SpatialNavigation.makeFocusable();
+
+  document.querySelectorAll(".focusable").forEach(item => {
+    item.addEventListener("focus", item => {
+      item.target.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center"
+      });
     });
   });
-});
+}
