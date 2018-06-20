@@ -1,14 +1,10 @@
-{% extends "components/_base.html" %}
-
-{% block content %}
+{% extends "components/_base.html" %} {% block content %}
 
 <header>
-    <div class="container">
-        <h1>{{ data.title }}</h1>
-        <p>{{ data.description | safe }}</p>
-    </div>
+  <div class="container">
+    <h1>{{ data.title }}</h1>
+    <p>{{ data.description | safe }}</p>
+  </div>
 </header>
 
-{% include "components/_timeline.html" %}
-
-{% endblock %}
+{% include "components/_timeline.html" %} {% endblock %}
