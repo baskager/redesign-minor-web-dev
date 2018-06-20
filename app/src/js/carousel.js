@@ -109,7 +109,7 @@
                 SpatialNavigation.move("right");
                 SpatialNavigation.focus();
                 e.preventDefault();
-              } else counter.reset();
+              }
             }
           });
         });
