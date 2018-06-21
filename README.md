@@ -1,8 +1,8 @@
 # Website redesign for the minor Web Development
 
-During this project, we have redesigned the website for the minor 'web development' at the University of Applied sciences in Amsterdam. We have done our best to make a very experimental but pleasurable web site.
+During this project we redesigned the website for the minor 'web development' at the University of Applied sciences in Amsterdam. We have done our best to make a very experimental yet pleasurable web site.
 
-During this project, a big theme was 'accessibility'. The site should be pleasurable for everyone, not just for the 'general public'.
+A big theme in this project was 'accessibility'. The site should be pleasurable for everyone, not just for the 'general public'.
 
 [INSERT A PICTURE HERE WHEN WE SIGN OFF ON THE PROJECT]
 
