@@ -1,8 +1,9 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
 const app = express();
-var fs = require("fs");
-var parser = require("subtitles-parser");
+const Screenshot = require("url-to-screenshot");
+const fs = require("fs");
+const parser = require("subtitles-parser");
 
 function readData(path) {
   let data = fs.readFileSync(path, "utf8");
@@ -15,6 +16,46 @@ function getSubs(path) {
   return subs;
 }
 
+// from https://gist.github.com/mathewbyrne/1280286
+function slugify(text) {
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, "-") // Replace spaces with -
+    .replace(/[^\w\-]+/g, "") // Remove all non-word chars
+    .replace(/\-\-+/g, "-") // Replace multiple - with single -
+    .replace(/^-+/, "") // Trim - from start of text
+    .replace(/-+$/, ""); // Trim - from end of text
+}
+
+let studentData = readData("src/json/student-work.json");
+
+console.log(studentData);
+
+const staticDir = "./static/";
+const screenshotDir = "img/student-work/";
+
+studentData.courses.forEach(course => {
+  course.items.forEach(item => {
+    if (item.demoUrl) {
+      let thescreenshot = new Screenshot(item.demoUrl)
+        .clip()
+        .timeout(3000)
+        .capture()
+        .then(img => {
+          let imgName =
+            staticDir + screenshotDir + "/" + slugify(item.demoUrl) + ".png";
+          item.imgUrl = screenshotDir + "/" + slugify(item.demoUrl) + ".png";
+          console.log(item.imgUrl);
+          fs.writeFileSync(imgName, img);
+        })
+        .catch(function(err) {
+          console.log(err);
+        });
+    }
+  });
+});
+
 nunjucks.configure("./templates", {
   autoescape: true,
   express: app,
@@ -22,7 +63,7 @@ nunjucks.configure("./templates", {
 });
 
 app.set("view engine", "html");
-app.use(express.static("./static"));
+app.use(express.static(staticDir));
 
 app.get("/", function(req, res) {
   res.render("index.html", {
@@ -56,7 +97,7 @@ app.get("/team", function(req, res) {
 
 app.get("/student-work", function(req, res) {
   res.render("student-work.html", {
-    data: readData("src/json/student-work.json")
+    data: studentData
   });
 });
 
