@@ -1,0 +1,149 @@
+{
+  "title": "Student work",
+  "heading": "Student work",
+  "description":
+    "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
+  "courses": [
+    {
+      "name": "Web app from scratch",
+      "items": [
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        }
+      ]
+    },
+    {
+      "name": "CSS to the rescue",
+      "items": [
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        }
+      ]
+    },
+    {
+      "name": "Project 1",
+      "items": [
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        },
+        {
+          "heading": "Project header",
+          "imgUrl": "//via.placeholder.com/306x176",
+          "imgAlt": "Description of the project/image",
+          "demoUrl": "#",
+          "repoUrl": "https://www.github.com"
+        }
+      ]
+    }
+  ]
+}

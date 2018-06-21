@@ -196,156 +196,6 @@ const courseData = {
     "Here comes the description for the course. Here comes the description for the course. Here comes the description for the course."
 };
 
-const studentWork = {
-  title: "Student work",
-  heading: "Student work",
-  description:
-    "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
-  courses: [
-    {
-      name: "Web app from scratch",
-      items: [
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        }
-      ]
-    },
-    {
-      name: "CSS to the rescue",
-      items: [
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        }
-      ]
-    },
-    {
-      name: "Project 1",
-      items: [
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        },
-        {
-          heading: "Project header",
-          imgUrl: "//via.placeholder.com/306x176",
-          imgAlt: "Description of the project/image",
-          demoUrl: "#",
-          repoUrl: "https://www.github.com"
-        }
-      ]
-    }
-  ]
-};
-
 const partnersData = {
   title: "Our Partners",
   heading: "Our Partners",
@@ -392,9 +242,12 @@ const teamData = {
   ]
 };
 
+let studentworkData = fs.readFileSync("src/json/student-work.json", "utf8");
+studentworkData = JSON.parse(studentworkData);
+
 const srt = fs.readFileSync("src/subs/talk.srt", "utf8");
 let subs = parser.fromSrt(srt, true);
-let talkData = fs.readFileSync("src/json/vitaly-friedman.json", "utf8");
+let talkData = fs.readFileSync("src/json/talk.json", "utf8");
 talkData = JSON.parse(talkData);
 talkData.subtitles = subs;
 talkData.subtitles = JSON.stringify(talkData.subtitles);
@@ -449,7 +302,7 @@ app.get("/team", function(req, res) {
 
 app.get("/student-work", function(req, res) {
   res.render("student-work.html", {
-    data: studentWork
+    data: studentworkData
   });
 });
 
