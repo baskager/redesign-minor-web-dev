@@ -189,3 +189,38 @@
         position: absolute;
     }
 }
+
+.home-courses article.trans {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.home-courses article.trans.start-transition {
+    transition: all .5s ease;
+    opacity: 1;
+    transform: none;
+}
+
+.home-courses article:nth-of-type(2).trans.start-transition {
+    transition: 
+        opacity .5s ease .3s,
+        transform .5s ease .3s;
+}
+
+.home-courses article:nth-of-type(3).trans.start-transition {
+    transition: 
+        opacity .5s ease .6s,
+        transform .5s ease .6s;
+}
+
+.home-courses article:nth-of-type(5).trans.start-transition {
+    transition: 
+        opacity .5s ease .3s,
+        transform .5s ease .3s;
+}
+
+.home-courses article:nth-of-type(6).trans.start-transition {
+    transition: 
+        opacity .5s ease .6s,
+        transform .5s ease .6s;
+}
