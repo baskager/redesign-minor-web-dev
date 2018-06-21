@@ -142,9 +142,10 @@
     box-shadow: 0 7px 28px rgba(61, 25, 91, 0.25);
 }
 
-.button-pulse:hover,
-.button-pulse:focus {
+.btn.button-pulse:hover,
+.btn.button-pulse:focus {
     animation: button-pulse infinite 1.5s ease-in-out;
+    background: $primary-color;
 }
 
 @keyframes button-pulse {

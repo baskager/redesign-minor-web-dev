@@ -46,6 +46,7 @@
       transition: all .3s ease;
       a {
         outline: 0;
+        display: block;
       }
       &:focus-within,
       &:hover {
@@ -53,6 +54,7 @@
       }
       img {
         max-width: 100%;
+        display: block;
       }
     }
   }
