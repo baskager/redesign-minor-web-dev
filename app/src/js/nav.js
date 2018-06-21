@@ -6,11 +6,12 @@
     // Set core functionality states. The hotKeyState will be saved in a cookie.
     // Key value of objects
     cmdState: false,
-    keyNavState: false,
+    keyNavState: true,
 
     init: function() {
       let self = this;
 
+      // Check the state of the hotkeys that is stored in localstorage.
       if (!storage.get("hotKeysEnabled")) {
         storage.store("hotKeysEnabled", this.keyNavState);
       } else {
@@ -18,10 +19,18 @@
       }
 
       // Check if the CMD state is used, since it has some OS functionality it should be blocked.
-      window.addEventListener("keydown", function(e) {
+      window.addEventListener("keydown", onkeydown);
+      window.addEventListener("keyup", onkeyup);
+
+      // Set base state for the toggle indicator
+      self.toggleIndicators();
+
+      function onkeydown(e) {
+        // checken op metakey
         if (e.keyCode === 91) {
           self.cmdState = true;
         }
+
         if ((e.altKey || e.keyCode === 18) && (e.ctrlKey || e.keyCode === 17)) {
           // Set the opposite of what the current keyNavState is
           self.keyNavState = !self.keyNavState;
@@ -30,17 +39,15 @@
           // Retoggle the state of the indicator
           self.toggleIndicators();
         }
-        keyNavKeys.init(e);
-      });
 
-      window.addEventListener("keyup", function(e) {
+        keyNavKeys.init(e);
+      }
+
+      function onkeyup(e) {
         if (e.keyCode === 91) {
           self.cmdState = false;
         }
-      });
-
-      // Set base state for the toggle indicator
-      self.toggleIndicators();
+      }
     },
 
     toggleIndicators: function() {
@@ -80,32 +87,45 @@
   // Set buttons for the navigation with keys
   const keyNavKeys = {
     init: function keyNavKeys(e) {
-      if (!keyNav.cmdState && keyNav.keyNavState) {
-        // Set key to 1
-        if (e.keyCode === 49) {
-          window.location.href = "/";
-        }
-        // Set key to 2
-        else if (e.keyCode === 50) {
-          window.location.href = "/program";
-        }
-        // Set key to 3
-        else if (e.keyCode === 51) {
-          window.location.href = "/partners";
-        }
-        // Set key to 4
-        else if (e.keyCode === 52) {
-          window.location.href = "/student-work";
-        }
-        // Set key to 5
-        else if (e.keyCode === 53) {
-          window.location.href = "/contact";
-        }
-        // Set key to 6
-        else if (e.keyCode === 54) {
-          window.location.href = "/signup";
-        }
+      var paths = {
+        49: "/",
+        50: "/program",
+        51: "/partners",
+        52: "/student-work",
+        53: "/contact",
+        54: "/signup"
+      };
+
+      if (!keyNav.cmdState && keyNav.keyNavState && e.keyCode in paths) {
+        window.location.href = paths[e.keyCode];
       }
+
+      // if (!keyNav.cmdState && keyNav.keyNavState) {
+      //   // Set key to 1
+      //   if (e.keyCode === 49) {
+      //     window.location.href = "/";
+      //   }
+      //   // Set key to 2
+      //   else if (e.keyCode === 50) {
+      //     window.location.href = "/program";
+      //   }
+      //   // Set key to 3
+      //   else if (e.keyCode === 51) {
+      //     window.location.href = "/partners";
+      //   }
+      //   // Set key to 4
+      //   else if (e.keyCode === 52) {
+      //     window.location.href = "/student-work";
+      //   }
+      //   // Set key to 5
+      //   else if (e.keyCode === 53) {
+      //     window.location.href = "/contact";
+      //   }
+      //   // Set key to 6
+      //   else if (e.keyCode === 54) {
+      //     window.location.href = "/signup";
+      //   }
+      // }
     }
   };
 
