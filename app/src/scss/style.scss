@@ -18,7 +18,16 @@
 @import "./components/testimonial";
 @import "./components/timeline";
 @import "./components/homepage";
+@import "./components/carousel";
 @import "./components/course";
+@import "./components/signup";
+@import "./components/animations";
 @import "./components/courses";
 @import "./components/contact";
 @import "./components/signup";
+@import "./components/presentation";
+
+// TODO remove this filty hotfix
+:focus {
+  box-shadow: 0 0px 18px 5px rgba(106, 0, 245, 0.2);
+}
