@@ -10,7 +10,6 @@
 
     init: function() {
       let self = this;
-
       // Check the state of the hotkeys that is stored in localstorage.
       if (!storage.get("hotKeysEnabled")) {
         storage.store("hotKeysEnabled", this.keyNavState);
@@ -18,51 +17,25 @@
         this.keyNavState = storage.get("hotKeysEnabled");
       }
 
-      // Check if the CMD state is used, since it has some OS functionality it should be blocked.
-      window.addEventListener("keydown", onkeydown);
-      window.addEventListener("keyup", onkeyup);
+      eventListeners.onKeyUp();
+      eventListeners.onKeyDown();
 
       // Set base state for the toggle indicator
       self.toggleIndicators();
-
-      function onkeydown(e) {
-        // checken op metakey
-        if (e.keyCode === 91) {
-          self.cmdState = true;
-        }
-
-        if ((e.altKey || e.keyCode === 18) && (e.ctrlKey || e.keyCode === 17)) {
-          // Set the opposite of what the current keyNavState is
-          self.keyNavState = !self.keyNavState;
-          storage.store("hotKeysEnabled", self.keyNavState);
-
-          // Retoggle the state of the indicator
-          self.toggleIndicators();
-        }
-
-        keyNavKeys.init(e);
-      }
-
-      function onkeyup(e) {
-        if (e.keyCode === 91) {
-          self.cmdState = false;
-        }
-      }
     },
 
     toggleIndicators: function() {
-      let self = this;
-      let keyNavIndicator = document.getElementById("keynav");
+      let mainIndicator = document.getElementById("keynav");
       let menuIndicators = document.querySelectorAll(
         ".main-nav div > ul a span"
       );
       if (this.keyNavState) {
-        keyNavIndicator.classList.add("active");
+        mainIndicator.classList.add("active");
         menuIndicators.forEach(function(indicator) {
           indicator.classList.add("active");
         });
       } else {
-        keyNavIndicator.classList.remove("active");
+        mainIndicator.classList.remove("active");
         menuIndicators.forEach(function(indicator) {
           indicator.removeAttribute("class");
         });
@@ -99,33 +72,6 @@
       if (!keyNav.cmdState && keyNav.keyNavState && e.keyCode in paths) {
         window.location.href = paths[e.keyCode];
       }
-
-      // if (!keyNav.cmdState && keyNav.keyNavState) {
-      //   // Set key to 1
-      //   if (e.keyCode === 49) {
-      //     window.location.href = "/";
-      //   }
-      //   // Set key to 2
-      //   else if (e.keyCode === 50) {
-      //     window.location.href = "/program";
-      //   }
-      //   // Set key to 3
-      //   else if (e.keyCode === 51) {
-      //     window.location.href = "/partners";
-      //   }
-      //   // Set key to 4
-      //   else if (e.keyCode === 52) {
-      //     window.location.href = "/student-work";
-      //   }
-      //   // Set key to 5
-      //   else if (e.keyCode === 53) {
-      //     window.location.href = "/contact";
-      //   }
-      //   // Set key to 6
-      //   else if (e.keyCode === 54) {
-      //     window.location.href = "/signup";
-      //   }
-      // }
     }
   };
 
@@ -152,17 +98,44 @@
     enableOnInput: function() {
       // Enable keyCode navigation when input field loses focus
       getInput.forEach(function(el) {
-        el.addEventListener("focusout", function(el) {
-          keyNavState = true;
+        keyNavState = true;
 
-          // Remove 'inactive' styling on the rectangles
-          getSpan.forEach(function(span) {
-            span.removeAttribute("class");
-          });
+        // Remove 'inactive' styling on the rectangles
+        getSpan.forEach(function(span) {
+          span.removeAttribute("class");
         });
       });
     }
   };
 
+  const eventListeners = {
+    onKeyDown: function(e) {
+      window.addEventListener("keydown", function(e) {
+        // checken op metakey
+        if (e.keyCode === 91) {
+          self.cmdState = true;
+        }
+
+        if ((e.altKey || e.keyCode === 18) && (e.ctrlKey || e.keyCode === 17)) {
+          // Set the opposite of what the current keyNavState is
+          self.keyNavState = !self.keyNavState;
+          storage.store("hotKeysEnabled", self.keyNavState);
+
+          // Retoggle the state of the indicator
+          self.toggleIndicators();
+        }
+
+        keyNavKeys.init(e);
+      });
+    },
+
+    onKeyUp: function(e) {
+      window.addEventListener("keyup", function(e) {
+        if (e.keyCode === 91) {
+          self.cmdState = false;
+        }
+      });
+    }
+  };
   keyNav.init();
 })();
