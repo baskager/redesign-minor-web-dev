@@ -46,7 +46,7 @@
     & > li {
       margin-left: $margin-24;
       & > a {
-        height: $padding-72;
+        padding: 1.5rem 0;
         display: flex;
         align-items: center;
         border-bottom: 2px solid transparent;
@@ -65,6 +65,14 @@
           border-color: $secondary-color;
         }
       }
+      #menu-item-6 {
+        padding: calc(1.5rem + 1px) 1rem;
+      }
+
+      #menu-item-6:hover {
+        border-bottom: 0;
+      }
+
       span {
         border: 1px $primary-color solid;
         font-size: 0.75rem;
