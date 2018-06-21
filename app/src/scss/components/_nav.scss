@@ -50,7 +50,7 @@
     & > li {
       margin-left: $margin-24;
       & > a {
-        height: $padding-72;
+        padding: $padding-24 0;
         display: flex;
         align-items: center;
         border-bottom: 2px solid transparent;
@@ -69,6 +69,15 @@
           border-color: $secondary-color;
         }
       }
+
+      #menu-item-6 {
+        padding: calc(1.5rem + 1px) 1rem;
+      }
+
+      #menu-item-6:hover {
+        border-bottom: 0;
+      }
+
       span {
         border: 1px $primary-color solid;
         font-size: 0.75rem;
@@ -98,13 +107,20 @@
     position: absolute;
     left: 0;
     right: 0;
+    bottom: 0;
+    height: 0;
+    top: 74px;
     margin-top: 0px;
     background-color: $secondary-color;
-    padding: $padding-16 0;
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    box-shadow: $card-shadow;
+    padding: 0;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    * {
+      display: none;
+    }
     div div {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
@@ -130,9 +146,13 @@
   }
   li:focus-within .submenu,
   li:hover .submenu {
-    display: block;
-    visibility: visible;
-    opacity: 1;
+    height: 250px;
+    * {
+      display: block;
+    }
+    div div {
+      display: grid;
+    }
   }
   li {
     list-style: none;
@@ -162,6 +182,7 @@
   top: 6rem;
   font-size: 0.75rem;
   transition: background-color 0.3s ease-in-out;
+  z-index: -1;
   &.active {
     background-color: rgba($secondary-color, 1);
   }
