@@ -107,41 +107,44 @@
           self.cmdState = false;
         }
       });
-    }
+    },
+
+    inputFocus: function() {
+      input.addEventListener("focus", function(input) {
+        keyNav.keyNavState = false;
+
+        // Add 'inactive' styling to the rectangles
+        getSpan.forEach(function(span) {
+          span.classList.add("inactive");
+        });
+      });
+    },
+
+    inputLeave: function() {}
   };
 
-  // // Add functionality to the keys
-  // const toggleOnInput = {
-  //   // Get all rectangles with numbers next to the menu items
-  //   getSpan: document.querySelectorAll(".main-nav div > ul a span"),
+  // Add functionality to the keys
+  const toggleOnInput = {
+    // Get all rectangles with numbers next to the menu items
+    getSpan: document.querySelectorAll(".main-nav div > ul a span"),
 
-  //   disableOnInput: function () {
-  //     // Disable keyCode navigation when an input field has focus
-  //     getInput.forEach(function (input) {
-  //       input.addEventListener("focus", function (input) {
-  //         console.log("hai");
-  //         keyNavState = false;
+    disableOnInput: function() {
+      // Disable keyCode navigation when an input field has focus
+      getInput.forEach(function(input) {});
+    },
 
-  //         // Add 'inactive' styling to the rectangles
-  //         getSpan.forEach(function (span) {
-  //           span.classList.add("inactive");
-  //         });
-  //       });
-  //     });
-  //   },
+    enableOnInput: function() {
+      // Enable keyCode navigation when input field loses focus
+      getInput.forEach(function(el) {
+        keyNav.keyNavState = true;
 
-  //   enableOnInput: function () {
-  //     // Enable keyCode navigation when input field loses focus
-  //     getInput.forEach(function (el) {
-  //       keyNavState = true;
-
-  //       // Remove 'inactive' styling on the rectangles
-  //       getSpan.forEach(function (span) {
-  //         span.removeAttribute("class");
-  //       });
-  //     });
-  //   }
-  // };
+        // Remove 'inactive' styling on the rectangles
+        getSpan.forEach(function(span) {
+          span.removeAttribute("class");
+        });
+      });
+    }
+  };
 
   keyNav.init();
 })();

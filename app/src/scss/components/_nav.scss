@@ -72,20 +72,25 @@
       span {
         border: 1px $primary-color solid;
         font-size: 0.75rem;
-        margin-right: 0.5rem;
+        margin-right: 0;
         align-items: center;
         justify-content: center;
         border-radius: 4px;
-        width: 1.25rem;
+        width: 0;
         height: 1.25rem;
-        display: none;
-
-        @include transition;
+        opacity: 0;
+        display: inline-flex;
+        transition: width 0.15s 0.15s ease-in-out,
+          margin 0.15s 0.15s ease-in-out, opacity 0.3s ease-in-out;
         &.inactive {
           opacity: 0.4;
         }
         &.active {
-          display: inline-flex;
+          opacity: 1;
+          width: 1.25rem;
+          margin-right: $margin-8;
+          transition: width 0.15s 0.15s ease-in-out,
+            margin 0.15s 0.15s ease-in-out, opacity 0.15s 0.15s ease-in-out;
         }
       }
     }
