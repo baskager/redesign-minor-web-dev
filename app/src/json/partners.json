@@ -1,0 +1,23 @@
+{
+  "title": "Our Partners",
+  "heading": "Our Partners",
+  "description":
+    "De minor heeft verschillende partners. Dit zijn vooral bedrijven die een project hebben voor de meesterproef of voor tijdens de minor. Elke week is er een “<b>Weekly Nerd</b>🤓” waarbij een bedrijf of persoon gaat vertellen over een nerdy onderwerp.",
+  "linkText": "View project",
+  "members": [
+    {
+      "heading": "Openbare Bibliotheek Amsterdam",
+      "subHeading":
+        "The OBA comprises a Central Library and 25 branch libraries.",
+      "avatarURL": "/img/partners/oba.jpg",
+      "gitHubURL": "https://www.oba.nl/"
+    },
+    {
+      "heading": "De Ceuvel",
+      "subHeading":
+        "De Ceuvel is a city playground for innovation and creativity.",
+      "avatarURL": "/img/partners/deceuvel.jpg",
+      "gitHubURL": "https://www.oba.nl/"
+    }
+  ]
+}
