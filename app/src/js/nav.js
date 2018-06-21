@@ -6,12 +6,11 @@
     // Set core functionality states. The hotKeyState will be saved in a cookie.
     // Key value of objects
     cmdState: false,
-    keyNavState: true,
+    keyNavState: false,
 
     init: function() {
       keyNavToggle.toggleState();
       keyNavToggle.toggleIndicators();
-      keyNavToggle.toggleOnInput();
       eventListeners.onKeyUp();
       eventListeners.onKeyDown();
     }
@@ -20,6 +19,7 @@
   const keyNavToggle = {
     mainIndicator: document.getElementById("keynav"),
     menuIndicators: document.querySelectorAll(".main-nav div > ul a span"),
+    inputs: document.querySelectorAll("input, textarea"),
 
     toggleState: function(e) {
       // Check the state of the hotkeys that is stored in localstorage.
@@ -36,24 +36,21 @@
         this.menuIndicators.forEach(function(indicator) {
           indicator.classList.add("active");
         });
+        // this.toggleOnInput(e);
       } else {
         this.mainIndicator.classList.remove("active");
         this.menuIndicators.forEach(function(indicator) {
           indicator.removeAttribute("class");
         });
       }
-    },
-
-    toggleOnInput: function(e) {
-      if (keyNav.keyNavState) {
-        let getInput = document.querySelectorAll("input, textarea");
-
-        getInput.forEach(function(e) {
-          eventListeners.inputFocus(e);
-          eventListeners.inputLeave(e);
-        });
-      }
     }
+
+    // toggleOnInput: function(e) {
+    //   this.inputs.forEach(function(input) {
+    //     eventListeners.inputFocus(input);
+    //     eventListeners.inputLeave(input);
+    //   });
+    // }
   };
 
   const storage = {
@@ -104,6 +101,7 @@
           // Retoggle the state of the indicator
           keyNavToggle.toggleState();
           keyNavToggle.toggleIndicators();
+          // keyNavToggle.toggleOnInput();
         }
 
         keyNavKeys.keyNavKeys(e);
