@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "-",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "browserify": "browserify src/js/app.js -o static/js/bundle.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/baskager/redesign-minor-web-dev.git"
@@ -15,7 +17,7 @@
   },
   "homepage": "https://github.com/baskager/redesign-minor-web-dev#readme",
   "dependencies": {
-    "babel-core": "^6.26.3",
+    "debug": "^3.1.0",
     "express": "^4.16.3",
     "gulp-babel": "^7.0.1",
     "gulp-clean-css": "^3.9.4",
@@ -23,14 +25,25 @@
     "massive": "^5.0.0",
     "nunjucks": "^3.1.3",
     "nunjucks-include-with": "^1.0.2",
-    "pg-monitor": "^1.0.0"
+    "pg-monitor": "^1.0.0",
+    "subtitles-parser": "0.0.2"
   },
   "devDependencies": {
+    "browserify": "^16.2.2",
+    "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-sequence": "^1.0.0",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "gulplog": "^1.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   }
 }

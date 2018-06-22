@@ -1,5 +1,100 @@
-.student-work-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
-  grid-gap: 2em 1em;
+.student-work {
+  .student-work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
+    grid-gap: 2em 1em;
+  }
+
+  .course {
+    padding: $padding-48 0;
+  }
+
+  h2 {
+    margin: 0 0 2rem 0;
+  }
+
+  .btn-primary {
+    display: block;
+    margin: auto;
+    max-width: rem(300);
+    padding: $padding-24;
+    text-align: center;
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+  .btn {
+    max-width: 20rem;
+    margin-top: 2rem;
+  }
+}
+
+.student-work-header {
+  select {
+    font-size: inherit;
+    font-weight: inherit;
+    outline: none;
+    border: none;
+    border-bottom: $primary-color rem(8) solid;
+    border-radius: 0;
+    color: $primary-color;
+    width: auto;
+    display: inline-block;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    transition: all .3s ease;
+    &:valid {
+      background-color: #fff;
+    }
+    &:hover,
+    &:focus {
+      color: $secondary-color;
+      border-color: $secondary-color;
+      transform: translateX(40px);
+    }
+  }
+
+  input:valid {
+    background-color: #fff;
+  }
+
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+  }
+
+  input[type="radio"] + label,
+  input[type="checkbox"] + label {
+    display: inline-block;
+    padding: $padding-8 $padding-24;
+    border-radius: rem(100);
+    border: 1px $primary-color solid;
+    color: $primary-color;
+    margin-right: $margin-16;
+    height: auto;
+    transition: all .3s ease;
+
+    @include transitionCubic;
+  }
+
+  input[type="radio"]:focus + label {
+    transform: scale(1.15);
+  }
+
+  input[type="radio"]:checked + label {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  input,
+  select,
+  label,
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  button {
+    display: none;
+  }
 }
