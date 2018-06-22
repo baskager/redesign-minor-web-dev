@@ -1,4 +1,8 @@
 .main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -46,7 +50,7 @@
     & > li {
       margin-left: $margin-24;
       & > a {
-        height: $padding-72;
+        padding: $padding-24 0;
         display: flex;
         align-items: center;
         border-bottom: 2px solid transparent;
@@ -65,38 +69,34 @@
           border-color: $secondary-color;
         }
       }
+
+      #menu-item-6 {
+        padding: calc(1.5rem + 1px) 1rem;
+      }
+
+      #menu-item-6:hover {
+        border-bottom: 0;
+      }
+
       span {
         border: 1px $primary-color solid;
         font-size: 0.75rem;
-        margin-right: 0.5rem;
-        display: none;
+        margin-right: 0;
         align-items: center;
         justify-content: center;
         border-radius: 4px;
-        width: 1.25rem;
+        width: 0;
         height: 1.25rem;
-        @include transition;
-        &.inactive {
-          opacity: 0.4;
-        }
-        @include min-desktop {
-          display: inline-flex;
-        }
-      }
-      &:first-child {
-        margin: 0;
-        align-items: center;
+        opacity: 0;
         display: inline-flex;
-        border-bottom: 2px solid transparent;
-        span {
-          opacity: 0.4;
-          width: auto;
-          padding: 0 $padding-8;
-          color: $primary-color;
-          margin: 0;
-          &.active {
-            opacity: 1;
-          }
+        transition: width 0.15s 0.15s ease-in-out,
+          margin 0.15s 0.15s ease-in-out, opacity 0.3s ease-in-out;
+        &.active {
+          opacity: 1;
+          width: 1.25rem;
+          margin-right: $margin-8;
+          transition: width 0.15s 0.15s ease-in-out,
+            margin 0.15s 0.15s ease-in-out, opacity 0.15s 0.15s ease-in-out;
         }
       }
     }
@@ -107,14 +107,20 @@
     position: absolute;
     left: 0;
     right: 0;
+    bottom: 0;
+    height: 0;
+    top: 74px;
     margin-top: 0px;
     background-color: $secondary-color;
-    padding: $padding-16 0;
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    box-shadow: $card-shadow;
-    z-index: 1;
+    padding: 0;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    * {
+      display: none;
+    }
     div div {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
@@ -140,51 +146,13 @@
   }
   li:focus-within .submenu,
   li:hover .submenu {
-    display: block;
-    visibility: visible;
-    opacity: 1;
-  }
-
-  // submenu styling
-  .submenu {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-top: 0px;
-    background-color: $secondary-color;
-    padding: $padding-16 0;
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    box-shadow: $card-shadow;
+    height: 250px;
+    * {
+      display: block;
+    }
     div div {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
-      grid-gap: $margin-16;
     }
-    h2 {
-      text-transform: uppercase;
-      color: #fff;
-      font-size: $body-font-size;
-    }
-    p {
-      color: #fff;
-      margin-top: 0;
-    }
-    a {
-      display: block;
-      padding: $padding-8 0;
-      color: lighten($primary-color, 35%);
-      &:hover {
-        color: lighten($primary-color, 25%);
-      }
-    }
-  }
-  li:focus-within .submenu,
-  li:hover .submenu {
-    display: block;
-    visibility: visible;
-    opacity: 1;
   }
   li {
     list-style: none;
@@ -202,5 +170,21 @@
     span {
       border-color: #fff;
     }
+  }
+}
+
+.keynav {
+  padding: $padding-8 $padding-16;
+  border-radius: rem(10);
+  background-color: rgba($secondary-color, 0.4);
+  color: #fff;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.75rem;
+  transition: background-color 0.3s ease-in-out;
+  z-index: -1;
+  &.active {
+    background-color: rgba($secondary-color, 1);
   }
 }
