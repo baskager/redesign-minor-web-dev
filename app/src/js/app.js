@@ -1,21 +1,22 @@
-require("./intersection-observer.js");
-require("./animation.js");
-require("./carousel");
-const spatialNavigation = require("./spatial-navigation");
-const focusOnScroll = require("./focus-on-scroll");
-const Presentation = require("./presentation");
-const Subtitles = require("./subtitles");
-const nav = require("./nav");
+require('./the-wow-header.js');
+require('./intersection-observer.js');
+require('./animation.js');
+require('./carousel');
+const spatialNavigation = require('./spatial-navigation');
+const focusOnScroll = require('./focus-on-scroll');
+const Presentation = require('./presentation');
+const Subtitles = require('./subtitles');
+const nav = require('./nav');
 
-if (document.querySelector(".presentation")) {
+if (document.querySelector('.presentation')) {
   const fpSubtitles = new Subtitles(
-    document.querySelector(".subtitle"),
+    document.querySelector('.subtitle'),
     subs,
-    document.querySelector(".presentation .media")
+    document.querySelector('.presentation .media')
   );
 
   const fpPresentation = new Presentation(
-    document.querySelector(".presentation"),
+    document.querySelector('.presentation'),
     slides,
     fpSubtitles
   );
@@ -24,30 +25,30 @@ if (document.querySelector(".presentation")) {
   fpSubtitles.init();
 }
 
-if (document.querySelector(".focusable")) {
+if (document.querySelector('.focusable')) {
   const firstPeriode = document.querySelector(
-    ".timeline-wrapper:first-of-type > section"
+    '.timeline-wrapper:first-of-type > section'
   );
   if (firstPeriode) {
     const firstPeriodeArticles = firstPeriode.querySelectorAll(
-      "article:nth-of-type(-n+3) a"
+      'article:nth-of-type(-n+3) a'
     );
 
     firstPeriodeArticles.forEach(article => {
-      article.setAttribute("data-sn-up", "#");
+      article.setAttribute('data-sn-up', '#');
     });
   }
 
   SpatialNavigation.init();
-  SpatialNavigation.add({ selector: ".focusable" });
+  SpatialNavigation.add({ selector: '.focusable' });
   SpatialNavigation.makeFocusable();
 
-  document.querySelectorAll(".focusable").forEach(item => {
-    item.addEventListener("focus", item => {
+  document.querySelectorAll('.focusable').forEach(item => {
+    item.addEventListener('focus', item => {
       item.target.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center"
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'center'
       });
     });
   });

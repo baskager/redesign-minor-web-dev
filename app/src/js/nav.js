@@ -1,187 +1,145 @@
 (function() {
   "use strict";
 
-  // Set buttons for the navigation with keys
-  const keyNav = function keyNav(e) {
-    // Get visual modifier element "alt +"
-    const getModSpan = document.querySelector(".main-nav li > span");
+  // Main function. Here we need to toggle the quicknavigation
+  const keyNav = {
+    // Set core functionality states. The hotKeyState will be saved in a cookie.
+    // Key value of objects
+    cmdState: false,
+    keyNavState: false,
 
-    // Check if alt is pressed before going further
-    if (e.altKey || e.keyCode === 18) {
-      // Add active class on keyDown
-      getModSpan.classList.add("active");
-
-      // Set key to 1
-      if (e.keyCode === 49) {
-        window.location.href = "/";
-      }
-      // Set key to 2
-      else if (e.keyCode === 50) {
-        window.location.href = "/program";
-      }
-      // Set key to 3
-      else if (e.keyCode === 51) {
-        window.location.href = "/partners";
-      }
-      // Set key to 4
-      else if (e.keyCode === 52) {
-        window.location.href = "/student-work";
-      }
-      // Set key to 5
-      else if (e.keyCode === 53) {
-        window.location.href = "/contact";
-      }
-      // Set key to 6
-      else if (e.keyCode === 54) {
-        window.location.href = "/signup";
-      }
-    } else {
-      getModSpan.removeAttribute("class");
-    }
-    // Remove the whole active class when alt key is released
-    if (e.altKey || e.keyCode === 18) {
-      document.addEventListener("keyup", function(e) {
-        getModSpan.removeAttribute("class");
-      });
+    init: function() {
+      keyNavToggle.toggleState();
+      keyNavToggle.toggleIndicators();
+      eventListeners.onKeyUp();
+      eventListeners.onKeyDown();
     }
   };
 
-  // Add functionality to the keys
-  const keyNavSwitch = function() {
-    let keyNavState = true;
-    // Get all rectangles with numbers next to the menu items
-    let getSpan = document.querySelectorAll(".main-nav div > ul a span");
-    // Get all input elements
-    let getInput = document.querySelectorAll("input, textarea");
+  const keyNavToggle = {
+    mainIndicator: document.getElementById("keynav"),
+    menuIndicators: document.querySelectorAll(".main-nav div > ul a span"),
+    inputs: document.querySelectorAll("input, textarea"),
 
-    // Add eventlistener to all keys
-    document.addEventListener("keydown", function(e) {
-      if (keyNavState === true) {
-        keyNav(e);
+    toggleState: function(e) {
+      // Check the state of the hotkeys that is stored in localstorage.
+      if (!storage.get("hotKeysEnabled")) {
+        storage.store("hotKeysEnabled", keyNav.keyNavState);
+      } else {
+        keyNav.keyNavState = storage.get("hotKeysEnabled");
       }
-    });
+    },
 
-    // Disable keyCode navigation when an input field has focus
-    getInput.forEach(function(input) {
-      input.addEventListener("focus", function(input) {
-        keyNavState = false;
+    toggleIndicators: function(e) {
+      if (keyNav.keyNavState) {
+        this.mainIndicator.classList.add("active");
+        this.menuIndicators.forEach(function(indicator) {
+          indicator.classList.add("active");
+        });
+        // this.toggleOnInput(e);
+      } else {
+        this.mainIndicator.classList.remove("active");
+        this.menuIndicators.forEach(function(indicator) {
+          indicator.removeAttribute("class");
+        });
+      }
+    }
+
+    // toggleOnInput: function(e) {
+    //   this.inputs.forEach(function(input) {
+    //     eventListeners.inputFocus(input);
+    //     eventListeners.inputLeave(input);
+    //   });
+    // }
+  };
+
+  const storage = {
+    // Store data in localstorage
+    store: function(key, data) {
+      // create string from value so we can convert it back to js later.
+      localStorage.setItem(key, JSON.stringify(data));
+    },
+
+    // Getting data from the localstorage
+    get: function(key) {
+      let data = localStorage.getItem(key);
+      return JSON.parse(data);
+    }
+  };
+
+  // Set buttons for the navigation with keys
+  const keyNavKeys = {
+    keyNavKeys: function(e) {
+      var paths = {
+        49: "/",
+        50: "/program",
+        51: "/partners",
+        52: "/student-work",
+        53: "/contact",
+        54: "/signup"
+      };
+
+      if (!keyNav.cmdState && keyNav.keyNavState && e.keyCode in paths) {
+        window.location.href = paths[e.keyCode];
+      }
+    }
+  };
+
+  const eventListeners = {
+    onKeyDown: function(e) {
+      window.addEventListener("keydown", function(e) {
+        // checken op metakey
+        if (e.keyCode === 91) {
+          keyNav.cmdState = true;
+        }
+
+        if ((e.altKey || e.keyCode === 18) && (e.ctrlKey || e.keyCode === 17)) {
+          // Set the opposite of what the current keyNavState is
+          keyNav.keyNavState = !keyNav.keyNavState;
+          storage.store("hotKeysEnabled", keyNav.keyNavState);
+
+          // Retoggle the state of the indicator
+          keyNavToggle.toggleState();
+          keyNavToggle.toggleIndicators();
+          // keyNavToggle.toggleOnInput();
+        }
+
+        keyNavKeys.keyNavKeys(e);
+      });
+    },
+
+    onKeyUp: function(e) {
+      window.addEventListener("keyup", function(e) {
+        if (e.keyCode === 91) {
+          self.cmdState = false;
+        }
+      });
+    },
+
+    inputFocus: function(e) {
+      e.addEventListener("focus", function(e) {
+        console.log("focus");
+        keyNav.keyNavState = false;
 
         // Add 'inactive' styling to the rectangles
-        getSpan.forEach(function(span) {
-          span.classList.add("inactive");
+        keyNavToggle.menuIndicators.forEach(function(indicator) {
+          indicator.classList.add("inactive");
         });
       });
-    });
+    },
 
-    // Enable keyCode navigation when input field loses focus
-    getInput.forEach(function(el) {
-      el.addEventListener("focusout", function(el) {
-        keyNavState = true;
+    inputLeave: function(e) {
+      e.addEventListener("focusout", function(e) {
+        console.log("focusout");
+        keyNav.keyNavState = true;
 
-        // Remove 'inactive' styling on the rectangles
-        getSpan.forEach(function(span) {
-          span.removeAttribute("class");
+        // Add 'inactive' styling to the rectangles
+        keyNavToggle.menuIndicators.forEach(function(indicator) {
+          indicator.classList.remove("inactive");
         });
       });
-    });
+    }
   };
 
-  // LETS GO KEYNAVSWITCHERINO
-  keyNavSwitch();
+  keyNav.init();
 })();
-
-// (function() {
-//   "use strict";
-
-//   // Set buttons for the navigation with keys
-//   const keyNav = function keyNav(e) {
-//     // Get visual modifier element "alt +"
-//     const getModSpan = document.querySelector(".main-nav li > span");
-
-//     // Check if alt is pressed before going further
-//     if (e.altKey || e.keyCode === 18) {
-//       // Add active class on keyDown
-//       getModSpan.classList.add("active");
-
-//       // Set key to 1
-//       if (e.keyCode === 48) {
-//         document.getElementById("main").scrollIntoView();
-//       }
-//       // Set key to 1
-//       if (e.keyCode === 49) {
-//         document.getElementById("menu-item-1").focus();
-//       }
-//       // Set key to 2
-//       else if (e.keyCode === 50) {
-//         document.getElementById("menu-item-2").focus();
-//       }
-//       // Set key to 3
-//       else if (e.keyCode === 51) {
-//         document.getElementById("menu-item-3").focus();
-//       }
-//       // Set key to 4
-//       else if (e.keyCode === 52) {
-//         document.getElementById("menu-item-4").focus();
-//       }
-//       // Set key to 5
-//       else if (e.keyCode === 53) {
-//         document.getElementById("menu-item-5").focus();
-//       }
-//       // Set key to 6
-//       else if (e.keyCode === 54) {
-//         document.getElementById("menu-item-6").focus();
-//       }
-//     } else {
-//       getModSpan.removeAttribute("class");
-//     }
-//     // Remove the whole active class when alt key is released
-//     if (e.altKey || e.keyCode === 18) {
-//       document.addEventListener("keyup", function(e) {
-//         getModSpan.removeAttribute("class");
-//       });
-//     }
-//   };
-
-//   // Add functionality to the keys
-//   const keyNavSwitch = function() {
-//     let keyNavState = true;
-//     // Get all rectangles with numbers next to the menu items
-//     let getSpan = document.querySelectorAll(".main-nav div > ul a span");
-//     // Get all input elements
-//     let getInput = document.querySelectorAll("input, textarea");
-
-//     // Add eventlistener to all keys
-//     document.addEventListener("keydown", function(e) {
-//       if (keyNavState === true) {
-//         keyNav(e);
-//       }
-//     });
-
-//     // Disable keyCode navigation when an input field has focus
-//     getInput.forEach(function(input) {
-//       input.addEventListener("focus", function(input) {
-//         keyNavState = false;
-
-//         // Add 'inactive' styling to the rectangles
-//         getSpan.forEach(function(span) {
-//           span.classList.add("inactive");
-//         });
-//       });
-//     });
-
-//     // Enable keyCode navigation when input field loses focus
-//     getInput.forEach(function(el) {
-//       el.addEventListener("focusout", function(el) {
-//         keyNavState = true;
-
-//         // Remove 'inactive' styling on the rectangles
-//         getSpan.forEach(function(span) {
-//           span.removeAttribute("class");
-//         });
-//       });
-//     });
-//   };
-
-//   // LETS GO KEYNAVSWITCHERINO
-//   keyNavSwitch();
-// })();

@@ -99,7 +99,7 @@
                 'tab' and 'shift tab' will work normally on the first and last element of the carousel
                 Effectively releasing the keys from the carousel elements when it's needed
               */
-            if (e.which == 9) {
+            if (e.which == 9 || e.which == 32) {
               if (e.shiftKey && counter.isMin() == false) {
                 // On keydown for the 'shift' key in combination with the 'tab' key
                 SpatialNavigation.move("left");
