@@ -1,4 +1,4 @@
-@import "./components/variables";
+@import './components/variables';
 
 h1,
 h2,
@@ -65,7 +65,7 @@ blockquote {
   color: $blockquote-text-color;
   margin: 0;
   padding: 1rem 0.5rem;
-  quotes: "\201C" "\201D" "\2018" "\2019";
+  quotes: '\201C' '\201D' '\2018' '\2019';
 }
 
 blockquote:before {

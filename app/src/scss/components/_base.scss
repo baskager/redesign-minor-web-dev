@@ -34,17 +34,28 @@ body > header {
 
   h1 {
     max-width: 50em;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
   }
 
   p {
     font-size: 1.8em;
     line-height: 1.4em;
     margin: 0;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-weight: normal;
     max-width: 54rem;
     margin-bottom: 1rem;
+  }
+
+  &:not(.hero) {
+    h1 span {
+      -webkit-box-decoration-break: clone;
+      background-color: $secondary-color;
+      box-decoration-break: clone;
+      display: inline;
+      padding: $padding-24;
+      color: white;
+    }
   }
 }
 

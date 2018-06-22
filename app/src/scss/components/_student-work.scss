@@ -31,18 +31,19 @@
 
 .student-work-header {
   select {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    border-bottom: $primary-color rem(8) solid;
+    border-radius: 0;
+    border: none;
+    color: $primary-color;
+    display: inline-block;
     font-size: inherit;
     font-weight: inherit;
     outline: none;
-    border: none;
-    border-bottom: $primary-color rem(8) solid;
-    border-radius: 0;
-    color: $primary-color;
+    transform: translateX(40px);
+    transition: all 0.3s ease;
     width: auto;
-    display: inline-block;
-    -webkit-appearance: none;
-    -webkit-border-radius: 0px;
-    transition: all .3s ease;
     &:valid {
       background-color: #fff;
     }
@@ -58,13 +59,13 @@
     background-color: #fff;
   }
 
-  input[type="radio"] {
+  input[type='radio'] {
     position: absolute;
     opacity: 0;
   }
 
-  input[type="radio"] + label,
-  input[type="checkbox"] + label {
+  input[type='radio'] + label,
+  input[type='checkbox'] + label {
     display: inline-block;
     padding: $padding-8 $padding-24;
     border-radius: rem(100);
@@ -72,16 +73,16 @@
     color: $primary-color;
     margin-right: $margin-16;
     height: auto;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 
     @include transitionCubic;
   }
 
-  input[type="radio"]:focus + label {
+  input[type='radio']:focus + label {
     transform: scale(1.15);
   }
 
-  input[type="radio"]:checked + label {
+  input[type='radio']:checked + label {
     background-color: $primary-color;
     color: #fff;
   }
