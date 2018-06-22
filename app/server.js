@@ -85,12 +85,12 @@ app.get("/signup", function(req, res) {
 
 app.get("/prototypes/slider", function(req, res) {
   res.render("prototypes/slider.html", {
-    data: signupData
+    data: null
   });
 });
 app.get("/prototypes/slider-with-buttons", function(req, res) {
   res.render("prototypes/slider-buttons.html", {
-    data: signupData
+    data: null
   });
 });
 app.listen(3000, () => console.log("Example app listening on port 3000!"));
