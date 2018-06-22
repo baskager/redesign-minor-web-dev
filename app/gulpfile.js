@@ -2,15 +2,15 @@ const browserify = require("browserify");
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const clean = require("gulp-clean");
-const babel = require("gulp-babel");
 const sourceStream = require("vinyl-source-stream");
 const buffer = require("vinyl-buffer");
-// const log = require("gulplog");
+const log = require("gulplog");
 const uglify = require("gulp-uglify");
 const gulpSequence = require("gulp-sequence");
 const imagemin = require("gulp-imagemin");
 const cleanCSS = require("gulp-clean-css");
 const sourcemaps = require("gulp-sourcemaps");
+const babel = require("babelify");
 
 const source = "./src/";
 const destination = "./static/";
@@ -34,49 +34,42 @@ gulp.task("img:compress", function() {
 });
 
 gulp.task("js", function() {
-  // set up the browserify instance on a task basis
-  var b = browserify({
-    entries: source + "js/app.js",
-    debug: true
-    // defining transforms here will avoid crashing your stream
-    // transform: [env]
-  });
-
-  return (
-    b
-      .bundle()
-      .pipe(sourceStream("app.js"))
-      .pipe(buffer())
-      .pipe(sourcemaps.init({ loadMaps: true }))
-      // Add transformation tasks to the pipeline here.
-      // .pipe(uglify())
-      // .on("error", log.error)
-      .pipe(sourcemaps.write("./"))
-      .pipe(gulp.dest(destination + "js/"))
+  let bundler = browserify(source + "js/app.js", { debug: true }).transform(
+    "babelify",
+    { presets: ["env"] }
   );
+
+  bundler
+    .bundle()
+    .on("error", function(err) {
+      console.error(err);
+      this.emit("end");
+    })
+    .pipe(sourceStream("app.js"))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest(destination + "js/"));
 });
 
 gulp.task("js:minify", () => {
-  // set up the browserify instance on a task basis
-  var b = browserify({
-    entries: source + "js/app.js",
-    debug: true
-    // defining transforms here will avoid crashing your stream
-    // transform: [env]
-  });
-
-  return (
-    b
-      .bundle()
-      .pipe(sourceStream("app.js"))
-      .pipe(buffer())
-      .pipe(sourcemaps.init({ loadMaps: true }))
-      // Add transformation tasks to the pipeline here.
-      .pipe(uglify())
-      .on("error", log.error)
-      .pipe(sourcemaps.write("./"))
-      .pipe(gulp.dest(destination + "js/"))
+  let bundler = browserify(source + "js/app.js", { debug: true }).transform(
+    "babelify",
+    { presets: ["env"] }
   );
+
+  bundler
+    .bundle()
+    .on("error", function(err) {
+      console.error(err);
+      this.emit("end");
+    })
+    .pipe(sourceStream("app.js"))
+    .pipe(buffer())
+    .pipe(uglify())
+    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest(destination + "js/"));
 });
 
 gulp.task("css:minify", () => {
