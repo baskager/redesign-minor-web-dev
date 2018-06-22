@@ -53,7 +53,7 @@ if (styleElement && headerCodeEditor && replayAnimationBtn) {
         }
         typewriterAnimation();
       }
-    }, 1);
+    }, 10);
   }
 
   function removeHTMLTags(element) {
