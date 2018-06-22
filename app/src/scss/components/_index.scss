@@ -1,5 +1,164 @@
 .hero {
-  min-height: 100vh;
+  min-height: 85vh;
+  padding: 0;
+
+  h1,
+  p,
+  a {
+    color: initial;
+    font: initial;
+    margin: 0;
+    text-decoration: initial;
+    text-transform: initial;
+  }
+
+  h1 {
+    font-size: 64px;
+    margin-bottom: 2.5rem;
+    span {
+      -webkit-box-decoration-break: clone;
+      background-color: transparent;
+      box-decoration-break: clone;
+      display: inline;
+      line-height: 1.35;
+    }
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  .container {
+    align-items: center;
+    display: flex;
+    height: 85vh;
+  }
+
+  .left {
+    margin-right: 5rem;
+    width: 55%;
+  }
+
+  .right {
+    position: relative;
+    width: 45%;
+    > svg {
+      left: -10rem;
+      position: absolute;
+      top: -3.5rem;
+    }
+  }
+
+  pre {
+    border-radius: 10px;
+    border-top: 25px solid #e8e8e8;
+    box-shadow: 4px 0 30px rgba(black, 0.33);
+    height: 350px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  #replayAnimation {
+    background: 0;
+    bottom: 33px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 25px;
+
+    svg {
+      fill: $primary-color;
+      height: 44px;
+      width: 44px;
+    }
+  }
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #333;
+  font-weight: bold;
+}
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #008080;
+}
+.hljs-string,
+.hljs-doctag {
+  color: #d14;
+}
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #900;
+  font-weight: bold;
+}
+.hljs-subst {
+  font-weight: normal;
+}
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+.hljs-regexp,
+.hljs-link {
+  color: #009926;
+}
+.hljs-symbol,
+.hljs-bullet {
+  color: #990073;
+}
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #0086b3;
+}
+.hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+.hljs-deletion {
+  background: #fdd;
+}
+.hljs-addition {
+  background: #dfd;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: bold;
 }
 
 .home-courses {
