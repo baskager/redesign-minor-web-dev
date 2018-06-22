@@ -99,9 +99,8 @@
     grid-template-columns: 100%;
   }
   .course-header {
-    background: red;
     .container {
-      .header-info {
+      > div {
         grid-column: 1 / 13;
         margin-top: 14%;
         div p {
