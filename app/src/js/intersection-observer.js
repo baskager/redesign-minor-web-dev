@@ -4,24 +4,27 @@ const   scrollTransitions = 'scroll-transition',
             threshold: 0.33
         }
 
-if (IntersectionObserver) {
+if (els) {
 
-    els.forEach(el => {
-        el.classList.add('trans')
-    })
+    if (IntersectionObserver) {
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.intersectionRatio != 0) {
-                window.setTimeout(function() {
-                    entry.target.classList.add('start-transition')
-                }, 100)
-                observer.unobserve(entry.target)
-            }
+        els.forEach(el => {
+            el.classList.add('trans')
         })
-    }, config)
 
-    els.forEach(el => {
-        observer.observe(el)
-    })
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.intersectionRatio != 0) {
+                    window.setTimeout(function() {
+                        entry.target.classList.add('start-transition')
+                    }, 100)
+                    observer.unobserve(entry.target)
+                }
+            })
+        }, config)
+
+        els.forEach(el => {
+            observer.observe(el)
+        })
+    }
 }

@@ -2,52 +2,53 @@
   "title": "Student work",
   "heading": "Student work",
   "description":
-    "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Vestibulumid ligula porta felis euismod semper.",
+    "Here you can find all the student work from past years. We will add more and more content to this page as the minor progresses.",
   "courses": [
     {
       "name": "Web app from scratch",
       "items": [
         {
-          "heading": "Project header",
+          "heading": "Jamerrone",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl": "https://jamerrone.github.io/wafs/app/#home",
+          "repoUrl": "https://github.com/Jamerrone/wafs"
         },
         {
-          "heading": "Project header",
+          "heading": "jajan20",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl": "https://oege.ie.hva.nl/~jansenj031/wafs/",
+          "repoUrl": "https://github.com/jajan20/wafs"
         },
         {
-          "heading": "Project header",
+          "heading": "baskager",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl": "http://www.kager.io/wafs/app/",
+          "repoUrl": "https://github.com/baskager/wafs"
         },
         {
-          "heading": "Project header",
+          "heading": "jelleoverbeek",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl": "https://jelleoverbeek.github.io/wafs/#now-playing",
+          "repoUrl": "https://github.com/jelleoverbeek/wafs"
         },
         {
-          "heading": "Project header",
+          "heading": "Rick712",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl": "https://rick712.github.io/wafs/app/dist/",
+          "repoUrl": "https://github.com/Rick712/wafs"
         },
         {
-          "heading": "Project header",
+          "heading": "kyunwang",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl":
+            "https://kyunwang.github.io/web-app-from-scratch/app/#library",
+          "repoUrl": "https://github.com/kyunwang/web-app-from-scratch"
         }
       ]
     },

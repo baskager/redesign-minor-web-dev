@@ -7,6 +7,7 @@
     <a href="/" class="btn btn-primary button-pulse">Interested? Contact us!</a>
   </div>
 </header>
+
 <main id="main" class="partners-team-wrapper container">
   {% for member in data.members %}
   <article class="grid focusOnScroll" scroll-transition>
@@ -16,7 +17,7 @@
         <span>{{ member.heading }}</span>
       </h2>
       <p>
-        <span>{{ member.subHeading }}</span>
+        <span>{{ member.description }}</span>
       </p>
       <a href="{{ member.gitHubURL }}" class="btn button-pulse">{{ data.linkText }}</a>
     </div>
