@@ -118,9 +118,6 @@
     opacity: 1;
     transition: all 0.3s ease;
     overflow: hidden;
-    * {
-      display: none;
-    }
     div div {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
@@ -129,7 +126,7 @@
     h2 {
       text-transform: uppercase;
       color: #fff;
-      font-size: $body-font-size;
+      font-size: $h3-font-size;
     }
     p {
       color: #fff;
@@ -146,10 +143,7 @@
   }
   li:focus-within .submenu,
   li:hover .submenu {
-    height: 250px;
-    * {
-      display: block;
-    }
+    height: 275px;
     div div {
       display: grid;
     }
