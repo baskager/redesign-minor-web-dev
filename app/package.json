@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/baskager/redesign-minor-web-dev#readme",
   "dependencies": {
+    "compression": "^1.7.2",
     "debug": "^3.1.0",
     "express": "^4.16.3",
     "gulp-babel": "^7.0.1",

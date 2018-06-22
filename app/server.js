@@ -8,6 +8,7 @@ const config = require("./config");
 const DataStore = require("./src/classes/DataStore.class");
 const fs = require("fs");
 const parser = require("subtitles-parser");
+const compression = require("compression");
 
 function readData(path) {
   let data = fs.readFileSync(path, "utf8");
@@ -27,6 +28,7 @@ nunjucks.configure("./templates", {
 });
 
 app.set("view engine", "html");
+app.use(compression());
 app.use(express.static("./static"));
 
 // Use the Massive datamapper to connect to the database
