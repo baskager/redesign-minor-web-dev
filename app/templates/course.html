@@ -3,29 +3,23 @@
   <div class="container grid">
     <div>
       <div class="header-info" scroll-transition>
-        <h1>Real-Time Web</h1>
-        <p>In drie weken leer je hoe je real time / live data op een inzichtelijke manier toegankelijk kunt maken voor de eindgebruiker.</p>
+        <h1>{{ data.course_name }}</h1>
+        <p>{{data.course_description}}</p>
         <ul class="teachers-list">
+          {% for teacher in data.teachers %}
           <li>
             <a href="/">See Biography</a>
-            <img class="avatar" src="https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg">
+            <img class="avatar" src="{{teacher.avatar}}">
             <div>
-              <h2>Vasilis van Gemert</h2>
-              <p>CSS Master</p>
+              <h2>{{teacher.name}}</h2>
+              <p>{{teacher.short_story}}</p>
             </div>
           </li>
-          <li>
-            <a href="/">See Biography</a>
-            <img class="avatar" src="https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg">
-            <div>
-              <h2>Vasilis van Gemert</h2>
-              <p>CSS Master</p>
-            </div>
-          </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
-    <img class="header-img" scroll-transition src="/img/partners/oba.jpg"></img>
+    <img class="header-img" scroll-transition src="{{data.icon_url}}"></img>
   </div>
 </header>
 
@@ -34,28 +28,33 @@
     <section>
       <h2>Learn goals</h2>
       <ul class="course-list">
+        {% for learning_goal in data.learning_goals %}
         <li>
-          Student is able to build a (Node) webapp with a back-end that uses templating, routing and a remote database.
+          {{learning_goal}}
         </li>
-        <li>
-          Student can deliver a live application where the interaction influences the content of the application by manipulating the database.
-        </li>
-        <li>
-          Student can translate live data to a reactive view (datavisualisation is allowed) that is useful for the end user.
-        </li>
+        {% endfor %}
       </ul>
     </section>
     <section>
       <h2>More about this course</h2>
-      <p>During this course you'll learn to use Socket.io to establish a connection between the browser and the server. You'll combine your knowledge from other courses and your newly aqquired skills from this course to create a progressive web app that retrieves live data from an API, and display the data to the user.</p>
+      <p>{{data.long_description}}</p>
     </section>
   </section>
 
   <section class="course-card-overview focusOnScroll">
     <h2>Weekly program</h2>
     <div class="course-card-list" scroll-transition>
-      {% include "components/_course-card.html" %} {% include "components/_course-card.html" %} {% include "components/_course-card.html"
-      %}
+      {% for week in data.weeks %}
+      <div class='course-card'>
+        <img src='http://sweettutos.com/wp-content/uploads/2015/12/placeholder.png' class='avatar' alt=''>
+        <h3>Week {{week.number}}</h3>
+        <ul>
+          {% if week.subjects %} {% for subject in week.subjects %}
+          <li>{{subject}}</li>
+          {% endfor %} {% endif %}
+        </ul>
+      </div>
+      {% endfor %}
     </div>
     <div class="course-btn">
       <a class="btn button-pulse" href="/program">View the full program</a>
@@ -65,10 +64,20 @@
   <section class="student-quote">
     <div class="testimonial">
       <img src='https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg' class='avatar'
-      alt=''>
+        alt=''>
       <blockquote>
-        <p>Voor ik begon met de minor had ik weinig kennis en skill in Javascript. Ik kon net een class toevoegen en weghalen met jQuery. Nu kan ik een Webapp bouwen! Leraren geven goed en gedetailleerd feedback.</p>
-        <p><i>~ Sjaak - 2018</i></p>
+        <<<<<<< HEAD <p>Voor ik begon met de minor had ik weinig kennis en skill in Javascript. Ik kon net een class toevoegen en weghalen
+          met jQuery. Nu kan ik een Webapp bouwen! Leraren geven goed en gedetailleerd feedback.</p>
+          <p>
+            <i>~ Sjaak - 2018</i>
+          </p>
+          =======
+          <p>Voor ik begon met de minor had ik weinig kennis en skill in Javascript. Ik kon net een class toevoegen en weghalen
+            met jQuery. Nu kan ik een Webapp bouwen! Leraren geven goed en gedetailleerd feedback.</p>
+          <p>
+            <i>~ Sjaak - 2018</i>
+          </p>
+          >>>>>>> develop
       </blockquote>
     </div>
   </section>

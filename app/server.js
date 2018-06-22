@@ -1,8 +1,13 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
 const app = express();
-var fs = require("fs");
-var parser = require("subtitles-parser");
+const massive = require("massive");
+const monitor = require("pg-monitor");
+const debug = require("debug")("minor-server");
+const config = require("./config");
+const DataStore = require("./src/classes/DataStore.class");
+const fs = require("fs");
+const parser = require("subtitles-parser");
 
 function readData(path) {
   let data = fs.readFileSync(path, "utf8");
@@ -24,15 +29,39 @@ nunjucks.configure("./templates", {
 app.set("view engine", "html");
 app.use(express.static("./static"));
 
-app.get("/", function(req, res) {
-  res.render("index.html", {
-    data: readData("src/json/homepage.json")
+// Use the Massive datamapper to connect to the database
+massive(config.postgres).then(database => {
+  // Create a Datastore object (handles the database queries)
+  let dataStore = new DataStore(database);
+  // Attach a monitor so we get nice logs about the database usage
+  monitor.attach(database.driverConfig);
+
+  // E.G. /course/web-design
+  app.get("/course/:pageSlug", function(req, res) {
+    /* 
+      Get the pageslug from the Express server
+      The pageslug identifies what page we are on
+      E.G.: 'course/web-design' or 'course/real-time-web'
+    */
+    let pageSlug = req.params.pageSlug;
+    /* 
+      Tell the datastore to fetch a course with the 
+      given pageslug and render the page with the received data. 
+    */
+    dataStore
+      .getCourseForCourseOverview({ page_slug: pageSlug })
+      .then(courseData => {
+        debug(courseData[0]);
+        res.render("course.html", {
+          data: courseData[0]
+        });
+      });
   });
 });
 
-app.get("/course", function(req, res) {
-  res.render("course.html", {
-    data: readData("src/json/course.json")
+app.get("/", function(req, res) {
+  res.render("index.html", {
+    data: readData("src/json/homepage.json")
   });
 });
 
