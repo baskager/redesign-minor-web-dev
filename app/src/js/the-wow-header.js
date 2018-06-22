@@ -15,7 +15,7 @@ const additionalHeaderStyling = `
   }
 
   .hero {
-    background-color: #6A00F5;
+    background-color: #2A2D3D;
     color: white;
   }
 
@@ -35,13 +35,13 @@ const additionalHeaderStyling = `
   }
 
   .hero h1 span {
-    background-color: #2A2D3D;
+    background-color: #6A00F5;
     padding: 1.5rem;
   }
 
   .hero a {
     background-color: #FFFFFF;
-    color: #6A00F5;
+    color: #2A2D3D;
     text-decoration: none;
     padding: 1rem 3.5rem; // px's are no go!
     font-size: 1.25rem;
