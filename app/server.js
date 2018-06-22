@@ -38,8 +38,8 @@ massive(config.postgres).then(database => {
   // Attach a monitor so we get nice logs about the database usage
   monitor.attach(database.driverConfig);
 
-  // E.G. /course/web-design
-  app.get("/course/:pageSlug", function(req, res) {
+  // E.G. /program/web-design
+  app.get("/program/:pageSlug", function(req, res) {
     /* 
       Get the pageslug from the Express server
       The pageslug identifies what page we are on
