@@ -3,7 +3,7 @@
 --
 
 -- Dumped from database version 10.4
--- Dumped by pg_dump version 10.4 (Ubuntu 10.4-0ubuntu0.18.04)
+-- Dumped by pg_dump version 10.4
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -44,7 +44,7 @@ CREATE TABLE public.course (
     partner_id integer,
     type_id integer NOT NULL,
     active boolean NOT NULL,
-    period smallint NOT NULL,
+    period_id integer NOT NULL,
     page_slug character varying NOT NULL,
     long_description text,
     learning_goals jsonb,
@@ -53,6 +53,18 @@ CREATE TABLE public.course (
 
 
 ALTER TABLE public.course OWNER TO minorwebdev;
+
+--
+-- Name: course_period; Type: TABLE; Schema: public; Owner: minorwebdev
+--
+
+CREATE TABLE public.course_period (
+    number integer NOT NULL,
+    weeks jsonb NOT NULL
+);
+
+
+ALTER TABLE public.course_period OWNER TO minorwebdev;
 
 --
 -- Name: course_type; Type: TABLE; Schema: public; Owner: minorwebdev
@@ -145,8 +157,10 @@ CREATE VIEW public.course_composed_view AS
  SELECT concat(course_week.course_id, course_week.week_number) AS course_week_pk,
     course.id AS course_id,
     course.name AS course_name,
-    teacher.id AS teacher_id,
     course_week.week_number,
+    course_period.number AS course_period_number,
+    course_period.weeks AS course_period_weeks,
+    teacher.id AS teacher_id,
     teacher.name AS teacher_name,
     teacher.avatar_url AS teacher_avatar,
     teacher.short_story AS teacher_short_story,
@@ -162,11 +176,12 @@ CREATE VIEW public.course_composed_view AS
     partner.name AS partner_name,
     partner.website_url AS partner_website,
     partner.logo_url AS partner_logo
-   FROM (((((public.course
+   FROM ((((((public.course
      JOIN public.teacher_course ON ((course.id = teacher_course.course_id)))
      RIGHT JOIN public.teacher ON ((teacher.id = teacher_course.teacher_id)))
      LEFT JOIN public.partner ON ((partner.id = course.partner_id)))
      JOIN public.course_type ON ((course.type_id = course_type.id)))
+     JOIN public.course_period ON ((course.period_id = course_period.number)))
      RIGHT JOIN public.course_week ON ((course.id = course_week.course_id)))
   WHERE (course.active = true)
   ORDER BY (concat(course_week.course_id, course_week.week_number));
@@ -195,41 +210,6 @@ ALTER TABLE public.course_id_seq OWNER TO minorwebdev;
 
 ALTER SEQUENCE public.course_id_seq OWNED BY public.course.id;
 
-
---
--- Name: course_overview_view; Type: VIEW; Schema: public; Owner: minorwebdev
---
-
-CREATE VIEW public.course_overview_view AS
- SELECT course.id AS course_id,
-    course.name AS course_name,
-    course.short_description AS course_description,
-    course_type.name AS course_type,
-    course.page_slug,
-    course.icon_url,
-    course.long_description,
-    course.learning_goals,
-    ((('['::text || string_agg((((((((('
-        {
-            "id": "'::text || teacher.id) || '",
-            "name": "'::text) || (teacher.name)::text) || '",
-            "avatar": "'::text) || (teacher.avatar_url)::text) || '",
-            "short_story": "'::text) || (teacher.short_story)::text) || '"
-        }'::text), ','::text)) || ']'::text))::json AS teachers,
-    partner.id AS partner_id,
-    partner.name AS partner_name,
-    partner.website_url AS partner_website,
-    partner.logo_url AS partner_logo
-   FROM ((((public.teacher
-     JOIN public.teacher_course ON ((teacher.id = teacher_course.teacher_id)))
-     RIGHT JOIN public.course ON ((course.id = teacher_course.course_id)))
-     LEFT JOIN public.partner ON ((partner.id = course.partner_id)))
-     JOIN public.course_type ON ((course.type_id = course_type.id)))
-  WHERE (course.active = true)
-  GROUP BY course.id, course.name, course_type.name, course.short_description, course.page_slug, course.icon_url, course.long_description, course.learning_goals, partner.id, partner.name, partner.website_url, partner.logo_url;
-
-
-ALTER TABLE public.course_overview_view OWNER TO minorwebdev;
 
 --
 -- Name: course_type_id_seq; Type: SEQUENCE; Schema: public; Owner: minorwebdev
@@ -444,10 +424,22 @@ ALTER TABLE ONLY public.testimonial ALTER COLUMN id SET DEFAULT nextval('public.
 -- Data for Name: course; Type: TABLE DATA; Schema: public; Owner: minorwebdev
 --
 
-COPY public.course (id, name, short_description, partner_id, type_id, active, period, page_slug, long_description, learning_goals, icon_url) FROM stdin;
-5	Project 1	Projectweek 1 for the public library of Amsterdam	1	1	t	1	project-1	\N	\N	\N
-3	Real Time Web	In drie weken leer je hoe je real time / live data op een inzichtelijke manier toegankelijk kunt maken voor de eindgebruiker.	\N	3	t	1	real-time-web	During this course you'll learn to use Socket.io to establish a connection between the browser and the server. You'll combine your knowledge from other courses and your newly aqquired skills from this course to create a progressive web app that retrieves live data from an API, and display the data to the user.	["Student is able to build a (Node) webapp with a back-end that uses templating, routing and a remote database.", "Student can deliver a live application where the interaction influences the content of the application by manipulating the database.", "Student can translate live data to a reactive view (datavisualisation is allowed) that is useful for the end user."]	/img/partners/oba.jpg
-4	Web Design	Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design is consistent and optimized to meet business objectives and create enjoyable experiences for users.	\N	3	t	1	web-design	The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.	["The river stole the gods.", "Don't step on the broken glass.", "If Purple People Eaters are real… where do they find purple people to eat?"]	https://pre00.deviantart.net/25c6/th/pre/f/2016/117/0/4/bridge___flat_design_wallpaper_by_sebastian456-da0elq8.png
+COPY public.course (id, name, short_description, partner_id, type_id, active, period_id, page_slug, long_description, learning_goals, icon_url) FROM stdin;
+4	Web Design	Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design is consistent and optimized to meet business objectives and create enjoyable experiences for users.	\N	3	t	3	web-design	The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.	["The river stole the gods.", "Don't step on the broken glass.", "If Purple People Eaters are real… where do they find purple people to eat?"]	https://pre00.deviantart.net/25c6/th/pre/f/2016/117/0/4/bridge___flat_design_wallpaper_by_sebastian456-da0elq8.png
+7	CSS To The Rescue	CSS & accessibility	\N	3	t	1	css-to-the-rescue	\N	\N	https://assets.wordpress.envato-static.com/uploads/2016/03/Tools-for-Structuring-Optimizing-Your-CSS-Code.jpg
+8	Web app from scratch	Javascript introduction	\N	3	t	1	web-app-from-scratch	\N	\N	https://cdn-images-1.medium.com/max/1600/1*uiYye9J142y8fIZGRnufEw.png
+5	Project 1	At the OBA we will create awesome stuff with data about Amsterdam, which they collected throughout the years.	1	1	t	1	project-1	\N	\N	\N
+3	Real Time Web	In drie weken leer je hoe je real time / live data op een inzichtelijke manier toegankelijk kunt maken voor de eindgebruiker.	\N	3	t	3	real-time-web	During this course you'll learn to use Socket.io to establish a connection between the browser and the server. You'll combine your knowledge from other courses and your newly aqquired skills from this course to create a progressive web app that retrieves live data from an API, and display the data to the user.	["Student is able to build a (Node) webapp with a back-end that uses templating, routing and a remote database.", "Student can deliver a live application where the interaction influences the content of the application by manipulating the database.", "Student can translate live data to a reactive view (datavisualisation is allowed) that is useful for the end user."]	/img/partners/oba.jpg
+\.
+
+
+--
+-- Data for Name: course_period; Type: TABLE DATA; Schema: public; Owner: minorwebdev
+--
+
+COPY public.course_period (number, weeks) FROM stdin;
+1	[1, 2, 3, 4]
+3	[9, 10, 11, 12]
 \.
 
 
@@ -470,6 +462,13 @@ COPY public.course_week (course_id, week_number, description, subjects_covered) 
 4	1	CSS startup	["The river stole the gods.", "Don't step on the broken glass.", "If Purple People Eaters are real… where do they find purple people to eat?"]
 4	2	Just use weird selectors	["Different data", "Don't step on the broken glass.", "Allways be weary near Ronald McDonald"]
 4	3	Time to finish everything up :)	["Different data", "Don't step on the broken glass.", "Allways be weary near Ronald McDonald"]
+7	1	Creating fun, pleasurable and accessible solutions for different kinds of interfaces.	[]
+7	2	Using CSS without the use of classes. Getting to know the basic CSS principles is key!	[]
+8	1	Introduction to Javascript object programming and coding design patterns.	[]
+8	2	Resolving and manipulating data from an API.	[]
+8	3	Designing your pleasurable interface with attention to detail.	[]
+7	3	Finetune the structure and flow of your app, because It's a wrap!	[]
+5	1	\N	\N
 \.
 
 
@@ -496,7 +495,8 @@ COPY public.student_work (id, student_name, title, repository_url, demo_url, cou
 
 COPY public.teacher (id, type, name, repository_url, website_url, avatar_url, short_story) FROM stdin;
 2	1	Koop Reynders	https://github.com/KoopReynders	\N	https://avatars2.githubusercontent.com/u/1391509?s=460&v=4	Masta stylo
-1	1	Derpy mcDerpface	https://github.com/vasilisvg	http://vasilis.nl/	https://a11yrules.com/wp-content/uploads/2018/01/Vasilis-van-Gemert.jpg	Hallo
+1	1	Vasilis van Gemert	https://github.com/vasilisvg	http://vasilis.nl/	https://a11yrules.com/wp-content/uploads/2018/01/Vasilis-van-Gemert.jpg	Hallo
+3	1	Joost Faber	\N	\N	https://media.licdn.com/dms/image/C4D03AQGjbmp7vQhU6Q/profile-displayphoto-shrink_200_200/0?e=1534982400&v=beta&t=z9pL5r8zgBjYGuQE-56NCJzMYVggUYxIizvpxVotNj4	
 \.
 
 
@@ -508,6 +508,9 @@ COPY public.teacher_course (teacher_id, course_id) FROM stdin;
 1	3
 1	4
 2	4
+1	7
+3	8
+1	5
 \.
 
 
@@ -533,7 +536,7 @@ COPY public.testimonial (id, name, role, message) FROM stdin;
 -- Name: course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: minorwebdev
 --
 
-SELECT pg_catalog.setval('public.course_id_seq', 6, true);
+SELECT pg_catalog.setval('public.course_id_seq', 8, true);
 
 
 --
@@ -561,7 +564,7 @@ SELECT pg_catalog.setval('public.student_work_id_seq', 1, false);
 -- Name: teacher_teacher_id_seq; Type: SEQUENCE SET; Schema: public; Owner: minorwebdev
 --
 
-SELECT pg_catalog.setval('public.teacher_teacher_id_seq', 2, true);
+SELECT pg_catalog.setval('public.teacher_teacher_id_seq', 6, true);
 
 
 --
@@ -619,6 +622,22 @@ ALTER TABLE ONLY public.partner
 
 
 --
+-- Name: course_period period_id; Type: CONSTRAINT; Schema: public; Owner: minorwebdev
+--
+
+ALTER TABLE ONLY public.course_period
+    ADD CONSTRAINT period_id PRIMARY KEY (number);
+
+
+--
+-- Name: course_period period_weeks; Type: CONSTRAINT; Schema: public; Owner: minorwebdev
+--
+
+ALTER TABLE ONLY public.course_period
+    ADD CONSTRAINT period_weeks UNIQUE (weeks);
+
+
+--
 -- Name: student_work student_work_pk; Type: CONSTRAINT; Schema: public; Owner: minorwebdev
 --
 
@@ -667,6 +686,14 @@ ALTER TABLE ONLY public.course
 
 
 --
+-- Name: course course_period_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: minorwebdev
+--
+
+ALTER TABLE ONLY public.course
+    ADD CONSTRAINT course_period_id_fkey FOREIGN KEY (period_id) REFERENCES public.course_period(number) ON UPDATE CASCADE ON DELETE RESTRICT;
+
+
+--
 -- Name: course course_type_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: minorwebdev
 --
 
@@ -707,11 +734,11 @@ ALTER TABLE ONLY public.teacher_course
 
 
 --
--- Name: teacher teacher_teacher_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: minorwebdev
+-- Name: teacher teacher_type_fkey; Type: FK CONSTRAINT; Schema: public; Owner: minorwebdev
 --
 
 ALTER TABLE ONLY public.teacher
-    ADD CONSTRAINT teacher_teacher_id_fkey FOREIGN KEY (id) REFERENCES public.teacher_type(id) ON UPDATE CASCADE ON DELETE RESTRICT;
+    ADD CONSTRAINT teacher_type_fkey FOREIGN KEY (type) REFERENCES public.teacher_type(id) ON UPDATE CASCADE ON DELETE RESTRICT;
 
 
 --
