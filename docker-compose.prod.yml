@@ -15,9 +15,13 @@ services:
     container_name: minorwebdev_webserver
     hostname: minorwebdev-web
     restart: on-failure
+    depends_on:
+      - postgres
     ports:
       - "3000:3000"
     command: "node server.js"
+    environment:
+      NODE_ENV: production
 
 volumes: 
   pgdata:
