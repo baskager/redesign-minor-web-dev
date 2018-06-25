@@ -1,24 +1,31 @@
 (function() {
   "use strict";
 
-  // Main function. Here we need to toggle the quicknavigation
-  const keyNav = {
-    // Set core functionality states. The hotKeyState will be saved in a cookie.
-    // Key value of objects
-    cmdState: false,
-    keyNavState: false,
-
-    init: function() {
-      keyNavToggle.toggleState();
-      keyNavToggle.toggleIndicators();
-      eventListeners.onKeyUp();
-      eventListeners.onKeyDown();
-    }
-  };
-
+  // Mobile navigation toggle
   const mobileNav = {
     init: function(e) {
       eventListeners.onClick();
+    }
+  };
+
+  // Hotkey navigation init
+  const keyNav = {
+    // Key value of objects
+    cmdState: false,
+
+    // KeyNavState is (will be) stored in localStorage
+    keyNavState: false,
+
+    init: function() {
+      // Functionality for the state of the hotkeys
+      keyNavToggle.toggleState();
+
+      // Pure visual indicators for the state of the hotkeys
+      keyNavToggle.toggleIndicators();
+
+      // Eventlisteners to actually toggle the state of the hotkeys and the visuals
+      eventListeners.onKeyUp();
+      eventListeners.onKeyDown();
     }
   };
 

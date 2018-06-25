@@ -8,7 +8,7 @@
   align-items: center;
   box-shadow: $bottom-shadow;
   z-index: $zindex-nav;
-  .menu-toggle {
+  #nav-items-toggle {
     @include min-desktop() {
       display: none;
     }
@@ -54,38 +54,47 @@
     padding: 0;
     margin: 0;
   }
+
+  //   #nav-items {
+  //   @include max-tablet() {
+  //     display: none;
+  //     &.active {
+  //       display: block;
+  //     }
+  //   }
+  // }
   // main menu styling
-  & div > ul {
+  #nav-items {
     display: flex;
-    & > li:not(:first-child) {
+    & > li {
       @include min-desktop() {
         margin-left: $margin-24;
       }
-    }
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 2px solid transparent;
-      flex-flow: column;
-      @include transition();
-      &:hover:not(#menu-item-6) {
-        border-bottom: 2px solid rgba($primary-color, 0.5);
+      & > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid transparent;
+        flex-flow: column;
+        @include transition();
+        &:hover:not(#menu-item-6) {
+          border-bottom: 2px solid rgba($primary-color, 0.5);
+        }
+        @include min-tablet() {
+          min-height: calc(4.5rem + 2px);
+        }
+        @include min-desktop-hd() {
+          flex-flow: row;
+        }
       }
-      @include min-tablet() {
-        min-height: calc(4.5rem + 2px);
-      }
-      @include min-desktop-hd() {
-        flex-flow: row;
-      }
-    }
-    .active {
-      a {
-        color: $secondary-color;
-        border-bottom: 2px solid $secondary-color;
-      }
-      span {
-        border-color: $secondary-color;
+      .active {
+        a {
+          color: $secondary-color;
+          border-bottom: 2px solid $secondary-color;
+        }
+        span {
+          border-color: $secondary-color;
+        }
       }
     }
 
