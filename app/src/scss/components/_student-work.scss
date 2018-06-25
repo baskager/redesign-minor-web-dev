@@ -13,45 +13,66 @@
     margin: 0 0 2rem 0;
   }
 
-  .btn-primary {
-    display: block;
-    margin: auto;
-    max-width: rem(300);
-    padding: $padding-24;
-    text-align: center;
-    &:hover {
-      color: darken($primary-color, 10%);
-    }
-  }
   .btn {
+    display: block;
+    margin: 0 auto;
+    width: auto;
     max-width: 20rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 }
 
 .student-work-header {
+  h1 {
+    display: inline-block;
+    margin-right: rem(32);
+  }
+
   select {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    border-bottom: $primary-color rem(8) solid;
+    border-radius: 0;
+    border: none;
+    color: $primary-color;
+    display: inline-block;
     font-size: inherit;
     font-weight: inherit;
     outline: none;
-    border: none;
-    border-bottom: $primary-color rem(8) solid;
-    border-radius: 0;
-    color: $primary-color;
+    transition: all 0.3s ease;
     width: auto;
-    display: inline-block;
-    -webkit-appearance: none;
-    -webkit-border-radius: 0px;
-    transition: all .3s ease;
+
+    font-family: $font-family-headers;
+    font-size: $h1-font-size;
+    font-weight: $h1-font-weight;
+
+    padding-right: rem(64);
+    background: #fff url("../img/icons/dropdown-indicator.svg") no-repeat right
+      rem(16) center;
+
     &:valid {
       background-color: #fff;
     }
     &:hover,
     &:focus {
-      color: $secondary-color;
+      color: darken($primary-color, 10%);
       border-color: $secondary-color;
     }
+
+    @include max-mobile() {
+      font-size: rem(64);
+      margin-bottom: rem(32);
+    }
+
+    @include max-desktop() {
+      margin-bottom: rem(40);
+    }
   }
+}
+
+.student-work-filters {
+  display: flex;
+  flex-wrap: wrap;
 
   input:valid {
     background-color: #fff;
@@ -69,15 +90,19 @@
     border-radius: rem(100);
     border: 1px $primary-color solid;
     color: $primary-color;
-    margin-right: $margin-16;
+    margin: $margin-16 $margin-16 0 0;
     height: auto;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 
     @include transitionCubic;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   input[type="radio"]:focus + label {
-    transform: scale(1.15);
+    transform: scale(1.1);
   }
 
   input[type="radio"]:checked + label {

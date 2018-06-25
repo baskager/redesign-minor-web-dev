@@ -2,7 +2,9 @@
 
 <header class="focusOnScroll">
   <div class="container">
-    <h1>{{ data.heading }}</h1>
+    <h1>
+      <span>{{ data.heading }}</span>
+    </h1>
     <p>{{ data.description | safe }}</p>
     <a href="/" class="btn btn-primary button-pulse">Interested? Contact us!</a>
   </div>
@@ -19,7 +21,7 @@
       <p>
         <span>{{ member.description }}</span>
       </p>
-      <a href="{{ member.gitHubURL }}" class="btn button-pulse">{{ data.linkText }}</a>
+      <a href="/student-work#project-1" class="btn button-pulse">{{ data.linkText }}</a>
     </div>
   </article>
   {% endfor %}
