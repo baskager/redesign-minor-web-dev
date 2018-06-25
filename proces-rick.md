@@ -245,6 +245,52 @@ Maandag ochtend hadden we weer een klasbespreking. Na de bespreking hebben we ko
 
 Na het gesprek hebben we weer kort gesproken over de kleuren, en ben ik verder gegaan met de vakpagina. Na de vakpagina ben ik begonnen met het halen van een van mijn leerdoelen: Animaties en transities.
 
-Ik heb nagedacht over op wat voor plekken in ze toe zou willen voegen. 
+Ik heb nagedacht over op wat voor plekken in ze toe zou willen voegen.
 
 Om 13:00 hadden we een gesprek met Vasilis. Vasilis was erg tevreden over hoe de website er uit zag. De rest van de dag hebben we de feedback van Marie besproken, en waar nodig verwerkt.
+
+#### Dinsdag 12 juni
+
+Ook dinsdag had ik een gesprek met Vasilis, maar deze was individueel. Tijdens het gesprek had ik een aantal vragen over parallax in css, maar Vasilis kon mij helaas niet uitleggen hoe het precies werkte. Wel gaf hij een handig script wat ik zou kunnen gebruiken voor andere animaties: [Delighters.JS](https://github.com/Q42/delighters).
+
+Het script voegt classes toe aan elementen wanneer ze binnen de viewport vallen, wat inhoudt dat je makkelijk kan animeren wanneer een element in beeld komt.
+
+Ook heb ik een begin gemaakt aan de animatie van het aanmeld formulier, alhoewel ik me afvraag in hoeverre deze code gebruikt gaat worden. James was op dat moment bezig met het vormgeven van het formulier, dus de kans bestond dat de animatie niet meer zou gaan werken wanneer James er klaar mee zou zijn.
+
+Eind van de middag hadden we een weekly nerd in de vorm van een Icons meeting van Vitaly Friedman. Vitaly is een een beetje een alleskunner in deze branch, en hij gaat vertellen over 'The incredible amount of knowledge he has in the field of web design'.
+
+### Woensdag 13 juni
+
+Woensdag heb ik mij heel erg gefocust op animeren en het verbeteren van de animaties. James kwam met een linkje naar een website waar je heel makkelijk transities en animaties kan selecteren genaamd Animista. Ik wilde deze dag een page transition maken van het programma naar de vakpagina, en dat is soort van gelukt.
+
+Op safari werkt de transitie zelf wel, maar als je dan naar de vorige pagina gaat dan gaat het stuk. Op Chrome deed Delighters.js het niet goed, en op Firefox had ik nog niet kunnen testen. 
+
+Ik had geprobeert om het script aan te passen zodat het wel zou gaan werken, maar dat is me op deze dag niet gelukt.
+
+In de avond hadden we een test met Marijn. We hadden vandaag veel meer om te laten zien dan vorige keer, dus deze test zou dan ook een stuk relevanter zijn. We hadden ons voorgenomen om spacial navigation te laten werken voor de test. James heeft dit weten te fixen (lekker bezig James), en Jelle en Jamal hebben het nieuwe ontwerp van het programma gemaakt.
+
+Daarnaast kreeg ik ruzie met Delighters.js. Het werkte niet consistent, en dat maakte mij enigszins gefrustreerd.
+
+#### Donderdag 14 juni
+
+Donderdag had ik in de ochtend een gesprek met Joost. Ik vertelde dat delighters.js niet heel betrouwbaar was, en hij stelde voor om naar de intersection observer te kijken. Mees had dit woensdag al opgenoemd, maar het leek mij ietwat ingewikkeld, maar dit bleek best mee te vallen. Na 1 uurtje had ik het werkende, en na nog een half uur had ik het zo gemaakt dat het precies hetzelfde werkte als delighters.js, maar dan wel betrouwbaar. Het enige is dat de intersection observer minder goed gesupport is.
+
+Ik dacht althans dat het werkte. Op safari kreeg ik niets te zien, aangezien de intersection observer niet ondersteund wordt door Safari. Vervolgens heb ik het zo om te weten schrijven dat op safari de elementen wel te zien zijn, maar niet animeren, en wanneer het wel ondersteund wordt, dat de elementen dan wel geanimeerd worden. 
+
+Ook had ik de animatie van het formulier die ik dinsdag had gemaakt er uit gesloopt. Het werkte niet helemaal goed, en voegde eigenlijk ook niet gek veel toe. Ook heb ik de pagina transitie eruit gegooid. Het was niet consistent genoeg. Ook wilde hij nog wel eens glitchen.
+
+#### Donderdag avond
+
+Donderdag avond kwam Vasilis met de opmerking dat we veel te weinig prototypes hadden om te testen met Marijn. Vasilis wilde dat wij meer gingen testen met manieren om de website te gebruiken, terwijl wij wilde focussen op een complete website die de lucht in zou kunnen aan het eind van de meesterproef.
+
+### Vrijdag 15 juni
+
+Vrijdag ochtend hadden we een test met Marie. Marie vond de website veel beter dan de vorige keer. Jelle had twee varianten gemaakt voor ondertitelingen bij een video.
+
+Na de test gingen we facetimen met Vasilis om te bespreken wat de avond ervoor via Slack ging. We hebben kort besproken wat we nu zouden gaan doen, en we hadden besloten om nu een week lang vol voor de prototypes van interactie te gaan. We hadden allemaal een bepaald element uitgekozen om te onderzoeken hoe we de interactie vooral voor Marijn een stuk beter kunnen maken.
+
+Ik had er voor gekozen om een form element plezierig te maken voor Marijn. Ik dacht gelijk aan een autocompleter. Voor Marijn duurt het best lang om toetsen in te drukken, dus als hij snel iets kan invullen dan zou dat een hoop moeite schelen.
+
+Als eerst focuste ik op het autocompleten van de email. Ik heb ervoor gezorgd dat, wanneer hij de eerste letter van zijn bedrijf domein invult, hij met 1 tab en een enter de rest van het domein kan selecteren (F wordt fuga.com). Dit scheelt 7 karakters, wat voor Marijn al een aantal seconden scheelt.
+
+Toen ik die autocomplete had was ik aan het bedenken hoe ik Marijn nog meer tijd zou kunnen schelen wanneer hij iets in moet typen. Ik moest vrij snel denken aan Tio Salamanca, de Mexicaanse kartel meneer uit Breaking Bad. Hij kon niet meer praten, en gebruikte een bord met letters om aan te geven wat hij wilde zeggen. Ik heb iets bedacht wat daar op lijkt. Op vrijdag heb ik hem nog niet af weten te krijgen. De bedoeling is dat Marijn kan typen door middel van cijfercombinaties. 11 is A, 12 is B, 21 is F, en zo verder. Op deze manier kan Marijn zijn hand op dezelfde plek houden, en hoeft hij maar een kleine beweging te maken.
