@@ -46,12 +46,10 @@
     <div class="course-card-list" scroll-transition>
       {% for week in data.weeks %}
       <div class='course-card'>
-        <h3>Week {{week.number}}</h3>
-        <ul>
+        <p>Week {{week.number}}</p>
           {% if week.subjects %} {% for subject in week.subjects %}
-          <li>{{subject}}</li>
+          <p>{{subject}}</p>
           {% endfor %} {% endif %}
-        </ul>
       </div>
       {% endfor %}
     </div>
@@ -62,8 +60,6 @@
 
   <section class="student-quote">
     <div class="testimonial">
-      <img src='https://vasilis.nl/presentaties/fec15/examples/studies/speakers/speakers/Vasilis-van-Gemert.jpg' class='avatar'
-        alt=''>
       <blockquote>
         <p>Voor ik begon met de minor had ik weinig kennis en skill in Javascript. Ik kon net een class toevoegen en weghalen
           met jQuery. Nu kan ik een Webapp bouwen! Leraren geven goed en gedetailleerd feedback.</p>
@@ -77,14 +73,17 @@
   <section class="other-courses focusOnScroll">
     <h2>Other courses</h2>
     <div>
-      <a class="btn" href="">other course</a>
-      <a class="btn" href="">other course</a>
-      <a class="btn" href="">other course</a>
-      <a class="btn" href="">other course</a>
-      <a class="btn" href="">other course</a>
-      <a class="btn" href="">other course</a>
-      <a class="btn" href="">other course</a>
-      <a class="btn" href="">other course</a>
+      <a class="btn" href="/course/web-apps-from-scratch">Web Apps From Scratch</a>
+      <a class="btn" href="/course/css-to-the-rescue">other course</a>
+      <a class="btn" href="/course/browser-technologies">Browser Technologies</a>
+      <a class="btn" href="/course/performance-matters">Performance Matters</a>
+      <a class="btn" href="/course/real-time-web">Real-Time Web</a>
+      <a class="btn" href="/course/web-design">Web Design</a>
+      <a class="btn" href="/course/weekly-nerd">Weekly Nerd</a>
+      <a class="btn" href="/course/project-1">Project 1</a>
+      <a class="btn" href="/course/project-2">Project 2</a>
+      <a class="btn" href="/course/project-3">Project 3</a>
+      <a class="btn" href="/course/master-test">Master Test</a>
     </div>
   </section>
 </main>
