@@ -8,16 +8,41 @@
   align-items: center;
   box-shadow: $bottom-shadow;
   z-index: $zindex-nav;
+
+  .logo {
+    min-height: calc(4.5rem + 2px);
+    display: flex;
+    align-items: center;
+    @include max-tablet() {
+      align-self: flex-start;
+    }
+  }
+
+  #nav-items-toggle {
+    padding: 1.5rem;
+    margin: 0.25rem 0;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-self: flex-start;
+    i {
+      display: block;
+      height: 1rem;
+    }
+  }
+
   #nav-items-toggle {
     @include min-desktop() {
       display: none;
     }
   }
+
   & > .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   h1 {
     margin: 0;
     @include min-tablet() {
@@ -28,6 +53,7 @@
     }
     @include transition;
   }
+
   .skip-to-content {
     position: absolute;
     padding: $padding-8 $padding-16;
@@ -41,31 +67,44 @@
     clip: rect(1px, 1px, 1px, 1px);
     transition: all 0.3 ease-in-out;
   }
+
   .skip-to-content:focus {
     z-index: 2;
     width: auto;
     height: auto;
     clip: auto;
   }
+
   .skip-to-content:focus + a h1 {
     opacity: 0;
   }
+
   ul {
     padding: 0;
     margin: 0;
   }
 
-  //   #nav-items {
-  //   @include max-tablet() {
-  //     display: none;
-  //     &.active {
-  //       display: block;
-  //     }
-  //   }
-  // }
-  // main menu styling
   #nav-items {
     display: flex;
+    @include max-tablet() {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    &.active {
+      @include max-tablet {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-flow: column;
+      }
+    }
     & > li {
       @include min-desktop() {
         margin-left: $margin-24;
@@ -77,6 +116,7 @@
         border-bottom: 2px solid transparent;
         flex-flow: column;
         @include transition();
+
         &:hover:not(#menu-item-6) {
           border-bottom: 2px solid rgba($primary-color, 0.5);
         }
