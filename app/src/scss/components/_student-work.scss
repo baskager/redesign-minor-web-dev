@@ -23,6 +23,11 @@
 }
 
 .student-work-header {
+  h1 {
+    display: inline-block;
+    margin-right: rem(32);
+  }
+
   select {
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
@@ -34,11 +39,13 @@
     font-size: inherit;
     font-weight: inherit;
     outline: none;
-    transform: translateX(40px);
     transition: all 0.3s ease;
     width: auto;
 
     font-family: $font-family-headers;
+    font-size: $h1-font-size;
+    font-weight: $h1-font-weight;
+
     padding-right: rem(64);
     background: #fff url("../img/icons/dropdown-indicator.svg") no-repeat right
       rem(16) center;
@@ -50,7 +57,6 @@
     &:focus {
       color: darken($primary-color, 10%);
       border-color: $secondary-color;
-      transform: translateX(40px);
     }
   }
 

@@ -7,11 +7,11 @@
         <span>
           {{ data.title }}
         </span>
-        <select name="archive" id="select-year">
-          <option value="2018">2018</option>
-          <option value="2017">2017</option>
-        </select>
       </h1>
+      <select name="archive" id="select-year">
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+      </select>
 
       <p>{{ data.description }}</p>
       <input type="radio" id="all" name="course" value="all" checked="checked">
@@ -28,7 +28,7 @@
 
 <main id="main" class="student-work">
   {% for course in data.courses %}
-  <section class="course course-{{ course.abbreviation }} focusOnScroll">
+  <section class="course course-{{ course.abbreviation }} focusOnScroll" id="{{ course.slug }}">
     <div class="container">
       <h2>{{ course.name }}</h2>
 
