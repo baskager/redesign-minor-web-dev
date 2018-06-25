@@ -237,6 +237,20 @@ De rest van de dag hebben we verder gewerkt aan het design, en hebben we een aan
 
 In de middag wilden we veranderingen aanbrengen aan de kleuren, maar aangezien het vrijdagmiddag was zijn we er niet echt aan toegekomen. Wel hebben we aanpassingen gedaan aan de tijdlijn.
 
+<details>
+  <summary>
+    Een aantal screenshots van de website
+  </summary>
+  <img src="https://i.imgur.com/FRSeOQS.png" alt="Vak pagina" />
+  <img src="https://i.imgur.com/eLbBNEa.png" alt="Vak pagina 2" />
+  <img src="https://i.imgur.com/uVQ4CfI.png" alt="Programma" />
+  <img src="https://i.imgur.com/Gw5Xkz0.png" alt="Programma 2" />
+  <img src="https://i.imgur.com/Oqy2jVR.png" alt="Studenten werk" />
+  <img src="https://i.imgur.com/vineXi5.png" alt="Partner pagina" />
+  <img src="https://i.imgur.com/Cuq043P.png" alt="Partner pagina 2" />
+  <img src="https://i.imgur.com/wGb7b8W.png" alt="Inschrijf pagina" />
+</details>
+
 ### Week 3
 
 #### Maandag 11 juni
