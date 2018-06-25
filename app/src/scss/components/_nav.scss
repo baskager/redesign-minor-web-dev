@@ -57,9 +57,7 @@
 
   h1 {
     margin: 0;
-    @include min-tablet() {
-      font-size: $h4-font-size;
-    }
+    font-size: $h4-font-size;
     @include min-desktop-hd() {
       font-size: $h3-font-size;
     }

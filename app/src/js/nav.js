@@ -53,7 +53,7 @@
       } else {
         this.mainIndicator.classList.remove("active");
         this.menuIndicators.forEach(function(indicator) {
-          indicator.removeAttribute("class");
+          indicator.classList.remove("active");
         });
       }
     }
