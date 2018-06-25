@@ -238,3 +238,11 @@
             opacity .3s ease-in-out;
     }
 }
+
+.student-work-list.trans.start-transition {
+    article {
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
