@@ -100,6 +100,32 @@ Na de standup zijn we begonnen met het bouwen van de componenten. De componenten
 
 We kozen vooral voor de paarse variant van de Premier League huisstijl.
 
-Uiteindelijk waren dit de kleuren waarmee we zouden gaan werken:
+We wilden de kleuren niet 100% kopieëren, dus hadden we de tinten iets aangepast. Uiteindelijk waren dit de kleuren waarmee we zouden gaan werken:
 
 ![De kleuren waar we voor hadden gekozen](https://i.imgur.com/tVLD6NA.png)
+
+### Dinsdag 5 juni
+
+Dinsdag zijn we verder gegaan met de code. We hadden allemaal een individueel gesprek met een docent. Uit dat gesprek kwam dat het wel lekker ging. Ik kreeg wel feedback dat we misschien een plan moesten opstellen voor de test met Marijn, dus dat hebben we die middag gedaan. Jelle had al twee klein opzetjes voor de programma pagina die we wilden testen met Marijn. James had Marijn al eens een keer ontmoet voor het vak web design, maar die kon helaas niet mee. Bas kon helaas ook niet mee, dus uiteindelijk waren Jamal, Jelle en ik afgereisd naar het zuidelijk gelegen Veldhoven (!).
+
+In de middag zijn we naar Veldhoven gegaan om de test te doen. De test zelf was niet heel relevant, omdat we nog weinig componenten hadden om te testen. Wel was het heel interessant om te zien hoe Marijn zijn laptop gebruikt met zijn handicap. Ik vond het nog vrij snel gaan, ik had verwacht dat hij heel lang deed om te navigeren. Marijn was wel moeilijk te verstaan, maar zodra we meer context hadden in het gesprek ging het beter. Marijn zelf is developer, dus die gebruikt zijn computer waarschijnlijk al een stuk sneller dan iemand die in een vergelijkbare situatie zit, maar die in een ander werkveld actief is.
+
+Typen kan voor Marijn soms lang duren, afhankelijk van hoe ver de toetsen op het toetsenbord zit. Marijn typt met 1 vinger, dus het kan soms duren voordat hij van de ene kant naar de andere kant van het toetsenbord is. Hij gebruikte zijn trackpad opzich best goed. Het duurde wel wat langer dan bij een 'normale' gebruiker, maar hij klikte eigenlijk niet mis, wat ik ook wel verwacht had. Hij gebruikte de spatie balk om te scrollen. Ik had verwacht dat hij vaker met de tab toets zou navigeren, maar hij gaf aan dat vervelend te vinden. Wanneer hij de spatiebalk gebruikt, blijft de focus op het bovenste element. Wanneer hij dan tab indrukt, scrollt de website helemaal naar boven.
+
+Marijn heeft ons veel inzicht gegeven in hoe iemand met een motorische handicap een computer gebruikt.
+
+### Woensdag 6 juni
+
+Woensdag zijn we begonnen met een standup, en hebben we besproken wat er uit de test was gekomen met Marijn. Daarna hebben we besproken wat we voor vrijdag af moesten hebben i.v.m. de test met Marie. Marie is doof en grafisch vormgeefster, dus zij zal ook vooral letten op de vormgeving. We hadden geen content met geluid, dus focuste we ons meer op componenten dan op de flow.
+
+Bij de test met Marijn hadden we eigenlijk geen stijling, en we hadden sowieso weinig dingen af. We hebben besproken wat de prioriteiten waren. We hadden gepland een aantal flows uit te werken voor de test met Marie. Vervolgens zijn ik en Bas gaan werken aan de vak pagina. Daarnaast hebben Jamal, James en Jelle de stijling getweaked. Ik heb Bas het een en ander uitgelegd over het maken van een simpele layout in CSS, aangezien dat een van zijn leerdoelen was.
+
+### Donderdag 7 juni
+
+Donderdag zijn we zoals altijd weer begonnen met een standup. Aangezien we woensdag een duidelijke planning hadden gemaakt was het voor iedereen duidelijk waar hij verder mee zou gaan. Ik ben verder gegaan met de course template. 
+
+Ook hadden we allemaal een individueel gesprek met een docent. Ik had mijn gesprek met Joost. Hij gaf mij een aantal handige tips over het maken van animaties, en ook gaf hij aan dat we misschien iets kritischer moeten kijken naar de HTML en naar het gebruik van classes of ids. 
+
+Nadat we allemaal een gesprek hebben gehad hebben we een korte code review gedaan met zijn allen, en zijn we alle componenten langsgelopen. Mijn code had een aantal dingen die veranderd moesten worden, dus dat had ik dan ook veranderd. 
+
+Na de codereview ben ik weer verder gegaan met de course template. Aan het eind van de middag hebben we een aantal branches bij elkaar gezet, zodat we vrijdag goed zouden kunnen testen met Marie.
