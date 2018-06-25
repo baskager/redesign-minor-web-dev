@@ -59,6 +59,11 @@
       border-color: $secondary-color;
     }
   }
+}
+
+.student-work-filters {
+  display: flex;
+  flex-wrap: wrap;
 
   input:valid {
     background-color: #fff;
@@ -76,15 +81,19 @@
     border-radius: rem(100);
     border: 1px $primary-color solid;
     color: $primary-color;
-    margin-right: $margin-16;
+    margin: $margin-16 $margin-16 0 0;
     height: auto;
     transition: all 0.3s ease;
 
     @include transitionCubic;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   input[type="radio"]:focus + label {
-    transform: scale(1.15);
+    transform: scale(1.1);
   }
 
   input[type="radio"]:checked + label {

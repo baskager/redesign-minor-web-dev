@@ -14,14 +14,18 @@
       </select>
 
       <p>{{ data.description }}</p>
-      <input type="radio" id="all" name="course" value="all" checked="checked">
-      <label for="all">All courses</label>
-      {% for course in data.courses %}
-      <input type="radio" id="{{ course.abbreviation }}" name="course" value="{{ course.abbreviation }}">
-      <label for="{{ course.abbreviation }}">{{ course.name }}</label>
-      {% endfor %}
 
-      <button type="submit">Filter</button>
+      <div class="student-work-filters">
+        <input type="radio" id="all" name="course" value="all" checked="checked">
+        <label for="all">All courses</label>
+
+        {% for course in data.courses %}
+          <input type="radio" id="{{ course.slug }}" name="course" value="{{ course.abbreviation }}">
+          <label for="{{ course.slug }}">{{ course.name }}</label>
+        {% endfor %}
+
+        <button type="submit">Filter</button>
+      </div>
     </form>
   </nav>
 </header>
