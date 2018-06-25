@@ -5,7 +5,7 @@ services:
     container_name: minorwebdev_postgres
     restart: on-failure
     volumes:
-      - ./postgres-data:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     environment:
@@ -18,12 +18,7 @@ services:
     depends_on:
       - postgres
     ports:
-      - 8181:8080
-  # web:
-  #   build: .
-  #   container_name: minorwebdev_webserver
-  #   hostname: minorwebdev-web
-  #   restart: on-failure
-  #   ports:
-  #     - "3000:3000"
-  #   command: "node server.js"
+      - 8080:8080
+
+volumes: 
+  pgdata:

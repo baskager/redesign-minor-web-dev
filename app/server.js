@@ -31,6 +31,11 @@ app.set("view engine", "html");
 app.use(compression());
 app.use(express.static("./static"));
 
+// Overwrite config for the postgres host on production servers
+if (app.get("env") == "production") {
+  config.postgres.host = "postgres";
+}
+
 // Use the Massive datamapper to connect to the database
 massive(config.postgres).then(database => {
   // Create a Datastore object (handles the database queries)
@@ -124,4 +129,7 @@ app.get("/prototypes/slider-with-buttons", function(req, res) {
     data: null
   });
 });
-app.listen(3000, () => console.log("Example app listening on port 3000!"));
+app.listen(config.port, () => {
+  console.log("Postgres will connect to: http://" + config.postgres.host);
+  console.log("Example app listening on port: " + config.port);
+});
