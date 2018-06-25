@@ -297,7 +297,7 @@ Ook had ik de animatie van het formulier die ik dinsdag had gemaakt er uit geslo
 
 Donderdag avond kwam Vasilis met de opmerking dat we veel te weinig prototypes hadden om te testen met Marijn. Vasilis wilde dat wij meer gingen testen met manieren om de website te gebruiken, terwijl wij wilde focussen op een complete website die de lucht in zou kunnen aan het eind van de meesterproef.
 
-### Vrijdag 15 juni
+#### Vrijdag 15 juni
 
 Vrijdag ochtend hadden we een test met Marie. Marie vond de website veel beter dan de vorige keer. Jelle had twee varianten gemaakt voor ondertitelingen bij een video.
 
@@ -308,3 +308,142 @@ Ik had er voor gekozen om een form element plezierig te maken voor Marijn. Ik da
 Als eerst focuste ik op het autocompleten van de email. Ik heb ervoor gezorgd dat, wanneer hij de eerste letter van zijn bedrijf domein invult, hij met 1 tab en een enter de rest van het domein kan selecteren (F wordt fuga.com). Dit scheelt 7 karakters, wat voor Marijn al een aantal seconden scheelt.
 
 Toen ik die autocomplete had was ik aan het bedenken hoe ik Marijn nog meer tijd zou kunnen schelen wanneer hij iets in moet typen. Ik moest vrij snel denken aan Tio Salamanca, de Mexicaanse kartel meneer uit Breaking Bad. Hij kon niet meer praten, en gebruikte een bord met letters om aan te geven wat hij wilde zeggen. Ik heb iets bedacht wat daar op lijkt. Op vrijdag heb ik hem nog niet af weten te krijgen. De bedoeling is dat Marijn kan typen door middel van cijfercombinaties. 11 is A, 12 is B, 21 is F, en zo verder. Op deze manier kan Marijn zijn hand op dezelfde plek houden, en hoeft hij maar een kleine beweging te maken.
+
+Ook zijn er een aantal aanpassingen geweest aan de kleuren, maar zelf ben ik daar niet echt mee bezig geweest. In plaats van roze en paars hebben we nu twee tinten paars.
+
+<details>
+  <summary>
+    Een aantal screenshots van de vernieuwde website
+  </summary>
+  <img src="https://i.imgur.com/ag1d6LO.png" alt="screenshot van weekly nerd pagina" />
+  <img src="https://i.imgur.com/ayomsdG.png" alt="screenshot van nieuwe partner pagina" />
+  <img src="https://i.imgur.com/5sJhLm1.png" alt="screenshot van nieuwe footer" />
+</details>
+
+### Week 4
+
+#### Maandag 18 juni
+
+Maandag ben ik verder gegaan met het maken van het nummer toetsenbord, zoals ik het genoemd heb. Ik heb het niet helemaal werkend gekregen, maar ik heb er omheen weten te werken zodat het wel werkt.
+
+Toen ik dat af had zat ik een tijdje te bedenken wat ik nog meer zou kunnen verzinnen om een form zo makkelijk mogelijk te maken voor Marijn. Ik heb echter niet heel veel meer kunnen bedenken, maar mijn nummer toetsenbord was zo experimenteel dat ik daar al genoeg inzichten uit zou kunnen halen.
+
+Rond 1 uur kwam Vasilis, en die was erg tevreden met de prototypes die we gemaakt hadden. Ook hij vond mijn toetsenbord erg interessant.
+
+#### Dinsdag 19 juni
+
+Dinsdag heb ik de laatste paar dingetjes verbeterd aan het nummer toetsenbord. Daarna ben ik opzoek gegaan naar andere elementen die ik zou kunnen verbeteren voor Marijn. Ik had besloten de footer toegankelijker te gaan maken voor Marijn. De footer bestaat uit heel veel linkjes, waardoor Marijn heel lang bezig zou kunnen zijn met tabben.
+
+![Screenshot van de footer](https://i.imgur.com/ayomsdG.png)
+
+De footer bestaat uit een hoop linkjes, zeker het gedeelte met de lijst van vakken. Ik heb boven het lijstje met vakken een extra element toegevoegd die linkt naar het contact gedeelte. Dit element is alleen zichtbaar wanneer de focus op het element staat.
+
+![screenshot van het element](https://i.imgur.com/zdKkl3w.png)
+
+De rest van de dag ben ik verder gegaan aan de website zelf, en heb ik focus states toegevoegd aan elementen die nog geen focus state hadden.
+
+#### Woensdag 20 juni
+
+Woensdag ben ik verder gegaan met focus states toegevoegd aan verschillende pagina's. Om 13:00 hadden we een interessante presentatie van Bruce Lawson, een van de standarisator van het W3C. Hij vertelde over hoe standaarden tot stand komen, en wat er allemaal bij komt kijken.
+
+In de middag ben ik verder gegaan met de focus states, en heb ik ook een aantal nieuwe states toegevoegd. In de avond hadden we de testen met Marijn.
+
+We gingen op bezoek bij Marijn zijn bedrijf: Fuga. Het pand zat aan de Prinsengracht, en was vrij groot. Nadat we kort uitgelegd hadden wat we gingen doen ging Marijn testen.
+
+<details>
+  <summary>
+    Klik hier voor resultaten
+  </summary>
+
+  <p><b>Test hotkeys versie 1</b></p>
+  <ul>
+    <li>liever geen alt om te navigeren, maar direct het cijfer</li>
+  </ul>
+
+  <p><b>Versie 2</b></p>
+  <ul>
+    <li>control alt icm sticky keys werkte niet zoals hij zou verwachten</li>
+    <li>concept van control alt is wel goed bedacht</li>
+  </ul>
+
+  <p><b>Versie 3</b></p>
+  <ul>
+    <li>als hij er al met zijn muis is, dan kan hij ook gewoon klikken</li>
+  </ul>
+
+  <p><b>Test verbeterde navigatie met pijljtes</b></p>
+  <ul>
+    <li>andere focus en hover state is goed (beter)</li>
+    <li>wel opletten dat je als je op de pijltjestoets drukt, dat je heel hard naar beneden gaat</li>
+    <li>hij is wel beter dan de vorige keer</li>
+  </ul>
+
+  <p><b>Test carroussel Bas</b></p>
+  <ul>
+    <li>carroussel elementen onder elkaar zetten</li>
+    <li>Het is wel beter, maar nog steeds niet 'pleasurable'</li>
+    <li>Marijn wilt hem bedienen met spatiebalk</li>
+  </ul>
+
+  <p><b>Algemeen</b></p>
+  <ul>
+    <li>student work arrow is duidelijk :)</li>
+    <li>detailpagina weekly nerd niet duidelijk</li>
+  </ul>
+
+  <p><b>Test weekly nerd video</b></p>
+  <ul>
+    <li>Het was onduidelijk waarom de subtitles van plaats veranderde</li>
+    <li>Hij zou verwachten dat je met de pijltjestoetsen vooruit/achteruit zou kunnen spoelen</li>
+    <li>images niet dragable maken</li>
+  </ul>
+
+  <p><b>Flow website</b></p>
+  <ul>
+    <li>standaard navigatie toggle aan, en je kan het uitzetten met hotkeys</li>
+    <li>of hover of focus, en niet allebei tegelijk</li>
+    <li>student work jaar select ding is 'perfect' (1)</li>
+    <li>submenu niet beschikbaar met keys</li>
+    <li>student work ook met pijltjes beschikbaar</li>
+    <li>menu dragable</li>
+    <li>(2) oke, misschien niet 'perfect', maar wel duidelijk</li>
+  </ul>
+
+  <p><b>Nummer toetsenbord</b></p>
+  <ul>
+    <li>Veld terug gaan met getallen</li>
+    <li>Uitdaging: om getallen dicht bij elkaar te houden. Getallen uit je hoofd</li>
+    <li>Is het fijn wanneer je het uit hoofd zou kunnen. Marijn denkt dat het beter werkt dan toetsenbord.</li>
+    <li>123QW nog dichter bij elkaar</li>
+    <li>Y er uit gehaald</li>
+    <li>Leuk idee</li>
+    <li>Bij focus blijven</li>
+  </ul>
+</details>
+
+Toen ik mijn alternatieve toetsenbord liet zien moest hij lachen, maar toen hij even bezig was vond hij het eigenlijk heel handig. Hij gaf aan dat het voor hem makkelijker was dan een normaal toetsenbord, en wanneer hij de combinatie van cijfers beter zou weten, hij het als toegevoegde waarde zou zien.
+
+#### Donderdag 21 juni
+
+Donderdag zijn we verder gegaan met de website zelf. Vrijdag hebben we de laatste test met Marie gepland, en dan willen we een website laten zien die redelijk af is. Ik ben voornamelijk bezig geweest met interactie van elementen, en de transities en animaties die daarbij horen. Het submenu wat nog statisch was heb ik een transitie gegeven, en daarnaast heb ik nog wat elementjes verbeterd.
+
+Ook hebben we nog een aantal elementen verbeterd.
+
+<details>
+  <summary>
+    Nog meer mooie screenshots! KLIK DAN
+  </summary>
+  <img src="https://i.imgur.com/6D03q40.png" alt="screenshot van video element" />
+  <img src="https://i.imgur.com/iEYLKqA.png" alt="screenshot van inschrijf gedeelte op homepagina" />
+  <img src="https://i.imgur.com/cik9Bch.png" alt="screenshot van submenu" />
+  <img src="https://i.imgur.com/LHTgSDS.png" alt="screenshot van Instagram feed" />
+  <img src="https://i.imgur.com/7VakUcU.png" alt="screenshot van alternatieve navigatie" />
+</details>
+
+#### Vrijdag 22 juni
+
+Vrijdag ben ik weer verder gegaan met waar ik donderdag gebleven ben, voor de rest heb ik hier niet veel over te vertellen. Wel hebben we goed geinventariseerd wat we nog allemaal moeten doen voor de eindoplevering. Deze taken hebben we verdeeld.
+
+#### Maandag 25 juni
+
+Maandag hadden we in de ochtend weer een bijeenkomst met Koop. We hebben het kort over de poster gehad die we moeten maken voor de presentatie. Na de bijeenkomst zijn we weer verder gegaan met de website, en de afvinken van de laatste dingen.
