@@ -10,7 +10,7 @@ const replayAnimationBtn = document.getElementById("replayAnimation");
 
 const additionalHeaderStyling = `
   .hero {
-    background-color: #09012f;
+    background-color: rgba(9, 1, 47, 1);
   }
 
   .hero h1,
