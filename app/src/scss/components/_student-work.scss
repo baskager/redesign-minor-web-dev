@@ -58,6 +58,15 @@
       color: darken($primary-color, 10%);
       border-color: $secondary-color;
     }
+
+    @include max-mobile() {
+      font-size: rem(64);
+      margin-bottom: rem(32);
+    }
+
+    @include max-desktop() {
+      margin-bottom: rem(40);
+    }
   }
 }
 

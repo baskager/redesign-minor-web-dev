@@ -51,10 +51,6 @@ body > header {
     h1 {
       line-height: 1.3;
 
-      @include max-mobile() {
-        line-height: 1.25;
-      }
-
       select {
         z-index: 1;
       }
@@ -81,6 +77,11 @@ body > header {
   margin: 0 auto;
   max-width: 80rem;
   width: 95%;
+
+  @include max-mobile {
+    padding: 0 2rem;
+    width: 100%;
+  }
 }
 
 .icon {
