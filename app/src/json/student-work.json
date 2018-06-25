@@ -6,6 +6,7 @@
   "courses": [
     {
       "name": "Web app from scratch",
+      "slug": "web-app-from-scratch",
       "items": [
         {
           "heading": "Jamerrone",
@@ -54,6 +55,7 @@
     },
     {
       "name": "CSS to the rescue",
+      "slug": "css-to-the-rescue",
       "items": [
         {
           "heading": "Project header",
@@ -101,6 +103,7 @@
     },
     {
       "name": "Project 1",
+      "slug": "project-1",
       "items": [
         {
           "heading": "Project header",
