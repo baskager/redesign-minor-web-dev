@@ -4,9 +4,9 @@
  * @since   21-06-2018
  **/
 
-const styleElement = document.getElementById('styleElement');
-const headerCodeEditor = document.getElementById('headerCodeEditor');
-const replayAnimationBtn = document.getElementById('replayAnimation');
+const styleElement = document.getElementById("styleElement");
+const headerCodeEditor = document.getElementById("headerCodeEditor");
+const replayAnimationBtn = document.getElementById("replayAnimation");
 
 const additionalHeaderStyling = `
   .hero {
@@ -24,11 +24,14 @@ const additionalHeaderStyling = `
   }
 
   .hero h1 span {
-    background-color: #6A00F5;
+    background-color: #FFFFFF;
+    color: #09012f;
     padding: 1.5rem;
   }
 
   .hero a {
+    background-color: #6A00F5;
+    color: #FFFFFF;
     padding: 1rem 3.5rem;
     font-weight: bold;
     border-radius: 4.375rem;
@@ -43,12 +46,12 @@ if (styleElement && headerCodeEditor && replayAnimationBtn) {
   function typewriterAnimation() {
     setTimeout(() => {
       styleElement.innerHTML += additionalHeaderStyling[currentCharacter];
-      headerCodeEditor.querySelector('code').innerHTML +=
+      headerCodeEditor.querySelector("code").innerHTML +=
         additionalHeaderStyling[currentCharacter];
       currentCharacter++;
       headerCodeEditor.scrollTop = headerCodeEditor.scrollHeight;
       if (currentCharacter < additionalHeaderStyling.length) {
-        if (additionalHeaderStyling[currentCharacter] === '}') {
+        if (additionalHeaderStyling[currentCharacter] === "}") {
           hljs.highlightBlock(headerCodeEditor);
         }
         typewriterAnimation();
@@ -57,28 +60,28 @@ if (styleElement && headerCodeEditor && replayAnimationBtn) {
   }
 
   function removeHTMLTags(element) {
-    return element.innerHTML.replace(/\<.*?\>/g, '');
+    return element.innerHTML.replace(/\<.*?\>/g, "");
   }
 
   function replayTypewriterAnimation() {
     currentCharacter = 0;
     console.log(currentCharacter);
-    styleElement.innerHTML = '';
-    headerCodeEditor.querySelector('code').innerHTML = '';
+    styleElement.innerHTML = "";
+    headerCodeEditor.querySelector("code").innerHTML = "";
     typewriterAnimation();
   }
 
-  headerCodeEditor.addEventListener('keyup', () => {
+  headerCodeEditor.addEventListener("keyup", () => {
     clearTimeout(debounceTimeout);
     debounceTimeout = setTimeout(() => {
-      styleElement.innerHTML = '';
+      styleElement.innerHTML = "";
       styleElement.innerHTML += removeHTMLTags(
-        headerCodeEditor.querySelector('code')
+        headerCodeEditor.querySelector("code")
       );
     }, 1000);
   });
 
-  replayAnimationBtn.addEventListener('click', () => {
+  replayAnimationBtn.addEventListener("click", () => {
     replayTypewriterAnimation();
   });
 
