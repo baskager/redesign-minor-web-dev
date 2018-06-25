@@ -75,9 +75,9 @@ Voor een pagina die als overzicht zou dienen van de vakken en projecten wilde we
   <summary>
     Bekijk leuke plaatjes
   </summary>
-  ![screenshot van de partner pagina](https://i.imgur.com/E6LQomX.png)
-  ![screenshot van de programma pagina](https://i.imgur.com/V4crdVO.png)
-  ![screenshot van de studentenwerk pagina](https://i.imgur.com/fDIaXLu.png)
+  <img alt="screenshot van de partner pagina" src="https://i.imgur.com/E6LQomX.png" />
+  <img alt="screenshot van de programma pagina" src="https://i.imgur.com/V4crdVO.png" />
+  <img alt="screenshot van de studentenwerk pagina" src="https://i.imgur.com/fDIaXLu.png" />
 </details>
 
 ### Vrijdag 1 juni
