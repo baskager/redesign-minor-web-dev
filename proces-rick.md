@@ -73,6 +73,7 @@ Toen we de database structuur opgezet hadden zijn we begonnen met het maken van 
   </summary>
   <img src="https://i.imgur.com/u7altpk.png" alt="overzicht van schetsen" />
   <img src="https://i.imgur.com/axnEoYa.png" alt="nog meer schetsen" />
+  <img src="https://i.imgur.com/DgD5kh6.png" alt="NOG MEER SCHETSEN" />
 </details>
 
 We hadden een gesprek met Marijn gepland, maar die kon helaas niet doorgaan.
@@ -154,3 +155,84 @@ Na de codereview ben ik weer verder gegaan met de course template. Aan het eind 
   <img alt="eerste screenshot van een van de eerste versies van de course pagina" src="https://i.imgur.com/AxlMWfB.png" />
   <img alt="tweede screenshot van een van de eerste versies van de course pagina" src="https://i.imgur.com/XdVATzi.png" />
 </details>
+
+### Vrijdag 8 juni
+
+Vrijdag ochtend was de test met Marie. Marie had veel goede tips over de vormgeving en over de duidelijkheid van bepaalde pagina's:
+
+
+<details>
+  <summary>
+    Resultaten van test met Marie
+  </summary>
+
+  <p><b>Program pagina</b></p>
+  <ul>
+    <li>Niet duidelijk dat het de sprekers zijn</li>
+    <li>Programma en hiërarchie is niet duidelijk</li>
+    <li>Kopjes toevoegen, introductie.</li>
+    <li>Tabel is niet eigenlijk niet duidelijk.</li>
+    <li>Weken opsplitsen</li>
+    <li>Betere visuele afscheiding per deel</li>
+    <li>Klikken op de vakken is nog niet duidelijk. Accentkleur moet</li>
+    <li>Download PDF naar onder</li>
+    <li>Horizontaal kijken maar niet verticaal. Link met elkaar onduidelijk</li>
+    <li>Lengte van de teksten is goed</li>
+  </ul>
+
+  <p><b>Vak pagina</b></p>
+  <ul>
+    <li>Docenten staan boven de leerdoelen</li>
+    <li>Weekly programma zien er belangrijk uit</li>
+    <li>Link naar docenten duidelijk</li>
+    <li>Weekopdrachten 2x, minder belangrijk maken</li>
+  </ul>
+
+  <p><b>Partner pagina</b></p>
+  <ul>
+    <li>Nieuw tabblad openen bij klikken op de button</li>
+    <li>Is meer de goede kant op</li>
+  </ul>
+
+  <p><b>Student work pagina</b></p>
+  <ul>
+    <li>Misschien zijn de filters niet nodig</li>
+  </ul>
+
+  <p><b>Algemeen</b></p>
+  <ul>
+    <li>Missen de hiërarchie in de teksten, links zien er niet zo heel klikbaar uit</li>
+  </ul>
+
+
+  <p><b>Video</b></p>
+  <p>Aangezien Marie doof is, vroegen wij ons af hoe ze dat normaal doet met geluid, en in het bijzonder video.</p>
+  <ul>
+    <li>Bij Lynda video’s waarbij tekst al gelezen is</li>
+    <li>Samenvattingen</li>
+    <li>Ondertiteling is al voldoende</li>
+  </ul>
+
+<p><b>Welke dingen zoek je als je naar een minor op zoek bent:</b></p>
+
+Student work, beste beeld van wat er gemaakt wordt en het resultaat. Interessant of niet, daarna naar programma.
+
+Programma is ook belangrijk.
+Partners is voor de student zelf minder belangrijk.
+
+<p><b>Liever alleen goed werk of ook minder goed werk</b>
+
+Goed werk kan ook afschrikken. Wat minder goed werk ook tonen.
+
+Wel toegankelijk voor iedereen.
+
+<p></b>Sfeer, over ons</b></p>
+
+Met sfeer van de minor.
+Marie: niet zo zeer een aparte pagina, misschien verwarrend maar op de homepage.
+
+</details>
+
+De rest van de dag hebben we verder gewerkt aan het design, en hebben we een aantal van Marie haar tips verwerkt.
+
+In de middag wilden we veranderingen aanbrengen aan de kleuren, maar aangezien het vrijdagmiddag was zijn we er niet echt aan toegekomen. Wel hebben we aanpassingen gedaan aan de tijdlijn.
