@@ -161,7 +161,7 @@ Na de codereview ben ik weer verder gegaan met de course template. Aan het eind 
 Vrijdag ochtend was de test met Marie. Marie had veel goede tips over de vormgeving en over de duidelijkheid van bepaalde pagina's:
 
 
-<details style="background: rgb(245,245,245);">
+<details>
   <summary>
     Resultaten van test met Marie
   </summary>
@@ -236,3 +236,15 @@ Marie: niet zo zeer een aparte pagina, misschien verwarrend maar op de homepage.
 De rest van de dag hebben we verder gewerkt aan het design, en hebben we een aantal van Marie haar tips verwerkt.
 
 In de middag wilden we veranderingen aanbrengen aan de kleuren, maar aangezien het vrijdagmiddag was zijn we er niet echt aan toegekomen. Wel hebben we aanpassingen gedaan aan de tijdlijn.
+
+### Week 3
+
+#### Maandag 11 juni
+
+Maandag ochtend hadden we weer een klasbespreking. Na de bespreking hebben we kort met Krijn gesproken over onze leerdoelen en onze progressie.
+
+Na het gesprek hebben we weer kort gesproken over de kleuren, en ben ik verder gegaan met de vakpagina. Na de vakpagina ben ik begonnen met het halen van een van mijn leerdoelen: Animaties en transities.
+
+Ik heb nagedacht over op wat voor plekken in ze toe zou willen voegen. 
+
+Om 13:00 hadden we een gesprek met Vasilis. Vasilis was erg tevreden over hoe de website er uit zag. De rest van de dag hebben we de feedback van Marie besproken, en waar nodig verwerkt.
