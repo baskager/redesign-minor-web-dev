@@ -8,6 +8,11 @@
   align-items: center;
   box-shadow: $bottom-shadow;
   z-index: $zindex-nav;
+  .menu-toggle {
+    @include min-desktop() {
+      display: none;
+    }
+  }
   & > .container {
     display: flex;
     justify-content: space-between;
@@ -64,7 +69,7 @@
       border-bottom: 2px solid transparent;
       flex-flow: column;
       @include transition();
-      &:hover {
+      &:hover:not(#menu-item-6) {
         border-bottom: 2px solid rgba($primary-color, 0.5);
       }
       @include min-tablet() {
@@ -82,14 +87,6 @@
       span {
         border-color: $secondary-color;
       }
-    }
-
-    // #menu-item-6 {
-    //   padding: calc(1.5rem + 1px) 1rem;
-    // }
-
-    #menu-item-6:hover {
-      border-bottom: 0;
     }
 
     span {

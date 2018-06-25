@@ -2,7 +2,7 @@
   <div class="container">
     <a class="skip-to-content" href="#main" tabindex="0">Skip to content</a>
     <a href="/"><h1>Minor Web Dev</h1></a>
-    <ul>
+    <ul id="nav-items">
       <li {% if data.title=="Home" %} class="active" {% endif %}>
         <a id="menu-item-1" href="/" accesskey="1"><span span class="active">1</span>Home</a>
       </li>
@@ -50,10 +50,6 @@
       <li {% if data.title=="Our Partners" %} class="active" {% endif %}>
         <a id="menu-item-3" href="/partners" accesskey="3"><span span class="active">3</span>Partners</a>
       </li>
-      {#
-      <li {% if data.title=="Ons team" %} class="active" {% endif %}>
-        <a href="/team">Team</a>
-      </li> #}
       <li {% if data.title=="Student work" %} class="active" {% endif %}>
         <a id="menu-item-4" href="/student-work" accesskey="4"><span span class="active">4</span>Student work</a>
       </li>
@@ -65,6 +61,14 @@
       </li>
     </ul>
 
+    {# Hamburger menu #}
+    <button href="#nav-items" id="nav-items-toggle" aria-label="Open main menu">
+      {# <span class="sr-only">Open main menu</span> #}
+      <span class="fa fa-bars" aria-hidden="true"></span>
+    </button>
+
+    {# Key nav indicator #}
+    {# Add click event #}
     <div id="keynav" class="keynav active">
       <span>CTRL + ALT</span> toggle shortkeys
     </div>

@@ -16,6 +16,12 @@
     }
   };
 
+  const mobileNav = {
+    init: function(e) {
+      eventListeners.onClick();
+    }
+  };
+
   const keyNavToggle = {
     mainIndicator: document.getElementById("keynav"),
     menuIndicators: document.querySelectorAll(".main-nav div > ul a span"),
@@ -138,8 +144,25 @@
           indicator.classList.remove("inactive");
         });
       });
+    },
+
+    onClick: function(e) {
+      let mainNav = document.getElementById("nav-items");
+      let navToggle = document.getElementById("nav-items-toggle");
+
+      console.log(navToggle);
+      navToggle.addEventListener("click", function(e) {
+        if (this.classList.contains("active")) {
+          mainNav.classList.add("active");
+          navToggle.removeAttribute("class");
+        } else {
+          mainNav.removeAttribute("class");
+          navToggle.classList.add("active");
+        }
+      });
     }
   };
 
+  mobileNav.init();
   keyNav.init();
 })();
