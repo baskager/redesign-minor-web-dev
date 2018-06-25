@@ -7,28 +7,32 @@
         <span>
           {{ data.title }}
         </span>
-        <select name="archive" id="select-year">
-          <option value="2018">2018 ▼</option>
-          <option value="2017">2017 ▼</option>
-        </select>
       </h1>
+      <select name="archive" id="select-year">
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+      </select>
 
       <p>{{ data.description }}</p>
-      <input type="radio" id="all" name="course" value="all" checked="checked">
-      <label for="all">All courses</label>
-      {% for course in data.courses %}
-      <input type="radio" id="{{ course.abbreviation }}" name="course" value="{{ course.abbreviation }}">
-      <label for="{{ course.abbreviation }}">{{ course.name }}</label>
-      {% endfor %}
 
-      <button type="submit">Filter</button>
+      <div class="student-work-filters">
+        <input type="radio" id="all" name="course" value="all" checked="checked">
+        <label for="all">All courses</label>
+
+        {% for course in data.courses %}
+          <input type="radio" id="{{ course.slug }}" name="course" value="{{ course.abbreviation }}">
+          <label for="{{ course.slug }}">{{ course.name }}</label>
+        {% endfor %}
+
+        <button type="submit">Filter</button>
+      </div>
     </form>
   </nav>
 </header>
 
 <main id="main" class="student-work">
   {% for course in data.courses %}
-  <section class="course course-{{ course.abbreviation }} focusOnScroll">
+  <section class="course course-{{ course.abbreviation }} focusOnScroll" id="{{ course.slug }}">
     <div class="container">
       <h2>{{ course.name }}</h2>
 
@@ -48,7 +52,7 @@
         {% endfor %}
       </div>
 
-      <a href="#" class="btn-primary">Meer {{ course.name }}</a>
+      <a href="#" class="btn btn-small btn-primary">Meer {{ course.name }}</a>
     </div>
   </section>
   {% endfor %}
