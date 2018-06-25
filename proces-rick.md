@@ -161,7 +161,7 @@ Na de codereview ben ik weer verder gegaan met de course template. Aan het eind 
 Vrijdag ochtend was de test met Marie. Marie had veel goede tips over de vormgeving en over de duidelijkheid van bepaalde pagina's:
 
 
-<details>
+<details style="background: rgb(245,245,245);">
   <summary>
     Resultaten van test met Marie
   </summary>
