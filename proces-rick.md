@@ -45,7 +45,11 @@ Tijdens een gesprek met Vasilis hadden we elkaars leerdoelen besproken, en een b
 
 ### Dinsdag 29 mei
 
-Dinsdag waren we begonnen met het inventariseren van alle content die bruikbaar zou kunnen zijn voor alle gebruikers. Onder de gebruikers verstonden wij: 
+Dinsdag waren we begonnen met het inventariseren van alle content die bruikbaar zou kunnen zijn voor alle gebruikers. 
+
+![Overzicht content](https://i.imgur.com/XUw8Fwh.png)
+
+Onder de gebruikers verstonden wij: 
 
 - CMD studenten
 - niet-CMD studenten 
@@ -59,7 +63,17 @@ Vervolgens hadden we met een aantal docenten gesproken over zij denken over de m
 
 Woensdag zijn we verder gegaan met het inventariseren van de content, en zijn we verder gegaan met het indelen van de content in een database. Ook hebben we besproken hoe welke content is verbonden met andere content, en hoe dit terug moet komen in de website.
 
+![Overzicht van database structuur](https://i.imgur.com/wuzUCBC/.png)
+
 Toen we de database structuur opgezet hadden zijn we begonnen met het maken van de eerste schetsen van de website. Deze schetsen waren nogal redelijk lo-fi.
+
+<details>
+  <summary>
+    Kijk naar leuke schetsen
+  </summary>
+  <img src="https://i.imgur.com/u7altpk.png" alt="overzicht van schetsen" />
+  <img src="https://i.imgur.com/axnEoYa.png" alt="nog meer schetsen" />
+</details>
 
 We hadden een gesprek met Marijn gepland, maar die kon helaas niet doorgaan.
 
@@ -87,6 +101,8 @@ Vrijdag zijn we begonnen met het opzetten van het project. Ook hebben we beslote
 Jelle, Jamal en ik zijn verder gegaan met itereren op het wireframe, terwijl James en Bas zijn begonnen aan de layout van de website. Jelle, Jamal en ik hebben een aantal aanpassingen gedaan aan het wireframe, zodat het voor iedereen duidelijk zou zijn hoe de pagina's eruit zouden komen te zien.
 
 Als laatst hebben we een planning gemaakt voor de volgende week, en issues assigned aan elkaar.
+
+![Planning voor week 2](https://i.imgur.com/M6VhS1i.png)
 
 ## Week 2
 
