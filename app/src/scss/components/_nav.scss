@@ -29,6 +29,7 @@
     opacity: 1;
     transition: all .3s ease;
     overflow: hidden;
+    box-shadow: 5px 0 4px rgba(0,0,0,0.2);
     * {
       display: none;
     }
@@ -59,6 +60,7 @@
   li:focus-within .submenu,
   li:hover .submenu {
     height: 250px;
+    border-bottom: solid white 1px;
     * {
       display: block;
     }
