@@ -44,6 +44,10 @@ $h3-font-size: 1.5rem;
 $h3-font-style: normal;
 $h3-font-weight: $semi-bold;
 
+$h4-font-size: 1.25rem;
+$h4-font-style: normal;
+$h4-font-weight: $semi-bold;
+
 $body-color: $black;
 $body-font-size: 100%;
 $body-font-size-small: 0.75rem;
@@ -158,5 +162,5 @@ $min-tablet: rem($mobile + 1);
 $max-tablet: rem($tablet);
 $min-desktop: rem($tablet + 1);
 $max-desktop: rem($desktop);
-$min-desktop-hd: rem($desktop-hd + 1);
+$min-desktop-hd: rem($desktop + 1);
 $max-desktop-hd: rem($desktop-hd);
