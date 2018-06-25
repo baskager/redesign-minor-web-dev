@@ -18,7 +18,7 @@ services:
     depends_on:
       - postgres
     ports:
-      - 8080:8080
+      - 8181:8080
   # web:
   #   build: .
   #   container_name: minorwebdev_webserver

@@ -148,10 +148,10 @@ $zindex-card: 8;
 $zindex-card-link: 9;
 
 // Media queries
-$mobile: 575;
-$tablet: 768;
-$desktop: 992;
-$desktop-hd: 1180;
+$mobile: rem(575);
+$tablet: rem(768);
+$desktop: rem(992);
+$desktop-hd: rem(1180);
 
 $max-mobile: rem($mobile);
 $min-tablet: rem($mobile + 1);
