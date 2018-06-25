@@ -32,11 +32,11 @@
 
 <main id="main" class="student-work">
   {% for course in data.courses %}
-  <section class="course course-{{ course.abbreviation }} focusOnScroll" id="{{ course.slug }}">
+  <section class="course course-{{ course.abbreviation }} focusOnScroll">
     <div class="container">
       <h2>{{ course.name }}</h2>
 
-      <div class="student-work-list">
+      <div class="student-work-list" scroll-transition>
         {% for item in course.items %}
         <article class="card card-interactive student-work-card">
           <header>
@@ -46,12 +46,10 @@
             </a>
           </header>
           <img src="{{ item.imgUrl }}" alt="{{ item.imgAlt }}">
-
           <a class="card-link" href="{{ item.demoUrl }}" target="_blank"></a>
         </article>
         {% endfor %}
       </div>
-
       <a href="#" class="btn btn-small btn-primary">Meer {{ course.name }}</a>
     </div>
   </section>
