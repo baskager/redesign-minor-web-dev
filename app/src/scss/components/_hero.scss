@@ -1,6 +1,7 @@
 .hero {
   min-height: 85vh;
   padding: 0;
+  transition: background 0s linear !important;
 
   h1,
   p,
@@ -9,6 +10,7 @@
     margin: 0;
     text-decoration: initial;
     text-transform: initial;
+    transition: color 0s linear !important;
   }
 
   h1 {
