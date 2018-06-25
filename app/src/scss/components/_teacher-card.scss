@@ -1,11 +1,13 @@
 .teachers-list {
   display: flex;
+  margin: 2rem 0;
   padding: 0;
   li {
     display: flex;
     list-style: none;
     margin-right: 2rem;
     position: relative;
+    align-items: center;
   }
   div {
     display: flex;
