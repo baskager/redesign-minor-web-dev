@@ -78,8 +78,13 @@ body > header {
   max-width: 80rem;
   width: 95%;
 
-  @include max-mobile {
+  @include max-tablet {
     padding: 0 2rem;
+    width: 100%;
+  }
+
+  @include max-mobile {
+    padding: 0 1.25rem;
     width: 100%;
   }
 }
