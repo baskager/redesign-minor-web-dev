@@ -63,13 +63,13 @@ Vervolgens hadden we met een aantal docenten gesproken over zij denken over de m
 
 Woensdag zijn we verder gegaan met het inventariseren van de content, en zijn we verder gegaan met het indelen van de content in een database. Ook hebben we besproken hoe welke content is verbonden met andere content, en hoe dit terug moet komen in de website.
 
-![Overzicht van database structuur](https://i.imgur.com/wuzUCBC/.png)
+![Overzicht van database structuur](https://i.imgur.com/wuzUCBC.png)
 
 Toen we de database structuur opgezet hadden zijn we begonnen met het maken van de eerste schetsen van de website. Deze schetsen waren nogal redelijk lo-fi.
 
 <details>
   <summary>
-    Kijk naar leuke schetsen
+    Kijk naar schetsjes
   </summary>
   <img src="https://i.imgur.com/u7altpk.png" alt="overzicht van schetsen" />
   <img src="https://i.imgur.com/axnEoYa.png" alt="nog meer schetsen" />
