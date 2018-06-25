@@ -1,0 +1,27 @@
+version: '3'
+services:
+  postgres:
+    image: "postgres:10.4-alpine"
+    container_name: minorwebdev_postgres
+    restart: on-failure
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    env_file:
+      - credentials.env
+  web:
+    build: .
+    container_name: minorwebdev_webserver
+    hostname: minorwebdev-web
+    restart: on-failure
+    depends_on:
+      - postgres
+    ports:
+      - "3000:3000"
+    command: "node server.js"
+    environment:
+      NODE_ENV: production
+
+volumes: 
+  pgdata:

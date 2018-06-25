@@ -1,3 +1,4 @@
+require("./the-wow-header.js");
 require("./intersection-observer.js");
 require("./animation.js");
 require("./carousel");

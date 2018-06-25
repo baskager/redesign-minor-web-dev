@@ -1,29 +1,35 @@
-{% extends 'components/_base.html' %} 
+{% extends 'components/_base.html' %}
 
 {% block content %}
 <header class="student-work-header">
-    <nav class="container">
-        <form action="/student-work" method="POST">
-                
-            <h1>
-                {{ data.title }}
-                <select name="archive" id="select-year">
-                    <option value="2018">2018 ▼</option>
-                    <option value="2017">2017 ▼</option>
-                </select>
-            </h1>
+  <nav class="container">
+    <form action="/student-work" method="POST">
 
-            <p>{{ data.description }}</p>
-                <input type="radio" id="all" name="course" value="all" checked="checked">
-                <label for="all">All courses</label>
-            {% for course in data.courses %}
-                <input type="radio" id="{{ course.abbreviation }}" name="course" value="{{ course.abbreviation }}">
-                <label for="{{ course.abbreviation }}">{{ course.name }}</label>
-            {% endfor %}
+      <h1>
+        <span>
+          {{ data.title }}
+        </span>
+      </h1>
+      <select name="archive" id="select-year">
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+      </select>
 
-            <button type="submit">Filter</button>
-        </form>
-    </nav>
+      <p>{{ data.description }}</p>
+
+      <div class="student-work-filters">
+        <input type="radio" id="all" name="course" value="all" checked="checked">
+        <label for="all">All courses</label>
+
+        {% for course in data.courses %}
+          <input type="radio" id="{{ course.slug }}" name="course" value="{{ course.abbreviation }}">
+          <label for="{{ course.slug }}">{{ course.name }}</label>
+        {% endfor %}
+
+        <button type="submit">Filter</button>
+      </div>
+    </form>
+  </nav>
 </header>
 
 <main id="main" class="student-work">
@@ -32,25 +38,23 @@
         <div class="container">
         <h2>{{ course.name }}</h2>
 
-        <div class="student-work-list">
-            {% for item in course.items %}
-            <article class="card card-interactive student-work-card">
-            <header>
-                <h3>{{ item.heading }}</h3>
-                <a href="{{ item.repoUrl }}" target="_blank">
-                <img src="/img/icons/github.svg" class="icon-24" alt="To GitHub repo">
-                </a>
-            </header>
-            <img src="{{ item.imgUrl }}" alt="{{ item.imgAlt }}">
-
-            <a class="card-link" href="{{ item.demoUrl }}" target="_blank"></a>
-            </article>
-            {% endfor %}
-        </div>
-
-        <a href="#" class="btn-primary">Meer {{ course.name }}</a>
-        </div>
-    </section>
-    {% endfor %}
+      <div class="student-work-list" scroll-transition>
+        {% for item in course.items %}
+        <article class="card card-interactive student-work-card">
+          <header>
+            <h3>{{ item.heading }}</h3>
+            <a href="{{ item.repoUrl }}" target="_blank">
+              <img src="/img/icons/github.svg" class="icon-24" alt="To GitHub repo">
+            </a>
+          </header>
+          <img src="{{ item.imgUrl }}" alt="{{ item.imgAlt }}">
+          <a class="card-link" href="{{ item.demoUrl }}" target="_blank"></a>
+        </article>
+        {% endfor %}
+      </div>
+      <a href="#" class="btn btn-small btn-primary">Meer {{ course.name }}</a>
+    </div>
+  </section>
+  {% endfor %}
 </main>
 {% endblock %}

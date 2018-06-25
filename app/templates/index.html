@@ -1,24 +1,43 @@
 {% set title = "Home" %} {% extends "components/_base.html" %} {% block content %}
 <header id="main" class="hero focusOnScroll">
   <div class="container">
-    <h1>Minor Web Development</h1>
-    <p>This minor learns you to make interactive applications with HTML, CSS and JavaScipt. In seperate courses and projects you'll learn everything about: real-time web, internet of things, performance, rapid prototyping, usability, documenting, version control, debugging, testing, responsive, reactive, micro interactions, API's and more...</p>
-    {# {% include "components/_student-work-card.html" %} #}
+    <div class="left">
+      <h1>
+        <span>Minor Web Development</span>
+      </h1>
+      <p>This minor learns you to make interactive applications with HTML, CSS and JavaScript. In separate courses and projects
+        you'll learn everything about: real-time web, internet of things, performance, rapid prototyping...</p>
+      <a href="/">What you gonna learn</a>
+    </div>
+    <div class="right">
+      <svg width="201" height="81" viewBox="0 0 201 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.55">
+          <path d="M48.6886 0C48.6886 0 -12.2524 3.3477 2.22362 53.184" transform="translate(190.152 2.23901) rotate(88)" stroke="white"
+            stroke-width="2" stroke-miterlimit="10" />
+          <path d="M-1.31226e-06 -3.05176e-07L11.496 8.1797L-1.31226e-06 16.3633" transform="translate(199.625 39.1235) rotate(88)"
+            stroke="white" stroke-width="2" stroke-miterlimit="10" />
+        </g>
+        <path d="M11.7188 6.77344H7.28516V19H4.83398V6.77344H0.439453V4.78125H11.7188V6.77344ZM18.252 10.6016C17.9395 10.5495 17.6172 10.5234 17.2852 10.5234C16.1979 10.5234 15.4655 10.9401 15.0879 11.7734V19H12.7148V8.43359H14.9805L15.0391 9.61523C15.612 8.69727 16.4062 8.23828 17.4219 8.23828C17.7604 8.23828 18.0404 8.28385 18.2617 8.375L18.252 10.6016ZM23.623 15.6016L25.7715 8.43359H28.3008L24.1016 20.6016C23.457 22.3789 22.3633 23.2676 20.8203 23.2676C20.4753 23.2676 20.0944 23.209 19.6777 23.0918V21.2559L20.127 21.2852C20.7259 21.2852 21.1751 21.1745 21.4746 20.9531C21.7806 20.7383 22.0215 20.3737 22.1973 19.8594L22.5391 18.9512L18.8281 8.43359H21.3867L23.623 15.6016ZM37.1777 19H34.8047V8.43359H37.1777V19ZM34.6582 5.68945C34.6582 5.32487 34.7721 5.02214 35 4.78125C35.2344 4.54036 35.5664 4.41992 35.9961 4.41992C36.4258 4.41992 36.7578 4.54036 36.9922 4.78125C37.2266 5.02214 37.3438 5.32487 37.3438 5.68945C37.3438 6.04753 37.2266 6.34701 36.9922 6.58789C36.7578 6.82227 36.4258 6.93945 35.9961 6.93945C35.5664 6.93945 35.2344 6.82227 35 6.58789C34.7721 6.34701 34.6582 6.04753 34.6582 5.68945ZM42.7441 5.86523V8.43359H44.6094V10.1914H42.7441V16.0898C42.7441 16.4935 42.8223 16.7865 42.9785 16.9688C43.1413 17.1445 43.4277 17.2324 43.8379 17.2324C44.1113 17.2324 44.388 17.1999 44.668 17.1348V18.9707C44.1276 19.1204 43.6068 19.1953 43.1055 19.1953C41.2826 19.1953 40.3711 18.1895 40.3711 16.1777V10.1914H38.6328V8.43359H40.3711V5.86523H42.7441ZM55.1074 15.6016L57.2559 8.43359H59.7852L55.5859 20.6016C54.9414 22.3789 53.8477 23.2676 52.3047 23.2676C51.9596 23.2676 51.5788 23.209 51.1621 23.0918V21.2559L51.6113 21.2852C52.2103 21.2852 52.6595 21.1745 52.959 20.9531C53.265 20.7383 53.5059 20.3737 53.6816 19.8594L54.0234 18.9512L50.3125 8.43359H52.8711L55.1074 15.6016ZM60.5566 13.6191C60.5566 12.584 60.7617 11.653 61.1719 10.8262C61.582 9.99284 62.1582 9.35482 62.9004 8.91211C63.6426 8.46289 64.4954 8.23828 65.459 8.23828C66.8848 8.23828 68.0404 8.69727 68.9258 9.61523C69.8177 10.5332 70.2995 11.7507 70.3711 13.2676L70.3809 13.8242C70.3809 14.8659 70.179 15.7969 69.7754 16.6172C69.3783 17.4375 68.8053 18.0723 68.0566 18.5215C67.3145 18.9707 66.4551 19.1953 65.4785 19.1953C63.9876 19.1953 62.793 18.7005 61.8945 17.7109C61.0026 16.7148 60.5566 15.39 60.5566 13.7363V13.6191ZM62.9297 13.8242C62.9297 14.9115 63.1543 15.7643 63.6035 16.3828C64.0527 16.9948 64.6777 17.3008 65.4785 17.3008C66.2793 17.3008 66.901 16.9883 67.3438 16.3633C67.793 15.7383 68.0176 14.8236 68.0176 13.6191C68.0176 12.5514 67.7865 11.7051 67.3242 11.0801C66.8685 10.4551 66.2467 10.1426 65.459 10.1426C64.6842 10.1426 64.069 10.4518 63.6133 11.0703C63.1576 11.6823 62.9297 12.6003 62.9297 13.8242ZM78.7891 17.9648C78.0924 18.7852 77.1029 19.1953 75.8203 19.1953C74.6745 19.1953 73.8053 18.86 73.2129 18.1895C72.627 17.5189 72.334 16.5488 72.334 15.2793V8.43359H74.707V15.25C74.707 16.5911 75.2637 17.2617 76.377 17.2617C77.5293 17.2617 78.3073 16.8483 78.7109 16.0215V8.43359H81.084V19H78.8477L78.7891 17.9648ZM89.0332 10.6016C88.7207 10.5495 88.3984 10.5234 88.0664 10.5234C86.9792 10.5234 86.2467 10.9401 85.8691 11.7734V19H83.4961V8.43359H85.7617L85.8203 9.61523C86.3932 8.69727 87.1875 8.23828 88.2031 8.23828C88.5417 8.23828 88.8216 8.28385 89.043 8.375L89.0332 10.6016ZM96.4551 16.1289C96.4551 15.7057 96.2793 15.3835 95.9277 15.1621C95.5827 14.9408 95.0065 14.7454 94.1992 14.5762C93.3919 14.4069 92.7181 14.1921 92.1777 13.9316C90.9928 13.3587 90.4004 12.5286 90.4004 11.4414C90.4004 10.5299 90.7845 9.76823 91.5527 9.15625C92.321 8.54427 93.2975 8.23828 94.4824 8.23828C95.7454 8.23828 96.7643 8.55078 97.5391 9.17578C98.3203 9.80078 98.7109 10.6113 98.7109 11.6074H96.3379C96.3379 11.1517 96.1686 10.7741 95.8301 10.4746C95.4915 10.1686 95.0423 10.0156 94.4824 10.0156C93.9616 10.0156 93.5352 10.1361 93.2031 10.377C92.8776 10.6178 92.7148 10.9401 92.7148 11.3438C92.7148 11.7083 92.8678 11.9915 93.1738 12.1934C93.4798 12.3952 94.0983 12.6003 95.0293 12.8086C95.9603 13.0104 96.6895 13.2546 97.2168 13.541C97.7507 13.821 98.1445 14.1595 98.3984 14.5566C98.6589 14.9538 98.7891 15.4355 98.7891 16.002C98.7891 16.9525 98.3952 17.724 97.6074 18.3164C96.8197 18.9023 95.7878 19.1953 94.5117 19.1953C93.6458 19.1953 92.8743 19.0391 92.1973 18.7266C91.5202 18.4141 90.9928 17.9844 90.6152 17.4375C90.2376 16.8906 90.0488 16.3014 90.0488 15.6699H92.3535C92.3861 16.2298 92.5977 16.6628 92.9883 16.9688C93.3789 17.2682 93.8965 17.418 94.541 17.418C95.166 17.418 95.6413 17.3008 95.9668 17.0664C96.2923 16.8255 96.4551 16.513 96.4551 16.1289ZM105.518 19.1953C104.014 19.1953 102.793 18.7233 101.855 17.7793C100.924 16.8288 100.459 15.5658 100.459 13.9902V13.6973C100.459 12.6426 100.661 11.7018 101.064 10.875C101.475 10.0417 102.048 9.39388 102.783 8.93164C103.519 8.4694 104.339 8.23828 105.244 8.23828C106.683 8.23828 107.793 8.69727 108.574 9.61523C109.362 10.5332 109.756 11.832 109.756 13.5117V14.4688H102.852C102.923 15.3411 103.213 16.0312 103.721 16.5391C104.235 17.0469 104.88 17.3008 105.654 17.3008C106.742 17.3008 107.627 16.8613 108.311 15.9824L109.59 17.2031C109.167 17.8346 108.6 18.3262 107.891 18.6777C107.188 19.0228 106.396 19.1953 105.518 19.1953ZM105.234 10.1426C104.583 10.1426 104.056 10.3704 103.652 10.8262C103.255 11.2819 103.001 11.9167 102.891 12.7305H107.412V12.5547C107.36 11.7604 107.148 11.1615 106.777 10.7578C106.406 10.3477 105.892 10.1426 105.234 10.1426ZM114.131 19H111.758V4H114.131V19ZM117.559 19V10.1914H115.947V8.43359H117.559V7.4668C117.559 6.29492 117.884 5.38997 118.535 4.75195C119.186 4.11393 120.098 3.79492 121.27 3.79492C121.686 3.79492 122.129 3.85352 122.598 3.9707L122.539 5.82617C122.279 5.77409 121.976 5.74805 121.631 5.74805C120.498 5.74805 119.932 6.33073 119.932 7.49609V8.43359H122.08V10.1914H119.932V19H117.559ZM126.328 14.8105H124.287L124.062 4.78125H126.562L126.328 14.8105ZM123.994 17.877C123.994 17.5059 124.115 17.1999 124.355 16.959C124.596 16.7116 124.925 16.5879 125.342 16.5879C125.758 16.5879 126.087 16.7116 126.328 16.959C126.569 17.1999 126.689 17.5059 126.689 17.877C126.689 18.235 126.572 18.5345 126.338 18.7754C126.104 19.0163 125.771 19.1367 125.342 19.1367C124.912 19.1367 124.58 19.0163 124.346 18.7754C124.111 18.5345 123.994 18.235 123.994 17.877Z"
+          transform="translate(0 50.0137) rotate(-23)" fill="white" />
+      </svg>
+
+      <pre id="headerCodeEditor" class="hljs css">
+        <code class="hljs css" contenteditable="true"></code>
+      </pre>
+      <button id="replayAnimation">
+        <svg width="100pt" height="100pt" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="m50 5c-24.852 0-45 20.145-45 45s20.148 45 45 45c24.855 0 45-20.145 45-45s-20.145-45-45-45zm27.391 40.348c-0.070313 0.18359-0.18359 0.35156-0.32422 0.49219-0.14453 0.14453-0.30859 0.25781-0.48438 0.33203-0.17969 0.074219-0.375 0.11719-0.57812 0.11719l-8.0547-0.027343-8.0547-0.023438c-0.33203 0.003907-0.61719-0.035156-0.85547-0.11719-0.31641-0.10938-0.53906-0.28906-0.64453-0.53516-0.10547-0.24609-0.082031-0.53516 0.0625-0.83984 0.10547-0.22266 0.27734-0.45703 0.51172-0.69141l4.8398-4.8477c-3.3438-4.4102-8.6133-7.1133-14.289-7.1133-9.8711 0-17.902 8.0312-17.902 17.902s8.0312 17.898 17.902 17.898c7.5547 0 14.332-4.7734 16.867-11.883l0.058593 0.019531c0.78125-1.3906 2.2695-2.332 3.9766-2.332 2.5195 0 4.5586 2.0391 4.5586 4.5586 0 0.27344-0.027344 0.53906-0.074219 0.80078l0.066406 0.019531c-0.0625 0.17188-0.12891 0.33594-0.19141 0.50781-0.058594 0.19531-0.13672 0.38672-0.22266 0.57031-4.1133 10.137-14.031 16.863-25.039 16.863-14.895 0-27.02-12.121-27.02-27.02s12.121-27.02 27.02-27.02c8.1211 0 15.695 3.6836 20.758 9.7461l5.0156-5.0234c0.23047-0.23438 0.46875-0.41016 0.6875-0.51953 0.30078-0.14844 0.58984-0.17578 0.83594-0.078125 0.24609 0.10156 0.43359 0.32031 0.54688 0.63672 0.085938 0.23047 0.12891 0.51953 0.13281 0.84766l0.015625 16.172c-0.011719 0.20703-0.046875 0.40234-0.12109 0.58594z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
 <main class="container">
   <section class="courses home-courses focusOnScroll">
     <h2>Vakken</h2>
-    <!-- {% for course in data.courses %}
-        <article>
-            <img src="{{data.icon_url}}" alt=" " />
-            <h3>{{course.title}}</h3>
-            <p>{{course_description}}</p>
-            <a href="/course/{{course.page_slug}}">{{course.title}}</a>
-        </article>
-        {% endfor %} -->
     <div class="flex">
-      <article class="card">
+      <article class="card" scroll-transition>
         <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
           alt=" " />
         <h3>Web Design</h3>
@@ -28,7 +47,7 @@
         </p>
         <a href="/course">Web Design</a>
       </article>
-      <article class="card">
+      <article class="card" scroll-transition>
         <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
           alt=" " />
         <h3>Web Design</h3>
@@ -38,7 +57,7 @@
         </p>
         <a href="/course/{{course.page_slug}}">Web Design</a>
       </article>
-      <article class="card">
+      <article class="card" scroll-transition>
         <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
           alt=" " />
         <h3>Web Design</h3>
@@ -48,7 +67,7 @@
         </p>
         <a href="/course/{{course.page_slug}}">Web Design</a>
       </article>
-      <article class="card">
+      <article class="card" scroll-transition>
         <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
           alt=" " />
         <h3>Web Design</h3>
@@ -58,7 +77,7 @@
         </p>
         <a href="/course/{{course.page_slug}}">Web Design</a>
       </article>
-      <article class="card">
+      <article class="card" scroll-transition>
         <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
           alt=" " />
         <h3>Web Design</h3>
@@ -68,7 +87,7 @@
         </p>
         <a href="/course/{{course.page_slug}}">Web Design</a>
       </article>
-      <article class="card">
+      <article class="card" scroll-transition>
         <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
           alt=" " />
         <h3>Web Design</h3>
@@ -83,44 +102,45 @@
 
   <section class="partners focusOnScroll">
     <h2>Partners waar we mee samen werken</h2>
-    <ul class="slider">
-      <li>
-        <a href='/partners'>
+    <div class="carousel">
+      <a id="previous">
+        <img src="/img/icons/arrow.svg">
+      </a>
+      <ul>
+        <li class="focusable next" id="slide1" data-sn-up="#" data-sn-down="#">
           <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
             alt=" ">
-        </a>
-      </li>
-      <li>
-        <a href='/partners'>
-          <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
-            alt=" ">
-        </a>
-      </li>
-      <li>
-        <a href='/partners'>
-          <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
-            alt=" ">
-        </a>
-      </li>
-      <li>
-        <a href='/partners'>
-          <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
-            alt=" ">
-        </a>
-      </li>
-      <li>
-        <a href='/partners'>
-          <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
-            alt=" ">
-        </a>
-      </li>
-      <li>
-        <a href='/partners'>
-          <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
-            alt=" ">
-        </a>
-      </li>
-    </ul>
+          </a>
+        </li>
+        <li>
+          <a href='/partners'>
+            <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
+              alt=" ">
+          </a>
+        </li>
+        <li>
+          <a href='/partners'>
+            <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
+              alt=" ">
+          </a>
+        </li>
+        <li>
+          <a href='/partners'>
+            <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
+              alt=" ">
+          </a>
+        </li>
+        <li>
+          <a href='/partners'>
+            <img src="http://www.thonik.nl/app/uploads/07-thonik-amsterdam-openbare_bibliotheek_amsterdam_OBA-library-logo_uitleg-filmstill-1440x810.jpg"
+              alt=" ">
+            <a href="#" class="link"></a>
+        </li>
+      </ul>
+      <a id="next">
+        <img src="/img/icons/arrow.svg">
+      </a>
+    </div>
   </section>
 
   <section class="student-quote">
@@ -138,26 +158,26 @@
     </div>
   </section>
 
-  <section class="instagram-feed">
+  <section class="instagram-feed focusOnScroll">
     <div class="grid">
 
       <div class="ig-1">
-        <img src="img/partners/oba.jpg"/>
+        <img src="img/partners/oba.jpg" />
         <a href="#"></a>
       </div>
 
       <div class="ig-2">
-        <img src="img/partners/oba.jpg"/>
+        <img src="img/partners/oba.jpg" />
         <a href="#"></a>
       </div>
 
       <div class="ig-3">
-        <img src="img/partners/oba.jpg"/>
+        <img src="img/partners/oba.jpg" />
         <a href="#"></a>
       </div>
 
       <div class="ig-4">
-        <img src="img/partners/oba.jpg"/>
+        <img src="img/partners/oba.jpg" />
         <a href="#"></a>
       </div>
     </div>
@@ -169,7 +189,7 @@
       Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo,
       tortor mauris condimentum nibh, ut.
     </p>
-    <a class='btn btn-primary' href="/signup">Inschrijven</a>
+    <a class='btn btn-primary button-pulse' href="/signup">Inschrijven</a>
   </section>
 
 

@@ -1,20 +1,15 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
 const app = express();
+const massive = require("massive");
+const monitor = require("pg-monitor");
+const debug = require("debug")("minor-server");
+const config = require("./config");
+const DataStore = require("./src/classes/DataStore.class");
+const compression = require("compression");
 const Screenshot = require("url-to-screenshot");
 const fs = require("fs");
 const parser = require("subtitles-parser");
-
-function readData(path) {
-  let data = fs.readFileSync(path, "utf8");
-  return JSON.parse(data);
-}
-
-function getSubs(path) {
-  const srt = fs.readFileSync(path, "utf8");
-  const subs = parser.fromSrt(srt, true);
-  return subs;
-}
 
 // from https://gist.github.com/mathewbyrne/1280286
 function slugify(text) {
@@ -26,6 +21,16 @@ function slugify(text) {
     .replace(/\-\-+/g, "-") // Replace multiple - with single -
     .replace(/^-+/, "") // Trim - from start of text
     .replace(/-+$/, ""); // Trim - from end of text
+}
+
+function readData(path) {
+  let data = fs.readFileSync(path, "utf8");
+  return JSON.parse(data);
+}
+
+function getSubs(path) {
+  const srt = fs.readFileSync(path, "utf8");
+  return parser.fromSrt(srt, true);
 }
 
 let studentData = readData("src/json/student-work.json");
@@ -63,17 +68,48 @@ nunjucks.configure("./templates", {
 });
 
 app.set("view engine", "html");
+app.use(compression());
+app.use(express.static("./static"));
 app.use(express.static(staticDir));
+
+// Overwrite config for the postgres host on production servers
+if (app.get("env") == "production") {
+  config.postgres.host = "postgres";
+}
+
+// Use the Massive datamapper to connect to the database
+massive(config.postgres).then(database => {
+  // Create a Datastore object (handles the database queries)
+  let dataStore = new DataStore(database);
+  // Attach a monitor so we get nice logs about the database usage
+  monitor.attach(database.driverConfig);
+
+  // E.G. /program/web-design
+  app.get("/program/:pageSlug", function(req, res) {
+    /*
+      Get the pageslug from the Express server
+      The pageslug identifies what page we are on
+      E.G.: 'course/web-design' or 'course/real-time-web'
+    */
+    let pageSlug = req.params.pageSlug;
+    /*
+      Tell the datastore to fetch a course with the
+      given pageslug and render the page with the received data.
+    */
+    dataStore
+      .getCourseForCourseOverview({ page_slug: pageSlug })
+      .then(courseData => {
+        debug(courseData[0]);
+        res.render("course.html", {
+          data: courseData[0]
+        });
+      });
+  });
+});
 
 app.get("/", function(req, res) {
   res.render("index.html", {
     data: readData("src/json/homepage.json")
-  });
-});
-
-app.get("/course", function(req, res) {
-  res.render("course.html", {
-    data: readData("src/json/course.json")
   });
 });
 
@@ -97,7 +133,7 @@ app.get("/team", function(req, res) {
 
 app.get("/student-work", function(req, res) {
   res.render("student-work.html", {
-    data: studentData
+    data: readData("src/json/student-work.json")
   });
 });
 
@@ -126,12 +162,15 @@ app.get("/signup", function(req, res) {
 
 app.get("/prototypes/slider", function(req, res) {
   res.render("prototypes/slider.html", {
-    data: signupData
+    data: null
   });
 });
 app.get("/prototypes/slider-with-buttons", function(req, res) {
   res.render("prototypes/slider-buttons.html", {
-    data: signupData
+    data: null
   });
 });
-app.listen(3000, () => console.log("Example app listening on port 3000!"));
+app.listen(config.port, () => {
+  console.log("Postgres will connect to: http://" + config.postgres.host);
+  console.log("Example app listening on port: " + config.port);
+});

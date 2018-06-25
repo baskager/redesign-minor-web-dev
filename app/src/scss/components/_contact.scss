@@ -33,10 +33,9 @@
       display: flex;
       flex-wrap: wrap;
       > div {
-        width: calc(50% - 0.625rem);
+        width: 100%;
         &:last-of-type {
           margin-right: 0;
-          width: 100%;
         }
       }
     }

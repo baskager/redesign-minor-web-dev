@@ -5,8 +5,9 @@
 
   .course-card {
     padding: 2em;
-    background: $accent-color;
     position: relative;
+    border-top: 1px #e5e5e5 solid;
+    border-bottom: 1px #e5e5e5 solid;
     &:last-child {
       margin-right: 0;
     }
@@ -17,14 +18,17 @@
       left: 0;
       bottom: 0;
     }
-    ul {
-      padding-left: 1rem;
-      li {
-        padding-left: 0.4em;
-        list-style-image: url("/img/icons/bullet-purple.svg");
-        padding-bottom: 0.3rem;
-      }
+    p:first-of-type {
+      font-weight: $bold;
+      text-align: center;
+      margin: 0;
     }
+
+    p {
+      margin: 0;
+      margin-bottom: .2rem;
+    }
+
     h3 {
       text-align: center;
       color: $primary-color;

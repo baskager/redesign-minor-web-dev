@@ -6,16 +6,19 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,400i,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">  
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   <title>{{ data.title }}</title>
+  <style id="styleElement"></style>
 </head>
 
 {# Dynamische classes toevoegen voor specifieke page styling #}
 
 <body>
-
   {% include 'components/_nav.html' %} {% block content %} {% endblock %} {% include 'components/_footer.html' %}
   
+  <script src="/js/animation.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script src="/js/app.js"></script>
 </body>
 
