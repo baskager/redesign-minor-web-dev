@@ -129,3 +129,12 @@ Ook hadden we allemaal een individueel gesprek met een docent. Ik had mijn gespr
 Nadat we allemaal een gesprek hebben gehad hebben we een korte code review gedaan met zijn allen, en zijn we alle componenten langsgelopen. Mijn code had een aantal dingen die veranderd moesten worden, dus dat had ik dan ook veranderd. 
 
 Na de codereview ben ik weer verder gegaan met de course template. Aan het eind van de middag hebben we een aantal branches bij elkaar gezet, zodat we vrijdag goed zouden kunnen testen met Marie.
+
+<details>
+  <summary>
+    Nog meer leuke plaatjes om te bekijken
+  </summary>
+  <img alt="screenshot van het ontwerp van de course pagina" src="https://i.imgur.com/DzrIrTG.png" />
+  <img alt="eerste screenshot van een van de eerste versies van de course pagina" src="https://i.imgur.com/AxlMWfB.png" />
+  <img alt="tweede screenshot van een van de eerste versies van de course pagina" src="https://i.imgur.com/XdVATzi.png" />
+</details>
