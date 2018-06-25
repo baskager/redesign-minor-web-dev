@@ -46,6 +46,7 @@
       transition: all .3s ease;
       a {
         outline: 0;
+        display: block;
       }
       &:focus-within,
       &:hover {
@@ -53,6 +54,7 @@
       }
       img {
         max-width: 100%;
+        display: block;
       }
     }
   }
@@ -80,7 +82,7 @@
 .instagram-feed {
   margin: 8rem 0;
   div {
-    max-width: rem(960);
+    max-width: 50rem;
     margin: 0 auto;
     div {
       display: block;
