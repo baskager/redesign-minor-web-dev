@@ -69,8 +69,10 @@ massive(config.postgres).then(database => {
     dataStore
       .getPeriodForTimeline({ course_period_number: 1 })
       .then(periods => {
-        // Add the weekly nerd card on each period
-        for (period of periods) period.courses.push(pageData.weekly_nerd_card);
+        // Add the weekly nerd card to each period
+        for (let period of periods) {
+          if (period) period.courses.push(pageData.weekly_nerd_card);
+        }
 
         pageData.periods = periods;
 
