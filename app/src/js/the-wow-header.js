@@ -24,11 +24,14 @@ const additionalHeaderStyling = `
   }
 
   .hero h1 span {
-    background-color: #6A00F5;
+    background-color: #FFFFFF;
+    color: #09012f;
     padding: 1.5rem;
   }
 
   .hero a {
+    background-color: #6A00F5;
+    color: #FFFFFF;
     padding: 1rem 3.5rem;
     font-weight: bold;
     border-radius: 4.375rem;
