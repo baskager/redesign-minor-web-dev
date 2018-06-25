@@ -8,9 +8,8 @@ services:
       - pgdata:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-    environment:
-      - POSTGRES_USER=minorwebdev
-      - POSTGRES_PASSWORD=faberyayo
+    env_file:
+      - credentials.env
   web:
     build: .
     container_name: minorwebdev_webserver
