@@ -13,19 +13,12 @@
     margin: 0 0 2rem 0;
   }
 
-  .btn-primary {
-    display: block;
-    margin: auto;
-    max-width: rem(300);
-    padding: $padding-24;
-    text-align: center;
-    &:hover {
-      color: darken($primary-color, 10%);
-    }
-  }
   .btn {
+    display: block;
+    margin: 0 auto;
+    width: auto;
     max-width: 20rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 }
 
