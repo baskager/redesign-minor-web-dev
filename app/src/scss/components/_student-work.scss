@@ -44,6 +44,12 @@
     transform: translateX(40px);
     transition: all 0.3s ease;
     width: auto;
+
+    font-family: $font-family-headers;
+    padding-right: rem(64);
+    background: #fff url("../img/icons/dropdown-indicator.svg") no-repeat right
+      rem(16) center;
+
     &:valid {
       background-color: #fff;
     }
@@ -59,13 +65,13 @@
     background-color: #fff;
   }
 
-  input[type='radio'] {
+  input[type="radio"] {
     position: absolute;
     opacity: 0;
   }
 
-  input[type='radio'] + label,
-  input[type='checkbox'] + label {
+  input[type="radio"] + label,
+  input[type="checkbox"] + label {
     display: inline-block;
     padding: $padding-8 $padding-24;
     border-radius: rem(100);
@@ -78,11 +84,11 @@
     @include transitionCubic;
   }
 
-  input[type='radio']:focus + label {
+  input[type="radio"]:focus + label {
     transform: scale(1.15);
   }
 
-  input[type='radio']:checked + label {
+  input[type="radio"]:checked + label {
     background-color: $primary-color;
     color: #fff;
   }
