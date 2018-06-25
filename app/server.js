@@ -59,6 +59,26 @@ massive(config.postgres).then(database => {
         });
       });
   });
+
+  app.get("/program", function(req, res) {
+    pageData = readData("src/json/program.json");
+    /* 
+      Tell the datastore to fetch a course with the 
+      given pageslug and render the page with the received data. 
+    */
+    dataStore
+      .getPeriodForTimeline({ course_period_number: 1 })
+      .then(periods => {
+        // Add the weekly nerd card on each period
+        for (period of periods) period.courses.push(pageData.weekly_nerd_card);
+
+        pageData.periods = periods;
+
+        res.render("program.html", {
+          data: pageData
+        });
+      });
+  });
 });
 
 app.get("/", function(req, res) {
@@ -67,11 +87,11 @@ app.get("/", function(req, res) {
   });
 });
 
-app.get("/program", function(req, res) {
-  res.render("program.html", {
-    data: readData("src/json/program.json")
-  });
-});
+// app.get("/program", function(req, res) {
+//   res.render("prograAm.html", {
+//     data: readData("src/json/program.json")
+//   });
+// });
 
 app.get("/partners", function(req, res) {
   res.render("partners.html", {

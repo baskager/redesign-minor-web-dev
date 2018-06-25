@@ -6,6 +6,8 @@ module.exports = {
       "course_name",
       "course_description",
       "course_type",
+      "course_period_number",
+      "course_period_weeks",
       "page_slug",
       "icon_url",
       "long_description",
