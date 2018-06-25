@@ -55,7 +55,7 @@
     }
     &:hover,
     &:focus {
-      color: $secondary-color;
+      color: darken($primary-color, 10%);
       border-color: $secondary-color;
       transform: translateX(40px);
     }
