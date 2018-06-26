@@ -136,6 +136,7 @@
         object-fit: cover;
         max-height: rem(250);
         display: block;
+        height: 100%;
         width: 100%;
         border-radius: 5px;
       }
@@ -166,10 +167,7 @@
       grid-column: 5 / 13;
     }
   }
-}
-
-@include max-tablet() {
-  .instagram-feed {
+  @include max-tablet() {
     .grid {
       .ig-1,
       .ig-3 {
@@ -178,6 +176,16 @@
       .ig-2,
       .ig-4 {
         grid-column: 7 / 13;
+      }
+    }
+  }
+  @include max-mobile() {
+    .grid {
+      .ig-1,
+      .ig-3,
+      .ig-2,
+      .ig-4 {
+        grid-column: 1 / 13;
       }
     }
   }
