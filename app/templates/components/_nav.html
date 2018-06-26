@@ -2,7 +2,7 @@
   <div class="container">
     <a class="skip-to-content" href="#main" tabindex="0">Skip to content</a>
     <a href="/"><h1>Minor Web Dev</h1></a>
-    <ul>
+    <ul id="nav-items">
       <li><span>alt +</span></li>
       <li {% if data.title=="Home" %} class="active" {% endif %}>
         <a id="menu-item-1" href="/" accesskey="1"><span span class="active">1</span>Home</a>
@@ -13,7 +13,7 @@
           <div class="container">
             <h2><a href="/program">Go to program timeline <i class="fas fa-chevron-right"></i></a></h2>
             <div>
-              <section>
+              <section class="blue">
                 <p>Term 1</p>
                 <ul>
                   <li><a href="/program/css-to-the-rescue">CSS to the rescue</a></li>
