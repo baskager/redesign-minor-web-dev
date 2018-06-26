@@ -65,5 +65,4 @@ typings/
 .vscode/
 .DS_Store
 /.vscode/
-
-postgres-data
+credentials.env

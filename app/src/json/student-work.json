@@ -6,6 +6,7 @@
   "courses": [
     {
       "name": "Web app from scratch",
+      "slug": "web-app-from-scratch",
       "items": [
         {
           "heading": "Jamerrone",
@@ -54,94 +55,96 @@
     },
     {
       "name": "CSS to the rescue",
+      "slug": "css-to-the-rescue",
       "items": [
         {
           "heading": "Project header",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
+          "demoUrl": null,
           "repoUrl": "https://www.github.com"
         },
         {
           "heading": "Project header",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
+          "demoUrl": null,
           "repoUrl": "https://www.github.com"
         },
         {
           "heading": "Project header",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
+          "demoUrl": null,
           "repoUrl": "https://www.github.com"
         },
         {
           "heading": "Project header",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
+          "demoUrl": null,
           "repoUrl": "https://www.github.com"
         },
         {
           "heading": "Project header",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
+          "demoUrl": null,
           "repoUrl": "https://www.github.com"
         },
         {
           "heading": "Project header",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
+          "demoUrl": null,
           "repoUrl": "https://www.github.com"
         }
       ]
     },
     {
       "name": "Project 1",
+      "slug": "project-1",
       "items": [
         {
           "heading": "Project header",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
+          "demoUrl": null,
           "repoUrl": "https://www.github.com"
         },
         {
           "heading": "Project header",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
+          "demoUrl": null,
           "repoUrl": "https://www.github.com"
         },
         {
           "heading": "Project header",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
+          "demoUrl": null,
           "repoUrl": "https://www.github.com"
         },
         {
           "heading": "Project header",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
+          "demoUrl": null,
           "repoUrl": "https://www.github.com"
         },
         {
           "heading": "Project header",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
+          "demoUrl": null,
           "repoUrl": "https://www.github.com"
         },
         {
           "heading": "Project header",
           "imgUrl": "//via.placeholder.com/306x176",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
+          "demoUrl": null,
           "repoUrl": "https://www.github.com"
         }
       ]

@@ -78,7 +78,7 @@
   }
 }
 
-@media (max-width: $desktop) {
+@include max-desktop() {
   .other-courses {
     div {
       a {
@@ -94,22 +94,24 @@
   }
 }
 
-@media (max-width: $tablet) {
+@include max-tablet() {
   .course-info {
     grid-template-columns: 100%;
   }
-  .course-header .container {
-    > div {
-      grid-column: 1 / 13;
-      margin-top: 14%;
-      div p {
-        background-color: rgba(255,255,255,0);
+  .course-header {
+    .container {
+      > div {
+        grid-column: 1 / 13;
+        margin-top: 14%;
+        div p {
+          background-color: rgba(255,255,255,0);
+        }
       }
-    }
 
-    >img {
-      grid-column: 1 / 13;
-      opacity: 0.6;
+      >img {
+        grid-column: 1 / 13;
+        opacity: 0.6;
+      }
     }
   }
 

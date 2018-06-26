@@ -6,15 +6,27 @@
     list-style: none;
     margin-right: 2rem;
     position: relative;
+    padding: .3rem;
+    transition: background .3s ease-in-out;
+    &:hover {
+      background: rgb(243, 243, 243);
+      img {
+        opacity: 1;
+      }
+    }
   }
   div {
     display: flex;
     flex-direction: column;
+    padding-bottom: .5rem;
+    border-bottom: solid $primary-color 1px;
   }
   img {
     height: 3rem;
     margin-right: 1rem;
     width: 3rem;
+    opacity: 0.4;
+    transition: opacity .3s ease-in-out;
   }
   h2 {
     font-size: 1rem;

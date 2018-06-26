@@ -1,6 +1,7 @@
 .hero {
   min-height: 85vh;
   padding: 0;
+  transition: background 0s linear !important;
 
   h1,
   p,
@@ -9,12 +10,14 @@
     margin: 0;
     text-decoration: initial;
     text-transform: initial;
+    transition: color 0s linear !important;
   }
 
   h1 {
-    font-size: 64px;
+    font-size: 4rem;
     font-weight: bold;
     margin-bottom: 2.5rem;
+
     span {
       -webkit-box-decoration-break: clone;
       background-color: transparent;
@@ -25,7 +28,7 @@
   }
 
   p {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 2.5rem;
   }
@@ -39,7 +42,7 @@
   .container {
     align-items: center;
     display: flex;
-    height: 85vh;
+    min-height: 85vh;
   }
 
   .left {
@@ -82,84 +85,33 @@
       width: 44px;
     }
   }
-}
 
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: #333;
-  background: #f8f8f8;
-}
-.hljs-comment,
-.hljs-quote {
-  color: #998;
-  font-style: italic;
-}
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-subst {
-  color: #333;
-  font-weight: bold;
-}
-.hljs-number,
-.hljs-literal,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag .hljs-attr {
-  color: #008080;
-}
-.hljs-string,
-.hljs-doctag {
-  color: #d14;
-}
-.hljs-title,
-.hljs-section,
-.hljs-selector-id {
-  color: #900;
-  font-weight: bold;
-}
-.hljs-subst {
-  font-weight: normal;
-}
-.hljs-type,
-.hljs-class .hljs-title {
-  color: #458;
-  font-weight: bold;
-}
-.hljs-tag,
-.hljs-name,
-.hljs-attribute {
-  color: #000080;
-  font-weight: normal;
-}
-.hljs-regexp,
-.hljs-link {
-  color: #009926;
-}
-.hljs-symbol,
-.hljs-bullet {
-  color: #990073;
-}
-.hljs-built_in,
-.hljs-builtin-name {
-  color: #0086b3;
-}
-.hljs-meta {
-  color: #999;
-  font-weight: bold;
-}
-.hljs-deletion {
-  background: #fdd;
-}
-.hljs-addition {
-  background: #dfd;
-}
-.hljs-emphasis {
-  font-style: italic;
-}
-.hljs-strong {
-  font-weight: bold;
+  @media only screen and (max-width: 995px) {
+    .container {
+      flex-direction: column;
+      padding: 5rem 0;
+    }
+
+    .left {
+      margin: 6rem 0 5rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    .right {
+      width: 80%;
+
+      > svg {
+        display: none;
+      }
+    }
+
+    #replayAnimation {
+      bottom: 1.5rem;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
 }
 
 .home-courses {
