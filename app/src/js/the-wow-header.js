@@ -37,6 +37,10 @@ const additionalHeaderStyling = `
     border-radius: 4.375rem;
     box-shadow: 0.25rem 0 1.5rem rgba(0, 0, 0, 0.25);
   }
+
+  .hero a:hover {
+    animation: button-pulse infinite 1.5 s ease-in-out;
+  }
 `;
 
 if (styleElement && headerCodeEditor && replayAnimationBtn) {
