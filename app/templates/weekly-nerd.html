@@ -1,10 +1,14 @@
 {% extends "components/_base.html" %} {% block content %}
 <header class="course-header focusOnScroll">
-  <div class="container">
+  <div class="container grid">
     <div>
       <div class="header-info" scroll-transition>
-        <h1><span>{{ data.course_name }}</span></h1>
-        <p>{{ data.course_description | safe }}</p>
+        <h1>
+          <span>
+            {{ data.course_name }}
+          </span>  
+        </h1>
+        <p>{{data.course_description | safe }}</p>
       </div>
     </div>
     <img class="header-img" scroll-transition src="{{data.icon_url}}"></img>
@@ -12,20 +16,8 @@
 </header>
 
 <main id="main" class="container">
-  <section class="course-info">
-    <section>
-      <h2>Learning goals</h2>
-      <ul class="course-list">
-        {% for learning_goal in data.learning_goals %}
-        <li>
-          {{learning_goal}}
-        </li>
-        {% endfor %}
-      </ul>
-    </section>
-  </section>
-
   <section class="course-card-overview focusOnScroll">
+    <h2>Weekly Nerds</h2>
     <div class="course-card-list" scroll-transition>
       {% for talk in data.talks %}
         <div class="card card-interactive card-talk">
@@ -37,6 +29,19 @@
         </div>
       {% endfor %}
     </div>
+  </section>
+
+  <section class="course-info">
+    <section>
+      <h2>Learning goals</h2>
+      <ul class="course-list">
+        {% for learning_goal in data.learning_goals %}
+        <li>
+          {{learning_goal}}
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
   </section>
 
   <section class="student-quote">

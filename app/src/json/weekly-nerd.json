@@ -2,6 +2,7 @@
   "course_name": "Weekly Nerds",
   "course_description":
     "Every week there is a <b>“Weekly Nerd🤓”</b> where a partner or person comes and gives a talk. The talks are about subjects such as progressive enhancement or the company culture of the partner. We've had some very interesting people giving a talk. For example the founder of smashing magazine and one of the team members of the W3C.",
+  "icon_url": "/img/feed/3.jpg",
   "learning_goals": [
     "Sketchnoting",
     "Insight in the industry",
@@ -9,6 +10,13 @@
     "Getting in contact with companies"
   ],
   "talks": [
+    {
+      "name": "Niels Leenheer",
+      "company": "HTML5test",
+      "subject": "Obscure browsers",
+      "url": "/weekly-nerd/vitaly-friedman",
+      "avatar": "/img/avatars/niels.jpg"
+    },
     {
       "name": "Vitaly Friedman",
       "company": "Smashing Magazine",
