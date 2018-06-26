@@ -47,9 +47,9 @@
       {% for week in data.weeks %}
       <div class='course-card'>
         <p>Week {{week.number}}</p>
-          {% if week.subjects %} {% for subject in week.subjects %}
-          <p>{{subject}}</p>
-          {% endfor %} {% endif %}
+        {% if week.subjects %} {% for subject in week.subjects %}
+        <p>{{subject}}</p>
+        {% endfor %} {% endif %}
       </div>
       {% endfor %}
     </div>
@@ -122,17 +122,17 @@
   <section class="other-courses focusOnScroll">
     <h2>Other courses</h2>
     <div>
-      <a class="btn" href="/course/web-apps-from-scratch">Web Apps From Scratch</a>
-      <a class="btn" href="/course/css-to-the-rescue">other course</a>
-      <a class="btn" href="/course/browser-technologies">Browser Technologies</a>
-      <a class="btn" href="/course/performance-matters">Performance Matters</a>
-      <a class="btn" href="/course/real-time-web">Real-Time Web</a>
-      <a class="btn" href="/course/web-design">Web Design</a>
-      <a class="btn" href="/course/weekly-nerd">Weekly Nerd</a>
-      <a class="btn" href="/course/project-1">Project 1</a>
-      <a class="btn" href="/course/project-2">Project 2</a>
-      <a class="btn" href="/course/project-3">Project 3</a>
-      <a class="btn" href="/course/master-test">Master Test</a>
+      <a class="btn" href="/program/web-app-from-scratch">Web App From Scratch</a>
+      <a class="btn" href="/program/css-to-the-rescue">CSS To The Rescue</a>
+      <a class="btn" href="/program/browser-technologies">Browser Technologies</a>
+      <a class="btn" href="/program/performance-matters">Performance Matters</a>
+      <a class="btn" href="/program/real-time-web">Real-Time Web</a>
+      <a class="btn" href="/program/web-design">Web Design</a>
+      <a class="btn" href="/program/weekly-nerd">Weekly Nerd</a>
+      <a class="btn" href="/program/project-1">Project 1</a>
+      <a class="btn" href="/program/project-2">Project 2</a>
+      <a class="btn" href="/program/project-3">Project 3</a>
+      <a class="btn" href="/program/master-test">Master Test</a>
     </div>
   </section>
 </main>

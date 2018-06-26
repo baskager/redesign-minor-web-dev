@@ -2,6 +2,34 @@
   "title": "Program",
   "description":
     "The minor works using a studio model. We have a dedicated classroom with a <b>refrigerator</b>❄️, <b>sandwich iron 🥪</b> and <b>stand-up desks</b>👖. Here we work for <b>40 hours a week💪</b>, <b>like in a real company</b>. Everyday the students have the option to ask questions to the mentors and ofcourse other students.",
+  "weekly_nerd_card": {
+    "name": "Weekly nerd",
+    "abbreviation": "wn",
+    "slug": "weekly-nerd",
+    "description": "Speakers",
+    "course_type": "WEEKLY_NERD",
+    "color": "#008d96",
+    "weeks": [
+      {
+        "week": 1,
+        "name": "Justus Sturkenboom",
+        "imgSrc": "//via.placeholder.com/48x48",
+        "description": "Functional Programming"
+      },
+      {
+        "week": 2,
+        "name": "Titus Wormer",
+        "imgSrc": "//via.placeholder.com/48x48",
+        "description": "Git"
+      },
+      {
+        "week": 3,
+        "name": "Vasilis van Gemert",
+        "imgSrc": "//via.placeholder.com/48x48",
+        "description": "Accessibility"
+      }
+    ]
+  },
   "periods": [
     {
       "period": 1,

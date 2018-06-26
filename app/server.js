@@ -57,13 +57,29 @@ massive(config.postgres).then(database => {
     dataStore
       .getCourseForCourseOverview({ page_slug: pageSlug })
       .then(courseData => {
-        console.log(courseData);
-
-        debug(courseData[0]);
         res.render("course.html", {
           data: courseData[0]
         });
       });
+  });
+
+  app.get("/program", function(req, res) {
+    pageData = readData("src/json/program.json");
+    /* 
+      Tell the datastore to fetch a course with the 
+      given pageslug and render the page with the received data. 
+    */
+    dataStore.getPeriodForTimeline().then(periods => {
+      // Add the weekly nerd card to each period
+      for (let period of periods) {
+        if (period) period.courses.push(pageData.weekly_nerd_card);
+      }
+      pageData.periods = periods;
+
+      res.render("program.html", {
+        data: pageData
+      });
+    });
   });
 });
 
@@ -73,11 +89,11 @@ app.get("/", function(req, res) {
   });
 });
 
-app.get("/program", function(req, res) {
-  res.render("program.html", {
-    data: readData("src/json/program.json")
-  });
-});
+// app.get("/program", function(req, res) {
+//   res.render("prograAm.html", {
+//     data: readData("src/json/program.json")
+//   });
+// });
 
 app.get("/partners", function(req, res) {
   res.render("partners.html", {
@@ -101,6 +117,7 @@ let talkData = readData("src/json/talk.json");
 talkData.subtitles = getSubs("src/subs/talk.srt");
 talkData.subtitles = JSON.stringify(talkData.subtitles);
 talkData.slides = JSON.stringify(talkData.slides);
+
 
 app.get("/weekly-nerd/vitaly-friedman", function(req, res) {
   res.render("talk.html", {
