@@ -85,14 +85,14 @@
 .signup-cta {
   max-width: 50em;
   margin: 0 auto;
-  h1 {
-    text-align: center;
+  h2 {
+    font-size: $h1-font-size;
   }
   p {
     max-width: 30em;
     margin: 0 auto;
     text-align: center;
-    font-size: $h4-font-size;
+    font-size: $h3-font-size;
   }
   a {
     margin: 2em auto;
@@ -115,7 +115,7 @@
       &:focus,
       &:focus-within {
         a {
-          background: rgba(0,0,0,0.6);
+          background: rgba(0, 0, 0, 0.6);
         }
         p {
           opacity: 1;
