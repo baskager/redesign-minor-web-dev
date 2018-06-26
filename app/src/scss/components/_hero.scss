@@ -37,6 +37,13 @@
     background-color: #ffffff;
     color: #09012f;
     font-size: 1.25rem;
+    display: inline-block;
+    &:hover {
+      animation: button-pulse infinite 1.5s ease-in-out;
+    }
+    &:focus {
+      animation: button-pulse infinite 1.5s ease-in-out;
+    }
   }
 
   .container {
