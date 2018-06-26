@@ -14,8 +14,10 @@
       <div class="period-week week week-{{week}}">
         Week: {{ week }}
       </div>
-      {% endfor %} {% for course in period.courses %} {% if course.course_type == "COURSE" %}
-      <article class="card card-interactive course-{{ course.page_slug }}">
+      {% endfor %}
+      <!-- Load all the courses -->
+      {% for course in period.courses %} {% if course.course_type == "COURSE" %}
+      <article class="card card-interactive course" style="color: {{course.color}}">
         <header>
           <h5>{{ course.course_name }}</h5>
           <h6>{{ course.course_description }}</h6>
@@ -28,10 +30,10 @@
         {% endfor %}
         <a class="focusable card-link" href="/program/{{ course.page_slug }}">Open {{ course.course_name }}</a>
       </article>
-
-      {% elseif course.type == "speakers" %}
-
-      <article class="card card-interactive course-{{ course.page_slug }}">
+      {% endif %} {% endfor %}
+      <!-- Load all the weekly nerds -->
+      {% for course in period.courses %} {% if course.course_type == "WEEKLY_NERD" %}
+      <article class="card card-interactive" style="color: {{course.color}}">
         <header>
           <h5>{{ course.name }}</h5>
           <h6>{{ course.description }}</h6>
@@ -46,15 +48,14 @@
         {% endfor %}
         <a class="focusable card-link" href="/program/{{ course.page_slug }}">Open {{ course.name }}</a>
       </article>
-
-      {% elseif course.course_type == "PROJECT" %}
+      {% endif %} {% endfor %} {% for course in period.courses %} {% if course.course_type == "PROJECT" %}
       <article class="card card-interactive course-project">
         <header>
           <h5>{{ course.course_name }}</h5>
-          <h6>{{ course.course_partner }}</h6>
+          <h6>{{ course.partner_name }}</h6>
           <span class="meta">End of {{ period.period }}</span>
         </header>
-        <p>{{ course.description }}</p>
+        <p>{{ course.course_description }}</p>
         <a class="focusable card-link" href="/program/{{ course.page_slug }}">Open {{ course.name }}</a>
       </article>
 
