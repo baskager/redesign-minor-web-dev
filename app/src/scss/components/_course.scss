@@ -78,7 +78,7 @@
   }
 }
 
-@media (max-width: $desktop) {
+@include max-desktop() {
   .other-courses {
     div {
       a {
@@ -94,7 +94,7 @@
   }
 }
 
-@media (max-width: $tablet) {
+@include max-tablet() {
   .course-info {
     grid-template-columns: 100%;
   }

@@ -1,7 +1,16 @@
 .signup-wrapper {
+  padding-top: 10rem;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(12, 1fr);
+  header {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+  h1 {
+    margin-top: 0;
+  }
   section {
     grid-column: 1 / 7;
     h2 {
@@ -16,9 +25,11 @@
       top: calc(4.5rem + #{$padding-32});
     }
   }
-  form {
+  & > div {
     grid-column: 8 / 13;
     transition: height 1s cubic-bezier(0.43, 0.005, 0, 0.995);
+  }
+  form {
     fieldset {
       border: none;
       margin: 0;
@@ -45,13 +56,20 @@
       padding: $padding-16;
       width: 100%;
       font: inherit;
-      &[type='submit'] {
+      &[type="submit"] {
         margin: $margin-32 0;
         font-weight: 600;
         transition: width 2s ease;
         bottom: 0;
       }
     }
+  }
+
+  ul:first-of-type {
+    font-size: $h4-font-size;
+    line-height: 1.5;
+    list-style-type: none;
+    padding: 0;
   }
   blockquote {
     margin-left: 0;
@@ -64,7 +82,7 @@
       grid-column: 2 / 12;
     }
 
-    form {
+    & > div {
       grid-column: 3 / 11;
       grid-row: 2;
       margin-top: $margin-48;

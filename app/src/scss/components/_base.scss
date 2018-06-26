@@ -27,7 +27,8 @@ body {
   }
 }
 
-body > header {
+body > header,
+.signup-wrapper header {
   margin-bottom: 5rem;
   padding: 7rem 0 4rem 0;
 

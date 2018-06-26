@@ -16,15 +16,18 @@
     @include max-tablet() {
       align-self: flex-start;
     }
+    z-index: 1;
   }
 
   #nav-items-toggle {
+    color: $primary-color;
     padding: 1.5rem;
     margin: 0.25rem 0;
     border: 0;
     background: rgba(0, 0, 0, 0);
     display: flex;
     align-self: flex-start;
+    z-index: 1;
     i {
       display: block;
       height: 1rem;
@@ -41,9 +44,6 @@
         display: none;
       }
     }
-  }
-
-  #nav-items-toggle {
     @include min-desktop() {
       display: none;
     }
@@ -97,11 +97,11 @@
   #nav-items {
     display: flex;
     @include max-tablet() {
-      margin-top: -100vh;
-      transition: margin 0.3s ease-in-out;
+      transform: translateY(-100vh);
+      transition: transform 0.3s ease-in-out;
       align-items: center;
       justify-content: center;
-      // position: absolute;
+      position: absolute;
       min-height: 100vh;
       top: 0;
       left: 0;
@@ -147,7 +147,7 @@
     }
 
     &.active {
-      margin-top: 0;
+      transform: translateY(0);
     }
     & > li {
       @include min-desktop() {
@@ -190,7 +190,7 @@
     border-radius: 0;
     padding: 0 1.25rem;
     @include max-tablet() {
-      border-radius: inherit;
+      border-radius: 50rem;
       min-width: rem(150);
     }
   }

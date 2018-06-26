@@ -12,6 +12,9 @@
     transition: background 0.3s ease-in-out;
     &:hover {
       background: rgb(243, 243, 243);
+      img {
+        opacity: 1;
+      }
     }
   }
   div {
@@ -48,12 +51,5 @@
     position: absolute;
     top: 0;
     width: 100%;
-    &:hover ~ div {
-      opacity: 1;
-    }
-
-    &:hover ~ img {
-      opacity: 1;
-    }
   }
 }

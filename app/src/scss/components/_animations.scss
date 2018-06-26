@@ -204,7 +204,6 @@
 .student-work-list.trans {
     article {
         opacity: 0;
-        transform: translateY(20px);
     }
 }
 
@@ -232,17 +231,7 @@
 
     article {
         opacity: 1;
-        transform: none;
         transition: 
-            transform .3s ease-in-out,
             opacity .3s ease-in-out;
-    }
-}
-
-.student-work-list.trans.start-transition {
-    article {
-        &:hover {
-            transform: scale(1.05);
-        }
     }
 }
