@@ -150,8 +150,10 @@
     span {
       border-color: #fff;
     }
-    @include max-tablet {
-      border-radius: 50rem;
+    border-radius: 0;
+    padding: 0 1.25rem;
+    @include max-tablet() {
+      border-radius: inherit;
       min-width: rem(150);
     }
   }
@@ -190,9 +192,11 @@
       }
     }
   }
-
   // submenu styling
   .submenu {
+    @include max-tablet() {
+      display: none;
+    }
     position: absolute;
     left: 0;
     right: 0;
@@ -243,17 +247,7 @@
   }
   .btn {
     margin: 0;
-    padding: $padding-8 $padding-16;
-    font-size: 1rem;
-    &.btn-primary {
-      border-radius: 0;
-      &:hover {
-        transform: none;
-      }
-    }
-    span {
-      border-color: #fff;
-    }
+    padding: 0;
   }
 }
 
