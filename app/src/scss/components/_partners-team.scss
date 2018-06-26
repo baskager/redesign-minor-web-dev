@@ -38,11 +38,13 @@
       display: block;
       grid-column: 1 / 7;
       grid-row: 1;
-      height: 100%;
       max-height: 350px;
       object-fit: cover;
       object-position: center center;
       width: 100%;
+      @include min-desktop() {
+        height: 100%;
+      }
     }
     div {
       grid-column: 5 / 12;
