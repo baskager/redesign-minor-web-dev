@@ -11,6 +11,12 @@ $browser-context: 16; // Default browser font size
   }
 }
 
+@mixin min-tablet() {
+  @media (min-width: $min-tablet) {
+    @content;
+  }
+}
+
 @mixin max-tablet() {
   @media (max-width: $max-tablet) {
     @content;

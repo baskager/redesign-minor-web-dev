@@ -18,8 +18,7 @@
   }
   form {
     grid-column: 8 / 13;
-    height: 712px;
-    transition: height 1s cubic-bezier(0.430, 0.005, 0.000, 0.995);
+    transition: height 1s cubic-bezier(0.43, 0.005, 0, 0.995);
     fieldset {
       border: none;
       margin: 0;
@@ -46,7 +45,7 @@
       padding: $padding-16;
       width: 100%;
       font: inherit;
-      &[type="submit"] {
+      &[type='submit'] {
         margin: $margin-32 0;
         font-weight: 600;
         transition: width 2s ease;
