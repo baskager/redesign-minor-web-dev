@@ -43,7 +43,7 @@
       list-style: none;
       width: calc(30% - 13.34px);
       margin: 0 20px 20px 0;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
       a {
         outline: 0;
         display: block;
@@ -87,7 +87,7 @@
     div {
       display: block;
       opacity: 0.5;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
       position: relative;
       &:hover,
       &:focus,
