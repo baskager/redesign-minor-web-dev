@@ -1,17 +1,22 @@
 .home-wrapper {
   section header {
-    margin: $margin-48 0;
+    margin: 0 0 $margin-48 0;
     padding: 0;
-    @include max-desktop() {
-      text-align: center;
+    text-align: center;
+    p {
+      margin: auto;
     }
   }
   h2 {
-    margin: 0;
+    margin: 0 0 $margin-24 0;
     text-transform: uppercase;
   }
   span {
     display: inline-block;
+  }
+
+  section {
+    padding: $padding-24 0;
   }
 }
 
@@ -20,6 +25,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: $margin-32;
     article {
       padding: 2em;
       width: calc(33.33% - 13.34px);
@@ -32,7 +38,7 @@
       }
 
       h3 {
-        color: #d00064;
+        color: $primary-color;
         text-align: center;
       }
 
@@ -87,6 +93,7 @@
     max-width: 30em;
     margin: 0 auto;
     text-align: center;
+    font-size: $h4-font-size;
   }
   a {
     margin: 2em auto;
