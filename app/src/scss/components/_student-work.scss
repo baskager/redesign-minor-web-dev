@@ -97,6 +97,7 @@
     @include transitionCubic;
 
     &:hover {
+      transition-delay: 0 !important;
       transform: scale(1.05);
     }
   }
