@@ -97,23 +97,20 @@
   #nav-items {
     display: flex;
     @include max-tablet() {
-      display: none;
-      &.active {
-        display: block;
-      }
+      margin-top: -100vh;
+      transition: margin 0.3s ease-in-out;
+      align-items: center;
+      justify-content: center;
+      // position: absolute;
+      min-height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      flex-flow: column;
     }
     &.active {
-      @include max-tablet {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: #fff;
-        flex-flow: column;
-      }
+      margin-top: 0;
     }
     & > li {
       @include min-desktop() {
@@ -137,50 +134,59 @@
           flex-flow: row;
         }
       }
-      .active {
-        a {
+      &.active {
+        & > a {
           color: $secondary-color;
           border-bottom: 2px solid $secondary-color;
         }
-        span {
+        & span {
           border-color: $secondary-color;
         }
       }
     }
+  }
 
+  #menu-item-6 {
     span {
-      border: 1px $primary-color solid;
+      border-color: #fff;
+    }
+    @include max-tablet {
+      border-radius: 50rem;
+      min-width: rem(150);
+    }
+  }
+
+  span {
+    border: 1px $primary-color solid;
+    font-size: 0.75rem;
+    margin-right: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: inline-flex;
+    transition: width 0.15s 0.15s ease-in-out, height 0.15s 0.15s ease-in-out,
+      margin 0.15s 0.15s ease-in-out, opacity 0.3s ease-in-out;
+    &.active {
+      opacity: 1;
+      width: 1rem;
+      height: 1rem;
+      margin: 0 0 0.25rem 0;
+      transition: width 0.15s 0.15s ease-in-out, margin 0.15s 0.15s ease-in-out,
+        height 0.15s 0.15s ease-in-out, opacity 0.15s 0.15s ease-in-out;
+    }
+    @include med-tablet() {
+      display: none;
+    }
+    @include min-desktop-hd() {
+      height: 1.25rem;
       font-size: 0.75rem;
-      margin-right: 0;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      width: 0;
-      height: 0;
-      opacity: 0;
-      display: inline-flex;
-      transition: width 0.15s 0.15s ease-in-out, height 0.15s 0.15s ease-in-out,
-        margin 0.15s 0.15s ease-in-out, opacity 0.3s ease-in-out;
       &.active {
-        opacity: 1;
-        width: 1rem;
-        height: 1rem;
-        margin: 0 0 0.25rem 0;
-        transition: width 0.15s 0.15s ease-in-out,
-          margin 0.15s 0.15s ease-in-out, height 0.15s 0.15s ease-in-out,
-          opacity 0.15s 0.15s ease-in-out;
-      }
-      @include med-tablet() {
-        display: none;
-      }
-      @include min-desktop-hd() {
+        width: 1.25rem;
+        margin: 0 $margin-8 0 0;
         height: 1.25rem;
-        font-size: 0.75rem;
-        &.active {
-          width: 1.25rem;
-          margin: 0 $margin-8 0 0;
-          height: 1.25rem;
-        }
       }
     }
   }
