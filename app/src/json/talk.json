@@ -1,0 +1,83 @@
+{
+  "title": "Bringing Personality Back To The Web",
+  "description":
+    "We’re pleased to announce that the brand new Smashing Book 6 is now available for pre-order. To give you a taste of what the book offers, here’s a sneak peek of a chapter written by Vitaly Friedman. Let’s explore a strategic guide for bringing back personality to the web, in regular real-life projects.",
+  "speaker": "Vitaly Friedman",
+  "speakerRole": "Founder of Smashingmagazine",
+  "avatarUrl":
+    "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/6f60ba6a-465e-42fb-b501-1329d45bf084/vitaly-friedman-profile-pic.jpg",
+  "videoUrl": "//jelle.im/crap/talk.mp4",
+  "subtitles": null,
+  "slides": [
+    {
+      "index": 0,
+      "img": "/img/slides/slide-1.png",
+      "links": [],
+      "startTime": 0,
+      "endTime": 12
+    },
+    {
+      "index": 1,
+      "img": "/img/slides/slide-2.png",
+      "links": [],
+      "startTime": 12,
+      "endTime": 24
+    },
+    {
+      "index": 2,
+      "img": "/img/slides/slide-3.png",
+      "links": [],
+      "startTime": 24,
+      "endTime": 111
+    },
+    {
+      "index": 3,
+      "img": "/img/slides/slide-4.png",
+      "links": [],
+      "startTime": 111,
+      "endTime": 113
+    },
+    {
+      "index": 4,
+      "img": "/img/slides/slide-5.png",
+      "links": [
+        "https://markboulton.co.uk/",
+        "https://twitter.com/markboulton"
+      ],
+      "startTime": 114,
+      "endTime": 150
+    },
+    {
+      "index": 5,
+      "img": "/img/slides/slide-6.png",
+      "links": [],
+      "startTime": 150,
+      "endTime": 180
+    }
+  ],
+  "presentationImg": "//via.placeholder.com/1920x1080",
+  "source":
+    "https://www.smashingmagazine.com/2018/06/bringing-personality-back-to-the-web/",
+  "paragraphs": [
+    "Generic web layouts have become somewhat of a misnomer in conversations circling around web design these days. We’re bored and slightly annoyed by how predictable and uninspired most web experiences have become. Not without reason, though. Every single landing page seems to be a twin of pretty much every other web page.",
+    "In the header, a compelling hero image with a short main heading is followed by a lengthier subheading. Beneath them, uniform blocks of media objects are alternated — an image and a few paragraphs of text. First, text on the left, image on the right; then image on the left, text on the right. Rinse and repeat. Rounded profile photos and a square grid of thumbnails complete the picture, with perfect shapes perfectly aligned along the 12-column grid. The only variations come from sporadic parallax transitions and notorious carousels, positioned at the top or bottom of the page — or perhaps both.",
+    "It’s not that somebody imposed these rules or limitations on our creative output; usually they originate from good motives and the best intentions. After all, one of the main tenets of web design has always been creating a subtle, almost invisible and functional interface — an interface that doesn’t make users think, where less is more, and form follows function, where simplicity prevails — an interface where everything feels just right.",
+    "Yet when everything is structured in a predictable way, nothing really stands out. Given how remarkably similar names, logos, icons, typography, layouts, and even shades of gradients on call-to-action buttons often are, it’s not surprising our users find it difficult to distinguish between brands, products, and services these days.",
+    "Very few people miss the golden times of the infamous Flash, with its strikingly experimental layouts and obscure mystery-meat navigation. Admittedly, in many cases the focus has shifted from creating an experience to merely providing content in a structured form. Yet unlike in those good ol’ days when we talked about how wonderful or horrible websites were, today most experiences are almost invisible, making it exceptionally difficult to connect emotionally with them.",
+    "If I asked you to think of a recently visited website that left a lasting, memorable impression on you, or what websites you truly love and admire for their unique design, or what website had a truly remarkable personality, would you be able to answer these questions immediately? Would you be able to provide more than one or two examples? Chances are that you won’t.",
+    "Not every website has to be unforgettable. It’s not that memorable websites automatically perform better, or hit better key performance indicators. However, if you want your product or service to stand out in a highly competitive and challenging environment, you need to be different in some way. Many of us would consider this to be the task of the marketing team. After all, they are supposed to place the product in the right light, at the right spot, for the right audience, at the right price. Yet in a world where many digital products are fairly usable and feature-rich, this would be a daunting undertaking that would often require months of extensive research and testing without the guarantee of a successful outcome. And even then, unless you are extremely good at predicting and shaping the next shiny big thing, it might not be good enough.",
+    "Customers are used to and expect decent experiences. They aren’t always fast or straightforward, but simply because of the sheer number of offerings, there are always decent tools and services out there that would be good enough.",
+    "We tend to believe we rationalize our decisions to extremes, choosing the best candidates, but it’s not necessarily true. According to well-known Herbert A. Simon’s satisficing theory, we tend to prefer the first option that meets an acceptability threshold, just because we don’t know if we can find a better option or how much effort it would take. We rarely study the entire spectrum of options in detail (and sometimes it’s nearly impossible), and as a result, we satisfice with a candidate that meets our needs or seems to address most needs.",
+    "To draw an audience’s attention, we need to be better than “good enough.” Nothing can beat word of mouth, but to get there we need to come up with something that’s worth looking at. What if I told you that there was a shortcut to getting there?",
+    "It’s not just about price. It’s not just about features. It’s not just about choosing the right placement of buttons, or the right shades of colors in endless A/B tests. And it’s not about choosing a cute mascot illustration that shows up in email campaigns. In the end, it’s about creating an experience that people can fall in love with, or connect deeply with — an experience that, of course, drives the purpose of the site, but also shows the human side of it, like the personality of the people building it, their values and principles, their choices and priorities.",
+    "That means designing voice and tone, interface copy, and embracing storytelling, authenticity, inclusivity, and respect; and all of that while establishing a unique visual language supported by original layout compositions and interaction patterns. Together with clear and honest messaging, these create a unique signature, which, used consistently, makes the product stand out from the rest. This task might sound as daunting as months of marketing research, but it doesn’t necessarily require an enormous amount of effort or resources.",
+    "In this chapter, we’ll look into a few practical techniques and strategies that might help you find, form, and surface your personality efficiently. By doing so, we’ll explore how doing so consistently could fit into existing design workflows, along with plenty of examples to give you a good start. But before we get there, we need to figure out how omnipresent design patterns and best practices fit into the equation.",
+    "Breaking Out By Breaking In",
+    "The creative process isn’t linear. Every single design decision — from colors and type to layout and interactivity — requires us to consider options and evaluate combinations. While the creative process is often seen as a straightforward, iterative process, in reality it’s very rare that we smoothly move from one mock-up to another through a series of enhancements and adjustments. More often than not, we tend to float and diverge, heading from one dead end to another, resolving conflicts and rerouting our creative direction along the way.",
+    "Those dead ends happen when we realize we aren’t really getting anywhere with the result exposed on our digital canvas. We’ve been there so many times, we know how to explore uncharted territories and how to maneuver the flanks, and so as we keep sculpting our ideas, we keep making progress, slowly but steadily moving towards a tangible result. Two steps forward, one step back, revisiting what we’ve done so far and refining those precious pixels — based on… frankly, based on intuition and random experiments. Eventually the back-and-forth brings us to a calm, peaceful, and beautiful place — just where we think we’ve found a solution — the solution.",
+    "We know, of course, that it’s unlikely it’s going to be the one, though, don’t we?",
+    "This journey from nothing to something isn’t just full of conflicting micro-decisions; it’s crammed with unknowns, traps, friction, and difficult constraints, be they of a technical nature or time-sensitive. And at every moment of the process, the beautiful, harmless creatures of our imagination can be mercilessly smashed against the harsh reality of user interviews and client revisions. So we swizzle around from one direction to another in a fertile yet remarkably hostile place. As a result, usually we can’t afford the luxury of losing time, as we know that the path to that deadline, harmlessly floating in the remote future, will be full of surprises and unexpected turnarounds.",
+    "To avoid losing time, we rely on things that worked well in our previous projects — the off-canvas navigation, the accordion pattern, rounded profile images, and the holy 12-column grid layout. It’s not for lack of knowledge, skill, or enthusiasm that we fall back to all those established practices — it’s just infinitely more difficult and time-consuming to come up with something different every single time. And because we lack time, we use all those wonderful, tried-and-tested design patterns — all of them tangible, viable solutions for a particular kind of problem. Obviously, this process might be slightly different for different people, but broken down into its essence, that’s what’s happening behind the scenes as we make progress in our designs.",
+    "When we started working on the redesign of Smashing Magazine a few years ago, one of the first steps we took was listing and exploring components and micro-interactions. We built the article layout and a style guide, responsive tables and forms, and used many of the established best practices to keep them accessible, fast, and responsive. Yet when putting all these perfect components together, we realized that while they were working well as standalone solutions, they just didn’t work together as a whole. The building blocks of the system weren’t sufficient to maintain and support the system. We had to redesign what we’d built so far, and we had to introduce overarching connections between those components that would be defined through the personality and voice and tone of the new identity."
+  ]
+}

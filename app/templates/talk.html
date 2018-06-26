@@ -63,6 +63,7 @@
   <section class="presentation-summary" id="story">
     <div class="container">
       <h3>{{ data.title }}</h3>
+      <p>Source: <a href="{{ data.source }}">Smashing Magazine</a></p>
       {% for paragraph in data.paragraphs %}
         <p>{{ paragraph }}</p>
       {% endfor %}

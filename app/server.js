@@ -58,6 +58,8 @@ massive(config.postgres).then(database => {
     dataStore
       .getCourseForCourseOverview({ page_slug: pageSlug })
       .then(courseData => {
+        console.log(courseData);
+
         debug(courseData[0]);
         res.render("course.html", {
           data: courseData[0]
@@ -96,14 +98,20 @@ app.get("/student-work", function(req, res) {
   });
 });
 
-let talkData = readData("src/json/weekly-nerd.json");
+let talkData = readData("src/json/talk.json");
 talkData.subtitles = getSubs("src/subs/talk.srt");
 talkData.subtitles = JSON.stringify(talkData.subtitles);
 talkData.slides = JSON.stringify(talkData.slides);
 
-app.get("/weekly-nerd", function(req, res) {
+app.get("/weekly-nerd/vitaly-friedman", function(req, res) {
   res.render("talk.html", {
     data: talkData
+  });
+});
+
+app.get("/weekly-nerd", function(req, res) {
+  res.render("weekly-nerd.html", {
+    data: readData("src/json/weekly-nerd.json")
   });
 });
 

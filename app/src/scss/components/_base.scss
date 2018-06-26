@@ -111,9 +111,10 @@ body > header {
   display: inline-block;
   font-size: rem(11);
   letter-spacing: 0;
-  padding: rem(4) rem(4);
+  padding: rem(0) rem(4);
   color: $white;
   border-radius: rem(3);
+  line-height: rem(19);
   border: 1px solid $white;
   white-space: nowrap;
   position: relative;
