@@ -177,7 +177,7 @@
       transition: width 0.15s 0.15s ease-in-out, margin 0.15s 0.15s ease-in-out,
         height 0.15s 0.15s ease-in-out, opacity 0.15s 0.15s ease-in-out;
     }
-    @include med-tablet() {
+    @include max-tablet-hd() {
       display: none;
     }
     @include min-desktop-hd() {
@@ -271,7 +271,7 @@
   &.active {
     background-color: rgba($secondary-color, 1);
   }
-  @include med-tablet() {
+  @include max-tablet-hd() {
     display: none;
   }
 }

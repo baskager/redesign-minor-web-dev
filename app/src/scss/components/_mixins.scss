@@ -23,6 +23,12 @@ $browser-context: 16; // Default browser font size
   }
 }
 
+@mixin max-tablet-hd() {
+  @media (max-width: $max-tablet-hd) {
+    @content;
+  }
+}
+
 @mixin min-desktop() {
   @media (min-width: $min-desktop) {
     @content;
@@ -43,13 +49,6 @@ $browser-context: 16; // Default browser font size
 
 @mixin max-desktop-hd() {
   @media (max-width: $max-desktop-hd) {
-    @content;
-  }
-}
-
-// Custom mediaquery program overview
-@mixin med-tablet() {
-  @media (max-width: 830px) {
     @content;
   }
 }
