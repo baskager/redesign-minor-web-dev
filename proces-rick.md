@@ -456,6 +456,8 @@ Ik heb de poster gemaakt in de stijl van de website. Op de poster komt te staan 
 
 In de middag (toen ik de database weer werkend heb weten te krijgen) heb ik een aantal bugs opgelost.
 
+Aan het eind van de middag hadden we een lijstje gemaakt met dingen die we echt af MOETEN zouden moeten hebben voor de beoordeling. Van dit lijstje heb ik een paar dingen opgepakt en die avond gedaan.
+
 #### Woensdag 27 juni
 
-De dag voor de oplevering zijn we nog volle bak aan de gang gegaan met de laatste bugs.
+De dag voor de oplevering zijn we nog volle bak aan de gang gegaan met de laatste bugs. De laatste dingen uit het prioriteiten lijstje hebben we afgemaakt, en ook de poster was nu 100% af.
