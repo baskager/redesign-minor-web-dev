@@ -1,4 +1,10 @@
 module.exports = {
+  order: [
+    {
+      field: "course_type",
+      direction: "desc"
+    }
+  ],
   decompose: {
     pk: "course_id",
     columns: [
@@ -8,6 +14,7 @@ module.exports = {
       "course_type",
       "course_period_number",
       "course_period_weeks",
+      "color",
       "page_slug",
       "icon_url",
       "long_description",

@@ -1,4 +1,5 @@
 const queries = require("../queries/queries");
+
 class DataStore {
   constructor(database) {
     this.db = database;
@@ -25,7 +26,6 @@ class DataStore {
     return new Promise((resolve, reject) => {
       this.getCourseForCourseOverview(queryParameters)
         .then(courseData => {
-          // debug(courseData);
           let periods = [];
 
           for (let course of courseData) {
@@ -41,6 +41,8 @@ class DataStore {
             // Add course to the period object it belongs to
             periods[periodNumber].courses.push(course);
           }
+
+          // debug(periods);
           resolve(periods);
         })
         .catch(err => {

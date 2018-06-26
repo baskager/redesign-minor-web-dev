@@ -35,8 +35,6 @@ function getSubs(path) {
 
 let studentData = readData("src/json/student-work.json");
 
-console.log(studentData);
-
 const staticDir = "./static/";
 const screenshotDir = "img/student-work/";
 
@@ -51,7 +49,6 @@ studentData.courses.forEach(course => {
           let imgName =
             staticDir + screenshotDir + "/" + slugify(item.demoUrl) + ".png";
           item.imgUrl = screenshotDir + "/" + slugify(item.demoUrl) + ".png";
-          console.log(item.imgUrl);
           fs.writeFileSync(imgName, img);
         })
         .catch(function(err) {
@@ -99,7 +96,6 @@ massive(config.postgres).then(database => {
     dataStore
       .getCourseForCourseOverview({ page_slug: pageSlug })
       .then(courseData => {
-        debug(courseData[0]);
         res.render("course.html", {
           data: courseData[0]
         });
@@ -112,20 +108,17 @@ massive(config.postgres).then(database => {
       Tell the datastore to fetch a course with the 
       given pageslug and render the page with the received data. 
     */
-    dataStore
-      .getPeriodForTimeline({ course_period_number: 1 })
-      .then(periods => {
-        // Add the weekly nerd card to each period
-        for (let period of periods) {
-          if (period) period.courses.push(pageData.weekly_nerd_card);
-        }
+    dataStore.getPeriodForTimeline().then(periods => {
+      // Add the weekly nerd card to each period
+      for (let period of periods) {
+        if (period) period.courses.push(pageData.weekly_nerd_card);
+      }
+      pageData.periods = periods;
 
-        pageData.periods = periods;
-
-        res.render("program.html", {
-          data: pageData
-        });
+      res.render("program.html", {
+        data: pageData
       });
+    });
   });
 });
 

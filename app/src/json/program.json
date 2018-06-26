@@ -7,7 +7,8 @@
     "abbreviation": "wn",
     "slug": "weekly-nerd",
     "description": "Speakers",
-    "type": "speakers",
+    "course_type": "WEEKLY_NERD",
+    "color": "#008d96",
     "weeks": [
       {
         "week": 1,

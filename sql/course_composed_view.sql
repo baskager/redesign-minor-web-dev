@@ -15,6 +15,7 @@ SELECT
     course.short_description AS course_description,
     course_type.name AS course_type,
     course.page_slug,
+    course.color,
     course.icon_url,
     course.long_description,
     course.learning_goals,
