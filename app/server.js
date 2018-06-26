@@ -133,7 +133,7 @@ app.get("/team", function(req, res) {
 
 app.get("/student-work", function(req, res) {
   res.render("student-work.html", {
-    data: readData("src/json/student-work.json")
+    data: studentData
   });
 });
 
