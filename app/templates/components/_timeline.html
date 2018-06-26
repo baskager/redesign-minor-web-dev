@@ -28,7 +28,7 @@
         <p>{{ week.description }}</p>
       </div>
       {% endfor %}
-      <a class="focusable card-link" href="/course">Open {{ course.name }}</a>
+      <a class="focusable card-link" href="program/{{ course.slug }}">Open {{ course.name }}</a>
     </article>
 
     {% elseif course.type == "speakers" %}
@@ -46,7 +46,7 @@
         <p class="meta">{{ week.description }}</p>
       </div>
       {% endfor %}
-      <a class="focusable card-link" href="/course">Open {{ course.name }}</a>
+      <a class="focusable card-link" href="/weekly-nerd">Open {{ course.name }}</a>
     </article>
 
     {% elseif course.type == "project" %}
@@ -58,7 +58,7 @@
         <span class="meta">End of {{ period.period }}</span>
       </header>
       <p>{{ course.description }}</p>
-      <a class="focusable card-link" href="/course">Open {{ course.name }}</a>
+      <a class="focusable card-link" href="program/{{ course.slug }}">Open {{ course.name }}</a>
     </article>
 
     {% endif %} {% endfor %}

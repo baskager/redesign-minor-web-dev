@@ -8,15 +8,24 @@
     margin-right: 2rem;
     position: relative;
     align-items: center;
+    padding: 0.3rem;
+    transition: background 0.3s ease-in-out;
+    &:hover {
+      background: rgb(243, 243, 243);
+    }
   }
   div {
     display: flex;
     flex-direction: column;
+    padding-bottom: 0.5rem;
+    border-bottom: solid $primary-color 1px;
   }
   img {
     height: 3rem;
     margin-right: 1rem;
     width: 3rem;
+    opacity: 0.4;
+    transition: opacity 0.3s ease-in-out;
   }
   h2 {
     font-size: 1rem;
@@ -39,5 +48,12 @@
     position: absolute;
     top: 0;
     width: 100%;
+    &:hover ~ div {
+      opacity: 1;
+    }
+
+    &:hover ~ img {
+      opacity: 1;
+    }
   }
 }
