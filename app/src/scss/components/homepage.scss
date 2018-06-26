@@ -21,15 +21,16 @@
 }
 
 .courses {
-  .flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  .courses-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+    grid-gap: $margin-16;
     margin-bottom: $margin-32;
+    @include min-desktop-hd() {
+      grid-template-columns: repeat(3, 1fr);
+    }
     article {
       padding: 2em;
-      width: calc(33.33% - 13.34px);
-      margin: 0 20px 20px 0;
 
       img {
         display: block;
