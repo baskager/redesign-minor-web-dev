@@ -6,9 +6,22 @@ const monitor = require("pg-monitor");
 const debug = require("debug")("minor-server");
 const config = require("./config");
 const DataStore = require("./src/classes/DataStore.class");
+const compression = require("compression");
+const Screenshot = require("url-to-screenshot");
 const fs = require("fs");
 const parser = require("subtitles-parser");
-const compression = require("compression");
+
+// from https://gist.github.com/mathewbyrne/1280286
+function slugify(text) {
+  return text
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, "-") // Replace spaces with -
+    .replace(/[^\w\-]+/g, "") // Remove all non-word chars
+    .replace(/\-\-+/g, "-") // Replace multiple - with single -
+    .replace(/^-+/, "") // Trim - from start of text
+    .replace(/-+$/, ""); // Trim - from end of text
+}
 
 function readData(path) {
   let data = fs.readFileSync(path, "utf8");
@@ -17,9 +30,36 @@ function readData(path) {
 
 function getSubs(path) {
   const srt = fs.readFileSync(path, "utf8");
-  const subs = parser.fromSrt(srt, true);
-  return subs;
+  return parser.fromSrt(srt, true);
 }
+
+let studentData = readData("src/json/student-work.json");
+
+console.log(studentData);
+
+const staticDir = "./static/";
+const screenshotDir = "img/student-work/";
+
+studentData.courses.forEach(course => {
+  course.items.forEach(item => {
+    if (item.demoUrl) {
+      let thescreenshot = new Screenshot(item.demoUrl)
+        .clip()
+        .timeout(3000)
+        .capture()
+        .then(img => {
+          let imgName =
+            staticDir + screenshotDir + "/" + slugify(item.demoUrl) + ".png";
+          item.imgUrl = screenshotDir + "/" + slugify(item.demoUrl) + ".png";
+          console.log(item.imgUrl);
+          fs.writeFileSync(imgName, img);
+        })
+        .catch(function(err) {
+          console.log(err);
+        });
+    }
+  });
+});
 
 nunjucks.configure("./templates", {
   autoescape: true,
@@ -30,6 +70,7 @@ nunjucks.configure("./templates", {
 app.set("view engine", "html");
 app.use(compression());
 app.use(express.static("./static"));
+app.use(express.static(staticDir));
 
 // Overwrite config for the postgres host on production servers
 if (app.get("env") == "production") {
@@ -45,15 +86,15 @@ massive(config.postgres).then(database => {
 
   // E.G. /program/web-design
   app.get("/program/:pageSlug", function(req, res) {
-    /* 
+    /*
       Get the pageslug from the Express server
       The pageslug identifies what page we are on
       E.G.: 'course/web-design' or 'course/real-time-web'
     */
     let pageSlug = req.params.pageSlug;
-    /* 
-      Tell the datastore to fetch a course with the 
-      given pageslug and render the page with the received data. 
+    /*
+      Tell the datastore to fetch a course with the
+      given pageslug and render the page with the received data.
     */
     dataStore
       .getCourseForCourseOverview({ page_slug: pageSlug })
@@ -92,7 +133,7 @@ app.get("/team", function(req, res) {
 
 app.get("/student-work", function(req, res) {
   res.render("student-work.html", {
-    data: readData("src/json/student-work.json")
+    data: studentData
   });
 });
 

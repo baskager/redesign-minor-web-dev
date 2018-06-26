@@ -42,7 +42,7 @@
   .container {
     align-items: center;
     display: flex;
-    height: 85vh;
+    min-height: 85vh;
   }
 
   .left {
@@ -83,6 +83,33 @@
       fill: $primary-color;
       height: 44px;
       width: 44px;
+    }
+  }
+
+  @media only screen and (max-width: 995px) {
+    .container {
+      flex-direction: column;
+      padding: 5rem 0;
+    }
+
+    .left {
+      margin: 6rem 0 5rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    .right {
+      width: 80%;
+
+      > svg {
+        display: none;
+      }
+    }
+
+    #replayAnimation {
+      bottom: 1.5rem;
+      right: 50%;
+      transform: translateX(50%);
     }
   }
 }
