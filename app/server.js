@@ -157,7 +157,7 @@ talkData.subtitles = getSubs("src/subs/talk.srt");
 talkData.subtitles = JSON.stringify(talkData.subtitles);
 talkData.slides = JSON.stringify(talkData.slides);
 
-app.get("/weekly-nerd", function(req, res) {
+app.get("/program/weekly-nerd", function(req, res) {
   res.render("talk.html", {
     data: talkData
   });
