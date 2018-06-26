@@ -1,12 +1,37 @@
+.home-wrapper {
+  section header {
+    margin: 0 0 $margin-48 0;
+    padding: 0;
+    text-align: center;
+    p {
+      margin: auto;
+    }
+  }
+  h2 {
+    margin: 0 0 $margin-24 0;
+    text-transform: uppercase;
+  }
+  span {
+    display: inline-block;
+  }
+
+  section {
+    padding: $padding-24 0;
+    margin: 0 0 $margin-64;
+  }
+}
+
 .courses {
-  .flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  .courses-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+    grid-gap: $margin-16;
+    margin-bottom: $margin-32;
+    @include min-desktop-hd() {
+      grid-template-columns: repeat(3, 1fr);
+    }
     article {
       padding: 2em;
-      width: calc(33.33% - 13.34px);
-      margin: 0 20px 20px 0;
 
       img {
         display: block;
@@ -15,7 +40,6 @@
       }
 
       h3 {
-        color: #d00064;
         text-align: center;
       }
 
@@ -61,15 +85,17 @@
 }
 
 .signup-cta {
-  max-width: 50em;
-  margin: 0 auto;
-  h1 {
-    text-align: center;
+  h2 {
+    @include max-tablet-hd() {
+      font-size: $h2-font-size;
+    }
+    font-size: $h1-font-size;
   }
   p {
     max-width: 30em;
     margin: 0 auto;
     text-align: center;
+    font-size: $h3-font-size;
   }
   a {
     margin: 2em auto;
@@ -80,19 +106,23 @@
 }
 
 .instagram-feed {
-  margin: 8rem 0;
+  margin: 0 0 8rem 0;
   div {
-    max-width: 50rem;
     margin: 0 auto;
     div {
       display: block;
-      opacity: 0.5;
+      // opacity: 0.5;
       transition: all 0.3s ease;
       position: relative;
       &:hover,
       &:focus,
       &:focus-within {
-        opacity: 1;
+        a {
+          background: rgba(0, 0, 0, 0.6);
+        }
+        p {
+          opacity: 1;
+        }
       }
       a {
         position: absolute;
@@ -101,13 +131,25 @@
         right: 0;
         bottom: 0;
         outline: 0;
+        font-size: 0;
+        border-radius: 5px;
       }
       img {
         object-fit: cover;
-        height: 200px;
+        max-height: rem(250);
         display: block;
+        height: 100%;
         width: 100%;
         border-radius: 5px;
+      }
+      p {
+        position: absolute;
+        bottom: 0;
+        padding: 0 $padding-16;
+        opacity: 0;
+        color: #fff;
+        // font-weight: bold;
+        font-size: $h4-font-size;
       }
     }
 
@@ -127,10 +169,7 @@
       grid-column: 5 / 13;
     }
   }
-}
-
-@include max-tablet() {
-  .instagram-feed {
+  @include max-tablet() {
     .grid {
       .ig-1,
       .ig-3 {
@@ -139,6 +178,16 @@
       .ig-2,
       .ig-4 {
         grid-column: 7 / 13;
+      }
+    }
+  }
+  @include max-mobile() {
+    .grid {
+      .ig-1,
+      .ig-3,
+      .ig-2,
+      .ig-4 {
+        grid-column: 1 / 13;
       }
     }
   }

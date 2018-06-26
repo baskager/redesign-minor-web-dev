@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="24px" viewBox="0 0 32 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>mouse-horizontal</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="mouse-horizontal" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M28.5,12.5 L28.5,15.5 L26.5,15.5 L26.5,12.5 L24.5,12.5 L27.5,8.5 L30.5,12.5 L28.5,12.5 Z" id="Combined-Shape-Copy-5" fill="#FFFFFF" transform="translate(27.500000, 12.000000) rotate(90.000000) translate(-27.500000, -12.000000) "></path>
+        <path d="M5.5,12.5 L5.5,15.5 L3.5,15.5 L3.5,12.5 L1.5,12.5 L4.5,8.5 L7.5,12.5 L5.5,12.5 Z" id="Combined-Shape-Copy-6" fill="#FFFFFF" transform="translate(4.500000, 12.000000) scale(-1, 1) rotate(90.000000) translate(-4.500000, -12.000000) "></path>
+        <g id="Group-3" transform="translate(11.000000, 3.000000)">
+            <path d="M5,-1.77635684e-15 L5,-1.77635684e-15 C7.76142375,-2.28362215e-15 10,2.23857625 10,5 L10,13 C10,15.7614237 7.76142375,18 5,18 L5,18 C2.23857625,18 1.2263553e-15,15.7614237 8.8817842e-16,13 L8.8817842e-16,5 C5.50001544e-16,2.23857625 2.23857625,-1.26909153e-15 5,-1.77635684e-15 Z" id="Rectangle-4" fill="#FFFFFF"></path>
+            <path d="M5,3 L5,6" id="Path-2" stroke="#131313" stroke-width="2" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>

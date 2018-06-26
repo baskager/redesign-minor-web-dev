@@ -10,7 +10,7 @@ input[type="reset"],
   box-shadow: none;
   font-size: 1em;
   font-weight: $semi-bold;
-  background: $btn-basic-background;
+  background-color: $btn-basic-background;
   cursor: pointer;
   transition: 0.2s;
   margin-top: 1rem;
@@ -47,11 +47,8 @@ input[type="reset"],
   border: none;
 }
 
-button.btn-primary,
-input[type="submit"].btn-primary,
-input[type="reset"].btn-primary,
-.btn.btn-primary {
-  background: $btn-primary-background;
+.btn-primary {
+  background-color: $btn-primary-background;
   border: none;
   color: $btn-primary-color;
   &:hover,
@@ -59,6 +56,11 @@ input[type="reset"].btn-primary,
     color: white;
     background: $btn-primary-focus-background;
   }
+}
+
+.btn-secondary {
+  background-color: $white;
+  border: 2px solid $btn-primary-background;
 }
 
 .btn-cta {

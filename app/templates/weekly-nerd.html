@@ -1,0 +1,77 @@
+{% extends "components/_base.html" %} {% block content %}
+<header class="course-header focusOnScroll">
+  <div class="container grid">
+    <div>
+      <div class="header-info" scroll-transition>
+        <h1>
+          <span>
+            {{ data.course_name }}
+          </span>  
+        </h1>
+        <p>{{data.course_description | safe }}</p>
+      </div>
+    </div>
+    <img class="header-img" scroll-transition src="{{data.icon_url}}"></img>
+  </div>
+</header>
+
+<main id="main" class="container">
+  <section class="course-card-overview focusOnScroll">
+    <h2>Weekly Nerds</h2>
+    <div class="course-card-list" scroll-transition>
+      {% for talk in data.talks %}
+        <div class="card card-interactive card-talk">
+          <img src="{{ talk.avatar }}" alt="" class="avatar">
+          <h3>{{ talk.name }}</h3>
+          <h4>{{ talk.company }}</h4>
+          <p>{{ talk.subject }}</p>
+          <a class="card-link" href="{{ talk.url }}">Check out the talk</a>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="course-info">
+    <section>
+      <h2>Learning goals</h2>
+      <ul class="course-list">
+        {% for learning_goal in data.learning_goals %}
+        <li>
+          {{learning_goal}}
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </section>
+
+  <section class="student-quote">
+    <div class="testimonial">
+      <blockquote>
+        <p>Voor ik begon met de minor had ik weinig kennis en skill in Javascript. Ik kon net een class toevoegen en weghalen
+          met jQuery. Nu kan ik een Webapp bouwen! Leraren geven goed en gedetailleerd feedback.</p>
+        <p>
+          <i>~ Sjaak - 2018</i>
+        </p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="other-courses focusOnScroll">
+    <h2>Other courses</h2>
+    <div>
+      <a class="btn" href="/course/web-apps-from-scratch">Web Apps From Scratch</a>
+      <a class="btn" href="/course/css-to-the-rescue">other course</a>
+      <a class="btn" href="/course/browser-technologies">Browser Technologies</a>
+      <a class="btn" href="/course/performance-matters">Performance Matters</a>
+      <a class="btn" href="/course/real-time-web">Real-Time Web</a>
+      <a class="btn" href="/course/web-design">Web Design</a>
+      <a class="btn" href="/course/weekly-nerd">Weekly Nerd</a>
+      <a class="btn" href="/course/project-1">Project 1</a>
+      <a class="btn" href="/course/project-2">Project 2</a>
+      <a class="btn" href="/course/project-3">Project 3</a>
+      <a class="btn" href="/course/master-test">Master Test</a>
+    </div>
+  </section>
+</main>
+
+{% endblock %}

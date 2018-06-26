@@ -4,13 +4,39 @@
   border: 1px solid $border-color;
   border-radius: $border-radius;
   position: relative;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card-talk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(32);
+
+  h3 {
+    margin: rem(24) 0 0 0;
+    color: $link-color;
+  }
+
+  h4 {
+    margin-top: rem(4);
+    color: lighten($black, 50%);
+  }
+
+  p {
+    margin: rem(16) 0 rem(8) 0;
+  }
+
+  .avatar {
+    width: rem(80);
+  }
 }
 
 .card:focus-within,
 .card:hover {
   transform: scale(1.03);
-  box-shadow: 0 .5rem 0.5rem rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.08);
   border: solid $primary-color 1px;
   outline: 0;
 }
