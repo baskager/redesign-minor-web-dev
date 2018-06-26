@@ -16,11 +16,15 @@
       display: none;
     }
   }
-  a {
+  a,
+  button {
     display: inline-block;
     text-align: center;
     padding: $padding-16;
     white-space: nowrap;
+    margin: 0;
+    border-radius: 0;
+    height: 100%;
   }
   #submenu-previous,
   #submenu-next {

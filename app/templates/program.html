@@ -1,8 +1,8 @@
 {% extends "components/_base.html" %} {% block content %}
 <nav class="submenu">
   <div class="container">
-    <ul>
-      <li><a id="submenu-previous" href="#previous"><i class="fa fa-chevron-left"></i></a></li>
+    <ul id="submenu-container">
+      <li><button id="submenu-previous"><i class="fa fa-chevron-left"></i></button></li>
       <li><a href="#cssttr">CSS to the rescue</a></li>
       <li><a href="#wafs">Web app from scratch</a></li>
       <li><a href="#project1">Project 1</a></li>
@@ -14,7 +14,7 @@
       <li><a href="#project3">Project 3</a></li>
       <li><a href="#wn">Weekly nerd</a></li>
       <li><a href="#mp">Master project</a></li>
-      <li><a id="submenu-next" href="#next"><i class="fa fa-chevron-right"></i></a></li>
+      <li><button id="submenu-next"><i class="fa fa-chevron-right"></i></button></li>
     </ul>
   </div>
 </nav>
