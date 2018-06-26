@@ -194,6 +194,9 @@
   }
   // submenu styling
   .submenu {
+    @include max-tablet() {
+      display: none;
+    }
     position: absolute;
     left: 0;
     right: 0;
