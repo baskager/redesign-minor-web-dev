@@ -447,3 +447,15 @@ Vrijdag ben ik weer verder gegaan met waar ik donderdag gebleven ben, voor de re
 #### Maandag 25 juni
 
 Maandag hadden we in de ochtend weer een bijeenkomst met Koop. We hebben het kort over de poster gehad die we moeten maken voor de presentatie. Na de bijeenkomst zijn we weer verder gegaan met de website, en de afvinken van de laatste dingen.
+
+#### Dinsdag 26 juni
+
+Dinsdag had ik een individueel gesprek met Koop waar ik de website liet zien. Koop was meer dan tevreden met hoe de website er op dat moment uit zag. Echter kreeg ik de database niet aan de praat, en had ik Bas nodig om hem aan te slingeren. Bas kwam alleen wat later, dus ben ik die ochtend maar begonnen met de poster.
+
+Ik heb de poster gemaakt in de stijl van de website. Op de poster komt te staan wat de belangrijkste content is, en een beetje hoe het proces is verlopen. Ook kan je in een oogopslag makkelijk zien wat de alternatieve manieren van interactie zijn.
+
+In de middag (toen ik de database weer werkend heb weten te krijgen) heb ik een aantal bugs opgelost.
+
+#### Woensdag 27 juni
+
+De dag voor de oplevering zijn we nog volle bak aan de gang gegaan met de laatste bugs.
