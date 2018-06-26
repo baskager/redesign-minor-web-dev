@@ -28,11 +28,13 @@ body {
 }
 
 body > header,
-.signup-wrapper header {
+.signup-wrapper header,
+.home-wrapper header {
   margin-bottom: 5rem;
   padding: 7rem 0 4rem 0;
 
-  h1 {
+  h1,
+  h2 {
     max-width: 50em;
     margin-bottom: 3rem;
   }
@@ -60,7 +62,7 @@ body > header,
       -webkit-box-decoration-break: clone;
       background-color: $secondary-color;
       box-decoration-break: clone;
-      display: inline;
+      display: inline-block;
       padding: $padding-24;
       color: white;
     }

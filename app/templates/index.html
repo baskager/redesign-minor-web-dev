@@ -5,9 +5,9 @@
       <h1>
         <span>Minor Web Development</span>
       </h1>
-      <p>This minor learns you to make interactive applications with HTML, CSS and JavaScript. In separate courses and projects
+      <p>This minor teaches you to make interactive applications with HTML, CSS and JavaScript. In separate courses and projects
         you'll learn everything about: real-time web, internet of things, performance, rapid prototyping...</p>
-      <a href="/">What you gonna learn</a>
+      <a href="/sign-up">Sign up!</a>
     </div>
     <div class="right">
       <svg width="201" height="81" viewBox="0 0 201 81" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,9 +33,11 @@
     </div>
   </div>
 </header>
-<main class="container">
+<main class="home-wrapper container">
   <section class="courses home-courses focusOnScroll">
-    <h2>Vakken</h2>
+    <header>
+        <h2><span>Courses</span></h2>
+    </header>
     <div class="flex">
       <article class="card" scroll-transition>
         <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
@@ -45,7 +47,7 @@
           Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
           is consistent and optimized to meet business objectives and create enjoyable experiences for users.
         </p>
-        <a href="/course">Web Design</a>
+        <a href="/course" class="focusable">Web Design</a>
       </article>
       <article class="card" scroll-transition>
         <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
@@ -55,7 +57,7 @@
           Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
           is consistent and optimized to meet business objectives and create enjoyable experiences for users.
         </p>
-        <a href="/course/{{course.page_slug}}">Web Design</a>
+        <a href="/course/{{course.page_slug}}" class="focusable">Web Design</a>
       </article>
       <article class="card" scroll-transition>
         <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
@@ -65,7 +67,7 @@
           Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
           is consistent and optimized to meet business objectives and create enjoyable experiences for users.
         </p>
-        <a href="/course/{{course.page_slug}}">Web Design</a>
+        <a href="/course/{{course.page_slug}}" class="focusable">Web Design</a>
       </article>
       <article class="card" scroll-transition>
         <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
@@ -75,7 +77,7 @@
           Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
           is consistent and optimized to meet business objectives and create enjoyable experiences for users.
         </p>
-        <a href="/course/{{course.page_slug}}">Web Design</a>
+        <a href="/course/{{course.page_slug}}" class="focusable">Web Design</a>
       </article>
       <article class="card" scroll-transition>
         <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
@@ -85,7 +87,7 @@
           Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
           is consistent and optimized to meet business objectives and create enjoyable experiences for users.
         </p>
-        <a href="/course/{{course.page_slug}}">Web Design</a>
+        <a href="/course/{{course.page_slug}}" class="focusable">Web Design</a>
       </article>
       <article class="card" scroll-transition>
         <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png"
@@ -95,13 +97,15 @@
           Creating websites is getting more and more complex and is usually not a one person job. It is important to ensure that design
           is consistent and optimized to meet business objectives and create enjoyable experiences for users.
         </p>
-        <a href="/course/{{course.page_slug}}">Web Design</a>
+        <a href="/course/{{course.page_slug}}" class="focusable">Web Design</a>
       </article>
     </div>
   </section>
 
   <section class="partners focusOnScroll">
-    <h2>Partners waar we mee samen werken</h2>
+    <header>
+      <h2><span>Partners</span></h2>
+    </header>
     <div class="carousel">
       <a id="previous">
         <img src="/img/icons/arrow.svg">
@@ -143,7 +147,7 @@
     </div>
   </section>
 
-  <section class="student-quote">
+  {# <section class="student-quote">
     <div class="testimonial">
       <img src='https://pbs.twimg.com/profile_images/535154875059806208/FwaafAh1_400x400.png' class='avatar' alt=''>
       <blockquote>
@@ -156,7 +160,7 @@
         </p>
       </blockquote>
     </div>
-  </section>
+  </section> #}
 
   <section class="instagram-feed focusOnScroll">
     <div class="grid">

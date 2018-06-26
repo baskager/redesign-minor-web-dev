@@ -1,3 +1,20 @@
+.home-wrapper {
+  section header {
+    margin: $margin-48 0;
+    padding: 0;
+    @include max-desktop() {
+      text-align: center;
+    }
+  }
+  h2 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+  span {
+    display: inline-block;
+  }
+}
+
 .courses {
   .flex {
     display: flex;
