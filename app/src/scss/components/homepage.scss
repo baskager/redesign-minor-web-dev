@@ -128,3 +128,18 @@
     }
   }
 }
+
+@include max-tablet() {
+  .instagram-feed {
+    .grid {
+      .ig-1,
+      .ig-3 {
+        grid-column: 1 / 7;
+      }
+      .ig-2,
+      .ig-4 {
+        grid-column: 7 / 13;
+      }
+    }
+  }
+}
