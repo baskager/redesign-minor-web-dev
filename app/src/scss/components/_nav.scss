@@ -1,68 +1,67 @@
 .main-nav {
   position: fixed;
-  z-index: $zindex-nav;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: #fff;
+  display: flex;
+  align-items: center;
   box-shadow: $bottom-shadow;
+  z-index: $zindex-nav;
 
-  &,
-  .submenu,
-  #nav-items.active {
-    top: 0;
-    left: 0;
-    right: 0;
+  .logo {
+    min-height: calc(4.5rem + 2px);
+    display: flex;
+    align-items: center;
+    @include max-tablet() {
+      align-self: flex-start;
+    }
   }
 
-  // All align-items: center; parents
-  &,
-  #nav-items,
-  #nav-items.active,
-  #nav-items a,
-  .container,
-  .hotkey {
+  #nav-items-toggle {
+    padding: 1.5rem;
+    margin: 0.25rem 0;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
     display: flex;
+    align-self: flex-start;
+    i {
+      display: block;
+      height: 1rem;
+      width: 1rem;
+      &:first-child {
+        display: none;
+      }
+    }
+    &.active {
+      i:first-child {
+        display: block;
+      }
+      i:last-child {
+        display: none;
+      }
+    }
+  }
+
+  #nav-items-toggle {
+    @include min-desktop() {
+      display: none;
+    }
+  }
+
+  & > .container {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 
-  #nav-items {
-    display: none;
-
-    &.active {
-      justify-content: center;
-      flex-flow: column;
-      min-height: 100vh;
-      background: #fff;
-    }
-
-    @include min-desktop {
-      display: flex;
-      & > li > a {
-        margin-left: $margin-24;
-      }
-    }
-
-    a {
-      margin-left: $margin-24;
-      justify-content: center;
-      border-bottom: 2px solid transparent;
-      flex-flow: column;
-    }
-  }
-
-  .container {
-    justify-content: space-between;
-  }
-
-  // All min-height: calc(4.5rem + 2px); parents
-  .logo {
-    min-height: calc(4.5rem + 2px);
-  }
-
   h1 {
-    font-size: $h4-font-size;
     margin: 0;
-    @include min-desktop {
+    font-size: $h4-font-size;
+    @include min-desktop-hd() {
       font-size: $h3-font-size;
     }
+    @include transition;
   }
 
   .skip-to-content {
@@ -77,28 +76,193 @@
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
     transition: all 0.3 ease-in-out;
+  }
 
-    &:focus {
-      z-index: 2;
-      width: auto;
-      height: auto;
-      clip: auto;
-    }
+  .skip-to-content:focus {
+    z-index: 2;
+    width: auto;
+    height: auto;
+    clip: auto;
+  }
 
-    &:focus + a h1 {
-      opacity: 0;
-    }
+  .skip-to-content:focus + a h1 {
+    opacity: 0;
   }
 
   ul {
-    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #nav-items {
+    display: flex;
+    @include max-tablet() {
+      margin-top: -100vh;
+      transition: margin 0.3s ease-in-out;
+      align-items: center;
+      justify-content: center;
+      // position: absolute;
+      min-height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      flex-flow: column;
+    }
+    &.active {
+      margin-top: 0;
+    }
+    & > li {
+      @include min-desktop() {
+        margin-left: $margin-24;
+      }
+      & > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid transparent;
+        flex-flow: column;
+        @include transition();
+
+        &:hover:not(#menu-item-6) {
+          border-bottom: 2px solid rgba($primary-color, 0.5);
+        }
+        @include min-tablet() {
+          min-height: calc(4.5rem + 2px);
+        }
+        @include min-desktop-hd() {
+          flex-flow: row;
+        }
+      }
+      &.active {
+        & > a {
+          color: $secondary-color;
+          border-bottom: 2px solid $secondary-color;
+        }
+        & span {
+          border-color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  #menu-item-6 {
+    span {
+      border-color: #fff;
+    }
+    border-radius: 0;
+    padding: 0 1.25rem;
+    @include max-tablet() {
+      border-radius: inherit;
+      min-width: rem(150);
+    }
+  }
+
+  span {
+    border: 1px $primary-color solid;
+    font-size: 0.75rem;
+    margin-right: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: inline-flex;
+    transition: width 0.15s 0.15s ease-in-out, height 0.15s 0.15s ease-in-out,
+      margin 0.15s 0.15s ease-in-out, opacity 0.3s ease-in-out;
+    &.active {
+      opacity: 1;
+      width: 1rem;
+      height: 1rem;
+      margin: 0 0 0.25rem 0;
+      transition: width 0.15s 0.15s ease-in-out, margin 0.15s 0.15s ease-in-out,
+        height 0.15s 0.15s ease-in-out, opacity 0.15s 0.15s ease-in-out;
+    }
+    @include max-tablet-hd() {
+      display: none;
+    }
+    @include min-desktop-hd() {
+      height: 1.25rem;
+      font-size: 0.75rem;
+      &.active {
+        width: 1.25rem;
+        margin: 0 $margin-8 0 0;
+        height: 1.25rem;
+      }
+    }
+  }
+  // submenu styling
+  .submenu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    top: 74px;
+    margin-top: 0px;
+    background-color: $secondary-color;
+    padding: 0;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    div div {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+      grid-gap: $margin-16;
+    }
+    h2 {
+      color: #fff;
+      font-size: $h3-font-size;
+    }
+    p {
+      color: #fff;
+      margin-top: 0;
+    }
+    a {
+      display: block;
+      padding: $padding-8 0;
+      font-weight: $h2-font-weight;
+      color: lighten($primary-color, 35%);
+      &:hover {
+        color: lighten($primary-color, 25%);
+      }
+    }
+  }
+  li:focus .submenu,
+  li:focus-within .submenu,
+  li:hover .submenu {
+    height: 275px;
+    div div {
+      display: grid;
+    }
+  }
+  li {
+    list-style: none;
+  }
+  .btn {
     margin: 0;
     padding: 0;
   }
 }
 
-.submenu,
-#nav-items-toggle,
-#keynav {
-  display: none;
+.keynav {
+  padding: $padding-8 $padding-16;
+  border-radius: rem(10);
+  background-color: rgba($secondary-color, 0.4);
+  color: #fff;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.75rem;
+  transition: background-color 0.3s ease-in-out;
+  z-index: -1;
+  &.active {
+    background-color: rgba($secondary-color, 1);
+  }
+  @include max-tablet-hd() {
+    display: none;
+  }
 }
