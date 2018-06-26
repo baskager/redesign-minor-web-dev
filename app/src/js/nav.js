@@ -1,16 +1,29 @@
 (function() {
   "use strict";
 
-  // Main function. Here we need to toggle the quicknavigation
+  // Mobile navigation toggle
+  const mobileNav = {
+    init: function(e) {
+      eventListeners.onClick();
+    }
+  };
+
+  // Hotkey navigation init
   const keyNav = {
-    // Set core functionality states. The hotKeyState will be saved in a cookie.
     // Key value of objects
     cmdState: false,
+
+    // KeyNavState is (will be) stored in localStorage
     keyNavState: false,
 
     init: function() {
+      // Functionality for the state of the hotkeys
       keyNavToggle.toggleState();
+
+      // Pure visual indicators for the state of the hotkeys
       keyNavToggle.toggleIndicators();
+
+      // Eventlisteners to actually toggle the state of the hotkeys and the visuals
       eventListeners.onKeyUp();
       eventListeners.onKeyDown();
     }
@@ -40,7 +53,7 @@
       } else {
         this.mainIndicator.classList.remove("active");
         this.menuIndicators.forEach(function(indicator) {
-          indicator.removeAttribute("class");
+          indicator.classList.remove("active");
         });
       }
     }
@@ -138,8 +151,25 @@
           indicator.classList.remove("inactive");
         });
       });
+    },
+
+    onClick: function(e) {
+      let mainNav = document.getElementById("nav-items");
+      let navToggle = document.getElementById("nav-items-toggle");
+
+      console.log(navToggle);
+      navToggle.addEventListener("click", function(e) {
+        if (this.classList.contains("active")) {
+          mainNav.classList.add("active");
+          navToggle.removeAttribute("class");
+        } else {
+          mainNav.removeAttribute("class");
+          navToggle.classList.add("active");
+        }
+      });
     }
   };
 
+  mobileNav.init();
   keyNav.init();
 })();
