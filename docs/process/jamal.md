@@ -7,6 +7,7 @@
 - **[Week 4](#week-4)**
 - **[Week 5](#week-5)**
 - **[Week 6](#week-6)**
+- **[Ook een kleine conclusie](#ook-een-kleine-conclusie)**
 
 Zelf heb ik voor deze eindopdracht gekozen omdat dit mij de leukste opdracht leek om styling en functionaliteit samen te kunnen voegen. Vanuit mijn eigen ervaring waren er ook delen informatie die voor mij onduidelijk waren voordat ik aan de minor begon. Het lijkt mij daarom een goede uitdaging om er voor te zorgen dat toekomstige studenten complete informatie kunnen vinden.
 
