@@ -1,7 +1,5 @@
 # Procesboek
 
-[TOC]
-
 ## Week 1
 
 ### Maandag 28 mei
