@@ -9,6 +9,13 @@
       padding: 1rem 1rem 1rem 0;
     }
   }
+  h1 > span {
+    -webkit-box-decoration-break: clone;
+    background-color: $secondary-color;
+    box-decoration-break: clone;
+    display: inline;
+    padding: $padding-24;
+  }
   > img {
     border-radius: 10px;
     grid-column: 6 / 13;
@@ -27,7 +34,7 @@
     }
     li {
       padding-left: 0.4em;
-      list-style-image: url("/img/icons/bullet-purple.svg");
+      list-style-image: url('/img/icons/bullet-purple.svg');
     }
   }
 }
@@ -104,11 +111,11 @@
         grid-column: 1 / 13;
         margin-top: 14%;
         div p {
-          background-color: rgba(255,255,255,0);
+          background-color: rgba(255, 255, 255, 0);
         }
       }
 
-      >img {
+      > img {
         grid-column: 1 / 13;
         opacity: 0.6;
       }
