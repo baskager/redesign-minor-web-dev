@@ -85,7 +85,7 @@ forever -o logs/node-server-out.log -e logs/node-server-error.log start app.js
 
 ## 'Hector Salamanca' input method by Rick
 
-Let Rick write something here
+Rick made a very experimental version of a keyboard that ( according to his research ) shoud be very accessible for Marijn. Check out [his progress Blog](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/rick.md) for the full research and results of the test with Marijn.
 
 ## Video element with captions and split screen
 
@@ -104,11 +104,11 @@ For deaf people it is hard to follow lectures. They have to focus on the speaker
 
 ## Spatial navigation on the program page
 
-Let James write something here
+The spatial navigation functionality is deeply inspired by the original Opera function and by multiple large screen navigation systems. Users can easily navigate through elements using their arrow keys. Unlike the forward jumping tab key, users can navigate in any direction. The enter key will emulate the mouse's on click event. More information can be found on James personal progress [blog](https://jamerrone.github.io/meesterproef-progress-blog/).
 
 ## Focus following the scroll position
 
-Let James write something here
+Marijn once told me that the biggest disadvantage of the tab key was the fact that it always starts at the top of the website. If the user chooses to scroll down the page and wants to interact with an element, he will need to spam the tab key until he get's there. With this functionality James wrote, the focus key will always follow the user's window location. The focus state will change its current element depending on what is currently displayed on the screen. More information can be found on James personal progress [blog](https://jamerrone.github.io/meesterproef-progress-blog/).
 
 ## Spatial navigation slider element
 
@@ -174,11 +174,11 @@ Write your own little story here
 
 ![Profile photo](https://avatars1.githubusercontent.com/u/22095570?s=460&v=4)
 
-Write your own little story here
+Doesn't really know what he's doing, but he's doing just fine.
 
 [Github repo](https://github.com/Rick712)
 
-[Progress Blog]()
+[Progress Blog](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/rick.md)
 
 ## Jamal van Rooijen
 
