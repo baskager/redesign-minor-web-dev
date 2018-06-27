@@ -102,7 +102,7 @@
     display: flex;
     @include max-tablet() {
       transform: translateY(-100vh);
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s 0.2s ease;
       align-items: center;
       justify-content: center;
       position: absolute;
@@ -112,6 +112,10 @@
       right: 0;
       background: #fff;
       flex-flow: column;
+      li {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
     }
 
     span {
@@ -152,6 +156,11 @@
 
     &.active {
       transform: translateY(0);
+      transition: transform 0.3s ease;
+      li {
+        opacity: 1;
+        transition: opacity 0.3s 0.2s ease;
+      }
     }
     & > li {
       @include min-desktop() {
