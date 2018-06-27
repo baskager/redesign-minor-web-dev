@@ -112,7 +112,14 @@ Marijn once told me that the biggest disadvantage of the tab key was the fact th
 
 ## Navigation through hotkeys
 
-In our interviews/test with Marijn, he told us that he really liked interfaces dat can be used through hotkeys. Now, all the pages in the main menu are available when you use the keys with a number on it. Look at the number in de main navigation to know which number you have to press. This feature can be toggled on or off when you press alt + ctrl simultaniously. Every user should be able to navigate quickly through the website without too much effort. Especially in combination with the spacial navigation and focus on scroll position. More information can be found on Jamal his person progress [blog Jamal](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/jamal.md).
+In our interviews/test with Marijn, he told us that he really liked interfaces dat can be used through hotkeys. Now, all the pages in the main menu are available when you use the keys with a number on it. Look at the number in de main navigation to know which number you have to press. This feature can be toggled on or off when you press alt + ctrl simultaniously. Every user should be able to navigate quickly through the website without too much effort. Especially in combination with the spacial navigation and focus on scroll position.
+
+**How to use the hotkeys**
+
+- If the indicator on the bottom right is transparent, press `control + alt` to toggle the hotkeys.
+- With [1, 2, 3, 4, 5, 6] you can navigate through the different pages on the website.
+
+![hotkeys](https://i.imgur.com/Yt4w2Wo.png)
 
 ## Spatial navigation slider element
 
@@ -188,9 +195,10 @@ Doesn't really know what he's doing, but he's doing just fine.
 
 ![Profile photo](https://avatars3.githubusercontent.com/u/26875486?s=460&v=4)
 
-Write your own little story here
+A designer who just recently discovered his love for code.s
 
 [Github repo](https://github.com/jamalvr)
+[Jamal his progress blog](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/jamal.md).
 
 [Progress Blog]()
 
