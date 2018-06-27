@@ -163,11 +163,11 @@ Write your own little story here
 
 ![Profile photo](https://avatars1.githubusercontent.com/u/22095570?s=460&v=4)
 
-Write your own little story here
+Doesn't really know what he's doing, but he's doing just fine.
 
 [Github repo](https://github.com/Rick712)
 
-[Progress Blog]()
+[Progress Blog](/app/docs/process/rick.md)
 
 ## Jamal van Rooijen
 
