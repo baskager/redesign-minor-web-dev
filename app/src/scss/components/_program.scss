@@ -1,7 +1,9 @@
 .submenu {
   background-color: #fafafa;
   margin-top: rem(74);
-  // box-shadow: inset 0px 11px 8px -10px #ccc, inset 0px -11px 8px -10px #ccc;
+  overflow: hidden;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
   .container {
     position: relative;
   }
@@ -10,7 +12,6 @@
     margin: 0 $margin-32;
     padding: 0;
     display: flex;
-    overflow-y: hidden;
     overflow-x: scroll;
     @include min-desktop {
       margin: 0 $margin-48;
