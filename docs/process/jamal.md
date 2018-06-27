@@ -563,4 +563,4 @@ Ook is het belangrijk om toch een project qua scope goed in te kunnen schatten e
 
 Verder vond ik het zelf echt super vet om samen te werken. Zelf vind ik dat ook de leukste manier van werken, omdat je super veel inzichten van elkaar krijgt. Mensen snappen ook beter waar ik mee bezig ben omdat je in hetzelfde project werk, wat het weer makkelijker maakt om de juist hulp te vragen. Hierdoor heb ik bijvoorbeeld best veel stappen kunnen maken in het zelfstandig schrijven van javascript.
 
-
+**[Pull requests van Jamal](https://github.com/baskager/redesign-minor-web-dev/pulls?utf8=%E2%9C%93&q=author%3Ajamalvr+)**
