@@ -71,24 +71,36 @@
 
           counter.init();
           counter.setMin(1);
-          counter.setMax(slides.length);
+          counter.setMax(slides.length + 1);
 
           if (previousButton && nextButton) {
             previousButton.addEventListener("click", function(e) {
-              SpatialNavigation.focus();
-              SpatialNavigation.move("left");
+              if (counter.count == 1) {
+                // Set counter to two so that when the 'next' button is clicked it will go to the second slide
+                counter.set(2);
+                // ALlways refocus to the first element when the 'previous' button is clicked on the first slide
+                SpatialNavigation.focus("#c-slide-1");
+              } else {
+                // Count down and focus to the previous element
+                counter.down();
+                SpatialNavigation.focus("#c-slide-" + (counter.count - 1));
+              }
             });
 
             nextButton.addEventListener("click", function(e) {
-              SpatialNavigation.focus();
-              if (counter.count !== 1) {
-                SpatialNavigation.move("right");
-              } else counter.up();
+              if (counter.count == 1) {
+                // Count up and (re)focus on the first slide when the 'next' button is clicked
+                counter.up();
+                SpatialNavigation.focus("#c-slide-1");
+              } else {
+                // Count up and move to the next slide
+                counter.up();
+                SpatialNavigation.focus("#c-slide-" + (counter.count - 1));
+              }
             });
           }
+          // Updates the counter when a move is triggered (tab, arrow keys or space)
           carouselElement.addEventListener("sn:willmove", function(e) {
-            // On the first focus this event will not trigger so we have to up the counter once before
-            // if (counter.count === 0) counter.set(1);
             if (e.detail.direction === "right") counter.up();
             if (e.detail.direction === "left") counter.down();
           });
@@ -99,7 +111,7 @@
                 'tab' and 'shift tab' will work normally on the first and last element of the carousel
                 Effectively releasing the keys from the carousel elements when it's needed
               */
-            if (e.which == 9 || e.which == 32) {
+            if (e.which == 32) {
               if (e.shiftKey && counter.isMin() == false) {
                 // On keydown for the 'shift' key in combination with the 'tab' key
                 SpatialNavigation.move("left");
