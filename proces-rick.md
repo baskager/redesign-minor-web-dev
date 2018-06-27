@@ -8,7 +8,7 @@ In dit markdown bestandje zal ik mijn persoonlijke proces beschrijven.
 - **[Week 3](#week-3)**
 - **[Week 4](#week-4)**
 - **[Week 5](#week-5)**
-- **[Week 6](#week-6)**
+- **[Conclusie](#Conclusie)**
 
 ## Leerdoelen
 
@@ -446,6 +446,8 @@ Ook hebben we nog een aantal elementen verbeterd.
 
 Vrijdag ben ik weer verder gegaan met waar ik donderdag gebleven ben, voor de rest heb ik hier niet veel over te vertellen. Wel hebben we goed geinventariseerd wat we nog allemaal moeten doen voor de eindoplevering. Deze taken hebben we verdeeld.
 
+### Week 5
+
 #### Maandag 25 juni
 
 Maandag hadden we in de ochtend weer een bijeenkomst met Koop. We hebben het kort over de poster gehad die we moeten maken voor de presentatie. Na de bijeenkomst zijn we weer verder gegaan met de website, en de afvinken van de laatste dingen.
@@ -462,4 +464,22 @@ Aan het eind van de middag hadden we een lijstje gemaakt met dingen die we echt 
 
 #### Woensdag 27 juni
 
-De dag voor de oplevering zijn we nog volle bak aan de gang gegaan met de laatste bugs. De laatste dingen uit het prioriteiten lijstje hebben we afgemaakt, en ook de poster was nu 100% af.
+De dag voor de oplevering zijn we nog volle bak aan de gang gegaan met de laatste bugs. De laatste dingen uit het prioriteiten lijstje hebben we afgemaakt, en ook de poster was nu 100% af. Ik heb de poster afgemaakt, en in de middag ben ik vooral bezig geweest met content vullen in de database.
+
+### Conclusie
+
+Aan het begin van de meesterproef had ik verwacht dat deze opdracht te klein was om met 5 man te doen, en man wat had ik het fout. Je kan het net zo gek maken zoals je zelf wilt, en dat hebben we gedaan. We hebben een hoop experimenten en testen gedaan, en dat heeft er voor gezorgd dat we een goede website hebben neergezet. Ik ben redelijk trots op het product, ondanks dat het nog niet helemaal af is. Wel denk ik dat wanneer er nog iemand een paar dagen naar kijkt, dat het zo live zou kunnen gaan.
+
+Ik heb mij niet echt heel erg bezig geweest met de technischere kant van de website, omdat dat ook niet echt mijn leerdoel was. Vooral Jamal en Jelle hadden de technische kant van de website, dus die hebben dat opgepakt.
+
+#### Leerdoelen evaluatie
+
+Ik denk dat ik mijn leerdoelen wel gehaald heb. Ik heb meegewerkt aan het ontwerpproces, en ik heb geen opmerkingen gekregen over code die niet leesbaar zou zijn. Ook heb ik gevraagd aan anderen of zij snapte wat er in mijn code gebeurde, en of ze het netjes vonden, en dat vonden ze. Ondanks dat dit niet mijn belangrijkste leerdoelen waren, heb ik ze wel gehaald.
+
+De belangrijkste leerdoel die ik had was transities en animaties. Ik ben best trots op hetgeen wat ik gemaakt heb. Bijna alle transities en animaties die terug te vinden zijn op de websites heb ik gemaakt. Daarnaast heb ik ook een script geschreven met de intersection observer die ik zo zou kunnen hergebruiken op andere websites die ik ga maken. Daarnaast heb ik duidelijke hover en focus states gemaakt die de interactie met de gebruiker verbeteren.
+
+Mijn laatste leerdoel die ik later heb toegevoegd, het leren van de CLI van git, heb ik wel enigzins gehaald. Voordat ik aan de meesterproef begon vond ik het een beetje eng om in de terminal te typen. Dingen zoals de server starten en gulp runnen deed ik al wel, maar committen, pushen en mergen nog niet. Bas heeft mij goed geholpen met het oefenen met de CLI. Ik heb meerdere malen gecommit, gepush en gemerged met de CLI, maar ik gebruik nog steeds af en toe de desktop versie van git. Ik ben echter niet meer bang om de CLI te gebruiken, en switch ook rustig van branch in de CLI. Ik heb dit leerdoel dus gehaald.
+
+#### Conclusie van de conclusie
+
+Ik ben erg tevreden met hoe het gegaan is de afgelopen weken. We hebben hard gebikkeld, en uiteindelijk staat er een mooie website. Ik heb mijn leerdoelen redelijk goed behaald, en heb ook anderen geholpen om hun leerdoelen te behalen. Ook heb ik veel geleerd over het werken in groepsverband, en samen werken aan een project. In het begin was het nog een beetje zoeken, maar ik denk zeker dat de samenwerking goed is verlopen.
