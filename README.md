@@ -4,9 +4,9 @@ During this project we redesigned the website for the minor 'web development' at
 
 A big theme in this project was 'accessibility'. The site should be pleasurable for everyone, not just for the 'general public'.
 
-[INSERT A PICTURE HERE WHEN WE SIGN OFF ON THE PROJECT]
+![Homepage](https://d.pr/i/DuFm0H+)
 
-[INSERT A DEMO URL HERE WHEN WE SIGN OFF ON THE PROJECT]
+[Demo here!](https://redesign-minor.kager.io/)
 
 # 1. Requirements
 
@@ -87,9 +87,20 @@ forever -o logs/node-server-out.log -e logs/node-server-error.log start app.js
 
 Rick made a very experimental version of a keyboard that ( according to his research ) shoud be very accessible for Marijn. Check out [his progress Blog](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/rick.md) for the full research and results of the test with Marijn.
 
-## Video element with captions and summary
+## Video element with captions and split screen
 
-Let Jelle write something here
+For deaf people it is hard to follow lectures. They have to focus on the speaker, the interpreter and the slides at the same time. As we are making a website for a minor lectures are part of it. To make it easier for deaf people to follow the lectures I made a video player focused on improving this experience. We tested the video player with Marie, a deaf graphic designer. She gave us a lot of interesting feedback. With this feedback we improved the video player to it's current form.
+
+**The video player contains the following features:**
+
+- Synced split screen view of the lecture and the slides
+- Subtitles (loaded as SRT format).
+- The subtitles can switch side using the mouse or arrow keys.
+- Slide overview to quickly navigate trough the lecture
+- The possibility to slowdown or speed up the lecture.
+- The video player can be controlled using the keyboard.
+
+![Screenshot of the videoplayer](https://d.pr/i/tQJ6Uu+)
 
 ## Spatial navigation on the program page
 
