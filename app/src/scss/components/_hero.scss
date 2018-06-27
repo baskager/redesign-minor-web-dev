@@ -17,6 +17,7 @@
     font-size: 4rem;
     font-weight: bold;
     margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
 
     span {
       -webkit-box-decoration-break: clone;
@@ -60,6 +61,7 @@
   .right {
     position: relative;
     width: 45%;
+    margin-top: 4rem;
     > svg {
       left: -10rem;
       position: absolute;
