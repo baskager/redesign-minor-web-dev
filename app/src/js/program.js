@@ -8,17 +8,23 @@
       let previousButton = document.getElementById("submenu-previous");
       let nextButton = document.getElementById("submenu-next");
 
-      previousButton.addEventListener("click", function(e) {
-        submenuContainer.scrollBy({
-          left: -275
-        });
-      });
+      if(previousButton) {
 
-      nextButton.addEventListener("click", function(e) {
-        submenuContainer.scrollBy({
-          left: 275
+        previousButton.addEventListener("click", function(e) {
+          submenuContainer.scrollBy({
+            left: -275
+          });
         });
-      });
+      }
+
+        if(nextButton) {
+
+        nextButton.addEventListener("click", function(e) {
+          submenuContainer.scrollBy({
+            left: 275
+          });
+        });
+      }
     }
   };
 
