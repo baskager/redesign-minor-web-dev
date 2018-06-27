@@ -198,9 +198,8 @@ Doesn't really know what he's doing, but he's doing just fine.
 A designer who just recently discovered his love for code.s
 
 [Github repo](https://github.com/jamalvr)
-[Jamal his progress blog](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/jamal.md).
 
-[Progress Blog]()
+[Jamal his progress blog](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/jamal.md).
 
 ## Bas Kager
 
