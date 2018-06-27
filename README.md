@@ -123,6 +123,17 @@ In our interviews/test with Marijn, he told us that he really liked interfaces d
 
 ## Spatial navigation slider element
 
+![spatial navigation slider element](https://imgur.com/3D5aGFQ)
+
+I made this prototype because I heard that marijn hated carousel elements in websites because they never seem to work with spacebar or tabs and are often very fidgety.
+
+For this reason, I tried to make a carousel element that would be more pleasurable for Marijn to use and ended up with two prototypes:
+
+- A carousel element with navigation using 'tab' keys and 'arrow' keys.
+- A carousel element with navigation using 'tab' keys, 'arrow' keys and clickable buttons on the side
+
+After the third usability/accessibility testing with Marijn, it became clear that he prefers the second option, but, was confused about not being able to use the 'spacebar' key to navigate through the carousel items. With this feedback, I decided to create another prototype with the 'spacebar' navigation added. This last version of the prototype made it to the website.
+
 # 6. Insights
 
 The experiments were eye-opening for us as a team. Every member of the team represents the 'general public'. We use a computer and websites like most of society. Not often do we as developers realise our privileges and that leads to designing and developing things that might not be ideal for users that need/use additional accessibility features.
