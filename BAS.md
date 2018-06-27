@@ -15,20 +15,20 @@ At the start, we all decided to do this project as a team, so in addition to hav
 
 ## Goals and Challenges
 
-Before starting this project I have looked at some reflection reports of older projects to see what I could do better. These are things that I have written about myself or feedback i've received.
+Before starting this project I have looked at some reflection reports of older projects to see what I could do better. These are things that I have written about myself or feedback I've received.
 
 ### Challenges
 
 - Communicate, plan and delegate better.
-- Take more innitiative and bring ideas to the table
-- Introduce a back-end perspective into the team.
+- Take more initiative and bring ideas to the table
+- Introduce a back-end perspective to the team.
 - Improve code documentation and commenting.
 
 ### Goals
 
 - Learn how to build proper CSS layouts with flexbox, grid and best practices.
 - Learn more about web design (best) practices.
-- Get up to speed with task-runners (later ommitted).
+- Get up to speed with task-runners (later omitted).
 - Learn how to properly deploy a front-end app with Docker and SSL (https) (later added).
 
 ### Things I should really stop doing
