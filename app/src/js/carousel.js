@@ -71,19 +71,32 @@
 
           counter.init();
           counter.setMin(1);
-          counter.setMax(slides.length);
+          counter.setMax(slides.length + 1);
 
           if (previousButton && nextButton) {
             previousButton.addEventListener("click", function(e) {
-              SpatialNavigation.focus();
-              SpatialNavigation.move("left");
+              if (counter.count == counter.getMax()) {
+                SpatialNavigation.focus("#c-slide-" + (slides.length - 1));
+                counter.down();
+              } else {
+                counter.down();
+                SpatialNavigation.focus("#c-slide-" + (counter.count - 1));
+              }
+              if (counter.count == 1) {
+                // Set counter to two so the 'next' button still acts as expected
+                counter.set(2);
+                SpatialNavigation.focus("#c-slide-1");
+              }
             });
 
             nextButton.addEventListener("click", function(e) {
-              SpatialNavigation.focus();
-              if (counter.count !== 1) {
-                SpatialNavigation.move("right");
-              } else counter.up();
+              if (counter.count == 1) {
+                counter.up();
+                SpatialNavigation.focus("#c-slide-1");
+              } else {
+                counter.up();
+                SpatialNavigation.focus("#c-slide-" + (counter.count - 1));
+              }
             });
           }
           carouselElement.addEventListener("sn:willmove", function(e) {
