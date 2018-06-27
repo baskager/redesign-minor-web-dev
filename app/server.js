@@ -7,21 +7,8 @@ const debug = require("debug")("minor-server");
 const config = require("./config");
 const DataStore = require("./src/classes/DataStore.class");
 const compression = require("compression");
-const Screenshot = require("url-to-screenshot");
 const fs = require("fs");
 const parser = require("subtitles-parser");
-
-// from https://gist.github.com/mathewbyrne/1280286
-function slugify(text) {
-  return text
-    .toString()
-    .toLowerCase()
-    .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(/[^\w\-]+/g, "") // Remove all non-word chars
-    .replace(/\-\-+/g, "-") // Replace multiple - with single -
-    .replace(/^-+/, "") // Trim - from start of text
-    .replace(/-+$/, ""); // Trim - from end of text
-}
 
 function readData(path) {
   let data = fs.readFileSync(path, "utf8");
@@ -33,34 +20,6 @@ function getSubs(path) {
   return parser.fromSrt(srt, true);
 }
 
-let studentData = readData("src/json/student-work.json");
-
-console.log(studentData);
-
-const staticDir = "./static/";
-const screenshotDir = "img/student-work/";
-
-studentData.courses.forEach(course => {
-  course.items.forEach(item => {
-    if (item.demoUrl) {
-      let thescreenshot = new Screenshot(item.demoUrl)
-        .clip()
-        .timeout(3000)
-        .capture()
-        .then(img => {
-          let imgName =
-            staticDir + screenshotDir + "/" + slugify(item.demoUrl) + ".png";
-          item.imgUrl = screenshotDir + "/" + slugify(item.demoUrl) + ".png";
-          console.log(item.imgUrl);
-          fs.writeFileSync(imgName, img);
-        })
-        .catch(function(err) {
-          console.log(err);
-        });
-    }
-  });
-});
-
 nunjucks.configure("./templates", {
   autoescape: true,
   express: app,
@@ -70,7 +29,6 @@ nunjucks.configure("./templates", {
 app.set("view engine", "html");
 app.use(compression());
 app.use(express.static("./static"));
-app.use(express.static(staticDir));
 
 // Overwrite config for the postgres host on production servers
 if (app.get("env") == "production") {
@@ -99,13 +57,29 @@ massive(config.postgres).then(database => {
     dataStore
       .getCourseForCourseOverview({ page_slug: pageSlug })
       .then(courseData => {
-        console.log(courseData);
-
-        debug(courseData[0]);
         res.render("course.html", {
           data: courseData[0]
         });
       });
+  });
+
+  app.get("/program", function(req, res) {
+    pageData = readData("src/json/program.json");
+    /* 
+      Tell the datastore to fetch a course with the 
+      given pageslug and render the page with the received data. 
+    */
+    dataStore.getPeriodForTimeline().then(periods => {
+      // Add the weekly nerd card to each period
+      for (let period of periods) {
+        if (period) period.courses.push(pageData.weekly_nerd_card);
+      }
+      pageData.periods = periods;
+
+      res.render("program.html", {
+        data: pageData
+      });
+    });
   });
 });
 
@@ -115,11 +89,11 @@ app.get("/", function(req, res) {
   });
 });
 
-app.get("/program", function(req, res) {
-  res.render("program.html", {
-    data: readData("src/json/program.json")
-  });
-});
+// app.get("/program", function(req, res) {
+//   res.render("prograAm.html", {
+//     data: readData("src/json/program.json")
+//   });
+// });
 
 app.get("/partners", function(req, res) {
   res.render("partners.html", {
@@ -135,7 +109,7 @@ app.get("/team", function(req, res) {
 
 app.get("/student-work", function(req, res) {
   res.render("student-work.html", {
-    data: studentData
+    data: readData("src/json/student-work.json")
   });
 });
 
@@ -144,13 +118,13 @@ talkData.subtitles = getSubs("src/subs/talk.srt");
 talkData.subtitles = JSON.stringify(talkData.subtitles);
 talkData.slides = JSON.stringify(talkData.slides);
 
-app.get("/weekly-nerd/vitaly-friedman", function(req, res) {
+app.get("/program/weekly-nerd/vitaly-friedman", function(req, res) {
   res.render("talk.html", {
     data: talkData
   });
 });
 
-app.get("/weekly-nerd", function(req, res) {
+app.get("/program/weekly-nerd", function(req, res) {
   res.render("weekly-nerd.html", {
     data: readData("src/json/weekly-nerd.json")
   });

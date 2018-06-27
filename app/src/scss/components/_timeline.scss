@@ -56,7 +56,7 @@ $grid-max-width: rem(1180);
 .timeline {
   grid-column-start: 2;
   grid-row-start: 1;
-  grid-row-end: 5;
+  grid-row-end: 6;
 
   display: grid;
   column-gap: $grid-gutter;
@@ -96,14 +96,14 @@ $grid-max-width: rem(1180);
 
   .week-3,
   .week-7,
-  .week-10 {
+  .week-11 {
     grid-row: 4;
     @include timeline-mid();
   }
 
   .week-4,
   .week-8,
-  .week-11 {
+  .week-12 {
     grid-row: 5;
     @include timeline-end();
   }
