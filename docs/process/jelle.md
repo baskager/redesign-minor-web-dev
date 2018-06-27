@@ -1,18 +1,14 @@
 # Procesboek
 
-
 [TOC]
-
 
 ## Week 1
 
-###	Dag 1 - Maandag 28 mei
+### Maandag 28 mei
 
 De eerste dag van de meesterproef was ik er helaas niet bij doordat ik ziek was. Het project dat ik heb gekozen is de nieuwe website voor de minor web development. De huidige website is aan vernieuwing toe. Zowel het ontwerp als de informatie kan beter. Een extra uitdaging is om de website toegankelijk te maken voor Marie en Marijn die we kennen van de opdracht van Web Design.
 
-
-
-### Dag 2 - Dinsdag 29 mei
+### Dinsdag 29 mei
 
 Vandaag hebben we geinventariseerd welke content we missen en hoe de docenten de minor site graag zouden zien. Verder hebben we een plan gemaakt over de structuur van de website.
 
@@ -25,17 +21,13 @@ Vandaag hebben we geinventariseerd welke content we missen en hoe de docenten de
 - Gepraat met docenten m.b.t. tot hun visie over de minor.
 - Plan gemaakt over wat we in het algemeen gaan bouwen. Dit is een front-end geworden voor de website. Wellicht dat we er wel een database aan kopppelen maar niet een heel CMS systeem.
 - Leerdoelen opgezet en besproken. Mijn leerdoelen zijn als volgt:
-  1. Performane matters - Setting up a Node server including performance optimisations
-  2. Web Design - Out of the box design, include more creativity then usual and try to deliver a wow experience.
-  3. WAFS - General JavaScript knowledge, make efficient JavaScript functions.
-
-
+  1.  Performane matters - Setting up a Node server including performance optimisations
+  2.  Web Design - Out of the box design, include more creativity then usual and try to deliver a wow experience.
+  3.  WAFS - General JavaScript knowledge, make efficient JavaScript functions.
 
 ![cardsorting](https://d.pr/i/ms6JnD+)
 
-
-
-### Dag 3 - Woensdag 30 mei
+### Woensdag 30 mei
 
 - Content inventarisatie uitgebreid en inzichtelijk gemaakt welke connecties er allemaal zijn tussen bepaalde soorten content.
 - Database structuur opgezet zodat we weten waar welke content beschikbaar is.
@@ -43,9 +35,7 @@ Vandaag hebben we geinventariseerd welke content we missen en hoe de docenten de
 
 ![database](https://d.pr/i/Elt396+)
 
-
-
-### Dag 4 - Donderdag 31 mei
+### Donderdag 31 mei
 
 Vandaag hebben in Figma gewerkt. Dit is de eerste keer dat ik deze design tool heb gebruikt. De tool lijkt erg op Sketch maar biedt de mogelijkheid om met meerdere mensen tegelijk in een bestand te werken. Ongeveer hetzelfde als Google docs doet.
 
@@ -57,9 +47,7 @@ Vandaag hebben in Figma gewerkt. Dit is de eerste keer dat ik deze design tool h
 
 ![schetsen-3](https://d.pr/i/ByCKcP+)
 
-
-
-### Dag 5 - Vrijdag 1 juni
+### Vrijdag 1 juni
 
 We hebben voor de tooling en projectstructuur Gulp, SCSS en Nunjucks gebruikt.
 
@@ -72,11 +60,9 @@ We hebben voor de tooling en projectstructuur Gulp, SCSS en Nunjucks gebruikt.
 
 ![planning](https://d.pr/i/eUFUGn+)
 
-
-
 ## Week 2
 
-### Dag 6 - Maandag 4 juni
+### Maandag 4 juni
 
 - Standup
 - Overleg over de stijl van de website. Besloten dat de Premier Leageau een goede inspiratie is qua stijl.
@@ -85,13 +71,9 @@ We hebben voor de tooling en projectstructuur Gulp, SCSS en Nunjucks gebruikt.
 - Aan de programma (met de tijdlijn) pagina gewerkt.
 - Stijl exploraties
 
-
-
 ![stijl-exploraties](https://d.pr/i/ElqTHH+)
 
-
-
-### Dag 7 - Dinsdag 5 juni
+### Dinsdag 5 juni
 
 - Gesprek m.b.t. voortang. Hier kwam uit dat we goed op weg zijn.
 - Plan gemaakt voor de test met Marijn.
@@ -101,27 +83,21 @@ We hebben voor de tooling en projectstructuur Gulp, SCSS en Nunjucks gebruikt.
 
 ![marijn](https://d.pr/i/z6MhYt+)
 
-
-
-### Dag 8 - Woensdag 6 juni
+### Woensdag 6 juni
 
 - Standup
-- Plan gemaakt voor wat we af willen hebben voor vrijdag. Vrijdag is de test met Marie, een grafisch vormgeefster die doof is. 
+- Plan gemaakt voor wat we af willen hebben voor vrijdag. Vrijdag is de test met Marie, een grafisch vormgeefster die doof is.
 - Aan de programma (met de tijdlijn) pagina gewerkt.
 - Wijzigingen aan de styling
 
-
-
-### Dag 9 - Donderdag 7 juni
+### Donderdag 7 juni
 
 - Code review met Titus gehad. Hier kwam uit dat onze Git workflow beter kan. I.p.v. mergen is het beter om te squashen. Dit gaan we vanaf vandaag dan ook toepassen op ons project. Titus gaf ook een aantal tips wat betreft CSS. We gebruiken SCSS maar het zou beter zijn om POSTCSS te gebruiken. Omdat we het project nu al helemaal opgezet hebben gaan we dit niet toepassen. Het is wel een goede tip om eens in de toekomst naar te gaan kijken. Een andere tip van Titus was om prettier te installeren. HIerdoor krijgen we consistentere code.
 - Na de gesprekken hebben we elkaars code ook gereviewed, dit hebben we gedaan om de code kwaliteit op te krikken.
 - Ik ben verder gegaan met het bouwen van de tijdlijn en de hoofdnavigatie.
 - Test voor Marie voorbereid.
 
-
-
-### Dag 9 - Vrijdag 8 juni
+### Vrijdag 8 juni
 
 Vandaag hebben we de eerste test met Marie gehad.
 
@@ -133,9 +109,7 @@ Vandaag hebben we de eerste test met Marie gehad.
 
 ![timeline-old](https://d.pr/i/iBrqdX+)
 
-
-
-### Dag 10 - maandag 11 juni 	
+### Maandag 11 juni
 
 - Klassenbespreking, besproken hoe iedereen er voor staat.
 - Met Krijn besproken hoe we er voor staan. Conclusie: het gaat lekker.
@@ -145,9 +119,7 @@ Vandaag hebben we de eerste test met Marie gehad.
 
 ![timeline-new](https://d.pr/i/kK6Mk1+)
 
-
-
-### Dag 11 - dinsdag 12 juni
+### dinsdag 12 juni
 
 - Gesprek met Joost, daaruit kwam voort dat we even goed naar de planning en MOSCOW moeten kijken. We moeten duidelijk maken met het groepje wat we nog gaan doen en waar we tot nu toe staan.
 - Focus states toegevoegd aan de tijdlijn en nog wat finetuning.
@@ -156,18 +128,14 @@ Vandaag hebben we de eerste test met Marie gehad.
 
 ![focus state](https://d.pr/i/flxZ00+)
 
-
-
-### Dag 12 - woensdag 13 juni
+### woensdag 13 juni
 
 - Gewerkt aan student work page.
 - Testplan gemaakt voor Marijn.
 - Getest met Marijn.
 - Pizza gegeten.
 
-
-
-### Dag 13 - donderdag 14 juni
+### donderdag 14 juni
 
 - Gewerkt aan video player voor Marie.
 - 2 verschillende versies gemaakt van de videoplayer om mee te testen.
@@ -177,24 +145,16 @@ Vandaag hebben we de eerste test met Marie gehad.
 
 ![videoplayer](https://d.pr/i/5BrPeN+)
 
+### vrijdag 15 juni
 
-
-### Dag 14 - vrijdag 15 juni
-
-- Test met marie. De test met Marie ging goed. Ze was enthousiast over de videoplayer die ik had gemaakt en denk dat dit goed kan werken in de praktijk. De ondertiteling 
+- Test met marie. De test met Marie ging goed. Ze was enthousiast over de videoplayer die ik had gemaakt en denk dat dit goed kan werken in de praktijk. De ondertiteling
 - Subtitel functionaliteit verbeterd.
 - Gefacetimed met Vasilis over de feedback van gisteren.
 - Plan gemaakt over het bouwen van prototypes.
 
-  
-
-
-
 ## Week 4
 
-
-
-### Dag 15 - maandag 18 juni
+### maandag 18 juni
 
 - Slomotion en versnellen functionaliteit toegevoegd.
 - Begonnen aan modulaire opzet voor videoplayer functionaliteit.
@@ -202,9 +162,7 @@ Vandaag hebben we de eerste test met Marie gehad.
 
 ![Videoplayer](https://d.pr/i/tQJ6Uu+)
 
-
-
-### Dag 16 - dinsdag 19 juni
+### dinsdag 19 juni
 
 - Keyboard toegankelijkheid voor videoplayer toegevoegd.
 - Modulare opzet afgemaakt
@@ -232,35 +190,25 @@ if (document.querySelector(".presentation")) {
 }
 ```
 
+### woensdag 20 juni
 
-
-
-
-### Dag 17 - woensdag 20 juni
-
-- Videoplayer verder verbeterd voor keyboard. 
+- Videoplayer verder verbeterd voor keyboard.
 - Focus states gefinetuned
 - Test met Marijn
 
 ![Marijn](https://d.pr/i/fTlLGn+)
 
-
-
-### Dag 18 - donderdag 21 juni
+### donderdag 21 juni
 
 - Bezig geweest met content toevoegen aan website.
 - Functionaliteit toegevoegd waarmee screenshots worden gemaakt van demo's. Deze worden vervolgens opgeslagen op de server en daarna geinjecteerd in de data van de student-work template.
 
 ![screenshots](https://d.pr/i/RWuWvP+)
 
-
-
-
-
-### Dag 19 - vrijdag 22 juni
+### vrijdag 22 juni
 
 - Gzip toegevoegd
-- Babel gefixt voor Browserify 
+- Babel gefixt voor Browserify
 - JavaScript build script gefixt.
 - Finetuning van studentwork page
 - Afbeeldingen toegevoegd aan homepage
@@ -269,13 +217,9 @@ if (document.querySelector(".presentation")) {
 
 ![marie](https://d.pr/i/Ybuxe1+)
 
-
-
 ## Week 5
 
-
-
-### Dag 20 - maandag 25 juni
+### maandag 25 juni
 
 - Finetuning van studentwork pagina.
 - Gewerkt aan screenshot feature.
@@ -285,9 +229,7 @@ if (document.querySelector(".presentation")) {
 
 ![perfomance audit](https://d.pr/i/Kdxd8B+)
 
-
-
-### Dag 21 - dinsdag 26 juni
+### dinsdag 26 juni
 
 - Screenshot feature werkte niet goed en dus uit website gehaald.
 - Finetuning.
@@ -297,9 +239,7 @@ if (document.querySelector(".presentation")) {
 
 ![studentwork](https://d.pr/i/ZKQed8+)
 
-
-
-### Dag 22 - woensdag 27 juni
+### woensdag 27 juni
 
 - Video presentatie gemaakt
 - Finetuning
@@ -307,6 +247,3 @@ if (document.querySelector(".presentation")) {
 - Repo geforked
 
 ![editing the video](https://d.pr/i/j7wnvn+)
-
-
-
