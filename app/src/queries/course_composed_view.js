@@ -14,6 +14,7 @@ module.exports = {
       "course_type",
       "course_period_number",
       "course_period_weeks",
+      "summary",
       "color",
       "page_slug",
       "icon_url",
