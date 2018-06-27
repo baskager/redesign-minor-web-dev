@@ -56,7 +56,7 @@ $grid-max-width: rem(1180);
 .timeline {
   grid-column-start: 2;
   grid-row-start: 1;
-  grid-row-end: 5;
+  grid-row-end: 6;
 
   display: grid;
   column-gap: $grid-gutter;
