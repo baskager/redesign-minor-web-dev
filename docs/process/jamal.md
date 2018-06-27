@@ -492,6 +492,9 @@ Ik ben in eerst instantie verder gegaan met het herschrijven van mijn `nav.js` f
   };
 ```
 
+Vervolgens ben ik weer verder gegaan met het finetunen van verschillende onderdelen op de website.
+
+
 <details>
   <summary>
     Screenshots van de huidige status van de website.
@@ -502,8 +505,6 @@ Ik ben in eerst instantie verder gegaan met het herschrijven van mijn `nav.js` f
   <img src="https://i.imgur.com/LHTgSDS.png" alt="screenshot van Instagram feed" />
   <img src="https://i.imgur.com/7VakUcU.png" alt="screenshot van alternatieve navigatie" />
 </details>
-
-Vervolgens ben ik weer verder gegaan met het finetunen van verschillende onderdelen op de website.
 
 
 ### Vrijdag
