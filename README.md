@@ -4,9 +4,9 @@ During this project we redesigned the website for the minor 'web development' at
 
 A big theme in this project was 'accessibility'. The site should be pleasurable for everyone, not just for the 'general public'.
 
-[INSERT A PICTURE HERE WHEN WE SIGN OFF ON THE PROJECT]
+![Homepage](https://d.pr/i/DuFm0H+)
 
-[INSERT A DEMO URL HERE WHEN WE SIGN OFF ON THE PROJECT]
+[Demo here!](https://redesign-minor.kager.io/)
 
 # 1. Requirements
 
