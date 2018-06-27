@@ -85,7 +85,7 @@ forever -o logs/node-server-out.log -e logs/node-server-error.log start app.js
 
 ## 'Hector Salamanca' input method by Rick
 
-Let Rick write something here
+Rick made a very experimental version of a keyboard that ( according to his research ) shoud be very accessible for Marijn. Check out [his progress Blog](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/rick.md) for the full research and results of the test with Marijn.
 
 ## Video element with captions and summary
 
@@ -167,7 +167,7 @@ Doesn't really know what he's doing, but he's doing just fine.
 
 [Github repo](https://github.com/Rick712)
 
-[Progress Blog](/app/docs/process/rick.md)
+[Progress Blog](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/rick.md)
 
 ## Jamal van Rooijen
 
