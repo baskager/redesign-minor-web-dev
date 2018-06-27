@@ -20,21 +20,6 @@ https://docs.docker.com/docker-for-windows/install/
 
 https://docs.docker.com/compose/install/
 
-## Development setup
+## Setup
 
-For development this project uses two containers, there are:
-
-- minorwebdev_postgres (PostgreSQL database)
-- minorwebdev_adminer (Database administration web tool)
-
-**To build and run these containers on your device, run the following command:**
-
-`docker-compose up -d`
-
-After this you can run the ExpressJS server (app/server.js) as follows:
-
-`DEBUG=minor-server node server.js`
-
-**Shutting down the containers can be done with the following command:**
-
-`docker-compose down`
+For the setup instructions you can refer to the main README file
