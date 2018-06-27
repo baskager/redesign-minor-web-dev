@@ -1,10 +1,18 @@
 # Procesboek Jamal
-#Study
+
+- **[Leerdoelen](#Leerdoelen)**
+- **[Week 1](#week-1)**
+- **[Week 2](#week-2)**
+- **[Week 3](#week-3)**
+- **[Week 4](#week-4)**
+- **[Week 5](#week-5)**
+- **[Week 6](#week-6)**
 
 Zelf heb ik voor deze eindopdracht gekozen omdat dit mij de leukste opdracht leek om styling en functionaliteit samen te kunnen voegen. Vanuit mijn eigen ervaring waren er ook delen informatie die voor mij onduidelijk waren voordat ik aan de minor begon. Het lijkt mij daarom een goede uitdaging om er voor te zorgen dat toekomstige studenten complete informatie kunnen vinden.
 
 We hebben eerst met z’n allen gezeten en besloten dat we de opdracht in teamvorm gaan uitvoeren. Om er voor te zorgen dat wel iedereen aan zijn persoonlijke leerdoelen komt, hebben we die eerst met z’n allen besproken. Aan de hand van de leerdoelen die iedereen opnoemde, kwamen we al snel tot de conclusie dat we elkaar heel goed kunnen aanvullen en helpen. 
 
+## Leerdoelen
 **Grootste uitdagingen:**
 * Strakke planning aanhouden. 
 * Goed in kaart brengen wat een gebruiker echt nodig heeft. 
@@ -525,8 +533,7 @@ Ik ben aan de slag gegaan met het mobile friendly maken van het menu. Omdat we m
 
 Desalniettemin heb ik de homepagina heel goed schaalbaar kunnen maken. Aan de hand van een simpel script wordt het menu aan de hand van een `.active` getoggled om in en uit te klappen.
 
-<!-- ![mobile friendly menu](https://i.imgur.com/dWH4Ogb.png) -->
-<img style="max-width:340px;margin:auto;display:block;" src="https://i.imgur.com/dWH4Ogb.png" alt="screenshot van alternatieve navigatie" />
+![Mobile friendly](https://i.imgur.com/ofIbMSt.png)
 
 ### Dinsdag
 Vandaag heb ik eerst de laatste dingen in het menu aangepast. Verder ben ik toen de homepagina gaan vullen met content en heb ik de algemene styling toegepast. Op deze manier is de hele website wat meer een geheel. James had ook een hele mooie header gemaakt, maar de rest van de content viel hier een beetje buiten.
