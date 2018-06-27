@@ -8,6 +8,7 @@
 - **[Week 5](#week-5)**
 - **[Week 6](#week-6)**
 - **[Ook een kleine conclusie](#ook-een-kleine-conclusie)**
+- **[Pull requests van Jamal](https://github.com/baskager/redesign-minor-web-dev/pulls?utf8=%E2%9C%93&q=author%3Ajamalvr+)**
 
 Zelf heb ik voor deze eindopdracht gekozen omdat dit mij de leukste opdracht leek om styling en functionaliteit samen te kunnen voegen. Vanuit mijn eigen ervaring waren er ook delen informatie die voor mij onduidelijk waren voordat ik aan de minor begon. Het lijkt mij daarom een goede uitdaging om er voor te zorgen dat toekomstige studenten complete informatie kunnen vinden.
 
@@ -562,5 +563,3 @@ Wat ik voornamelijk heb gemerkt is dat het heel belangrijk is om goed na te denk
 Ook is het belangrijk om toch een project qua scope goed in te kunnen schatten en ook beter na te denken over wat de gebruiker wilt. Zo is er bijvoorbeeld relatief erg veel tijd gestopt in het opzetten van een database, terwijl het niet perse nodig is en misschien ook helemaal niet handig is voor de leraren. Al met al werkt het overigens wel goed met de database, maar toch komen er altijd extra dingen bij kijken. Het was niet perse slecht, maar wel een kritisch puntje om over na te denken.
 
 Verder vond ik het zelf echt super vet om samen te werken. Zelf vind ik dat ook de leukste manier van werken, omdat je super veel inzichten van elkaar krijgt. Mensen snappen ook beter waar ik mee bezig ben omdat je in hetzelfde project werk, wat het weer makkelijker maakt om de juist hulp te vragen. Hierdoor heb ik bijvoorbeeld best veel stappen kunnen maken in het zelfstandig schrijven van javascript.
-
-**[Pull requests van Jamal](https://github.com/baskager/redesign-minor-web-dev/pulls?utf8=%E2%9C%93&q=author%3Ajamalvr+)**
