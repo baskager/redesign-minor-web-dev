@@ -6,7 +6,7 @@
         <h1>
           <span style="background-color: {{data.color}}">{{ data.course_name }}</span>
         </h1>
-        <p>{{data.course_description}}</p>
+        <p>{{data.summary}}</p>
         <ul class="teachers-list">
           {% for teacher in data.teachers %}
           <li>
@@ -25,6 +25,8 @@
 </header>
 
 <main id="main" class="container">
+
+  
   <section class="course-info">
     <section>
       <h2>Learning goals</h2>
@@ -41,7 +43,7 @@
       <p>{{data.long_description}}</p>
     </section>
   </section>
-
+{% if data.course_type == "COURSE" %}
   <section class="course-card-overview focusOnScroll">
     <h2>Weekly program</h2>
     <div class="course-card-list" scroll-transition>
@@ -58,6 +60,7 @@
       <a class="btn button-pulse" href="/program">View the full program</a>
     </div>
   </section>
+{% endif %}
 
   <section class="student-work">
     <h2>{{ data.course_name }} students work</h2>

@@ -49,7 +49,8 @@ CREATE TABLE public.course (
     long_description text,
     learning_goals jsonb,
     icon_url character varying(512),
-    color character varying(7)
+    color character varying(7),
+    summary text
 );
 
 
@@ -168,11 +169,12 @@ CREATE VIEW public.course_composed_view AS
     course_week.description AS week_description,
     course_week.subjects_covered AS week_subjects,
     course.short_description AS course_description,
+    course.long_description,
+    course.summary,
     course_type.name AS course_type,
     course.page_slug,
     course.color,
     course.icon_url,
-    course.long_description,
     course.learning_goals,
     partner.id AS partner_id,
     partner.name AS partner_name,
@@ -426,16 +428,16 @@ ALTER TABLE ONLY public.testimonial ALTER COLUMN id SET DEFAULT nextval('public.
 -- Data for Name: course; Type: TABLE DATA; Schema: public; Owner: minorwebdev
 --
 
-COPY public.course (id, name, short_description, partner_id, type_id, active, period_id, page_slug, long_description, learning_goals, icon_url, color) FROM stdin;
-7	CSS To The Rescue	CSS & accessibility	\N	3	t	1	css-to-the-rescue	\N	\N	https://assets.wordpress.envato-static.com/uploads/2016/03/Tools-for-Structuring-Optimizing-Your-CSS-Code.jpg	#4e00af
-4	Web Design	Design like a pro	\N	3	t	3	web-design	The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.	["The river stole the gods.", "Don't step on the broken glass.", "If Purple People Eaters are real… where do they find purple people to eat?"]	https://pre00.deviantart.net/25c6/th/pre/f/2016/117/0/4/bridge___flat_design_wallpaper_by_sebastian456-da0elq8.png	#C6006B
-9	Performance matters	Website performance	\N	3	t	2	performance-matters	This should be a long description	\N	https://i.pinimg.com/originals/6f/8f/a0/6f8fa03e7e73635f8ba88e0aabfd49bd.jpg	#007a4e
-8	Web app from scratch	Javascript introduction	\N	3	t	1	web-app-from-scratch	\N	\N	https://cdn-images-1.medium.com/max/1600/1*uiYye9J142y8fIZGRnufEw.png	#005aad
-10	Browser Technologies	Progressive Enhancement	\N	3	t	2	browser-technologies	A long description still needs to be added	\N	http://blog.teamtreehouse.com/wp-content/uploads/2014/11/progressive-enhancement.png	#233e68
-5	Project 1	At the OBA we will create awesome stuff with data about Amsterdam which they collected throughout the years.	1	1	t	1	project-1	\N	\N	\N	\N
-11	Project 2	Lifely is a digital agency. Here we’re going to work in their codebase of multiple projects.	2	1	t	2	project-2	\N	\N	\N	\N
-12	Project 3	De Ceuvel is a playground for green innovation. Here we will see what we can do with green technology	3	1	t	3	project-3	\N	\N	http://deceuvel.nl/wp-content/uploads/2016/06/De-Ceuvel1.jpg	\N
-3	Real Time Web	Live data	\N	3	t	3	real-time-web	During this course you'll learn to use Socket.io to establish a connection between the browser and the server. You'll combine your knowledge from other courses and your newly aqquired skills from this course to create a progressive web app that retrieves live data from an API, and display the data to the user.	["Student is able to build a (Node) webapp with a back-end that uses templating, routing and a remote database.", "Student can deliver a live application where the interaction influences the content of the application by manipulating the database.", "Student can translate live data to a reactive view (datavisualisation is allowed) that is useful for the end user."]	/img/partners/oba.jpg	#901265
+COPY public.course (id, name, short_description, partner_id, type_id, active, period_id, page_slug, long_description, learning_goals, icon_url, color, summary) FROM stdin;
+4	Web Design	Design like a pro	\N	3	t	3	web-design	The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.	["The river stole the gods.", "Don't step on the broken glass.", "If Purple People Eaters are real… where do they find purple people to eat?"]	https://pre00.deviantart.net/25c6/th/pre/f/2016/117/0/4/bridge___flat_design_wallpaper_by_sebastian456-da0elq8.png	#C6006B	\N
+9	Performance matters	Website performance	\N	3	t	2	performance-matters	This should be a long description	\N	https://i.pinimg.com/originals/6f/8f/a0/6f8fa03e7e73635f8ba88e0aabfd49bd.jpg	#007a4e	\N
+8	Web app from scratch	Javascript introduction	\N	3	t	1	web-app-from-scratch	\N	\N	https://cdn-images-1.medium.com/max/1600/1*uiYye9J142y8fIZGRnufEw.png	#005aad	\N
+10	Browser Technologies	Progressive Enhancement	\N	3	t	2	browser-technologies	A long description still needs to be added	\N	http://blog.teamtreehouse.com/wp-content/uploads/2014/11/progressive-enhancement.png	#233e68	\N
+5	Project 1	At the OBA we will create awesome stuff with data about Amsterdam which they collected throughout the years.	1	1	t	1	project-1	\N	\N	\N	\N	\N
+11	Project 2	Lifely is a digital agency. Here we’re going to work in their codebase of multiple projects.	2	1	t	2	project-2	\N	\N	\N	\N	\N
+12	Project 3	De Ceuvel is a playground for green innovation. Here we will see what we can do with green technology	3	1	t	3	project-3	\N	\N	http://deceuvel.nl/wp-content/uploads/2016/06/De-Ceuvel1.jpg	\N	\N
+3	Real Time Web	Live data	\N	3	t	3	real-time-web	During this course you'll learn to use Socket.io to establish a connection between the browser and the server. You'll combine your knowledge from other courses and your newly aqquired skills from this course to create a progressive web app that retrieves live data from an API, and display the data to the user.	["Student is able to build a (Node) webapp with a back-end that uses templating, routing and a remote database.", "Student can deliver a live application where the interaction influences the content of the application by manipulating the database.", "Student can translate live data to a reactive view (datavisualisation is allowed) that is useful for the end user."]	/img/partners/oba.jpg	#901265	\N
+7	CSS To The Rescue	CSS & accessibility	\N	3	t	1	css-to-the-rescue	\N	\N	https://assets.wordpress.envato-static.com/uploads/2016/03/Tools-for-Structuring-Optimizing-Your-CSS-Code.jpg	#4e00af	test
 \.
 
 

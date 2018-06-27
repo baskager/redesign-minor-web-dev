@@ -143,9 +143,11 @@ You can find our license here: https://github.com/baskager/redesign-minor-web-de
 
 ![Profile photo](https://avatars3.githubusercontent.com/u/16142485?s=460&v=4)
 
-Write your own little story here
+Ex-Graphical Design student that refound himself as a Frontend Developer at the University of Applied Science Amsterdam.
 
 [Github repo](https://github.com/Jamerrone)
+
+[Progress Blog](https://jamerrone.github.io/meesterproef-progress-blog/)
 
 ## Jelle Overbeek
 
@@ -155,6 +157,8 @@ Write your own little story here
 
 [Github repo](https://github.com/jelleoverbeek)
 
+[Progress Blog]()
+
 ## Rick Buter
 
 ![Profile photo](https://avatars1.githubusercontent.com/u/22095570?s=460&v=4)
@@ -162,6 +166,8 @@ Write your own little story here
 Write your own little story here
 
 [Github repo](https://github.com/Rick712)
+
+[Progress Blog]()
 
 ## Jamal van Rooijen
 
@@ -171,6 +177,8 @@ Write your own little story here
 
 [Github repo](https://github.com/jamalvr)
 
+[Progress Blog]()
+
 ## Bas Kager
 
 ![Profile photo](https://avatars3.githubusercontent.com/u/5838517?s=460&v=4)
@@ -178,6 +186,8 @@ Write your own little story here
 Software Engineer studying at The University of Applied Sciences Leiden. Really likes databases, performance, security and clean code.
 
 [Github repo](https://github.com/baskager)
+
+[Progress Blog]()
 
 # 12. Acknowledgements
 
