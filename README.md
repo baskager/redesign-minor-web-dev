@@ -175,11 +175,11 @@ Ex-Graphical Design student that refound himself as a Frontend Developer at the 
 
 ![Profile photo](https://avatars0.githubusercontent.com/u/6648715?s=460&v=4)
 
-Write your own little story here
+Designer that also likes to code.
 
 [Github repo](https://github.com/jelleoverbeek)
 
-[Progress Blog]()
+[Progress Blog](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/jelle.md)
 
 ## Rick Buter
 
