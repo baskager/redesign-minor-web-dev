@@ -87,9 +87,20 @@ forever -o logs/node-server-out.log -e logs/node-server-error.log start app.js
 
 Let Rick write something here
 
-## Video element with captions and summary
+## Video element with captions and split screen
 
-Let Jelle write something here
+For deaf people it is hard to follow lectures. They have to focus on the speaker, the interpreter and the slides at the same time. As we are making a website for a minor lectures are part of it. To make it easier for deaf people to follow the lectures I made a video player focused on improving this experience. We tested the video player with Marie, a deaf graphic designer. She gave us a lot of interesting feedback. With this feedback we improved the video player to it's current form.
+
+**The video player contains the following features:**
+
+- Synced split screen view of the lecture and the slides
+- Subtitles (loaded as SRT format).
+- The subtitles can switch side using the mouse or arrow keys.
+- Slide overview to quickly navigate trough the lecture
+- The possibility to slowdown or speed up the lecture.
+- The video player can be controlled using the keyboard.
+
+![Screenshot of the videoplayer](https://d.pr/i/tQJ6Uu+)
 
 ## Spatial navigation on the program page
 
