@@ -20,7 +20,7 @@ $mp-color: #dd1b00;
 
 // Typography
 $black: #222;
-$white: #eee;
+$white: #fff;
 $gray: #727272;
 
 $bold: bold;
@@ -44,6 +44,10 @@ $h3-font-size: 1.5rem;
 $h3-font-style: normal;
 $h3-font-weight: $semi-bold;
 
+$h4-font-size: 1.25rem;
+$h4-font-style: normal;
+$h4-font-weight: $semi-bold;
+
 $body-color: $black;
 $body-font-size: 100%;
 $body-font-size-small: 0.75rem;
@@ -62,7 +66,8 @@ $margin-8: 0.5rem;
 $margin-16: 1rem;
 $margin-24: 1.5rem;
 $margin-32: 2rem;
-$margin-48: 2.5rem;
+$margin-40: 2.5rem;
+$margin-48: 3rem;
 $margin-56: rem(56);
 $margin-64: rem(64);
 $margin-72: rem(72);
@@ -139,7 +144,7 @@ $container-s: 48rem;
 $container-xs: 36rem;
 
 // Z-indices
-$zindex-nav: 10;
+$zindex-nav: 20;
 $zindex-timeline-item: 7;
 $zindex-timeline-link: 8;
 $zindex-hotkey: 12;
@@ -148,15 +153,17 @@ $zindex-card: 8;
 $zindex-card-link: 9;
 
 // Media queries
-$mobile: rem(575);
-$tablet: rem(768);
-$desktop: rem(992);
-$desktop-hd: rem(1180);
+$mobile: 575;
+$tablet: 768;
+$tablet-hd: 830;
+$desktop: 992;
+$desktop-hd: 1180;
 
 $max-mobile: rem($mobile);
 $min-tablet: rem($mobile + 1);
 $max-tablet: rem($tablet);
+$max-tablet-hd: rem($tablet-hd);
 $min-desktop: rem($tablet + 1);
 $max-desktop: rem($desktop);
-$min-desktop-hd: rem($desktop-hd + 1);
+$min-desktop-hd: rem($desktop + 1);
 $max-desktop-hd: rem($desktop-hd);

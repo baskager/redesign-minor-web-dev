@@ -2,7 +2,7 @@
   "title": "Student work",
   "heading": "Student work",
   "description":
-    "Here you can find all the student work from past years. We will add more and more content to this page as the minor progresses.",
+    "Here you can find all the student work from past years. We will add more and more content to this page as the minor progress.",
   "courses": [
     {
       "name": "Web app from scratch",
@@ -10,42 +10,42 @@
       "items": [
         {
           "heading": "Jamerrone",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "imgUrl": "/img/student-work/wafs-jamerrone.png",
           "imgAlt": "Description of the project/image",
           "demoUrl": "https://jamerrone.github.io/wafs/app/#home",
           "repoUrl": "https://github.com/Jamerrone/wafs"
         },
         {
           "heading": "jajan20",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "imgUrl": "/img/student-work/wafs-jansen.png",
           "imgAlt": "Description of the project/image",
           "demoUrl": "https://oege.ie.hva.nl/~jansenj031/wafs/",
           "repoUrl": "https://github.com/jajan20/wafs"
         },
         {
           "heading": "baskager",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "imgUrl": "/img/student-work/wafs-kager.png",
           "imgAlt": "Description of the project/image",
           "demoUrl": "http://www.kager.io/wafs/app/",
           "repoUrl": "https://github.com/baskager/wafs"
         },
         {
           "heading": "jelleoverbeek",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "imgUrl": "/img/student-work/wafs-jelleoverbeek.png",
           "imgAlt": "Description of the project/image",
           "demoUrl": "https://jelleoverbeek.github.io/wafs/#now-playing",
           "repoUrl": "https://github.com/jelleoverbeek/wafs"
         },
         {
           "heading": "Rick712",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "imgUrl": "/img/student-work/wafs-rick.png",
           "imgAlt": "Description of the project/image",
           "demoUrl": "https://rick712.github.io/wafs/app/dist/",
           "repoUrl": "https://github.com/Rick712/wafs"
         },
         {
           "heading": "kyunwang",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "imgUrl": "/img/student-work/wafs-kyunwang.png",
           "imgAlt": "Description of the project/image",
           "demoUrl":
             "https://kyunwang.github.io/web-app-from-scratch/app/#library",
@@ -58,46 +58,46 @@
       "slug": "css-to-the-rescue",
       "items": [
         {
-          "heading": "Project header",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "heading": "hackshackshacks",
+          "imgUrl": "/img/student-work/csstr-fennadew.png",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl": "https://fennadew.github.io/cssttr/",
+          "repoUrl": "https://www.github.com/fennadew/csstr"
         },
         {
-          "heading": "Project header",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "heading": "hackshackshacks",
+          "imgUrl": "/img/student-work/csstr-hackshackshacks.png",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl": "https://hackshackshacks.github.io/cssttr/",
+          "repoUrl": "https://www.github.com/hackshackshacks/csstr"
         },
         {
-          "heading": "Project header",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "heading": "s44s",
+          "imgUrl": "/img/student-work/csstr-s44s.png",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl": "https://s44s.github.io/cssttr/",
+          "repoUrl": "https://www.github.com/s44s/csstr"
         },
         {
-          "heading": "Project header",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "heading": "vandijkstef",
+          "imgUrl": "/img/student-work/csstr-vandijkstef.png",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl": "https://vandijkstef.github.io/cssttr/site/index.html",
+          "repoUrl": "https://www.github.com/vandijkstef/csstr"
         },
         {
-          "heading": "Project header",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "heading": "velomovies",
+          "imgUrl": "/img/student-work/csstr-velomovies.png",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl": "https://velomovies.github.io/cssttr/",
+          "repoUrl": "https://www.github.com/velomovies/csstr"
         },
         {
-          "heading": "Project header",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "heading": "viennam",
+          "imgUrl": "/img/student-work/csstr-viennam.png",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl": "https://viennam.github.io/cssttr/week3/styleguide.html",
+          "repoUrl": "https://www.github.com/viennam/csstr"
         }
       ]
     },
@@ -106,46 +106,29 @@
       "slug": "project-1",
       "items": [
         {
-          "heading": "Project header",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "heading": "rick712",
+          "imgUrl": "/img/student-work/oba-rick712.png",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl": "https://rick712.github.io/project1-quick-hack-prototype/",
+          "repoUrl":
+            "https://www.github.com/rick712/project1-quick-hack-prototype"
         },
         {
-          "heading": "Project header",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "heading": "dipsaus9",
+          "imgUrl": "/img/student-work/oba-dipsaus9.png",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl":
+            "https://dipsaus9.github.io/project1-quick-hack-prototype/",
+          "repoUrl":
+            "https://www.github.com/dipsaus9/project1-quick-hack-prototype"
         },
         {
-          "heading": "Project header",
-          "imgUrl": "//via.placeholder.com/306x176",
+          "heading": "moniac",
+          "imgUrl": "/img/student-work/oba-moniac.png",
           "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
-        },
-        {
-          "heading": "Project header",
-          "imgUrl": "//via.placeholder.com/306x176",
-          "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
-        },
-        {
-          "heading": "Project header",
-          "imgUrl": "//via.placeholder.com/306x176",
-          "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
-        },
-        {
-          "heading": "Project header",
-          "imgUrl": "//via.placeholder.com/306x176",
-          "imgAlt": "Description of the project/image",
-          "demoUrl": "#",
-          "repoUrl": "https://www.github.com"
+          "demoUrl": "https://moniac.github.io/project1-quick-hack-prototype/",
+          "repoUrl":
+            "https://www.github.com/moniac/project1-quick-hack-prototype"
         }
       ]
     }

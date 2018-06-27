@@ -22,13 +22,9 @@
 @import "./components/course";
 @import "./components/signup";
 @import "./components/animations";
+@import "./components/program";
 @import "./components/courses";
 @import "./components/contact";
 @import "./components/signup";
 @import "./components/presentation";
 @import "./components/hljs";
-
-// TODO remove this filty hotfix focus
-:focus {
-  box-shadow: 0 0px 18px 5px rgba(0, 0, 0, 0.2);
-}

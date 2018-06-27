@@ -1,73 +1,39 @@
 <nav class="main-nav">
   <div class="container">
     <a class="skip-to-content" href="#main" tabindex="0">Skip to content</a>
-    <a href="/"><h1>Minor Web Dev</h1></a>
-    <ul>
-      <li><span>alt +</span></li>
+    <a class="logo" href="/"><h1>Minor Web Dev</h1></a>
+    <ul id="nav-items">
       <li {% if data.title=="Home" %} class="active" {% endif %}>
-        <a id="menu-item-1" href="/" accesskey="1"><span span class="active">1</span>Home</a>
+        <a id="menu-item-1" href="/" accesskey="1"><span class="active">1</span>Home</a>
       </li>
       <li {% if data.title=="Program" %} class="active" {% endif %}>
         <a id="menu-item-2" href="/program" accesskey="2"><span class="active">2</span>Program</a>
-        <div class="submenu">
-          <div class="container">
-            <h2><a href="/program">Go to program timeline <i class="fas fa-chevron-right"></i></a></h2>
-            <div>
-              <section>
-                <p>Term 1</p>
-                <ul>
-                  <li><a href="/program/css-to-the-rescue">CSS to the rescue</a></li>
-                  <li><a href="/program/web-app-from-scratch">Web app from scratch</a></li>
-                  <li><a href="/program/project1">Project 1</a></li>
-                </ul>
-              </section>
-              <section>
-                <p>Term 2</p>
-                <ul>
-                  <li><a href="/program/browser-technologies">Browser technologies</a></li>
-                  <li><a href="/program/performance-matters">Performance matters</a></li>
-                  <li><a href="/program/project2">Project 2</a></li>
-                </ul>
-              </section>
-              <section>
-                <p>Term 3</p>
-                <ul>
-                  <li><a href="/program/web-design">Web design</a></li>
-                  <li><a href="/program/real-time-web">Real time web</a></li>
-                  <li><a href="/program/project3">Project 3</a></li>
-                </ul>
-              </section>
-              <section>
-                <p>Term 4</p>
-                <ul>
-                  <li><a href="/program/weekly-nerd">Weekly nerd</a></li>
-                  <li><a href="/program/master-project">Master project</a></li>
-                </ul>
-              </section>
-            </div>
-          </div>
-        </div>
       </li>
       <li {% if data.title=="Our Partners" %} class="active" {% endif %}>
-        <a id="menu-item-3" href="/partners" accesskey="3"><span span class="active">3</span>Partners</a>
+        <a id="menu-item-3" href="/partners" accesskey="3"><span class="active">3</span>Partners</a>
       </li>
-      {#
-      <li {% if data.title=="Ons team" %} class="active" {% endif %}>
-        <a href="/team">Team</a>
-      </li> #}
       <li {% if data.title=="Student work" %} class="active" {% endif %}>
-        <a id="menu-item-4" href="/student-work" accesskey="4"><span span class="active">4</span>Student work</a>
+        <a id="menu-item-4" href="/student-work" accesskey="4"><span class="active">4</span>Student work</a>
       </li>
       <li {% if data.title=="Contact Us" %} class="active" {% endif %}>
-        <a id="menu-item-5" href="/contact" accesskey="5"><span span class="active">5</span>Contact Us</a>
+        <a id="menu-item-5" href="/contact" accesskey="5"><span class="active">5</span>Contact Us</a>
       </li>
       <li {% if data.title=="Sign up" %} class="active" {% endif %}>
-        <a id="menu-item-6" href="/signup" accesskey="6" class="btn btn-primary"><span span class="active">6</span>Sign up!</a>
+        <a id="menu-item-6" href="/signup" accesskey="6" class="btn btn-primary"><span class="active">6</span>Sign up!</a>
       </li>
     </ul>
 
+    {# Hamburger menu #}
+    <button href="#nav-items" id="nav-items-toggle" class="active" aria-label="Open main menu">
+      {# <span class="sr-only">Open main menu</span> #}
+      <i class="fa fa-bars" aria-hidden="true"></i>
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+
+    {# Key nav indicator #}
+    {# Add click event #}
     <div id="keynav" class="keynav active">
-      <span>CTRL + ALT</span> toggle shortkeys
+      <span class="hotkey">CTRL</span> + <span class="hotkey">ALT</span> toggle shortkeys
     </div>
   </div>
 </nav>  

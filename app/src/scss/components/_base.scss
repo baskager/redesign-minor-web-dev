@@ -2,6 +2,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:focus {
+  box-shadow: inset 0 0 0 3px lightskyblue;
+  outline: none;
 }
 
 body {
@@ -27,8 +33,9 @@ body {
   }
 }
 
-body > header {
-  margin-bottom: 5rem;
+body > header,
+.signup-wrapper header,
+.home-wrapper header {
   padding: 7rem 0 4rem 0;
 
   h1 {
@@ -59,7 +66,7 @@ body > header {
       -webkit-box-decoration-break: clone;
       background-color: $secondary-color;
       box-decoration-break: clone;
-      display: inline;
+      // display: inline-block;
       padding: $padding-24;
       color: white;
     }
@@ -111,12 +118,12 @@ body > header {
   display: inline-block;
   font-size: rem(11);
   letter-spacing: 0;
-  padding: rem(4) rem(4);
-  color: #fff;
+  padding: rem(0) rem(4);
+  color: $white;
   border-radius: rem(3);
-  border: 1px solid #ffffff;
+  line-height: rem(19);
+  border: 1px solid $white;
   white-space: nowrap;
-  transform: translateY(3.75rem);
   position: relative;
   z-index: $zindex-hotkey;
 }

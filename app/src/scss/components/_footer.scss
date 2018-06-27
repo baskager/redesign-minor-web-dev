@@ -4,11 +4,14 @@
   color: white;
   margin-top: 5rem;
   div {
-    padding: $padding-64 0;
+    padding-top: $padding-64;
+    padding-bottom: $padding-64;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(rem(261.5), 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: $margin-24 $margin-24;
-    @include max-mobile {
+    @include max-tablet {
+      display: flex;
+      flex-flow: column;
       text-align: center;
     }
   }
@@ -16,9 +19,8 @@
     display: block;
     color: lighten($primary-color, 35%);
     span {
-      transition : border-left .3s ease,
-      background-color .3s ease,
-      box-shadow .3s ease;
+      transition: border-left 0.3s ease, background-color 0.3s ease,
+        box-shadow 0.3s ease;
     }
     &:hover,
     &:focus {
@@ -30,7 +32,7 @@
         background-color: $white;
       }
     }
-  } // #9D95F9
+  }
   ul {
     list-style-type: none;
     padding: 0;

@@ -51,7 +51,7 @@ module.exports = class Subtitles {
 
     this.addEvents = function() {
       mouseEventElement.addEventListener("mousemove", ev => {
-        let side = this.checkCursorSide(ev.screenX);
+        let side = this.checkCursorSide(ev.clientX);
         this.alignSubs(side);
       });
 

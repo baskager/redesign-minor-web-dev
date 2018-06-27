@@ -1,60 +1,73 @@
 {% extends 'components/_base.html' %} {% block content %}
-<header>
-  <div class="container">
-    <h1>
-      <span>Enroll</span>
-    </h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, natus placeat est molestiae et omnis magnam dolor consequatur
-      blanditiis nostrum, quis possimus voluptates quas quisquam. Illo alias nesciunt beatae accusamus?</p>
-  </div>
-</header>
 <main id="main" class="signup-wrapper container">
   <section>
+    <header>
+      <h1>
+        <span>Sign up!</span>
+      </h1>
+    </header>
     <div>
       <h2>Requirements</h2>
       <ul>
-        <li>Basic JavaScript knowledge</li>
-        <li>Basic Node knowledge</li>
-        <li>Intermediate HTML/CSS knowledge</li>
-        <li>The will to learn new stuff</li>
-        <li>Have fun!</li>
+        <li>🤓 Basic
+          <strong>JavaScript</strong> knowledge</li>
+        <li>💃 Intermediate
+          <strong>HTML/CSS</strong> knowledge</li>
+        <li>💪 The
+          <strong>will to learn</strong> new stuff</li>
+        <li>❓
+          <strong>Ask questions</strong> to the teachers and fellow students.</li>
+        <li>🏎 Approximately
+          <strong>40 hours</strong> a week</li>
+        <li>🤪
+          <strong>Have fun!</strong>
+        </li>
       </ul>
-      <h2>Information</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae sapiente, tempora perspiciatis deserunt nobis fugit
-        impedit, cupiditate voluptatum commodi excepturi. Repellat autem tempore at molestias, reiciendis omnis sapiente
-        voluptas!
-      </p>
-      <h2>Students thoughts</h2>
-      <blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit corrupti aliquid id velit. Quasi pariatur, exercitationem
-        totam eaque itaque, dolor optio magni voluptatem doloribus at vitae iure qui corrupti ea!</blockquote>
+
+      <h2>Need some help with the requirements?</h2>
+      <p>We're striving to teach as many students to write high-quality code. From beginners to experts, there is always something
+        you can learn. To make life easier, you could check out certain courses to get some basic code skills before you
+        start the minor.</p>
+      <ul>
+        <li>
+          <a rel="nofollow" href="https://www.codecademy.com/catalog/subject/web-development">Codecademy: HTML, CSS & JS.</a>
+        </li>
+        <li>
+          <a rel="nofollow" href="https://wesbos.com/">Wesbos: CSS & JavaScript</a>
+        </li>
+        <li>
+          <a rel="nofollow" href="https://www.udemy.com/">Udemy: HTML, CSS & JavaScript</a>
+        </li>
+      </ul>
     </div>
   </section>
-
-  <form action="/" method="post" class="card">
-    <h2>Apply now!</h2>
-    <fieldset>
-      <div>
-        <input id="name" name="name" type="text" required autofocus>
-        <label for="name">Your Name</label>
-      </div>
-      <div>
-        <input id="email" name="email" type="email" required>
-        <label for="email">Email Address</label>
-      </div>
-      <div>
-        <input id="tel" name="tel" type="tel" required>
-        <label for="tel">Phone</label>
-      </div>
-      <div>
-        <input id="repo" name="repo" type="text">
-        <label for="repo">Git Url</label>
-      </div>
-      <div>
-        <input id="something" name="something" type="text">
-        <label for="something">Something Else</label>
-      </div>
-      <input type="submit" class="btn-primary" value="I am ready!">
-    </fieldset>
-  </form>
+  <div>
+    <form action="/" method="post" class="card">
+      <h2>Apply now!</h2>
+      <fieldset>
+        <div>
+          <label for="name">Your Name</label>
+          <input id="name" name="name" type="text" required autofocus>
+        </div>
+        <div>
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div>
+          <label for="tel">Phone</label>
+          <input id="tel" name="tel" type="tel" required>
+        </div>
+        <div>
+          <label for="repo">Git Url</label>
+          <input id="repo" name="repo" type="text">
+        </div>
+        <div>
+          <label for="something">Something Else</label>
+          <input id="something" name="something" type="text">
+        </div>
+        <input type="submit" class="btn-primary" value="I am ready!">
+      </fieldset>
+    </form>
+  </div>
 </main>
 {% endblock %}

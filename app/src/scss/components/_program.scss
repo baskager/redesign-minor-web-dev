@@ -1,0 +1,69 @@
+.program-header {
+  padding: 3rem 0;
+}
+
+.submenu {
+  background-color: #fafafa;
+  margin-top: rem(74);
+  overflow: hidden;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  .container {
+    position: relative;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0 $margin-32;
+    padding: 0;
+    display: flex;
+    overflow-x: scroll;
+    @include min-desktop {
+      margin: 0 $margin-48;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  a,
+  button {
+    display: inline-block;
+    text-align: center;
+    padding: $padding-16;
+    white-space: nowrap;
+    margin: 0;
+    border-radius: 0;
+    height: 100%;
+    color: lighten($primary-color, 15%);
+    &:hover {
+      color: $primary-color;
+      transform: 0;
+    }
+  }
+  #submenu-previous,
+  #submenu-next {
+    position: absolute;
+    background-color: #fafafa;
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      top: 0;
+    }
+  }
+  #submenu-previous {
+    left: 0;
+    &::before {
+      left: rem(40);
+      @include gradient-previous();
+    }
+  }
+  #submenu-next {
+    right: 0;
+    &::before {
+      left: rem(-20);
+      @include gradient-next();
+    }
+  }
+}

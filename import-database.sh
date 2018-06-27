@@ -1,0 +1,1 @@
+cat sql/dump/minorwebdev.sql | docker exec -i minorwebdev_postgres psql -U minorwebdev -d minorwebdev

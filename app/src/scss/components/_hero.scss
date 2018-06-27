@@ -17,6 +17,7 @@
     font-size: 4rem;
     font-weight: bold;
     margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
 
     span {
       -webkit-box-decoration-break: clone;
@@ -37,12 +38,19 @@
     background-color: #ffffff;
     color: #09012f;
     font-size: 1.25rem;
+    display: inline-block;
+    &:hover {
+      animation: button-pulse infinite 1.5s ease-in-out;
+    }
+    &:focus {
+      animation: button-pulse infinite 1.5s ease-in-out;
+    }
   }
 
   .container {
     align-items: center;
     display: flex;
-    height: 85vh;
+    min-height: 85vh;
   }
 
   .left {
@@ -53,6 +61,7 @@
   .right {
     position: relative;
     width: 45%;
+    margin-top: 4rem;
     > svg {
       left: -10rem;
       position: absolute;
@@ -83,6 +92,33 @@
       fill: $primary-color;
       height: 44px;
       width: 44px;
+    }
+  }
+
+  @media only screen and (max-width: 995px) {
+    .container {
+      flex-direction: column;
+      padding: 5rem 0;
+    }
+
+    .left {
+      margin: 6rem 0 5rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    .right {
+      width: 80%;
+
+      > svg {
+        display: none;
+      }
+    }
+
+    #replayAnimation {
+      bottom: 1.5rem;
+      right: 50%;
+      transform: translateX(50%);
     }
   }
 }

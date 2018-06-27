@@ -1,7 +1,7 @@
 {% extends "components/_base.html" %} {% block content %}
 <header class="presentation-header">
   <div class="container">
-    <h1>{{ data.title }}</h1>
+    <h1><span>{{ data.title }}</span></h1>
     <p>{{ data.description }}</p>
     <ul class="teachers-list">
       <li>
@@ -14,20 +14,31 @@
       </li>
     </ul>
 
-    <div class="center-btn">
-      <a href="#presentation" class="btn btn-primary">Check out the talk</a>  
-    </div>
+    <a href="#presentation" class="btn btn-primary">
+      <i class="fa fa-video"></i> Watch the video
+    </a>
+    <a href="#story" class="btn btn-secondary">
+      <i class="fa fa-book"></i> Read the story
+    </a>  
   </div>
 </header>
 
 <main>
   <section class="presentation" id="presentation">
+
+    <div class="help">
+      <p><span class="monospace"><img src="/img/icons/key-left.svg" alt="Arrow left"> / <img src="/img/icons/key-right.svg" alt="Arrow right"> / <img src="/img/icons/mouse-horizontal.svg" alt="Mouse left or right"> : </span>switch side of subtitles.</p>
+      <p><span class="monospace"><img src="/img/icons/key-shift.svg" alt="Arrow left"> + <img src="/img/icons/key-space.svg" alt="Arrow right"> : </span>play/pause.</p>
+    </div>
+
     <div class="media paused">
       <video src="{{ data.videoUrl }}"></video>
       <img class="current-slide" src="{{ data.presentationImg }}">
       <ul class="links"></ul>
       <button class="btn-media-control">
-        <span class="hotkey">shift + space</span>
+        <span class="shortcut">
+          <img src="/img/icons/key-shift.svg" alt="Arrow left"> + <img src="/img/icons/key-space.svg" alt="Arrow right"></span>
+        </span>
       </button>
       <h2 class="subtitle left"></h2>
     </div>  
@@ -49,9 +60,10 @@
     <div class="slides"></div>
   </section>
 
-  <section class="presentation-summary">
+  <section class="presentation-summary" id="story">
     <div class="container">
       <h3>{{ data.title }}</h3>
+      <p>Source: <a href="{{ data.source }}">Smashing Magazine</a></p>
       {% for paragraph in data.paragraphs %}
         <p>{{ paragraph }}</p>
       {% endfor %}

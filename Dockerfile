@@ -1,4 +1,5 @@
 FROM node:carbon
+ADD credentials.env credentials.env
 ADD app /app
 WORKDIR /app
 RUN npm install -g gulp
