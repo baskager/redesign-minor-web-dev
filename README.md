@@ -195,7 +195,7 @@ Doesn't really know what he's doing, but he's doing just fine.
 
 ![Profile photo](https://avatars3.githubusercontent.com/u/26875486?s=460&v=4)
 
-Write your own little story here
+A designer who just recently discovered his love for code.
 
 [Github repo](https://github.com/jamalvr)
 
