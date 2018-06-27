@@ -79,15 +79,33 @@ I have drawn up some elements displayed on the images below.
 ![more wireframes](https://i.imgur.com/STpMoL6.jpg)
 ![even more wireframes](https://i.imgur.com/Ndw3MIo.jpg)
 
-### Styleguide
+### Style guide
 
 The team took my learning goals in mind and allowed me to create a style guide for the website. This style guide provided elements that the rest of the team could work on.
+
+Before this project I had never made a style guide and now that I've made one I don't want to make a project without one. This makes it so much easier to come up with new elements, testing out colour schemes and keeping your design consistent. I love making styleguides. I love making styleguides.
+
+The picture below shows a part of the first iteration of the styleguide.
+
+![styleguide](https://i.imgur.com/kxZBQOS.png)
 
 ### CSS and HTML layout structure
 
 I have been able to set up the html structure for the homepage and the course page. I have done this alongside Rick and James (pair programming) and they have teached me alot of tips-and-tricks and best-practices along the way.
 
+Jelle and James later added finishing touches to the course page and homepage and I think the result turned out beautiful.
+
 ### SVG
+
+Another first for me! I had never worked with SVG before. I found a really nice tool called 'VECTR' that lets you design and export svg images on Linux! I have made an arrow icon and an icon for bullet lists.
+
+**The arrow icon:**
+
+![arrow svg](https://redesign-minor.kager.io/img/icons/arrow.svg)
+
+**The bullet icon:**
+
+![bullet svg](https://redesign-minor.kager.io/img/icons/bullet.svg)
 
 ### Documentation and readme
 
