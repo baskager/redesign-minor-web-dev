@@ -166,6 +166,8 @@ Vrijdag ochtend was de test met Marie. Marie had veel goede tips over de vormgev
     Resultaten van test met Marie
   </summary>
 
+  <img src="https://slack-imgs.com/?c=1&url=https%3A%2F%2Fd.pr%2Fi%2FYbuxe1%2B" alt="foto van Marie die aan het testen is" />
+
   <p><b>Program pagina</b></p>
   <ul>
     <li>Niet duidelijk dat het de sprekers zijn</li>
