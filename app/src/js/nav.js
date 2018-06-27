@@ -8,21 +8,17 @@
     }
   };
 
-  // Hotkey navigation init
   const keyNav = {
-    // Key value of objects
+    // State of the command key. If used, block the functionality.
     cmdState: false,
-
     // KeyNavState is (will be) stored in localStorage
     keyNavState: false,
-
+    // Hotkey navigation init
     init: function() {
       // Functionality for the state of the hotkeys
       keyNavToggle.toggleState();
-
       // Pure visual indicators for the state of the hotkeys
       keyNavToggle.toggleIndicators();
-
       // Eventlisteners to actually toggle the state of the hotkeys and the visuals
       eventListeners.onKeyUp();
       eventListeners.onKeyDown();

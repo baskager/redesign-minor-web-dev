@@ -99,6 +99,10 @@ The spatial navigation functionality is deeply inspired by the original Opera fu
 
 Marijn once told me that the biggest disadvantage of the tab key was the fact that it always starts at the top of the website. If the user chooses to scroll down the page and wants to interact with an element, he will need to spam the tab key until he get's there. With this functionality James wrote, the focus key will always follow the user's window location. The focus state will change its current element depending on what is currently displayed on the screen. More information can be found on James personal progress [blog](https://jamerrone.github.io/meesterproef-progress-blog/).
 
+## Navigation through hotkeys
+
+In our interviews/test with Marijn, he told us that he really liked interfaces dat can be used through hotkeys. Now, all the pages in the main menu are available when you use the keys with a number on it. Look at the number in de main navigation to know which number you have to press. This feature can be toggled on or off when you press alt + ctrl simultaniously. Every user should be able to navigate quickly through the website without too much effort. Especially in combination with the spacial navigation and focus on scroll position. More information can be found on Jamal his person progress [blog Jamal](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/jamal.md).
+
 ## Spatial navigation slider element
 
 # 6. Insights
