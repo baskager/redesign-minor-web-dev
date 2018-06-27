@@ -22,5 +22,7 @@
     }
   };
 
-  submenuScroll.init();
+  if (document.getElementById("submenu-container")) {
+    submenuScroll.init();
+  }
 })();
