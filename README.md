@@ -93,11 +93,11 @@ Let Jelle write something here
 
 ## Spatial navigation on the program page
 
-Let James write something here
+The spatial navigation functionality is deeply inspired by the original Opera function and by multiple large screen navigation systems. Users can easily navigate through elements using their arrow keys. Unlike the forward jumping tab key, users can navigate in any direction. The enter key will emulate the mouse's on click event. More information can be found on James personal progress [blog](https://jamerrone.github.io/meesterproef-progress-blog/).
 
 ## Focus following the scroll position
 
-Let James write something here
+Marijn once told me that the biggest disadvantage of the tab key was the fact that it always starts at the top of the website. If the user chooses to scroll down the page and wants to interact with an element, he will need to spam the tab key until he get's there. With this functionality James wrote, the focus key will always follow the user's window location. The focus state will change its current element depending on what is currently displayed on the screen. More information can be found on James personal progress [blog](https://jamerrone.github.io/meesterproef-progress-blog/).
 
 ## Spatial navigation slider element
 
