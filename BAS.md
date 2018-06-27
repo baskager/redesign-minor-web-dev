@@ -50,6 +50,7 @@ On the first Monday morning of the project, we started making a MOSCOW list base
 **MOSCOW**
 
 I have introduced the MOSCOW methodology to the team because I have used it in projects before and I have always found it useful to have a list of priorities.
+
 ![MOSCOW method](https://i.imgur.com/TmoERwy.png)
 
 **Card sorting**
@@ -74,13 +75,17 @@ We started wireframing on paper and continued with Figma to add more detail.
 
 I have drawn up some elements displayed on the images below.
 
-![wireframs](https://i.imgur.com/rDKKYSx.jpg)
+![wireframes](https://i.imgur.com/rDKKYSx.jpg)
 ![more wireframes](https://i.imgur.com/STpMoL6.jpg)
 ![even more wireframes](https://i.imgur.com/Ndw3MIo.jpg)
 
+### Styleguide
+
+The team took my learning goals in mind and allowed me to create a style guide for the website. This style guide provided elements that the rest of the team could work on.
+
 ### CSS and HTML layout structure
 
-### Styleguide
+I have been able to set up the html structure for the homepage and the course page. I have done this alongside Rick and James (pair programming) and they have teached me alot of tips-and-tricks and best-practices along the way.
 
 ### SVG
 
