@@ -10,6 +10,8 @@ In dit markdown bestandje zal ik mijn persoonlijke proces beschrijven.
 - **[Week 5](#week-5)**
 - **[Conclusie](#Conclusie)**
 
+[Link to Pull Requests](https://github.com/baskager/redesign-minor-web-dev/pulls?q=is%3Apr+is%3Aclosed+author%3ARick712)
+
 ## Leerdoelen
 
 1. Functionele animaties en transities maken
@@ -474,12 +476,46 @@ Ik heb mij niet echt heel erg bezig geweest met de technischere kant van de webs
 
 #### Leerdoelen evaluatie
 
-Ik denk dat ik mijn leerdoelen wel gehaald heb. Ik heb meegewerkt aan het ontwerpproces, en ik heb geen opmerkingen gekregen over code die niet leesbaar zou zijn. Ook heb ik gevraagd aan anderen of zij snapte wat er in mijn code gebeurde, en of ze het netjes vonden, en dat vonden ze. Ondanks dat dit niet mijn belangrijkste leerdoelen waren, heb ik ze wel gehaald.
+Ik denk dat ik mijn leerdoelen wel gehaald heb. Ik heb meegewerkt aan het ontwerpproces. Zelf ben ik verantwoordelijk geweest voor de vak pagina template. Die heb ik ontworpen, gebouwd en gestijlt.
+
+De schone en leeesbare code is ook wel gelukt denk ik. De code die ik heb geschreven is goed leesbaar. Ik heb relevante namen gebruikt voor variabelen en classnamen. Teamleden die verder zijn gaan werken met mijn code konden zonder problemen zien wat ik gedaan had, en hoe ze er mee verder zouden kunnen.
+
+Ondanks dat dit niet mijn belangrijkste leerdoelen waren, heb ik ze wel gehaald.
 
 De belangrijkste leerdoel die ik had was transities en animaties. Ik ben best trots op hetgeen wat ik gemaakt heb. Bijna alle transities en animaties die terug te vinden zijn op de websites heb ik gemaakt. Daarnaast heb ik ook een script geschreven met de intersection observer die ik zo zou kunnen hergebruiken op andere websites die ik ga maken. Daarnaast heb ik duidelijke hover en focus states gemaakt die de interactie met de gebruiker verbeteren.
 
 Mijn laatste leerdoel die ik later heb toegevoegd, het leren van de CLI van git, heb ik wel enigzins gehaald. Voordat ik aan de meesterproef begon vond ik het een beetje eng om in de terminal te typen. Dingen zoals de server starten en gulp runnen deed ik al wel, maar committen, pushen en mergen nog niet. Bas heeft mij goed geholpen met het oefenen met de CLI. Ik heb meerdere malen gecommit, gepush en gemerged met de CLI, maar ik gebruik nog steeds af en toe de desktop versie van git. Ik ben echter niet meer bang om de CLI te gebruiken, en switch ook rustig van branch in de CLI. Ik heb dit leerdoel dus gehaald.
 
+Naast de leerdoelen heb ik nog veel meer geleerd uiteraard. Een van de dingen die ik geleerd heb is hoe je een goede structuur kan aanbrengen in een project wanneer je met meerdere mensen aan een project werkt. Als ik in mijn eentje werkte, dan gooide ik elke push gewoon in master. Wanneer je met meerdere mensen aan een groot project werkt dan kan dit echt niet. Ik denk dat ik dit uberhaupt vaker ga toepassen, ook als ik in mijn eentje aan een project werk. Ook heb ik meer praktischere dingen geleerd, zoals de intersection observer, wat echt heel handig kan zijn wanneer je dingen wilt gaan doen wanneer elementen op het scherm tevoorschijn komen.
+
+Als laatst heb ik echt gigantisch veel geleerd over toegankelijkheid, en hoe je er voor kan zorgen dat je website toegankelijk is. De testen met Marijn en Marie hebben mij echt enorm veel kennis en inzicht gegeven in hoe iemand met een beperking een website gebruikt. Ik denk dat niet genoeg developers hier rekening mee houden, terwijl de oplossingen die je maakt voor deze doelgroep ook heel handig zou kunnen zijn voor de overige gebruikers. Ik beschouw deze kennis echt als zeer nuttig.
+
+#### Welk vak heb ik toegepast
+
+##### Web Apps Fron Scratch
+
+Ondanks dat ik niet heel veel technische taken heb opgepakt heb ik een aantal basis principes van WAFS wel toegepast.
+
+##### CSS To The Rescue
+
+CSSTTR is een van de vakken die ik het meest heb toegepast. Het maken van een plezierig interface was een belangrijk onderdeel van het vak, en ook van ons project. Ook kwam Marijn terug bij ons project. Ik denk dat we de website echt wel plezierig gemaakt hebben voor Marijn, of in ieder geval veel plezieriger dan de gemiddelde website. Ook voor Marie hebben we veel onderzoek gedaan naar hoe we geluid voor haar het beste kunnen omzetten in tekst, en dat is ook goed gelukt. Marie was tevreden met ons prototype van de videospeler.
+
+##### Browser Technologies
+
+Ondanks dat de focus niet echt bij dit vak lag, dacht ik onbewust toch over de support van bepaalde technieken die ik wilde gaan gebruiken op de website. Ook heb ik progressive enhanced met de animaties die werken op basis van de intersection observer.
+
+##### Performance Matters
+
+Sowieso is de website server-side gerenderd, wat een stuk beter is dan client side. Ook heb ik over performance nagedacht en onderzoek gedaan toen ik de micro library van Q42 wilde gebruiken. Toen ik er achter kwam dat de techniek die daar gebruikt vrij zwaar is, ben ik al snel na gaan denken over een andere manier om hetzelfde probleem op te lossen. Buiten dat heb ik mij niet bezig gehouden met performance.
+
+##### Real-Time Web
+
+Real-Time Web is het enige vak wat ik niet direct of indirect gebruikt heb tijdens de meesterproef.
+
+##### Web Design
+
+Het grootste deel van de tijd ben ik bezig geweest met web design. Aan het begin van de meesterproef al met het maken van schetsen en ontwerpen, en later tijdens het project met prototypen en itereren op testen. Ook het testen met Marijn en Marie was een belangrijk onderdeel van web design en van het project. Zoals ik eerder al aangaf denk ik dat de kennis die ik nu heb over het gebruik van een website voor mensen met een handicap heel bruikbaar is later. Ook het ontwerpen van de animaties en transities komen deels bij web design vandaan. Ik heb meerdere versies gemaakt van de animaties en transities, om uiteindelijk de best werkende te kiezen.
+
 #### Conclusie van de conclusie
 
-Ik ben erg tevreden met hoe het gegaan is de afgelopen weken. We hebben hard gebikkeld, en uiteindelijk staat er een mooie website. Ik heb mijn leerdoelen redelijk goed behaald, en heb ook anderen geholpen om hun leerdoelen te behalen. Ook heb ik veel geleerd over het werken in groepsverband, en samen werken aan een project. In het begin was het nog een beetje zoeken, maar ik denk zeker dat de samenwerking goed is verlopen.
+Ik ben erg tevreden met hoe het gegaan is de afgelopen weken. We hebben hard gebikkeld, en uiteindelijk staat er een mooie website. Ik heb mijn leerdoelen goed behaald, en heb ook anderen geholpen om hun leerdoelen te behalen. Ook heb ik veel geleerd over het werken in groepsverband, en samen werken aan een project. In het begin was het nog een beetje zoeken, maar ik denk zeker dat de samenwerking goed is verlopen.

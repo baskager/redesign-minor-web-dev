@@ -4,9 +4,9 @@ During this project we redesigned the website for the minor 'web development' at
 
 A big theme in this project was 'accessibility'. The site should be pleasurable for everyone, not just for the 'general public'.
 
-[INSERT A PICTURE HERE WHEN WE SIGN OFF ON THE PROJECT]
+![Homepage](https://d.pr/i/DuFm0H+)
 
-[INSERT A DEMO URL HERE WHEN WE SIGN OFF ON THE PROJECT]
+[Demo here!](https://redesign-minor.kager.io/)
 
 # 1. Requirements
 
@@ -34,10 +34,40 @@ npm install
 
 # 3. Deploying on development
 
+## Set the node environment variable to 'development'
+
+This ensures that the docker scripts will use the right build for development
+
+```
+export NODE_ENV=development
+```
+
 ## Checkout to the develop branch
 
 ```
 git checkout develop
+```
+
+## Run the 'start-servers' script
+
+This starts a 'postgres' container and an 'adminer' container. More info on these containers can be find in the `/docs` folder.
+
+```
+./start-servers.sh
+```
+
+## Run the 'import database' script
+
+This imports the database file contained in `/sql/dumps/minorwebdev.sql`
+
+```
+./import-database.sh
+```
+
+## Go to the /app/ directory
+
+```
+cd app
 ```
 
 ## Run gulp watch
@@ -59,27 +89,31 @@ nodemon server.js
 
 # 4. Deploying on production
 
-## Install forever on the server.
+## Set the node environment variable to 'production'
 
-Forever will run the server continuously and detached
-
-```
-npm install -g forever
-```
-
-## Run gulp
-
-This will compile all the assets
+This ensures that the docker scripts will use the right build for production
 
 ```
-gulp
+export NODE_ENV=production
 ```
 
-## Run forever and let it write logs in the `/logs` folder.
+## Run the 'start-servers' script
+
+This can take a while as it correctly installs and builds the webserver container
 
 ```
-forever -o logs/node-server-out.log -e logs/node-server-error.log start app.js
+./start-servers.sh
 ```
+
+## Run the 'import database' script
+
+This imports the database file contained in `/sql/dumps/minorwebdev.sql`
+
+```
+./import-database.sh
+```
+
+Your server should now run on the production server on port 3000, you could use a proxy through Apache or NGINX to serve the site on a domain or on another port.
 
 # 5. Experiments
 
@@ -87,9 +121,20 @@ forever -o logs/node-server-out.log -e logs/node-server-error.log start app.js
 
 Rick made a very experimental version of a keyboard that ( according to his research ) shoud be very accessible for Marijn. Check out [his progress Blog](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/rick.md) for the full research and results of the test with Marijn.
 
-## Video element with captions and summary
+## Video element with captions and split screen
 
-Let Jelle write something here
+For deaf people it is hard to follow lectures. They have to focus on the speaker, the interpreter and the slides at the same time. As we are making a website for a minor lectures are part of it. To make it easier for deaf people to follow the lectures I made a video player focused on improving this experience. We tested the video player with Marie, a deaf graphic designer. She gave us a lot of interesting feedback. With this feedback we improved the video player to it's current form.
+
+**The video player contains the following features:**
+
+- Synced split screen view of the lecture and the slides
+- Subtitles (loaded as SRT format).
+- The subtitles can switch side using the mouse or arrow keys.
+- Slide overview to quickly navigate trough the lecture
+- The possibility to slowdown or speed up the lecture.
+- The video player can be controlled using the keyboard.
+
+![Screenshot of the videoplayer](https://d.pr/i/tQJ6Uu+)
 
 ## Spatial navigation on the program page
 
@@ -99,7 +144,29 @@ The spatial navigation functionality is deeply inspired by the original Opera fu
 
 Marijn once told me that the biggest disadvantage of the tab key was the fact that it always starts at the top of the website. If the user chooses to scroll down the page and wants to interact with an element, he will need to spam the tab key until he get's there. With this functionality James wrote, the focus key will always follow the user's window location. The focus state will change its current element depending on what is currently displayed on the screen. More information can be found on James personal progress [blog](https://jamerrone.github.io/meesterproef-progress-blog/).
 
+## Navigation through hotkeys
+
+In our interviews/test with Marijn, he told us that he really liked interfaces dat can be used through hotkeys. Now, all the pages in the main menu are available when you use the keys with a number on it. Look at the number in de main navigation to know which number you have to press. This feature can be toggled on or off when you press alt + ctrl simultaniously. Every user should be able to navigate quickly through the website without too much effort. Especially in combination with the spacial navigation and focus on scroll position.
+
+**How to use the hotkeys**
+
+- If the indicator on the bottom right is transparent, press `control + alt` to toggle the hotkeys.
+- With [1, 2, 3, 4, 5, 6] you can navigate through the different pages on the website.
+
+![hotkeys](https://i.imgur.com/Yt4w2Wo.png)
+
 ## Spatial navigation slider element
+
+I made this prototype because I heard that marijn hated carousel elements in websites because they never seem to work with spacebar or tabs and are often very fidgety.
+
+For this reason, I tried to make a carousel element that would be more pleasurable for Marijn to use and ended up with two prototypes:
+
+- A carousel element with navigation using 'tab' keys and 'arrow' keys.
+  ![spatial navigation slider element](https://i.imgur.com/QwpJEXT.png)
+- A carousel element with navigation using 'tab' keys, 'arrow' keys and clickable buttons on the side
+  ![spatial navigation slider element with buttons](https://i.imgur.com/3D5aGFQ.png)
+
+After the third usability/accessibility testing with Marijn, it became clear that he prefers the second option, but, was confused about not being able to use the 'spacebar' key to navigate through the carousel items. With this feedback, I decided to create another prototype with the 'spacebar' navigation added. This last version of the prototype made it to the website.
 
 # 6. Insights
 
@@ -153,11 +220,11 @@ Ex-Graphical Design student that refound himself as a Frontend Developer at the 
 
 ![Profile photo](https://avatars0.githubusercontent.com/u/6648715?s=460&v=4)
 
-Write your own little story here
+Designer that also likes to code.
 
 [Github repo](https://github.com/jelleoverbeek)
 
-[Progress Blog]()
+[Progress Blog](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/jelle.md)
 
 ## Rick Buter
 
@@ -173,11 +240,11 @@ Doesn't really know what he's doing, but he's doing just fine.
 
 ![Profile photo](https://avatars3.githubusercontent.com/u/26875486?s=460&v=4)
 
-Write your own little story here
+A designer who just recently discovered his love for code.s
 
 [Github repo](https://github.com/jamalvr)
 
-[Progress Blog]()
+[Jamal his progress blog](https://github.com/baskager/redesign-minor-web-dev/blob/develop/docs/process/jamal.md).
 
 ## Bas Kager
 

@@ -47,7 +47,8 @@ input[type="reset"],
   border: none;
 }
 
-.btn-primary {
+.btn-primary,
+input[type="submit"].btn-primary {
   background-color: $btn-primary-background;
   border: none;
   color: $btn-primary-color;
