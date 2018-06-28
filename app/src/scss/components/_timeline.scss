@@ -11,17 +11,17 @@ $grid-max-width: rem(1180);
 
 @mixin timeline-mid {
   @include timeline-line();
-  background-image: url("/img/timeline/timeline-mid.svg");
+  background-image: url('/img/timeline/timeline-mid.svg');
 }
 
 @mixin timeline-start {
   @include timeline-line();
-  background-image: url("/img/timeline/timeline-start.svg");
+  background-image: url('/img/timeline/timeline-start.svg');
 }
 
 @mixin timeline-end {
   @include timeline-line();
-  background-image: url("/img/timeline/timeline-end.svg");
+  background-image: url('/img/timeline/timeline-end.svg');
 }
 
 .timeline-wrapper {
@@ -222,4 +222,16 @@ $grid-max-width: rem(1180);
       filter: brightness(70%);
     }
   }
+}
+
+.course-tag {
+  display: inline-block;
+  margin-top: rem(8);
+  padding: rem(2) 1rem;
+  background-color: $primary-color;
+  font-size: rem(14);
+  text-transform: uppercase;
+  margin-right: rem(8);
+  color: white;
+  border-radius: 10rem;
 }

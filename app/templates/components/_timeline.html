@@ -55,7 +55,12 @@
           <h6>{{ course.partner_name }}</h6>
           <span class="meta">End of {{ period.period }}</span>
         </header>
-        <p>{{ course.course_description }}</p>
+        <p>
+          {{ course.course_description }}
+          <br>
+          <a href="/program/css-to-the-rescue" class="course-tag" style="background-color: #4e00af;">CSS to the rescue</a>
+          <a href="/program/web-app-from-scratch" class="course-tag" style="background-color: #005aad">Web app from scratch</a>
+        </p>
         <a class="focusable card-link" href="/program/{{ course.page_slug }}">Open {{ course.name }}</a>
       </article>
 
