@@ -11,7 +11,7 @@ My name is Bas Kager and I'm a student Computer Sciences/Software-Engineering at
 
 The project, for me, was a conscious choice. As I am a typical 'back-end' developer, I felt like I really needed to challenge myself with front-end tasks to get the most out of this minor.
 
-At the start, we all decided to do this project as a team, so in addition to having challenges, I have been able to make my back-end knowledge useful as well. The combination of my own challenges and my back-end experience made this project one of the most valuable experiences in bachelor. It has allowed me to learn a lot while simultaneously allowing me to fill the 'back-end' gaps where needed.
+At the start, we all decided to do this project as a team, so in addition to having challenges, I have been able to make my back-end knowledge useful as well. The combination of my own challenges and my back-end experience made this project one of the most valuable experiences in my bachelor. It has allowed me to learn a lot while simultaneously allowing me to fill the 'back-end' gaps where needed.
 
 ## Goals and Challenges
 
