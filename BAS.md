@@ -189,4 +189,26 @@ For this reason, I tried to make a carousel element that would be more pleasurab
 - A carousel element with navigation using 'tab' keys, 'arrow' keys and clickable buttons on the side
   ![spatial navigation slider element with buttons](https://i.imgur.com/3D5aGFQ.png)
 
-After the third usability/accessibility testing with Marijn, it became clear that he prefers the second option, but, was confused about not being able to use the 'spacebar' key to navigate through the carousel items. With this feedback, I decided to create another prototype with the 'spacebar' navigation added. This last version of the prototype made it to the website.
+After the third usability/accessibility test with Marijn, it became clear that he prefers the second option, but, was confused about not being able to use the 'spacebar' key to navigate through the carousel items. With this feedback, I decided to create another prototype with the 'spacebar' navigation added. This last version of the prototype made it to the website.
+
+## Conclusion
+
+These 5 weeks flew by and I'm really proud of what we have delivered as a team.
+
+I was very happy with the communication and work ethic of the team. We haven't skipped a day with this project and I think that is visible by the amount of work delivered and attention to detail. This minor has allowed me to work with some of the best front-end developers in the world. I have been greatly inspired and motivated by the work I've done in this project and I think I have learned things that I will use for the rest of my career.
+
+I think I've been able to combine my back-end knowledge with the newly acquired front-end knowledge in this project, which means that I have achieved my main goal for this minor.
+
+Although things went well in this project, nothing is perfect. I think that my back-end perspective can sometimes make things too complex. I think this is because I have worked in a lot of back-end projects for my bachelor and that teaches you certain methods that may not be relevant for front-end developers.
+
+Although I think the database was a very good idea because we simply have a lot of relational data. I do think that perhaps I should have looked for a storage technology that was easier to use for the rest of the team.
+
+I noticed early on that the database was difficult for the rest of the team. This is why I decided to make deploying the development environment as easy as I possibly could. I have written detailed guides and documentation, helper scripts and I've actively helped out the team members with the setup.
+
+I have omitted the 'task-runner' learning goal as it was not realistic for me. The entire project depends on it and it would have blocked the entire team from being able to work on the project for the first few days. I have, however, replaced this learning goal with another learning goal. This was "Learn how to properly deploy a front-end app with Docker and SSL (https)".
+
+A thing that annoyed me a little in this project is that things were not tested or reviewed very well (we were all guilty of this). Often things were merged to develop which broke other elements in the website. This could have been prevented by simply checking if everything works properly in the feature branch. We fixed a lot of things afterwards through hotfixes in the develop branch. I do, however, think that the rest of the team realised this and every team member has gradually improved on this. Our working product is a testament to this improvement.
+
+I think I've nailed my learning goals in this project, With the exception of the omitted the 'task-runner' goal.
+
+This project has been a great success and in the future, I'll be looking back to everything I've learned in Amsterdam. I am looking forward to the results and I hope everyone loves our website!
