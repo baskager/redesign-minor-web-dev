@@ -91,9 +91,9 @@ The picture below shows a part of the first iteration of the style guide.
 
 ### CSS and HTML layout structure
 
-I have been able to set up the HTML structure for the homepage and the course page. I have done this alongside Rick and James (pair programming) and they have taught me a lot of tips-and-tricks and best-practices along the way.
+I have been able to set up the HTML structure for the home page and the course page. I have done this alongside Rick and James (pair programming) and they have taught me a lot of tips-and-tricks and best-practices along the way.
 
-Jelle and James later added finishing touches to the course page and homepage and I think the result turned out beautiful.
+Jelle and James later added finishing touches to the course page and home page and I think the result turned out beautiful.
 
 ### SVG
 
@@ -145,8 +145,48 @@ massive(config.postgres).then(database => {
 
 ### Database
 
+The website for the minor has a lot of information with a lot of data that is relational. For instance: a course has one or multiple teachers and belongs to a period, it can also be a project which can have a business partner.
+
+For this reason, I have decided to implement a relational database management system. The system I have chosen to contain the database is PostgreSQL. The reason for this choice is because I have experience with the SQL language, PostgreSQL has reasonable performance and PostgreSQL is tough enough on restraints (what happens when related data is removed etc.).
+
+I have set up 'adminer' in a Docker image for development environments. This makes it easier to edit the data in the database. This tool is not available on the server due to security reasons (Direct editing of a production database is a bad practice).
+
 ### Deployment
 
-### SSL (https)
+To make deployment as easy as possible I have implemented Docker in this project. Docker ensures that the development environment is virtually the same as the production environment.
+
+I've also set up shell scripts that make starting and stopping the Docker services very easy. It takes just one command to start the environment up and you're ready to develop. It also just takes one command to populate the database with new data.
+
+More information and for a detailed installation guide you can go to the following URL:
+https://github.com/baskager/redesign-minor-web-dev
+
+### Web server and SSL (https)
+
+In addition to setting up the deployment in Docker. I have also done the set up for the web server and SSL. I used NGINX to proxy the domain name to the docker container.
+
+I have also set up an SSL certificate in the web server configuration with the use of Certbot and Let's Encrypt.
+
+It was quite a hassle to get everything to work properly on production as this is the first time I have deployed a node app through Docker. I've learned a great amount by just playing around a few days with NGINX and docker and I will definitely use this knowledge again in the future.
 
 ### Carousel element
+
+The Carousel element on the home page was a real challenge to me. It is a very interactive element and one of the hardest elements to make pleasurable for both normal users and users who need accessibility features.
+
+There are a lot of things that browsers do that block a slider from functioning normally. Browsers have a habit of focusing on the scrollbar instead of the items for instance.
+
+I ended up writing a lot of javascript for the carousel, the javascript ensures that the focus states work as expected with both mouse and keyboard usage. It is currently possible to navigate the slider items by using the buttons on the side, the 'tab' key, the 'arrow' keys and the 'spacebar' key.
+
+In the end, I got it done and I am really happy with the result. Below you can read an excerpt from the 'experiments' part. This experiment was eventually adopted in the home page of the website.
+
+**Excerpt from the base readme**
+
+I made this prototype because I heard that Marijn hated carousel elements in websites because they never seem to work with spacebar or tabs and are often very fidgety.
+
+For this reason, I tried to make a carousel element that would be more pleasurable for Marijn to use and ended up with two prototypes:
+
+- A carousel element with navigation using 'tab' keys and 'arrow' keys.
+  ![spatial navigation slider element](https://i.imgur.com/QwpJEXT.png)
+- A carousel element with navigation using 'tab' keys, 'arrow' keys and clickable buttons on the side
+  ![spatial navigation slider element with buttons](https://i.imgur.com/3D5aGFQ.png)
+
+After the third usability/accessibility testing with Marijn, it became clear that he prefers the second option, but, was confused about not being able to use the 'spacebar' key to navigate through the carousel items. With this feedback, I decided to create another prototype with the 'spacebar' navigation added. This last version of the prototype made it to the website.
