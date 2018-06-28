@@ -293,3 +293,16 @@ We would also like the thank all the teachers for the guidance in this project b
 1.  Performance matters - Setting up a Node server including performance optimisations
 2.  Web Design - Out of the box design, include more creativity than usual and try to deliver a wow experience.
 3.  WAFS - General JavaScript knowledge, make efficient JavaScript functions.
+
+# 14. Roadmap
+
+1.  Add masters project to program page.
+2.  Fix bug where hotkeys are captured when in input field
+3.  Improve video player on mobile.
+4.  Fix mobile menu bug
+5.  Fix mobile headers
+6.  Improve animation speed
+7.  Add filter functionality to student work.
+8.  Add Github API
+9.  Make whole website dynamic from database
+10. Add Instagram and/or Twitter feed to give a feeling about the minor.
