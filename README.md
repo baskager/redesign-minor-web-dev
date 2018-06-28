@@ -254,7 +254,7 @@ Software Engineer studying at The University of Applied Sciences Leiden. Really 
 
 [Github repo](https://github.com/baskager)
 
-[Progress Blog]()
+[Progress Blog](https://github.com/baskager/redesign-minor-web-dev/blob/develop/BAS.md)
 
 # 12. Acknowledgements
 
